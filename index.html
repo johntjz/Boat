@@ -41,27 +41,23 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #18181b; /* zinc-900 */
-            color: #d4d4d8; /* zinc-300 */
+            background-color: #18181b; 
+            color: #d4d4d8; 
         }
-
         .data-card {
-            background-color: #09090b; /* zinc-950 */
-            border: 1px solid #27272a; /* zinc-800 */
+            background-color: #09090b; 
+            border: 1px solid #27272a; 
             transition: all 0.2s ease-in-out;
         }
-
         .data-card:hover {
-            border-color: #3f3f46; /* zinc-700 */
+            border-color: #3f3f46; 
         }
-
         .cad-grid-bg {
             background-size: 32px 32px;
             background-image: 
                 linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
         }
-
         /* Range Slider Styling */
         input[type=range] {
             -webkit-appearance: none;
@@ -84,8 +80,6 @@
             background: #3f3f46;
             border-radius: 2px;
         }
-
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 6px; height: 6px; }
         ::-webkit-scrollbar-track { background: #18181b; }
         ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 3px; }
@@ -111,22 +105,35 @@
                             <span class="text-base font-mono font-bold tracking-wider text-white">BAYWING</span>
                             <span class="text-[10px] font-mono px-1.5 py-0.5 bg-zinc-800 text-zinc-300 border border-zinc-700 rounded">EF-150</span>
                         </div>
-                        <span class="text-[9px] font-mono text-zinc-500 tracking-widest uppercase">Deep Tech Concept Proposal</span>
+                        <span class="text-[9px] font-mono text-zinc-500 tracking-widest uppercase" data-i18n="nav_subtitle">Deep Tech Concept Proposal</span>
                     </div>
                 </a>
 
                 <!-- Aligned Header Nav Menu -->
                 <nav class="hidden lg:flex items-center space-x-7 text-[11px] font-mono tracking-wider uppercase text-zinc-400">
-                    <a href="#vessel" class="hover:text-white transition-colors">1. Platform</a>
-                    <a href="#moat" class="hover:text-white transition-colors">2. Moat & Economics</a>
-                    <a href="#routes" class="hover:text-white transition-colors">3. Route Analytics</a>
-                    <a href="#specs" class="hover:text-white transition-colors">4. Tech Data</a>
-                    <a href="#portal" class="hover:text-white transition-colors">5. Data Room</a>
+                    <a href="#vessel" class="hover:text-white transition-colors" data-i18n="nav_1">1. Platform</a>
+                    <a href="#moat" class="hover:text-white transition-colors" data-i18n="nav_2">2. Moat & Economics</a>
+                    <a href="#routes" class="hover:text-white transition-colors" data-i18n="nav_3">3. Route Analytics</a>
+                    <a href="#specs" class="hover:text-white transition-colors" data-i18n="nav_4">4. Tech Data</a>
+                    <a href="#portal" class="hover:text-white transition-colors" data-i18n="nav_5">5. Data Room</a>
                 </nav>
 
-                <!-- Mobile Navigation Button -->
-                <div class="lg:hidden flex items-center">
-                    <button onclick="toggleMobileMenu()" class="text-zinc-400 hover:text-white p-2 border border-zinc-800 rounded bg-zinc-900">
+                <!-- Tools & Mobile Navigation -->
+                <div class="flex items-center space-x-4">
+                    
+                    <!-- Version Control Badge -->
+                    <span class="hidden sm:inline-block bg-zinc-800/40 text-zinc-400 border border-zinc-700 px-2 py-0.5 rounded text-[9px] font-mono tracking-widest">
+                        BUILD v2.1.0
+                    </span>
+
+                    <!-- Language Toggle -->
+                    <div class="hidden sm:flex bg-zinc-900 border border-zinc-800 rounded p-0.5 text-[10px] font-mono">
+                        <button onclick="setLang('en')" id="btn-lang-en" class="px-2 py-1 rounded bg-zinc-800 text-white transition-colors">EN</button>
+                        <button onclick="setLang('tc')" id="btn-lang-tc" class="px-2 py-1 rounded text-zinc-500 hover:text-white transition-colors">繁</button>
+                        <button onclick="setLang('sc')" id="btn-lang-sc" class="px-2 py-1 rounded text-zinc-500 hover:text-white transition-colors">简</button>
+                    </div>
+
+                    <button onclick="toggleMobileMenu()" class="lg:hidden text-zinc-400 hover:text-white p-2 border border-zinc-800 rounded bg-zinc-900">
                         <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                         <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                     </button>
@@ -137,11 +144,16 @@
 
         <!-- Mobile Drawer Menu -->
         <div id="mobile-menu" class="hidden lg:hidden bg-zinc-950 border-b border-zinc-800 px-4 py-4 space-y-2 font-mono text-xs uppercase tracking-wider">
-            <a href="#vessel" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900">1. Platform Setup</a>
-            <a href="#moat" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900">2. Economics</a>
-            <a href="#routes" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900">3. Route Analytics</a>
-            <a href="#specs" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900">4. Tech Data</a>
-            <a href="#portal" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900">5. Data Room</a>
+            <div class="flex space-x-2 mb-4 pb-4 border-b border-zinc-800">
+                <button onclick="setLang('en')" class="px-3 py-1 rounded bg-zinc-800 text-white border border-zinc-700">EN</button>
+                <button onclick="setLang('tc')" class="px-3 py-1 rounded bg-zinc-900 text-zinc-400 border border-zinc-800">繁體</button>
+                <button onclick="setLang('sc')" class="px-3 py-1 rounded bg-zinc-900 text-zinc-400 border border-zinc-800">简体</button>
+            </div>
+            <a href="#vessel" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_1">1. Platform Setup</a>
+            <a href="#moat" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_2">2. Economics</a>
+            <a href="#routes" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_3">3. Route Analytics</a>
+            <a href="#specs" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_4">4. Tech Data</a>
+            <a href="#portal" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_5">5. Data Room</a>
         </div>
     </header>
 
@@ -149,73 +161,68 @@
     <section id="vessel" class="relative pt-28 pb-16 md:pt-36 md:pb-24 border-b border-zinc-800 cad-grid-bg overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
-            <!-- Top Alert Badge -->
             <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
                 <div class="inline-flex items-center space-x-2 text-[11px] font-mono text-zinc-300 bg-zinc-800/50 border border-zinc-700 px-3 py-1 rounded">
                     <span class="w-2 h-2 bg-tech-emerald rounded-full"></span>
-                    <span class="font-semibold uppercase tracking-wider">HKSTP Incubation & Feasibility Study</span>
+                    <span class="font-semibold uppercase tracking-wider" data-i18n="badge_hkstp">HKSTP Incubation & Feasibility Study</span>
                 </div>
                 <div class="text-[11px] font-mono text-zinc-500">
                     DOC ID: <span class="text-white font-bold">AM-EF150-FS-2026</span>
                 </div>
             </div>
 
-            <!-- Main Heading Grid -->
             <div class="grid lg:grid-cols-12 gap-8 items-start">
                 <div class="lg:col-span-7 space-y-5">
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-mono font-bold text-white tracking-tight leading-tight uppercase">
                         BAYWING EF-150 EXPRESS
-                        <span class="block text-zinc-400 text-xl sm:text-2xl font-sans font-normal mt-2">Active Fly-by-Wire Electric Hydrofoil Platform</span>
+                        <span class="block text-zinc-400 text-xl sm:text-2xl font-sans font-normal mt-2" data-i18n="hero_subtitle">Active Fly-by-Wire Electric Hydrofoil Platform</span>
                     </h1>
-                    <p class="text-sm md:text-base text-zinc-400 leading-relaxed font-sans max-w-2xl">
+                    <p class="text-sm md:text-base text-zinc-400 leading-relaxed font-sans max-w-2xl" data-i18n="hero_desc">
                         Aero-Marine Systems is building the software-defined future of GBA maritime transit. By integrating aerospace-grade flight control algorithms with Pearl River Delta carbon-composite supply chains, the EF-150 architecture completely decouples the hull from hydrodynamic drag—slashing energy requirements by 80% and making high-speed electric commuter routes commercially viable.
                     </p>
                 </div>
 
-                <!-- Primary Vessel Spec Snapshot Table (Corrected Physics) -->
                 <div class="lg:col-span-5 data-card p-5 rounded-lg">
                     <div class="flex items-center justify-between border-b border-zinc-800 pb-3 mb-4">
-                        <span class="text-xs font-mono font-bold text-white uppercase tracking-wider">Target Operational Envelope</span>
-                        <span class="text-[10px] font-mono text-zinc-400 bg-zinc-800 px-2 py-0.5 rounded border border-zinc-700">150 PASSENGER CLASS</span>
+                        <span class="text-xs font-mono font-bold text-white uppercase tracking-wider" data-i18n="spec_title">Target Operational Envelope</span>
+                        <span class="text-[10px] font-mono text-zinc-400 bg-zinc-800 px-2 py-0.5 rounded border border-zinc-700" data-i18n="spec_class">150 PASSENGER CLASS</span>
                     </div>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="p-3 bg-zinc-900 rounded border border-zinc-800">
-                            <div class="text-[10px] font-mono text-zinc-500 uppercase">Target Cruise Speed</div>
-                            <div class="text-2xl font-mono font-bold text-white mt-1">38.0 <span class="text-xs text-zinc-400">KNOTS</span></div>
-                            <div class="text-[9px] font-mono text-zinc-600 mt-1">(70.3 km/h Foil-borne)</div>
+                            <div class="text-[10px] font-mono text-zinc-500 uppercase" data-i18n="spec_speed">Target Cruise Speed</div>
+                            <div class="text-2xl font-mono font-bold text-white mt-1">38.0 <span class="text-xs text-zinc-400" data-i18n="unit_knots">KNOTS</span></div>
+                            <div class="text-[9px] font-mono text-zinc-600 mt-1" data-i18n="spec_speed_sub">(70.3 km/h Foil-borne)</div>
                         </div>
                         <div class="p-3 bg-zinc-900 rounded border border-zinc-800">
-                            <div class="text-[10px] font-mono text-zinc-500 uppercase">Effective Range</div>
+                            <div class="text-[10px] font-mono text-zinc-500 uppercase" data-i18n="spec_range">Effective Range</div>
                             <div class="text-2xl font-mono font-bold text-white mt-1">45.0 <span class="text-xs text-zinc-400">NM</span></div>
-                            <div class="text-[9px] font-mono text-zinc-600 mt-1">(w/ 20% Regulatory Reserve)</div>
+                            <div class="text-[9px] font-mono text-zinc-600 mt-1" data-i18n="spec_range_sub">(w/ 20% Regulatory Reserve)</div>
                         </div>
                         <div class="p-3 bg-zinc-900 rounded border border-zinc-800">
-                            <div class="text-[10px] font-mono text-zinc-500 uppercase">Est. Battery Capacity</div>
+                            <div class="text-[10px] font-mono text-zinc-500 uppercase" data-i18n="spec_battery">Est. Battery Capacity</div>
                             <div class="text-2xl font-mono font-bold text-white mt-1">2.4 <span class="text-xs text-zinc-400">MWh</span></div>
-                            <div class="text-[9px] font-mono text-zinc-600 mt-1">800V Marine LFP Architecture</div>
+                            <div class="text-[9px] font-mono text-zinc-600 mt-1" data-i18n="spec_battery_sub">800V Marine LFP Architecture</div>
                         </div>
                         <div class="p-3 bg-zinc-900 rounded border border-zinc-800">
-                            <div class="text-[10px] font-mono text-zinc-500 uppercase">Turnaround Target</div>
-                            <div class="text-2xl font-mono font-bold text-white mt-1">45 <span class="text-xs text-zinc-400">MINS</span></div>
-                            <div class="text-[9px] font-mono text-zinc-600 mt-1">3.5 MW Automated Charging</div>
+                            <div class="text-[10px] font-mono text-zinc-500 uppercase" data-i18n="spec_turnaround">Turnaround Target</div>
+                            <div class="text-2xl font-mono font-bold text-white mt-1">45 <span class="text-xs text-zinc-400" data-i18n="unit_mins">MINS</span></div>
+                            <div class="text-[9px] font-mono text-zinc-600 mt-1" data-i18n="spec_turnaround_sub">3.5 MW Automated Charging</div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
     <!-- SECTION 2: COMPETITIVE MOAT & ECONOMICS (#moat) -->
     <section id="moat" class="py-16 md:py-24 bg-zinc-950 border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
             <div class="max-w-3xl mb-12">
-                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2">2. Deep Tech Moat & Economics</div>
-                <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase">
+                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2" data-i18n="moat_tag">2. Deep Tech Moat & Economics</div>
+                <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase" data-i18n="moat_title">
                     Defensible OPEX Advantages
                 </h2>
-                <p class="text-sm text-zinc-400 mt-3 font-sans leading-relaxed">
+                <p class="text-sm text-zinc-400 mt-3 font-sans leading-relaxed" data-i18n="moat_desc">
                     Legacy fast ferries rely on multi-megawatt diesel gas turbines pushing heavy displacement hulls. High marine fuel costs and escalating engine overhaul expenses compress operating margins. Our Fly-by-Wire control system enables a thermodynamic shift.
                 </p>
             </div>
@@ -286,13 +293,12 @@
     <!-- SECTION 3: ROUTE NETWORK & DISRUPTION CALCULATOR (#routes) -->
     <section id="routes" class="py-16 md:py-24 bg-zinc-900 border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
             <div class="max-w-3xl mb-10">
-                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2">3. Strategic Route Analytics</div>
-                <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase">
+                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2" data-i18n="calc_tag">3. Strategic Route Analytics</div>
+                <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase" data-i18n="calc_title">
                     GBA Route Feasibility Calculator
                 </h2>
-                <p class="text-sm text-zinc-400 mt-2 font-sans">
+                <p class="text-sm text-zinc-400 mt-2 font-sans" data-i18n="calc_desc">
                     Simulate the financial viability of replacing legacy diesel vessels with the EF-150 platform across major Greater Bay Area transit corridors. (Mathematics corrected for physics constraints).
                 </p>
             </div>
@@ -417,13 +423,12 @@
     <!-- SECTION 4: TECHNICAL SPECIFICATION MATRIX (#specs) -->
     <section id="specs" class="py-16 md:py-24 bg-zinc-950 border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
             <div class="max-w-3xl mb-10">
-                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2">4. Technical Data Bank</div>
-                <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase">
+                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2" data-i18n="tech_tag">4. Technical Data Bank</div>
+                <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase" data-i18n="tech_title">
                     Proposed Engineering Matrix
                 </h2>
-                <p class="text-sm text-zinc-400 mt-2 font-sans">
+                <p class="text-sm text-zinc-400 mt-2 font-sans" data-i18n="tech_desc">
                     Baseline structural and operational parameters proposed for the EF-150 platform architecture, updated for physics constraints and marine certification standards.
                 </p>
             </div>
@@ -431,13 +436,12 @@
             <div class="data-card rounded-xl overflow-hidden">
                 <div class="p-4 bg-zinc-900 border-b border-zinc-800 flex justify-between items-center text-xs font-mono">
                     <span class="text-white font-bold">PLATFORM ARCHITECTURE: BAYWING EF-150</span>
-                    <span class="text-zinc-500">REVISED DRAFT v2.0</span>
+                    <span class="text-zinc-500">REVISED DRAFT v2.1</span>
                 </div>
 
                 <div class="overflow-x-auto">
                     <table class="w-full text-left text-xs font-mono">
                         <tbody class="divide-y divide-zinc-800">
-                            
                             <!-- Category 1 -->
                             <tr class="bg-zinc-950/60">
                                 <th colspan="2" class="py-2.5 px-4 text-zinc-400 uppercase font-bold text-[11px] tracking-wider">1. Vessel Dimensions & Capacity</th>
@@ -518,31 +522,27 @@
                                 <td class="py-2.5 px-4 text-zinc-500">Charging Standard</td>
                                 <td class="py-2.5 px-4 text-zinc-300">3.5 MW Automated MCS (Megawatt Charging System) Arm</td>
                             </tr>
-
                         </tbody>
                     </table>
                 </div>
             </div>
-
         </div>
     </section>
 
     <!-- SECTION 5: STAKEHOLDER PORTAL (#portal) -->
     <section id="portal" class="py-16 md:py-24 bg-zinc-900 border-b border-zinc-800 cad-grid-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
             <div class="max-w-3xl mb-12">
-                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2">5. Data Room</div>
-                <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase">
+                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2" data-i18n="data_tag">5. Data Room</div>
+                <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase" data-i18n="data_title">
                     Institutional Feasibility Documents
                 </h2>
-                <p class="text-sm text-zinc-400 mt-2 font-sans">
+                <p class="text-sm text-zinc-400 mt-2 font-sans" data-i18n="data_desc">
                     Detailed modeling and feasibility projections structuring our dual-hub hardware/software integration path at HKSTP.
                 </p>
             </div>
 
             <div class="grid lg:grid-cols-2 gap-6">
-                
                 <!-- Document Item 1 -->
                 <div class="data-card p-6 rounded-lg">
                     <div class="text-sm font-mono font-bold text-white mb-4 border-b border-zinc-800 pb-2">Phase Development Roadmap</div>
@@ -561,7 +561,6 @@
                         </li>
                     </ul>
                 </div>
-
                 <!-- Document Item 2 -->
                 <div class="data-card p-6 rounded-lg">
                     <div class="text-sm font-mono font-bold text-white mb-4 border-b border-zinc-800 pb-2">Regulatory & Classification Path</div>
@@ -580,7 +579,6 @@
                         </li>
                     </ul>
                 </div>
-
                 <!-- Document Item 3 -->
                 <div class="data-card p-6 rounded-lg">
                     <div class="text-sm font-mono font-bold text-white mb-4 border-b border-zinc-800 pb-2">EF-150 Fleet Economics Breakdown</div>
@@ -611,7 +609,6 @@
                         </tbody>
                     </table>
                 </div>
-
                 <!-- Document Item 4 -->
                 <div class="data-card p-6 rounded-lg">
                     <div class="text-sm font-mono font-bold text-white mb-4 border-b border-zinc-800 pb-2">MCS Terminal & BESS Integration</div>
@@ -630,9 +627,7 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
-
         </div>
     </section>
 
@@ -640,12 +635,9 @@
     <footer class="bg-zinc-950 py-10 border-t border-zinc-800 text-zinc-500 text-[10px] font-mono uppercase tracking-wider">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex items-center space-x-3">
-                <div class="w-6 h-6 bg-zinc-900 border border-zinc-700 rounded flex items-center justify-center text-white font-bold">
-                    A
-                </div>
+                <div class="w-6 h-6 bg-zinc-900 border border-zinc-700 rounded flex items-center justify-center text-white font-bold">A</div>
                 <span>AERO-MARINE SYSTEMS CONCEPT © 2026.</span>
             </div>
-            
             <div class="flex flex-wrap items-center space-x-6 text-zinc-600">
                 <span>HONG KONG / SHENZHEN</span>
                 <span>FEASIBILITY STUDY</span>
@@ -656,7 +648,96 @@
     <!-- INTERACTIVE JAVASCRIPT ENGINES -->
     <script>
         
-        // 1. Mobile Navigation Toggle
+        // --- 1. LANGUAGE LOCALIZATION ENGINE ---
+        const translations = {
+            'en': {
+                'nav_subtitle': 'Deep Tech Concept Proposal',
+                'nav_1': '1. Platform', 'nav_2': '2. Moat & Economics', 'nav_3': '3. Route Analytics', 'nav_4': '4. Tech Data', 'nav_5': '5. Data Room',
+                'badge_hkstp': 'HKSTP Incubation & Feasibility Study',
+                'hero_subtitle': 'Active Fly-by-Wire Electric Hydrofoil Platform',
+                'hero_desc': 'Aero-Marine Systems is building the software-defined future of GBA maritime transit. By integrating aerospace-grade flight control algorithms with Pearl River Delta carbon-composite supply chains, the EF-150 architecture completely decouples the hull from hydrodynamic drag—slashing energy requirements by 80% and making high-speed electric commuter routes commercially viable.',
+                'spec_title': 'Target Operational Envelope', 'spec_class': '150 PASSENGER CLASS',
+                'spec_speed': 'Target Cruise Speed', 'unit_knots': 'KNOTS', 'spec_speed_sub': '(70.3 km/h Foil-borne)',
+                'spec_range': 'Effective Range', 'spec_range_sub': '(w/ 20% Regulatory Reserve)',
+                'spec_battery': 'Est. Battery Capacity', 'spec_battery_sub': '800V Marine LFP Architecture',
+                'spec_turnaround': 'Turnaround Target', 'unit_mins': 'MINS', 'spec_turnaround_sub': '3.5 MW Automated Charging',
+                'moat_tag': '2. Deep Tech Moat & Economics', 'moat_title': 'Defensible OPEX Advantages',
+                'moat_desc': 'Legacy fast ferries rely on multi-megawatt diesel gas turbines pushing heavy displacement hulls. High marine fuel costs and escalating engine overhaul expenses compress operating margins. Our Fly-by-Wire control system enables a thermodynamic shift.',
+                'calc_tag': '3. Strategic Route Analytics', 'calc_title': 'GBA Route Feasibility Calculator',
+                'calc_desc': 'Simulate the financial viability of replacing legacy diesel vessels with the EF-150 platform across major Greater Bay Area transit corridors. (Mathematics corrected for physics constraints).',
+                'tech_tag': '4. Technical Data Bank', 'tech_title': 'Proposed Engineering Matrix',
+                'tech_desc': 'Baseline structural and operational parameters proposed for the EF-150 platform architecture, updated for physics constraints and marine certification standards.',
+                'data_tag': '5. Data Room', 'data_title': 'Institutional Feasibility Documents',
+                'data_desc': 'Detailed modeling and feasibility projections structuring our dual-hub hardware/software integration path at HKSTP.'
+            },
+            'tc': {
+                'nav_subtitle': '深科技概念提案',
+                'nav_1': '1. 平台概述', 'nav_2': '2. 護城河與經濟', 'nav_3': '3. 航線分析', 'nav_4': '4. 技術數據', 'nav_5': '5. 資料室',
+                'badge_hkstp': '香港科技園 (HKSTP) 培育與可行性研究',
+                'hero_subtitle': '主動線傳飛控電動水翼平台',
+                'hero_desc': 'Aero-Marine Systems 正在構建大灣區海上交通的軟件定義未來。通過將航太級飛控算法與珠三角碳纖維複合材料供應鏈相結合，EF-150 架構將船體與水動力阻力完全解耦——大幅降低 80% 的能耗，使高速電動通勤航線具備商業可行性。',
+                'spec_title': '目標運行包絡線', 'spec_class': '150 客位級別',
+                'spec_speed': '目標巡航速度', 'unit_knots': '節', 'spec_speed_sub': '(70.3 公里/小時 水翼飛行)',
+                'spec_range': '有效航程', 'spec_range_sub': '(含 20% 法規安全儲備)',
+                'spec_battery': '預估電池容量', 'spec_battery_sub': '800V 船用磷酸鐵鋰架構',
+                'spec_turnaround': '週轉時間目標', 'unit_mins': '分鐘', 'spec_turnaround_sub': '3.5 MW 自動化充電',
+                'moat_tag': '2. 深科技護城河與經濟效益', 'moat_title': '具防禦性的運營成本優勢',
+                'moat_desc': '傳統高速客輪依賴兆瓦級柴油燃氣輪機推動沉重的排水型船體。高昂的船用燃料成本和不斷攀升的引擎大修費用壓縮了利潤空間。我們的線傳飛控系統實現了熱力學的根本轉變。',
+                'calc_tag': '3. 戰略航線分析', 'calc_title': '大灣區航線可行性計算器',
+                'calc_desc': '模擬使用 EF-150 平台替換大灣區主要交通走廊傳統柴油船隊的財務可行性。（數學模型已根據物理極限進行修正）。',
+                'tech_tag': '4. 技術數據庫', 'tech_title': '擬定工程矩陣',
+                'tech_desc': 'EF-150 平台架構的基準結構與運行參數，已根據物理極限和海事認證標準進行更新。',
+                'data_tag': '5. 資料室', 'data_title': '機構可行性文件',
+                'data_desc': '詳細的模型和可行性預測，構建了我們在香港科技園的雙樞紐硬體/軟體整合路徑。'
+            },
+            'sc': {
+                'nav_subtitle': '深科技概念提案',
+                'nav_1': '1. 平台概述', 'nav_2': '2. 护城河与经济', 'nav_3': '3. 航线分析', 'nav_4': '4. 技术数据', 'nav_5': '5. 资料室',
+                'badge_hkstp': '香港科技园 (HKSTP) 孵化与可行性研究',
+                'hero_subtitle': '主动线传飞控电动水翼平台',
+                'hero_desc': 'Aero-Marine Systems 正在构建大湾区海上交通的软件定义未来。通过将航空级飞控算法与珠三角碳纤维复合材料供应链相结合，EF-150 架构将船体与水动力阻力完全解耦——大幅降低 80% 的能耗，使高速电动通勤航线具备商业可行性。',
+                'spec_title': '目标运行包络线', 'spec_class': '150 客位级别',
+                'spec_speed': '目标巡航速度', 'unit_knots': '节', 'spec_speed_sub': '(70.3 公里/小时 水翼飞行)',
+                'spec_range': '有效航程', 'spec_range_sub': '(含 20% 法规安全储备)',
+                'spec_battery': '预估电池容量', 'spec_battery_sub': '800V 船用磷酸铁锂架构',
+                'spec_turnaround': '周转时间目标', 'unit_mins': '分钟', 'spec_turnaround_sub': '3.5 MW 自动化充电',
+                'moat_tag': '2. 深科技护城河与经济效益', 'moat_title': '具防御性的运营成本优势',
+                'moat_desc': '传统高速客轮依赖兆瓦级柴油燃气轮机推动沉重的排水型船体。高昂的船用燃料成本和不断攀升的引擎大修费用压缩了利润空间。我们的线传飞控系统实现了热力学的根本转变。',
+                'calc_tag': '3. 战略航线分析', 'calc_title': '大湾区航线可行性计算器',
+                'calc_desc': '模拟使用 EF-150 平台替换大湾区主要交通走廊传统柴油船队的财务可行性。（数学模型已根据物理极限进行修正）。',
+                'tech_tag': '4. 技术数据库', 'tech_title': '拟定工程矩阵',
+                'tech_desc': 'EF-150 平台架构的基准结构与运行参数，已根据物理极限和海事认证标准进行更新。',
+                'data_tag': '5. 资料室', 'data_title': '机构可行性文件',
+                'data_desc': '详细的模型和可行性预测，构建了我们在香港科技园的双枢纽硬件/软件整合路径。'
+            }
+        };
+
+        function setLang(lang) {
+            // Update Text Elements
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerText = translations[lang][key];
+                }
+            });
+
+            // Update UI Button Styles
+            ['en', 'tc', 'sc'].forEach(l => {
+                const btn = document.getElementById('btn-lang-' + l);
+                if(btn) {
+                    if(l === lang) {
+                        btn.classList.remove('text-zinc-500', 'hover:text-white');
+                        btn.classList.add('bg-zinc-800', 'text-white');
+                    } else {
+                        btn.classList.add('text-zinc-500', 'hover:text-white');
+                        btn.classList.remove('bg-zinc-800', 'text-white');
+                    }
+                }
+            });
+        }
+
+        // --- 2. UI INTERACTIONS & CALCULATOR ---
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const iconOpen = document.getElementById('menu-icon-open');
@@ -673,49 +754,12 @@
             }
         }
 
-        // 2. Dynamic Route & Financial Calculator Engine
-        // Updated with corrected physics and realistic capital premium math
         const routeProfiles = {
-            'hk-shenzhen': {
-                name: 'HK Central ⟷ Shenzhen Shekou',
-                distanceNM: 22,
-                dieselTimeMins: 48,
-                ef150TimeMins: 36,
-                dieselFuelPerNM: 17.5,
-                electricKwhPerNM: 30.0 // Adjusted for realistic 1100kW cruise
-            },
-            'hkg-szx': {
-                name: 'HKG SkyPier ⟷ Shenzhen Airport',
-                distanceNM: 25,
-                dieselTimeMins: 45,
-                ef150TimeMins: 40,
-                dieselFuelPerNM: 17.8,
-                electricKwhPerNM: 30.0
-            },
-            'hk-macau': {
-                name: 'HK Central ⟷ Macau Taipa',
-                distanceNM: 36,
-                dieselTimeMins: 58,
-                ef150TimeMins: 55,
-                dieselFuelPerNM: 18.5,
-                electricKwhPerNM: 30.0
-            },
-            'hk-airport': {
-                name: 'HK Central ⟷ HKG SkyPier Airport',
-                distanceNM: 17,
-                dieselTimeMins: 42,
-                ef150TimeMins: 28,
-                dieselFuelPerNM: 17.0,
-                electricKwhPerNM: 30.0
-            },
-            'hk-zhuhai': {
-                name: 'HK Central ⟷ Zhuhai Jiuzhou',
-                distanceNM: 35,
-                dieselTimeMins: 55,
-                ef150TimeMins: 53,
-                dieselFuelPerNM: 18.2,
-                electricKwhPerNM: 30.0
-            }
+            'hk-shenzhen': { name: 'HK Central ⟷ Shenzhen Shekou', distanceNM: 22, dieselTimeMins: 48, ef150TimeMins: 36, dieselFuelPerNM: 17.5, electricKwhPerNM: 30.0 },
+            'hkg-szx': { name: 'HKG SkyPier ⟷ Shenzhen Airport', distanceNM: 25, dieselTimeMins: 45, ef150TimeMins: 40, dieselFuelPerNM: 17.8, electricKwhPerNM: 30.0 },
+            'hk-macau': { name: 'HK Central ⟷ Macau Taipa', distanceNM: 36, dieselTimeMins: 58, ef150TimeMins: 55, dieselFuelPerNM: 18.5, electricKwhPerNM: 30.0 },
+            'hk-airport': { name: 'HK Central ⟷ HKG SkyPier Airport', distanceNM: 17, dieselTimeMins: 42, ef150TimeMins: 28, dieselFuelPerNM: 17.0, electricKwhPerNM: 30.0 },
+            'hk-zhuhai': { name: 'HK Central ⟷ Zhuhai Jiuzhou', distanceNM: 35, dieselTimeMins: 55, ef150TimeMins: 53, dieselFuelPerNM: 18.2, electricKwhPerNM: 30.0 }
         };
 
         function runRouteCalculator() {
@@ -723,49 +767,33 @@
             const fleet = parseInt(document.getElementById('calc-fleet').value);
             const trips = parseInt(document.getElementById('calc-trips').value);
 
-            // Update Slider Labels
             document.getElementById('calc-fleet-val').innerText = fleet + (fleet === 1 ? ' VESSEL' : ' VESSELS');
             document.getElementById('calc-trips-val').innerText = trips + ' TRIPS';
 
             const r = routeProfiles[routeKey];
             if (!r) return;
 
-            // Operational Variables
-            const dieselPricePerLiter = 2.20; // USD
-            const electricityPricePerKwh = 0.16; // USD
-
+            const dieselPricePerLiter = 2.20; 
+            const electricityPricePerKwh = 0.16; 
             const annualNMTravelled = fleet * trips * r.distanceNM * 365;
 
-            // Legacy Diesel Calculation
             const annualDieselLiters = annualNMTravelled * r.dieselFuelPerNM;
             const annualDieselCost = annualDieselLiters * dieselPricePerLiter;
-
-            // EF-150 Electricity Calculation
             const annualElectricKwh = annualNMTravelled * r.electricKwhPerNM;
             const annualElectricCost = annualElectricKwh * electricityPricePerKwh;
 
-            // Net Annual Savings
             const annualSavings = Math.max(0, annualDieselCost - annualElectricCost);
-
-            // CAPEX Payback Estimate on the premium (Assuming EF-150 is $3.5M more than a comparable new diesel cat)
             const premiumCostPerVessel = 3500000;
             const fleetPremiumCapEx = fleet * premiumCostPerVessel;
             const paybackYears = annualSavings > 0 ? (fleetPremiumCapEx / annualSavings).toFixed(1) : 'N/A';
-
-            // CO2 Avoidance (~2.68 kg CO2 per liter marine diesel)
             const co2TonsReduced = Math.round((annualDieselLiters * 2.68) / 1000);
-
-            // Transit Time Differential
             const timeSavedMins = r.dieselTimeMins - r.ef150TimeMins;
 
-            // Push Updates to UI
             document.getElementById('calc-out-savings').innerText = '$' + (annualSavings / 1000000).toFixed(2) + ' M';
             document.getElementById('calc-out-payback').innerText = paybackYears + ' YRS';
             document.getElementById('calc-out-co2').innerText = co2TonsReduced.toLocaleString() + ' T';
             document.getElementById('calc-out-time').innerText = r.ef150TimeMins + ' MINS';
             document.getElementById('calc-out-time-diff').innerText = timeSavedMins + ' Mins Faster than Diesel';
-
-            // Push Updates to Bar Chart Representation
             document.getElementById('calc-bar-diesel-text').innerText = '$' + (annualDieselCost / 1000000).toFixed(2) + 'M';
             document.getElementById('calc-bar-ef150-text').innerText = '$' + (annualElectricCost / 1000000).toFixed(2) + 'M';
 
@@ -773,9 +801,10 @@
             document.getElementById('calc-bar-ef150').style.width = Math.max(8, efPercent) + '%';
         }
 
-        // Initialize Calculator state on load
         window.addEventListener('DOMContentLoaded', () => {
             runRouteCalculator();
+            // Default Language Load
+            setLang('en');
         });
     </script>
 </body>
