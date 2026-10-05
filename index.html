@@ -120,17 +120,16 @@
 
                 <!-- Tools & Mobile Navigation -->
                 <div class="flex items-center space-x-4">
-                    
                     <!-- Version Control Badge -->
                     <span class="hidden sm:inline-block bg-zinc-800/40 text-zinc-400 border border-zinc-700 px-2 py-0.5 rounded text-[9px] font-mono tracking-widest">
-                        BUILD v2.1.0
+                        BUILD v3.0.0
                     </span>
 
-                    <!-- Language Toggle -->
+                    <!-- Multi-Currency & Language Toggle -->
                     <div class="hidden sm:flex bg-zinc-900 border border-zinc-800 rounded p-0.5 text-[10px] font-mono">
-                        <button onclick="setLang('en')" id="btn-lang-en" class="px-2 py-1 rounded bg-zinc-800 text-white transition-colors">EN</button>
-                        <button onclick="setLang('tc')" id="btn-lang-tc" class="px-2 py-1 rounded text-zinc-500 hover:text-white transition-colors">繁</button>
-                        <button onclick="setLang('sc')" id="btn-lang-sc" class="px-2 py-1 rounded text-zinc-500 hover:text-white transition-colors">简</button>
+                        <button onclick="setLang('en')" id="btn-lang-en" class="px-2 py-1 rounded bg-zinc-800 text-white transition-colors">EN (USD)</button>
+                        <button onclick="setLang('tc')" id="btn-lang-tc" class="px-2 py-1 rounded text-zinc-500 hover:text-white transition-colors">繁 (HKD)</button>
+                        <button onclick="setLang('sc')" id="btn-lang-sc" class="px-2 py-1 rounded text-zinc-500 hover:text-white transition-colors">简 (RMB)</button>
                     </div>
 
                     <button onclick="toggleMobileMenu()" class="lg:hidden text-zinc-400 hover:text-white p-2 border border-zinc-800 rounded bg-zinc-900">
@@ -144,10 +143,10 @@
 
         <!-- Mobile Drawer Menu -->
         <div id="mobile-menu" class="hidden lg:hidden bg-zinc-950 border-b border-zinc-800 px-4 py-4 space-y-2 font-mono text-xs uppercase tracking-wider">
-            <div class="flex space-x-2 mb-4 pb-4 border-b border-zinc-800">
-                <button onclick="setLang('en')" class="px-3 py-1 rounded bg-zinc-800 text-white border border-zinc-700">EN</button>
-                <button onclick="setLang('tc')" class="px-3 py-1 rounded bg-zinc-900 text-zinc-400 border border-zinc-800">繁體</button>
-                <button onclick="setLang('sc')" class="px-3 py-1 rounded bg-zinc-900 text-zinc-400 border border-zinc-800">简体</button>
+            <div class="flex space-x-2 mb-4 pb-4 border-b border-zinc-800 overflow-x-auto">
+                <button onclick="setLang('en'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-800 text-white border border-zinc-700 whitespace-nowrap">EN (USD)</button>
+                <button onclick="setLang('tc'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-900 text-zinc-400 border border-zinc-800 whitespace-nowrap">繁體 (HKD)</button>
+                <button onclick="setLang('sc'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-900 text-zinc-400 border border-zinc-800 whitespace-nowrap">简体 (RMB)</button>
             </div>
             <a href="#vessel" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_1">1. Platform Setup</a>
             <a href="#moat" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_2">2. Economics</a>
@@ -227,9 +226,7 @@
                 </p>
             </div>
 
-            <!-- 4 Pillar Grid Integration -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
                 <!-- Pillar 01: Carbon Hull -->
                 <div class="data-card p-6 rounded-lg relative overflow-hidden">
                     <div class="text-xs font-mono text-zinc-500 uppercase mb-1" data-i18n="p1_tag">01. Platform Dynamics</div>
@@ -272,20 +269,19 @@
                     </div>
                 </div>
 
-                <!-- Pillar 04: Disruption Economics -->
+                <!-- Pillar 04: Disruption Economics (Dynamic Currency) -->
                 <div class="data-card p-6 rounded-lg relative overflow-hidden">
                     <div class="text-xs font-mono text-zinc-500 uppercase mb-1" data-i18n="p4_tag">04. Route Yield</div>
                     <div class="text-3xl font-mono font-bold text-white mb-2">78%</div>
                     <h3 class="text-sm font-mono font-bold text-zinc-300 mb-2 uppercase" data-i18n="p4_title">OPEX Savings</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed font-sans" data-i18n="p4_desc">
-                        Direct electric pod drives and massive drag reduction yield ~$4.90/NM energy costs, compared to ~$22.50/NM for legacy marine gas oil turbines.
+                    <p class="text-xs text-zinc-400 leading-relaxed font-sans" id="ui-p4-desc">
+                        Direct electric pod drives yield ~$4.90 USD/NM energy costs, compared to ~$22.50 USD/NM for legacy marine gas oil turbines.
                     </p>
                     <div class="mt-4 pt-3 border-t border-zinc-800 text-[11px] font-mono text-zinc-500 flex justify-between">
                         <span data-i18n="p4_sub">Energy OPEX:</span>
-                        <span class="text-tech-emerald font-bold">~$4.90 / NM</span>
+                        <span class="text-tech-emerald font-bold" id="ui-p4-metric">~$4.90 USD / NM</span>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -311,7 +307,7 @@
                         <h3 class="text-lg font-mono font-bold text-white" data-i18n="calc_sim_title">Fleet OPEX Projection Model</h3>
                     </div>
                     <div class="text-[11px] font-mono text-zinc-500">
-                        <span data-i18n="calc_sim_base">BASELINE MGO DIESEL:</span> <span class="text-zinc-300 font-bold">$2.20 / Liter</span>
+                        <span data-i18n="calc_sim_base">BASELINE MGO DIESEL:</span> <span class="text-zinc-300 font-bold" id="ui-calc-diesel-price">$2.20 USD / Liter</span>
                     </div>
                 </div>
 
@@ -450,7 +446,6 @@
                 <div class="overflow-x-auto">
                     <table class="w-full text-left text-xs font-mono">
                         <tbody class="divide-y divide-zinc-800">
-                            <!-- Category 1 -->
                             <tr class="bg-zinc-950/60">
                                 <th colspan="2" class="py-2.5 px-4 text-zinc-400 uppercase font-bold text-[11px] tracking-wider" data-i18n="t_cat1">1. Vessel Dimensions & Capacity</th>
                             </tr>
@@ -467,7 +462,6 @@
                                 <td class="py-2.5 px-4 text-zinc-300" data-i18n="t_c1_v3">150 Passengers + 4 Crew</td>
                             </tr>
 
-                            <!-- Category 2 -->
                             <tr class="bg-zinc-950/60">
                                 <th colspan="2" class="py-2.5 px-4 text-zinc-400 uppercase font-bold text-[11px] tracking-wider" data-i18n="t_cat2">2. Hydrodynamics & Efficiency</th>
                             </tr>
@@ -484,7 +478,6 @@
                                 <td class="py-2.5 px-4 text-zinc-300" data-i18n="t_c2_v3">&lt; 0.15m at Cruise Speed</td>
                             </tr>
 
-                            <!-- Category 3 -->
                             <tr class="bg-zinc-950/60">
                                 <th colspan="2" class="py-2.5 px-4 text-zinc-400 uppercase font-bold text-[11px] tracking-wider" data-i18n="t_cat3">3. Power & Infrastructure Target</th>
                             </tr>
@@ -501,7 +494,6 @@
                                 <td class="py-2.5 px-4 text-zinc-300" data-i18n="t_c3_v3">45 NM (Incorporating 20% Regulatory Safety Reserve)</td>
                             </tr>
 
-                            <!-- Category 4: Flight Control System -->
                             <tr class="bg-zinc-950/60">
                                 <th colspan="2" class="py-2.5 px-4 text-zinc-400 uppercase font-bold text-[11px] tracking-wider" data-i18n="t_cat4">4. Flight Control System (FCS)</th>
                             </tr>
@@ -518,7 +510,6 @@
                                 <td class="py-2.5 px-4 text-zinc-300" data-i18n="t_c4_v3">Inertial Measurement Units (IMUs), Ultrasonic Height, Forward LiDAR</td>
                             </tr>
 
-                            <!-- Category 5: Dockside Infrastructure -->
                             <tr class="bg-zinc-950/60">
                                 <th colspan="2" class="py-2.5 px-4 text-zinc-400 uppercase font-bold text-[11px] tracking-wider" data-i18n="t_cat5">5. Shore Charging & Energy Buffer</th>
                             </tr>
@@ -601,8 +592,8 @@
                         <tbody class="text-zinc-300 divide-y divide-zinc-800/50">
                             <tr>
                                 <td class="py-2 text-zinc-400" data-i18n="dr_c3_r1">Energy/Fuel</td>
-                                <td class="py-2" data-i18n="dr_c3_v1a">~$22.50 / NM</td>
-                                <td class="py-2 text-tech-emerald" data-i18n="dr_c3_v1b">~$4.90 / NM</td>
+                                <td class="py-2" id="ui-dr-diesel">~$22.50 USD / NM</td>
+                                <td class="py-2 text-tech-emerald" id="ui-dr-electric">~$4.90 USD / NM</td>
                             </tr>
                             <tr>
                                 <td class="py-2 text-zinc-400" data-i18n="dr_c3_r2">Powertrain Maintenance</td>
@@ -656,7 +647,16 @@
     <!-- INTERACTIVE JAVASCRIPT ENGINES -->
     <script>
         
-        // --- 1. LANGUAGE LOCALIZATION ENGINE ---
+        // --- 1. LANGUAGE & CURRENCY LOCALIZATION ENGINE ---
+        // FX Rates based on Oct 2026 Market Data
+        const fxMap = {
+            'en': { rate: 1.00, symbol: '$', code: 'USD', m_suffix: ' M' },
+            'tc': { rate: 7.85, symbol: 'HK$', code: 'HKD', m_suffix: 'M' },
+            'sc': { rate: 6.70, symbol: '¥', code: 'RMB', m_suffix: 'M' }
+        };
+
+        let currentLang = 'en';
+
         const translations = {
             'en': {
                 'nav_subtitle': 'Deep Tech Concept Proposal',
@@ -675,7 +675,7 @@
                 'p1_tag': '01. Platform Dynamics', 'p1_title': 'Drag Reduction', 'p1_desc': 'Fully submerged T-foils lift the hull completely above the waves at 18+ knots, decoupling the vessel from hydrodynamic displacement drag.', 'p1_sub': 'Cruise Power:',
                 'p2_tag': '02. Core IP Moat', 'p2_title': 'Active FCS Loop', 'p2_desc': 'Triple-redundant Fly-by-Wire software reads IMUs and LiDAR, adjusting submerged flaps 100x/sec to neutralize Victoria Harbour wake pitch and roll.', 'p2_sub': 'Wake Wash:',
                 'p3_tag': '03. Infrastructure', 'p3_title': 'Shore BESS Buffer', 'p3_desc': 'Dockside battery storage buffers the 3.5 MW Megawatt Charging System (MCS), enabling rapid turnarounds without crashing the local municipal grid.', 'p3_sub': 'Charge Rate:',
-                'p4_tag': '04. Route Yield', 'p4_title': 'OPEX Savings', 'p4_desc': 'Direct electric pod drives and massive drag reduction yield ~$4.90/NM energy costs, compared to ~$22.50/NM for legacy marine gas oil turbines.', 'p4_sub': 'Energy OPEX:',
+                'p4_tag': '04. Route Yield', 'p4_title': 'OPEX Savings', 'p4_sub': 'Energy OPEX:',
                 
                 'calc_tag': '3. Strategic Route Analytics', 'calc_title': 'GBA Route Feasibility Calculator',
                 'calc_desc': 'Simulate the financial viability of replacing legacy diesel vessels with the EF-150 platform across major Greater Bay Area transit corridors. (Mathematics corrected for physics constraints).',
@@ -724,7 +724,7 @@
                 'dr_c2_b3': '<strong>Wake Exemption:</strong> Seeking clearance for elevated speeds in inner harbor limits due to < 0.15m wake wash profile.',
                 'dr_card3_title': 'EF-150 Fleet Economics Breakdown',
                 'dr_c3_h1': 'Metric', 'dr_c3_h2': 'Legacy Diesel', 'dr_c3_h3': 'EF-150 Electric',
-                'dr_c3_r1': 'Energy/Fuel', 'dr_c3_v1a': '~$22.50 / NM', 'dr_c3_v1b': '~$4.90 / NM',
+                'dr_c3_r1': 'Energy/Fuel',
                 'dr_c3_r2': 'Powertrain Maintenance', 'dr_c3_v2a': 'High (Gas Turbines)', 'dr_c3_v2b': 'Low (Pod Drives)',
                 'dr_c3_r3': 'Crew Complement', 'dr_c3_v3a': 'Standard (8-10)', 'dr_c3_v3b': 'Reduced (4)',
                 'dr_card4_title': 'MCS Terminal & BESS Integration',
@@ -752,7 +752,7 @@
                 'p1_tag': '01. 平台動力學', 'p1_title': '阻力減免', 'p1_desc': '全浸沒式 T 型水翼在 18 節以上速度時將船體完全抬離水面，使船隻與水動力排水阻力解耦。', 'p1_sub': '巡航功率:',
                 'p2_tag': '02. 核心技術護城河', 'p2_title': '主動飛控迴路', 'p2_desc': '三重冗餘的線傳飛控軟件讀取 IMU 和光學雷達數據，每秒 100 次調整浸沒式襟翼，以抵消維多利亞港尾流引起的俯仰和側傾。', 'p2_sub': '尾流激浪:',
                 'p3_tag': '03. 基礎設施', 'p3_title': '岸電 BESS 緩衝', 'p3_desc': '碼頭電池儲能系統緩衝 3.5 MW 兆瓦級充電系統 (MCS)，實現快速週轉而不會衝擊當地市政電網。', 'p3_sub': '充電速率:',
-                'p4_tag': '04. 航線收益', 'p4_title': '運營成本節省', 'p4_desc': '直接電力吊艙驅動和大幅阻力減免帶來約 $4.90/海里的能源成本，而傳統船用輕柴油燃氣輪機為約 $22.50/海里。', 'p4_sub': '能源運營成本:',
+                'p4_tag': '04. 航線收益', 'p4_title': '運營成本節省', 'p4_sub': '能源運營成本:',
                 
                 'calc_tag': '3. 戰略航線分析', 'calc_title': '大灣區航線可行性計算器',
                 'calc_desc': '模擬使用 EF-150 平台替換大灣區主要交通走廊傳統柴油船隊的財務可行性。（數學模型已根據物理極限進行修正）。',
@@ -801,7 +801,7 @@
                 'dr_c2_b3': '<strong>尾流豁免:</strong> 憑藉小於 0.15 米的尾流激浪特性，尋求在內港限制區內提高航速的許可。',
                 'dr_card3_title': 'EF-150 船隊經濟性細目',
                 'dr_c3_h1': '指標', 'dr_c3_h2': '傳統柴油', 'dr_c3_h3': 'EF-150 電動',
-                'dr_c3_r1': '能源/燃料', 'dr_c3_v1a': '~$22.50 / 海里', 'dr_c3_v1b': '~$4.90 / 海里',
+                'dr_c3_r1': '能源/燃料',
                 'dr_c3_r2': '動力系統維護', 'dr_c3_v2a': '高 (燃氣輪機)', 'dr_c3_v2b': '低 (吊艙驅動)',
                 'dr_c3_r3': '船員配置', 'dr_c3_v3a': '標準 (8-10)', 'dr_c3_v3b': '減少 (4)',
                 'dr_card4_title': 'MCS 終端與 BESS 整合',
@@ -829,7 +829,7 @@
                 'p1_tag': '01. 平台动力学', 'p1_title': '阻力减免', 'p1_desc': '全浸没式 T 型水翼在 18 节以上速度时将船体完全抬离水面，使船只与水动力排水阻力解耦。', 'p1_sub': '巡航功率:',
                 'p2_tag': '02. 核心技术护城河', 'p2_title': '主动飞控回路', 'p2_desc': '三重冗余的线传飞控软件读取 IMU 和光学雷达数据，每秒 100 次调整浸没式襟翼，以抵消维多利亚港尾流引起的俯仰和侧倾。', 'p2_sub': '尾流激浪:',
                 'p3_tag': '03. 基础设施', 'p3_title': '岸电 BESS 缓冲', 'p3_desc': '码头电池储能系统缓冲 3.5 MW 兆瓦级充电系统 (MCS)，实现快速周转而不会冲击当地市政电网。', 'p3_sub': '充电速率:',
-                'p4_tag': '04. 航线收益', 'p4_title': '运营成本节省', 'p4_desc': '直接电力吊舱驱动和大幅阻力减免带来约 $4.90/海里的能源成本，而传统船用轻柴油燃气轮机为约 $22.50/海里。', 'p4_sub': '能源运营成本:',
+                'p4_tag': '04. 航线收益', 'p4_title': '运营成本节省', 'p4_sub': '能源运营成本:',
                 
                 'calc_tag': '3. 战略航线分析', 'calc_title': '大湾区航线可行性计算器',
                 'calc_desc': '模拟使用 EF-150 平台替换大湾区主要交通走廊传统柴油船队的财务可行性。（数学模型已根据物理极限进行修正）。',
@@ -878,7 +878,7 @@
                 'dr_c2_b3': '<strong>尾流豁免:</strong> 凭借小于 0.15 米的尾流激浪特性，寻求在内港限制区内提高航速的许可。',
                 'dr_card3_title': 'EF-150 船队经济性细目',
                 'dr_c3_h1': '指标', 'dr_c3_h2': '传统柴油', 'dr_c3_h3': 'EF-150 电动',
-                'dr_c3_r1': '能源/燃料', 'dr_c3_v1a': '~$22.50 / 海里', 'dr_c3_v1b': '~$4.90 / 海里',
+                'dr_c3_r1': '能源/燃料',
                 'dr_c3_r2': '动力系统维护', 'dr_c3_v2a': '高 (燃气轮机)', 'dr_c3_v2b': '低 (吊舱驱动)',
                 'dr_c3_r3': '船员配置', 'dr_c3_v3a': '标准 (8-10)', 'dr_c3_v3b': '减少 (4)',
                 'dr_card4_title': 'MCS 终端与 BESS 整合',
@@ -892,16 +892,31 @@
         };
 
         function setLang(lang) {
-            // Update Text Elements (Including HTML injection for bold tags in the Data Room)
-            const elements = document.querySelectorAll('[data-i18n]');
-            elements.forEach(el => {
+            currentLang = lang;
+            const fx = fxMap[lang];
+            const t = translations[lang];
+
+            // 1. Update Static Text Elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) {
-                    el.innerHTML = translations[lang][key]; // Changed from innerText to innerHTML to support <strong> tags
-                }
+                if (t[key]) el.innerHTML = t[key];
             });
 
-            // Update Dropdown Values for Calculator
+            // 2. Format Static Hardcoded Currency Sentences
+            const dieselBase = (22.50 * fx.rate).toFixed(2);
+            const electricBase = (4.90 * fx.rate).toFixed(2);
+            
+            const p4Desc = lang === 'en' 
+                ? `Direct electric pod drives yield ~${fx.symbol}${electricBase} ${fx.code}/NM energy costs, compared to ~${fx.symbol}${dieselBase} ${fx.code}/NM for legacy marine gas oil turbines.`
+                : `直接電力吊艙驅動(直接电力吊舱驱动)和大幅阻力減免帶來約 ${fx.symbol}${electricBase} ${fx.code}/海里的能源成本，而傳統船用輕柴油燃氣輪機為約 ${fx.symbol}${dieselBase} ${fx.code}/海里。`.replace(/(\(.*?\))/g, lang === 'tc' ? '' : '');
+            
+            document.getElementById('ui-p4-desc').innerText = lang === 'tc' ? p4Desc.replace('驱动', '驅動').replace('减免', '減免').replace('带来约', '帶來約').replace('传统', '傳統').replace('轻', '輕').replace('燃气', '燃氣').replace('轮机', '輪機').replace('为约', '為約') : (lang === 'sc' ? p4Desc.replace('電力吊艙', '电力吊舱').replace('帶來約', '带来约').replace('傳統', '传统').replace('輕', '轻').replace('燃氣輪機', '燃气轮机').replace('為約', '为约') : p4Desc);
+            
+            document.getElementById('ui-p4-metric').innerText = `~${fx.symbol}${electricBase} ${fx.code} / NM`;
+            document.getElementById('ui-dr-diesel').innerText = `~${fx.symbol}${dieselBase} ${fx.code} / NM`;
+            document.getElementById('ui-dr-electric').innerText = `~${fx.symbol}${electricBase} ${fx.code} / NM`;
+
+            // 3. Update Dropdown Options
             const routeSelect = document.getElementById('calc-route');
             if(routeSelect) {
                 const currentVal = routeSelect.value;
@@ -915,7 +930,7 @@
                 routeSelect.value = currentVal;
             }
 
-            // Update UI Button Styles
+            // 4. Update Button Styles
             ['en', 'tc', 'sc'].forEach(l => {
                 const btn = document.getElementById('btn-lang-' + l);
                 if(btn) {
@@ -929,7 +944,7 @@
                 }
             });
             
-            // Re-run calculator to update dynamic text elements
+            // 5. Re-run calculator to update dynamic currency elements
             runRouteCalculator();
         }
 
@@ -938,7 +953,6 @@
             const menu = document.getElementById('mobile-menu');
             const iconOpen = document.getElementById('menu-icon-open');
             const iconClose = document.getElementById('menu-icon-close');
-
             if (menu.classList.contains('hidden')) {
                 menu.classList.remove('hidden');
                 iconOpen.classList.add('hidden');
@@ -951,26 +965,25 @@
         }
 
         const routeProfiles = {
-            'hk-shenzhen': { name: 'HK Central ⟷ Shenzhen Shekou', distanceNM: 22, dieselTimeMins: 48, ef150TimeMins: 36, dieselFuelPerNM: 17.5, electricKwhPerNM: 30.0 },
-            'hkg-szx': { name: 'HKG SkyPier ⟷ Shenzhen Airport', distanceNM: 25, dieselTimeMins: 45, ef150TimeMins: 40, dieselFuelPerNM: 17.8, electricKwhPerNM: 30.0 },
-            'hk-macau': { name: 'HK Central ⟷ Macau Taipa', distanceNM: 36, dieselTimeMins: 58, ef150TimeMins: 55, dieselFuelPerNM: 18.5, electricKwhPerNM: 30.0 },
-            'hk-airport': { name: 'HK Central ⟷ HKG SkyPier Airport', distanceNM: 17, dieselTimeMins: 42, ef150TimeMins: 28, dieselFuelPerNM: 17.0, electricKwhPerNM: 30.0 },
-            'hk-zhuhai': { name: 'HK Central ⟷ Zhuhai Jiuzhou', distanceNM: 35, dieselTimeMins: 55, ef150TimeMins: 53, dieselFuelPerNM: 18.2, electricKwhPerNM: 30.0 }
+            'hk-shenzhen': { distanceNM: 22, dieselTimeMins: 48, ef150TimeMins: 36, dieselFuelPerNM: 17.5, electricKwhPerNM: 30.0 },
+            'hkg-szx': { distanceNM: 25, dieselTimeMins: 45, ef150TimeMins: 40, dieselFuelPerNM: 17.8, electricKwhPerNM: 30.0 },
+            'hk-macau': { distanceNM: 36, dieselTimeMins: 58, ef150TimeMins: 55, dieselFuelPerNM: 18.5, electricKwhPerNM: 30.0 },
+            'hk-airport': { distanceNM: 17, dieselTimeMins: 42, ef150TimeMins: 28, dieselFuelPerNM: 17.0, electricKwhPerNM: 30.0 },
+            'hk-zhuhai': { distanceNM: 35, dieselTimeMins: 55, ef150TimeMins: 53, dieselFuelPerNM: 18.2, electricKwhPerNM: 30.0 }
         };
 
         function runRouteCalculator() {
             const routeKey = document.getElementById('calc-route').value;
             const fleet = parseInt(document.getElementById('calc-fleet').value);
             const trips = parseInt(document.getElementById('calc-trips').value);
+            const fx = fxMap[currentLang];
 
-            // Determine active language for dynamic suffix
-            const activeLangBtn = document.querySelector('.bg-zinc-800.text-white[id^="btn-lang-"]');
-            const lang = activeLangBtn ? activeLangBtn.id.replace('btn-lang-', '') : 'en';
-            const vesselSuffix = lang === 'en' ? (fleet === 1 ? ' VESSEL' : ' VESSELS') : (lang === 'tc' ? ' 艘' : ' 艘');
-            const tripSuffix = lang === 'en' ? ' TRIPS' : (lang === 'tc' ? ' 次' : ' 次');
-            const minSuffix = lang === 'en' ? ' MINS' : (lang === 'tc' ? ' 分鐘' : ' 分钟');
-            const yrsSuffix = lang === 'en' ? ' YRS' : (lang === 'tc' ? ' 年' : ' 年');
-            const diffSuffix = lang === 'en' ? ' Mins Faster than Diesel' : (lang === 'tc' ? ' 分鐘 (比傳統快)' : ' 分钟 (比传统快)');
+            // Localized Suffixes
+            const vesselSuffix = currentLang === 'en' ? (fleet === 1 ? ' VESSEL' : ' VESSELS') : ' 艘';
+            const tripSuffix = currentLang === 'en' ? ' TRIPS' : ' 次';
+            const minSuffix = currentLang === 'en' ? ' MINS' : (currentLang === 'tc' ? ' 分鐘' : ' 分钟');
+            const yrsSuffix = currentLang === 'en' ? ' YRS' : ' 年';
+            const diffSuffix = currentLang === 'en' ? ' Mins Faster than Diesel' : (currentLang === 'tc' ? ' 分鐘 (比傳統快)' : ' 分钟 (比传统快)');
 
             document.getElementById('calc-fleet-val').innerText = fleet + vesselSuffix;
             document.getElementById('calc-trips-val').innerText = trips + tripSuffix;
@@ -978,37 +991,46 @@
             const r = routeProfiles[routeKey];
             if (!r) return;
 
-            const dieselPricePerLiter = 2.20; 
-            const electricityPricePerKwh = 0.16; 
+            // BASE USD COSTS -> CONVERTED VIA FX
+            const dieselPricePerLiterUSD = 2.20; 
+            const electricityPricePerKwhUSD = 0.16; 
+            
+            const localDieselPrice = (dieselPricePerLiterUSD * fx.rate).toFixed(2);
+            document.getElementById('ui-calc-diesel-price').innerText = `${fx.symbol}${localDieselPrice} ${fx.code} / Liter`;
+
             const annualNMTravelled = fleet * trips * r.distanceNM * 365;
 
             const annualDieselLiters = annualNMTravelled * r.dieselFuelPerNM;
-            const annualDieselCost = annualDieselLiters * dieselPricePerLiter;
+            const annualDieselCostUSD = annualDieselLiters * dieselPricePerLiterUSD;
             const annualElectricKwh = annualNMTravelled * r.electricKwhPerNM;
-            const annualElectricCost = annualElectricKwh * electricityPricePerKwh;
+            const annualElectricCostUSD = annualElectricKwh * electricityPricePerKwhUSD;
 
-            const annualSavings = Math.max(0, annualDieselCost - annualElectricCost);
-            const premiumCostPerVessel = 3500000;
-            const fleetPremiumCapEx = fleet * premiumCostPerVessel;
-            const paybackYears = annualSavings > 0 ? (fleetPremiumCapEx / annualSavings).toFixed(1) : 'N/A';
+            const annualSavingsUSD = Math.max(0, annualDieselCostUSD - annualElectricCostUSD);
+            const premiumCostPerVesselUSD = 3500000;
+            const fleetPremiumCapExUSD = fleet * premiumCostPerVesselUSD;
+            const paybackYears = annualSavingsUSD > 0 ? (fleetPremiumCapExUSD / annualSavingsUSD).toFixed(1) : 'N/A';
             const co2TonsReduced = Math.round((annualDieselLiters * 2.68) / 1000);
             const timeSavedMins = r.dieselTimeMins - r.ef150TimeMins;
 
-            document.getElementById('calc-out-savings').innerText = '$' + (annualSavings / 1000000).toFixed(2) + ' M';
+            // FX Conversion for UI
+            const localAnnualSavings = (annualSavingsUSD * fx.rate) / 1000000;
+            const localAnnualDiesel = (annualDieselCostUSD * fx.rate) / 1000000;
+            const localAnnualElectric = (annualElectricCostUSD * fx.rate) / 1000000;
+
+            document.getElementById('calc-out-savings').innerText = `${fx.symbol}${localAnnualSavings.toFixed(2)}${fx.m_suffix}`;
             document.getElementById('calc-out-payback').innerText = paybackYears + yrsSuffix;
             document.getElementById('calc-out-co2').innerText = co2TonsReduced.toLocaleString() + ' T';
             document.getElementById('calc-out-time').innerText = r.ef150TimeMins + minSuffix;
             document.getElementById('calc-out-time-diff').innerText = timeSavedMins + diffSuffix;
-            document.getElementById('calc-bar-diesel-text').innerText = '$' + (annualDieselCost / 1000000).toFixed(2) + 'M';
-            document.getElementById('calc-bar-ef150-text').innerText = '$' + (annualElectricCost / 1000000).toFixed(2) + 'M';
+            document.getElementById('calc-bar-diesel-text').innerText = `${fx.symbol}${localAnnualDiesel.toFixed(2)}${fx.m_suffix}`;
+            document.getElementById('calc-bar-ef150-text').innerText = `${fx.symbol}${localAnnualElectric.toFixed(2)}${fx.m_suffix}`;
 
-            const efPercent = Math.round((annualElectricCost / annualDieselCost) * 100);
+            const efPercent = Math.round((annualElectricCostUSD / annualDieselCostUSD) * 100);
             document.getElementById('calc-bar-ef150').style.width = Math.max(8, efPercent) + '%';
         }
 
         window.addEventListener('DOMContentLoaded', () => {
-            runRouteCalculator();
-            setLang('en');
+            setLang('en'); // Defaults to USD/EN
         });
     </script>
 </body>
