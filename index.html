@@ -120,8 +120,8 @@
 
                 <!-- Tools & Mobile Navigation -->
                 <div class="flex items-center space-x-4 ml-auto">
-                    <span class="hidden md:inline-block bg-zinc-800/40 text-tech-cyan border border-tech-cyan/30 px-2 py-0.5 rounded text-[9px] font-mono tracking-widest whitespace-nowrap">
-                        HKSTP INCU-TECH
+                    <span class="hidden md:inline-block bg-zinc-800/40 text-tech-cyan border border-tech-cyan/30 px-2 py-0.5 rounded text-[9px] font-mono tracking-widest whitespace-nowrap" data-i18n="nav_track">
+                        HKSTP INCU-TECH TRACK
                     </span>
 
                     <div class="hidden sm:flex bg-zinc-900 border border-zinc-800 rounded p-0.5 text-[10px] font-mono whitespace-nowrap">
@@ -165,14 +165,14 @@
                     <span class="font-semibold uppercase tracking-wider" data-i18n="badge_hkstp">HKSTP Incubation & Feasibility Study</span>
                 </div>
                 <div class="text-[11px] font-mono text-zinc-500">
-                    DOC ID: <span class="text-white font-bold">AM-EF150-FS-2026</span>
+                    <span data-i18n="doc_id_label">DOC ID:</span> <span class="text-white font-bold">AM-EF150-FS-2026</span>
                 </div>
             </div>
 
             <div class="grid lg:grid-cols-12 gap-8 items-start">
                 <div class="lg:col-span-7 space-y-5">
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-mono font-bold text-white tracking-tight leading-tight uppercase">
-                        BAYWING EF-150 EXPRESS
+                        <span data-i18n="hero_title">BAYWING EF-150 EXPRESS</span>
                         <span class="block text-zinc-400 text-xl sm:text-2xl font-sans font-normal mt-2" data-i18n="hero_subtitle">Active Fly-by-Wire Electric Hydrofoil Platform</span>
                     </h1>
                     <p class="text-sm md:text-base text-zinc-400 leading-relaxed font-sans max-w-2xl" data-i18n="hero_desc">
@@ -180,11 +180,11 @@
                     </p>
                     <div class="pt-2 flex flex-wrap gap-3">
                         <a href="#demonstrator" class="inline-flex items-center space-x-2 px-4 py-2 bg-tech-cyan/10 border border-tech-cyan/40 text-tech-cyan text-xs font-mono rounded hover:bg-tech-cyan/20 transition-colors">
-                            <span>EXPLORE 1:8 TECH DEMONSTRATOR</span>
+                            <span data-i18n="hero_btn_explore">EXPLORE 1:8 TECH DEMONSTRATOR</span>
                             <span>→</span>
                         </a>
                         <a href="#portal" class="inline-flex items-center space-x-2 px-4 py-2 bg-zinc-800 border border-zinc-700 text-zinc-300 text-xs font-mono rounded hover:bg-zinc-750 transition-colors">
-                            <span>$0 FOUNDER CASH FUNDING PLAN</span>
+                            <span data-i18n="hero_btn_fund">$0 FOUNDER CASH FUNDING PLAN</span>
                         </a>
                     </div>
                 </div>
@@ -202,7 +202,7 @@
                         </div>
                         <div class="p-3 bg-zinc-900 rounded border border-zinc-800">
                             <div class="text-[10px] font-mono text-zinc-500 uppercase" data-i18n="spec_range">Effective Range</div>
-                            <div class="text-2xl font-mono font-bold text-white mt-1">45.0 <span class="text-xs text-zinc-400">NM</span></div>
+                            <div class="text-2xl font-mono font-bold text-white mt-1">45.0 <span class="text-xs text-zinc-400" data-i18n="unit_nm">NM</span></div>
                             <div class="text-[9px] font-mono text-zinc-600 mt-1" data-i18n="spec_range_sub">(w/ 20% Regulatory Reserve)</div>
                         </div>
                         <div class="p-3 bg-zinc-900 rounded border border-zinc-800">
@@ -240,48 +240,48 @@
                 <div class="data-card p-6 rounded-lg">
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider" data-i18n="d1_card1_tag">Avionics & Sensor Fusion</span>
-                        <span class="text-[10px] font-mono text-tech-cyan bg-tech-cyan/10 px-2 py-0.5 rounded border border-tech-cyan/30">100 Hz Loop</span>
+                        <span class="text-[10px] font-mono text-tech-cyan bg-tech-cyan/10 px-2 py-0.5 rounded border border-tech-cyan/30" data-i18n="d1_card1_badge">100 Hz Loop</span>
                     </div>
                     <h3 class="text-base font-mono font-bold text-white mb-2" data-i18n="d1_card1_title">Autonomous Flight Controller</h3>
                     <p class="text-xs text-zinc-400 leading-relaxed font-sans mb-4" data-i18n="d1_card1_desc">
                         Dual deterministic microcontrollers running real-time RTOS. Ingests dual IMUs, high-speed ultrasonic ride-height sensors, and a forward-scanning micro-LiDAR for wave feedforward compensation.
                     </p>
                     <ul class="text-[11px] font-mono text-zinc-400 space-y-1.5 border-t border-zinc-800 pt-3">
-                        <li class="flex justify-between"><span>Compute:</span> <span class="text-zinc-200">STM32H7 + Jetson Orin Nano</span></li>
-                        <li class="flex justify-between"><span>Latency:</span> <span class="text-tech-emerald">&lt; 8ms Actuator Response</span></li>
-                        <li class="flex justify-between"><span>Telemetry:</span> <span class="text-zinc-200">4G/5G + LoRa Long Range</span></li>
+                        <li class="flex justify-between"><span data-i18n="d1_c1_lbl1">Compute:</span> <span class="text-zinc-200" data-i18n="d1_c1_val1">STM32H7 + Jetson Orin Nano</span></li>
+                        <li class="flex justify-between"><span data-i18n="d1_c1_lbl2">Latency:</span> <span class="text-tech-emerald" data-i18n="d1_c1_val2">&lt; 8ms Actuator Response</span></li>
+                        <li class="flex justify-between"><span data-i18n="d1_c1_lbl3">Telemetry:</span> <span class="text-zinc-200" data-i18n="d1_c1_val3">4G/5G + LoRa Long Range</span></li>
                     </ul>
                 </div>
 
                 <div class="data-card p-6 rounded-lg">
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider" data-i18n="d1_card2_tag">Hydrodynamics & Scaling</span>
-                        <span class="text-[10px] font-mono text-tech-emerald bg-tech-emerald/10 px-2 py-0.5 rounded border border-tech-emerald/30">Froude Scaled</span>
+                        <span class="text-[10px] font-mono text-tech-emerald bg-tech-emerald/10 px-2 py-0.5 rounded border border-tech-emerald/30" data-i18n="d1_card2_badge">Froude Scaled</span>
                     </div>
                     <h3 class="text-base font-mono font-bold text-white mb-2" data-i18n="d1_card2_title">True Dynamic Similarity</h3>
                     <p class="text-xs text-zinc-400 leading-relaxed font-sans mb-4" data-i18n="d1_card2_desc">
-                        Scaled strictly according to Froude number criteria ($Fn = v/\sqrt{gL}$). Operating at 13.4 knots simulates the wave-making, cavitation boundaries, and flap dynamics of the full-scale vessel at 38 knots.
+                        Scaled strictly according to Froude number criteria (Fn = v/&radic;(gL)). Operating at 13.4 knots simulates the wave-making, cavitation boundaries, and flap dynamics of the full-scale vessel at 38 knots.
                     </p>
                     <ul class="text-[11px] font-mono text-zinc-400 space-y-1.5 border-t border-zinc-800 pt-3">
-                        <li class="flex justify-between"><span>Scale Factor:</span> <span class="text-zinc-200">1:8 Linear ($\lambda = 8$)</span></li>
-                        <li class="flex justify-between"><span>Model Speed:</span> <span class="text-tech-emerald">13.4 Knots (24.8 km/h)</span></li>
-                        <li class="flex justify-between"><span>Model Mass:</span> <span class="text-zinc-200">~109 kg (Displacement)</span></li>
+                        <li class="flex justify-between"><span data-i18n="d1_c2_lbl1">Scale Factor:</span> <span class="text-zinc-200" data-i18n="d1_c2_val1">1:8 Linear (&lambda; = 8)</span></li>
+                        <li class="flex justify-between"><span data-i18n="d1_c2_lbl2">Model Speed:</span> <span class="text-tech-emerald" data-i18n="d1_c2_val2">13.4 Knots (24.8 km/h)</span></li>
+                        <li class="flex justify-between"><span data-i18n="d1_c2_lbl3">Model Mass:</span> <span class="text-zinc-200" data-i18n="d1_c2_val3">~109 kg (Displacement)</span></li>
                     </ul>
                 </div>
 
                 <div class="data-card p-6 rounded-lg">
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider" data-i18n="d1_card3_tag">Zero-Grid R&D Deployment</span>
-                        <span class="text-[10px] font-mono text-tech-amber bg-tech-amber/10 px-2 py-0.5 rounded border border-tech-amber/30">Low OPEX Testing</span>
+                        <span class="text-[10px] font-mono text-tech-amber bg-tech-amber/10 px-2 py-0.5 rounded border border-tech-amber/30" data-i18n="d1_card3_badge">Low OPEX Testing</span>
                     </div>
                     <h3 class="text-base font-mono font-bold text-white mb-2" data-i18n="d1_card3_title">Tolo Harbour Test Protocol</h3>
                     <p class="text-xs text-zinc-400 leading-relaxed font-sans mb-4" data-i18n="d1_card3_desc">
                         Tested directly offshore at Hong Kong Science Park (Pak Shek Kok waterfront / Tolo Harbour). Swappable 48V LFP batteries eliminate shore charging needs during R&D, slashing sea-trial costs.
                     </p>
                     <ul class="text-[11px] font-mono text-zinc-400 space-y-1.5 border-t border-zinc-800 pt-3">
-                        <li class="flex justify-between"><span>Test Location:</span> <span class="text-zinc-200">HKSTP Tolo Harbour Slipway</span></li>
-                        <li class="flex justify-between"><span>Battery:</span> <span class="text-zinc-200">2.5 kWh Swappable 48V LFP</span></li>
-                        <li class="flex justify-between"><span>Runtime / Pack:</span> <span class="text-tech-emerald">~45 Mins Foil-borne</span></li>
+                        <li class="flex justify-between"><span data-i18n="d1_c3_lbl1">Test Location:</span> <span class="text-zinc-200" data-i18n="d1_c3_val1">HKSTP Tolo Harbour Slipway</span></li>
+                        <li class="flex justify-between"><span data-i18n="d1_c3_lbl2">Battery:</span> <span class="text-zinc-200" data-i18n="d1_c3_val2">2.5 kWh Swappable 48V LFP</span></li>
+                        <li class="flex justify-between"><span data-i18n="d1_c3_lbl3">Runtime / Pack:</span> <span class="text-tech-emerald" data-i18n="d1_c3_val3">~45 Mins Foil-borne</span></li>
                     </ul>
                 </div>
 
@@ -306,45 +306,45 @@
                         <tbody class="divide-y divide-zinc-800 text-zinc-300">
                             <tr>
                                 <td class="py-2.5 px-4 text-zinc-400" data-i18n="d1_r1_lbl">Length Overall (LOA)</td>
-                                <td class="py-2.5 px-4">28.50 m (93.5 ft)</td>
-                                <td class="py-2.5 px-4 text-tech-cyan font-bold">3.56 m (11.7 ft)</td>
-                                <td class="py-2.5 px-4 text-zinc-500">1 : $\lambda$ ($\lambda = 8$)</td>
+                                <td class="py-2.5 px-4" data-i18n="d1_r1_ef">28.50 m (93.5 ft)</td>
+                                <td class="py-2.5 px-4 text-tech-cyan font-bold" data-i18n="d1_r1_d1">3.56 m (11.7 ft)</td>
+                                <td class="py-2.5 px-4 text-zinc-500" data-i18n="d1_r1_law">1 : &lambda; (&lambda; = 8)</td>
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-4 text-zinc-400" data-i18n="d1_r2_lbl">Foil Span (Beam)</td>
-                                <td class="py-2.5 px-4">9.80 m</td>
-                                <td class="py-2.5 px-4 text-tech-cyan font-bold">1.22 m</td>
-                                <td class="py-2.5 px-4 text-zinc-500">1 : $\lambda$</td>
+                                <td class="py-2.5 px-4" data-i18n="d1_r2_ef">9.80 m</td>
+                                <td class="py-2.5 px-4 text-tech-cyan font-bold" data-i18n="d1_r2_d1">1.22 m</td>
+                                <td class="py-2.5 px-4 text-zinc-500" data-i18n="d1_r2_law">1 : &lambda;</td>
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-4 text-zinc-400" data-i18n="d1_r3_lbl">All-Up Displacement Mass</td>
-                                <td class="py-2.5 px-4">~56,000 kg</td>
-                                <td class="py-2.5 px-4 text-tech-cyan font-bold">~109 kg</td>
-                                <td class="py-2.5 px-4 text-zinc-500">1 : $\lambda^3$ ($\times 1/512$)</td>
+                                <td class="py-2.5 px-4" data-i18n="d1_r3_ef">~56,000 kg</td>
+                                <td class="py-2.5 px-4 text-tech-cyan font-bold" data-i18n="d1_r3_d1">~109 kg</td>
+                                <td class="py-2.5 px-4 text-zinc-500" data-i18n="d1_r3_law">1 : &lambda;&sup3; (&times; 1/512)</td>
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-4 text-zinc-400" data-i18n="d1_r4_lbl">Cruise Take-off Speed</td>
-                                <td class="py-2.5 px-4">18.0 Knots (Take-off) / 38.0 Knots (Cruise)</td>
-                                <td class="py-2.5 px-4 text-tech-cyan font-bold">6.4 Knots (Take-off) / 13.4 Knots (Cruise)</td>
-                                <td class="py-2.5 px-4 text-zinc-500">1 : $\sqrt{\lambda}$ ($\times 1/2.83$)</td>
+                                <td class="py-2.5 px-4" data-i18n="d1_r4_ef">18.0 Knots (Take-off) / 38.0 Knots (Cruise)</td>
+                                <td class="py-2.5 px-4 text-tech-cyan font-bold" data-i18n="d1_r4_d1">6.4 Knots (Take-off) / 13.4 Knots (Cruise)</td>
+                                <td class="py-2.5 px-4 text-zinc-500" data-i18n="d1_r4_law">1 : &radic;&lambda; (&times; 1/2.83)</td>
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-4 text-zinc-400" data-i18n="d1_r5_lbl">Installed Powertrain</td>
-                                <td class="py-2.5 px-4">2x 650 kW Pod Drives (1,300 kW Total)</td>
-                                <td class="py-2.5 px-4 text-tech-cyan font-bold">2x 5.0 kW Brushless Pods (10 kW Total)</td>
-                                <td class="py-2.5 px-4 text-zinc-500">Power Reqd $\propto \lambda^{3.5}$</td>
+                                <td class="py-2.5 px-4" data-i18n="d1_r5_ef">2x 650 kW Pod Drives (1,300 kW Total)</td>
+                                <td class="py-2.5 px-4 text-tech-cyan font-bold" data-i18n="d1_r5_d1">2x 5.0 kW Brushless Pods (10 kW Total)</td>
+                                <td class="py-2.5 px-4 text-zinc-500" data-i18n="d1_r5_law">Power Reqd &propto; &lambda;<sup>3.5</sup></td>
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-4 text-zinc-400" data-i18n="d1_r6_lbl">Flight Controller Frequency</td>
-                                <td class="py-2.5 px-4">100 Hz Loop (Triple Redundant)</td>
-                                <td class="py-2.5 px-4 text-tech-cyan font-bold">100 Hz Loop (Deterministic Dual-Core)</td>
-                                <td class="py-2.5 px-4 text-zinc-500">Oversampled (Higher bandwidth vs scaled craft)</td>
+                                <td class="py-2.5 px-4" data-i18n="d1_r6_ef">100 Hz Loop (Triple Redundant)</td>
+                                <td class="py-2.5 px-4 text-tech-cyan font-bold" data-i18n="d1_r6_d1">100 Hz Loop (Deterministic Dual-Core)</td>
+                                <td class="py-2.5 px-4 text-zinc-500" data-i18n="d1_r6_law">Oversampled (Higher bandwidth vs scaled craft)</td>
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-4 text-zinc-400" data-i18n="d1_r7_lbl">Primary Development Phase</td>
-                                <td class="py-2.5 px-4">Phase 3 (Full Commercial Build)</td>
-                                <td class="py-2.5 px-4 text-tech-cyan font-bold">Phase 1 & 2 (HKSTP Incubation Core)</td>
-                                <td class="py-2.5 px-4 text-zinc-500">Zero-capex risk burn-in</td>
+                                <td class="py-2.5 px-4" data-i18n="d1_r7_ef">Phase 3 (Full Commercial Build)</td>
+                                <td class="py-2.5 px-4 text-tech-cyan font-bold" data-i18n="d1_r7_d1">Phase 1 & 2 (HKSTP Incubation Core)</td>
+                                <td class="py-2.5 px-4 text-zinc-500" data-i18n="d1_r7_law">Zero-capex risk burn-in</td>
                             </tr>
                         </tbody>
                     </table>
@@ -371,14 +371,14 @@
                 <!-- Pillar 01: Carbon Hull -->
                 <div class="data-card p-6 rounded-lg relative overflow-hidden">
                     <div class="text-xs font-mono text-zinc-500 uppercase mb-1" data-i18n="p1_tag">01. Platform Dynamics</div>
-                    <div class="text-3xl font-mono font-bold text-white mb-2">80%</div>
+                    <div class="text-3xl font-mono font-bold text-white mb-2" data-i18n="p1_metric">80%</div>
                     <h3 class="text-sm font-mono font-bold text-zinc-300 mb-2 uppercase" data-i18n="p1_title">Drag Reduction</h3>
                     <p class="text-xs text-zinc-400 leading-relaxed font-sans" data-i18n="p1_desc">
                         Fully submerged T-foils lift the hull completely above the waves at 18+ knots, decoupling the vessel from hydrodynamic displacement drag.
                     </p>
                     <div class="mt-4 pt-3 border-t border-zinc-800 text-[11px] font-mono text-zinc-500 flex justify-between">
                         <span data-i18n="p1_sub">Cruise Power:</span>
-                        <span class="text-white font-bold">~1,100 kW</span>
+                        <span class="text-white font-bold" data-i18n="p1_val">~1,100 kW</span>
                     </div>
                 </div>
 
@@ -392,7 +392,7 @@
                     </p>
                     <div class="mt-4 pt-3 border-t border-zinc-800 text-[11px] font-mono text-zinc-500 flex justify-between">
                         <span data-i18n="p2_sub">Wake Wash:</span>
-                        <span class="text-white font-bold">&lt;0.15m</span>
+                        <span class="text-white font-bold" data-i18n="p2_val">&lt;0.15m</span>
                     </div>
                 </div>
 
@@ -406,14 +406,14 @@
                     </p>
                     <div class="mt-4 pt-3 border-t border-zinc-800 text-[11px] font-mono text-zinc-500 flex justify-between">
                         <span data-i18n="p3_sub">Charge Rate:</span>
-                        <span class="text-white font-bold">3.5 MW DC</span>
+                        <span class="text-white font-bold" data-i18n="p3_val">3.5 MW DC</span>
                     </div>
                 </div>
 
                 <!-- Pillar 04: Disruption Economics -->
                 <div class="data-card p-6 rounded-lg relative overflow-hidden">
                     <div class="text-xs font-mono text-zinc-500 uppercase mb-1" data-i18n="p4_tag">04. Route Yield</div>
-                    <div class="text-3xl font-mono font-bold text-white mb-2">78%</div>
+                    <div class="text-3xl font-mono font-bold text-white mb-2" data-i18n="p4_metric">78%</div>
                     <h3 class="text-sm font-mono font-bold text-zinc-300 mb-2 uppercase" data-i18n="p4_title">OPEX Savings</h3>
                     <p class="text-xs text-zinc-400 leading-relaxed font-sans" id="ui-p4-desc">
                         Direct electric pod drives yield ~$4.90 USD/NM energy costs, compared to ~$22.50 USD/NM for legacy marine gas oil turbines.
@@ -821,7 +821,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex items-center space-x-3">
                 <div class="w-6 h-6 bg-zinc-900 border border-zinc-700 rounded flex items-center justify-center text-white font-bold">A</div>
-                <span data-i18n="footer_cpy">AERO-MARINE SYSTEMS CONCEPT © 2026.</span>
+                <span data-i18n="footer_cpy">AERO-MARINE SYSTEMS CONCEPT &copy; 2026.</span>
             </div>
             <div class="flex flex-wrap items-center space-x-6 text-zinc-600">
                 <span data-i18n="footer_loc">HONG KONG / SHENZHEN</span>
@@ -841,31 +841,44 @@
 
         let currentLang = 'en';
 
+        // Full Explicit Translation Dictionary for EN, TC, and SC
         const translations = {
             'en': {
                 'nav_subtitle': 'Deep Tech Concept Proposal',
-                'nav_1': 'Platform', 'nav_demo': '1:8 Demonstrator', 'nav_2': 'Economics', 'nav_3': 'Analytics', 'nav_4': 'Tech Matrix', 'nav_5': 'Capital Stack',
-                'badge_hkstp': 'HKSTP Incubation & Feasibility Study',
-                'hero_subtitle': 'Active Fly-by-Wire Electric Hydrofoil Platform',
+                'nav_1': 'Platform', 'nav_demo': '1:8 Demonstrator', 'nav_2': 'Economics', 'nav_3': 'Analytics', 'nav_4': 'Tech Matrix', 'nav_5': 'Capital Stack', 'nav_track': 'HKSTP INCU-TECH TRACK',
+                'badge_hkstp': 'HKSTP Incubation & Feasibility Study', 'doc_id_label': 'DOC ID:',
+                'hero_title': 'BAYWING EF-150 EXPRESS', 'hero_subtitle': 'Active Fly-by-Wire Electric Hydrofoil Platform',
                 'hero_desc': 'Aero-Marine Systems is building the software-defined future of GBA maritime transit. By integrating aerospace-grade flight control algorithms with Pearl River Delta carbon-composite supply chains, the EF-150 architecture completely decouples the hull from hydrodynamic drag—slashing energy requirements by 80% and making high-speed electric commuter routes commercially viable.',
+                'hero_btn_explore': 'EXPLORE 1:8 TECH DEMONSTRATOR', 'hero_btn_fund': '$0 FOUNDER CASH FUNDING PLAN',
                 'spec_title': 'Target Operational Envelope', 'spec_class': '150 PASSENGER CLASS',
                 'spec_speed': 'Target Cruise Speed', 'unit_38': '38.0', 'unit_knots': 'KNOTS', 'spec_speed_sub': '(70.3 km/h Foil-borne)',
-                'spec_range': 'Effective Range', 'spec_range_sub': '(w/ 20% Regulatory Reserve)',
+                'spec_range': 'Effective Range', 'unit_nm': 'NM', 'spec_range_sub': '(w/ 20% Regulatory Reserve)',
                 'spec_battery': 'Est. Battery Capacity', 'spec_battery_sub': '800V Marine LFP Architecture',
                 'spec_turnaround': 'Turnaround Target', 'unit_mins': 'MINS', 'spec_turnaround_sub': '3.5 MW Automated Charging',
                 
                 'demo_tag': '1. Sub-Scale Technology Demonstrator', 'demo_title': 'BAYWING-D1 (1:8 Scale Autonomous Testbed)',
                 'demo_desc': 'High-speed hydrofoiling is fundamentally an aerospace control problem. Because dynamic instability scales inversely with physical size, a sub-scale 3.56-meter vessel experiences higher natural oscillation frequencies than the full 28.5-meter craft. Successfully stabilizing the D1 in real-world harbor sea-states completely de-risks the flight control stack before scaling up to intermediate 20–30 passenger hulls and the final EF-150 platform.',
-                'd1_card1_tag': 'Avionics & Sensor Fusion', 'd1_card1_title': 'Autonomous Flight Controller',
+                'd1_card1_tag': 'Avionics & Sensor Fusion', 'd1_card1_badge': '100 Hz Loop', 'd1_card1_title': 'Autonomous Flight Controller',
                 'd1_card1_desc': 'Dual deterministic microcontrollers running real-time RTOS. Ingests dual IMUs, high-speed ultrasonic ride-height sensors, and a forward-scanning micro-LiDAR for wave feedforward compensation.',
-                'd1_card2_tag': 'Hydrodynamics & Scaling', 'd1_card2_title': 'True Dynamic Similarity',
-                'd1_card2_desc': 'Scaled strictly according to Froude number criteria (Fn = v/√gL). Operating at 13.4 knots simulates the wave-making, cavitation boundaries, and flap dynamics of the full-scale vessel at 38 knots.',
-                'd1_card3_tag': 'Zero-Grid R&D Deployment', 'd1_card3_title': 'Tolo Harbour Test Protocol',
+                'd1_c1_lbl1': 'Compute:', 'd1_c1_val1': 'STM32H7 + Jetson Orin Nano', 'd1_c1_lbl2': 'Latency:', 'd1_c1_val2': '&lt; 8ms Actuator Response', 'd1_c1_lbl3': 'Telemetry:', 'd1_c1_val3': '4G/5G + LoRa Long Range',
+                
+                'd1_card2_tag': 'Hydrodynamics & Scaling', 'd1_card2_badge': 'Froude Scaled', 'd1_card2_title': 'True Dynamic Similarity',
+                'd1_card2_desc': 'Scaled strictly according to Froude number criteria (Fn = v/&radic;(gL)). Operating at 13.4 knots simulates the wave-making, cavitation boundaries, and flap dynamics of the full-scale vessel at 38 knots.',
+                'd1_c2_lbl1': 'Scale Factor:', 'd1_c2_val1': '1:8 Linear (&lambda; = 8)', 'd1_c2_lbl2': 'Model Speed:', 'd1_c2_val2': '13.4 Knots (24.8 km/h)', 'd1_c2_lbl3': 'Model Mass:', 'd1_c2_val3': '~109 kg (Displacement)',
+                
+                'd1_card3_tag': 'Zero-Grid R&D Deployment', 'd1_card3_badge': 'Low OPEX Testing', 'd1_card3_title': 'Tolo Harbour Test Protocol',
                 'd1_card3_desc': 'Tested directly offshore at Hong Kong Science Park (Pak Shek Kok waterfront / Tolo Harbour). Swappable 48V LFP batteries eliminate shore charging needs during R&D, slashing sea-trial costs.',
+                'd1_c3_lbl1': 'Test Location:', 'd1_c3_val1': 'HKSTP Tolo Harbour Slipway', 'd1_c3_lbl2': 'Battery:', 'd1_c3_val2': '2.5 kWh Swappable 48V LFP', 'd1_c3_lbl3': 'Runtime / Pack:', 'd1_c3_val3': '~45 Mins Foil-borne',
                 
                 'd1_table_title': 'PHYSICS & SCALING MATRIX: EF-150 vs. BAYWING-D1 DEMONSTRATOR', 'd1_table_sub': 'Froude Number: 1.17',
                 'd1_th_metric': 'Engineering Parameter', 'd1_th_ef150': 'Full-Scale EF-150 (Commercial)', 'd1_th_d1': 'BAYWING-D1 (1:8 Demonstrator)', 'd1_th_ratio': 'Scaling Law',
-                'd1_r1_lbl': 'Length Overall (LOA)', 'd1_r2_lbl': 'Foil Span (Beam)', 'd1_r3_lbl': 'All-Up Displacement Mass', 'd1_r4_lbl': 'Cruise Take-off Speed', 'd1_r5_lbl': 'Installed Powertrain', 'd1_r6_lbl': 'Flight Controller Frequency', 'd1_r7_lbl': 'Primary Development Phase',
+                'd1_r1_lbl': 'Length Overall (LOA)', 'd1_r1_ef': '28.50 m (93.5 ft)', 'd1_r1_d1': '3.56 m (11.7 ft)', 'd1_r1_law': '1 : &lambda; (&lambda; = 8)',
+                'd1_r2_lbl': 'Foil Span (Beam)', 'd1_r2_ef': '9.80 m', 'd1_r2_d1': '1.22 m', 'd1_r2_law': '1 : &lambda;',
+                'd1_r3_lbl': 'All-Up Displacement Mass', 'd1_r3_ef': '~56,000 kg', 'd1_r3_d1': '~109 kg', 'd1_r3_law': '1 : &lambda;&sup3; (&times; 1/512)',
+                'd1_r4_lbl': 'Cruise Take-off Speed', 'd1_r4_ef': '18.0 Knots (Take-off) / 38.0 Knots (Cruise)', 'd1_r4_d1': '6.4 Knots (Take-off) / 13.4 Knots (Cruise)', 'd1_r4_law': '1 : &radic;&lambda; (&times; 1/2.83)',
+                'd1_r5_lbl': 'Installed Powertrain', 'd1_r5_ef': '2x 650 kW Pod Drives (1,300 kW Total)', 'd1_r5_d1': '2x 5.0 kW Brushless Pods (10 kW Total)', 'd1_r5_law': 'Power Reqd &propto; &lambda;<sup>3.5</sup>',
+                'd1_r6_lbl': 'Flight Controller Frequency', 'd1_r6_ef': '100 Hz Loop (Triple Redundant)', 'd1_r6_d1': '100 Hz Loop (Deterministic Dual-Core)', 'd1_r6_law': 'Oversampled (Higher bandwidth vs scaled craft)',
+                'd1_r7_lbl': 'Primary Development Phase', 'd1_r7_ef': 'Phase 3 (Full Commercial Build)', 'd1_r7_d1': 'Phase 1 & 2 (HKSTP Incubation Core)', 'd1_r7_law': 'Zero-capex risk burn-in',
 
                 'grant_box_tag': '100% NON-DILUTIVE PUBLIC CAPITAL STACK', 'grant_box_title': 'Demonstrator (D1) R&D Budget: HK$ 3,990,000',
                 'founder_share': 'Founder Private Cash Injection:', 'founder_cost': 'HK$ 0.00 (Zero Self-Funding)',
@@ -876,10 +889,10 @@
 
                 'moat_tag': '2. Deep Tech Moat & Economics', 'moat_title': 'Defensible OPEX Advantages',
                 'moat_desc': 'Legacy fast ferries rely on multi-megawatt diesel gas turbines pushing heavy displacement hulls. High marine fuel costs and escalating engine overhaul expenses compress operating margins. Our Fly-by-Wire control system enables a thermodynamic shift.',
-                'p1_tag': '01. Platform Dynamics', 'p1_title': 'Drag Reduction', 'p1_desc': 'Fully submerged T-foils lift the hull completely above the waves at 18+ knots, decoupling the vessel from hydrodynamic displacement drag.', 'p1_sub': 'Cruise Power:',
-                'p2_tag': '02. Core IP Moat', 'p2_title': 'Active FCS Loop', 'p2_desc': 'Triple-redundant Fly-by-Wire software reads IMUs and LiDAR, adjusting submerged flaps 100x/sec to neutralize Victoria Harbour wake pitch and roll.', 'p2_sub': 'Wake Wash:',
-                'p3_tag': '03. Infrastructure', 'p3_title': 'Shore BESS Buffer', 'p3_desc': 'Dockside battery storage buffers the 3.5 MW Megawatt Charging System (MCS), enabling rapid turnarounds without crashing the local municipal grid.', 'p3_sub': 'Charge Rate:',
-                'p4_tag': '04. Route Yield', 'p4_title': 'OPEX Savings', 'p4_sub': 'Energy OPEX:',
+                'p1_tag': '01. Platform Dynamics', 'p1_metric': '80%', 'p1_title': 'Drag Reduction', 'p1_desc': 'Fully submerged T-foils lift the hull completely above the waves at 18+ knots, decoupling the vessel from hydrodynamic displacement drag.', 'p1_sub': 'Cruise Power:', 'p1_val': '~1,100 kW',
+                'p2_tag': '02. Core IP Moat', 'p2_title': 'Active FCS Loop', 'p2_desc': 'Triple-redundant Fly-by-Wire software reads IMUs and LiDAR, adjusting submerged flaps 100x/sec to neutralize Victoria Harbour wake pitch and roll.', 'p2_sub': 'Wake Wash:', 'p2_val': '&lt;0.15m',
+                'p3_tag': '03. Infrastructure', 'p3_title': 'Shore BESS Buffer', 'p3_desc': 'Dockside battery storage buffers the 3.5 MW Megawatt Charging System (MCS), enabling rapid turnarounds without crashing the local municipal grid.', 'p3_sub': 'Charge Rate:', 'p3_val': '3.5 MW DC',
+                'p4_tag': '04. Route Yield', 'p4_metric': '78%', 'p4_title': 'OPEX Savings', 'p4_sub': 'Energy OPEX:',
                 
                 'calc_tag': '3. Strategic Route Analytics', 'calc_title': 'GBA Route Feasibility Calculator',
                 'calc_desc': 'Simulate the financial viability of replacing legacy diesel vessels with the EF-150 platform across major Greater Bay Area transit corridors.',
@@ -903,7 +916,7 @@
                 't_cat2': '2. Hydrodynamics & Efficiency',
                 't_c2_r1': 'Foil Configuration', 't_c2_v1': 'Fully Submerged T-Foil (Forward) & Inverted V-Foil (Aft)',
                 't_c2_r2': 'Target Drag Reduction', 't_c2_v2': '80% vs Equivalent Displacement Catamaran',
-                't_c2_r3': 'Harbor Wake Wash', 't_c2_v3': '< 0.15m at Cruise Speed',
+                't_c2_r3': 'Harbor Wake Wash', 't_c2_v3': '&lt; 0.15m at Cruise Speed',
                 't_cat3': '3. Power & Infrastructure Target',
                 't_c3_r1': 'Storage Architecture', 't_c3_v1': '2,400 kWh (2.4 MWh), 800V DC Nominal',
                 't_c3_r2': 'Cruise Power Draw', 't_c3_v2': '~1,100 kW @ 38 Knots',
@@ -917,7 +930,7 @@
                 't_c5_r2': 'Charging Standard', 't_c5_v2': '3.5 MW Automated MCS (Megawatt Charging System) Arm',
 
                 'data_tag': '5. Non-Dilutive Capitalization & Data Room', 'data_title': 'Zero-Capital Public Funding Architecture',
-                'data_desc': 'Aero-Marine Systems is structured to require $0 founder private bankroll. By stacking HKSTP Incu-Tech milestones with the Hong Kong Innovation and Technology Commission’s Research Talent Hub (RTH-SPC) and Green Tech/Smart Mobility grant allowances, 100% of the BAYWING-D1 demonstrator build is subsidized by non-dilutive government capital.',
+                'data_desc': 'Aero-Marine Systems is structured to require <strong>$0 founder private bankroll</strong>. By stacking HKSTP Incu-Tech milestones with the Hong Kong Innovation and Technology Commission’s Research Talent Hub (RTH-SPC) and Green Tech/Smart Mobility grant allowances, 100% of the BAYWING-D1 demonstrator build is subsidized by non-dilutive government capital.',
                 'dr_card1_title': 'Phase Development Roadmap',
                 'dr_c1_b1': '<strong>Phase 1 (Months 1-9):</strong> 6-DoF Digital Twin, FCS Bench Testing, & Hardware-in-the-Loop simulation in HKSTP Robotics Lab.',
                 'dr_c1_b2': '<strong>Phase 2 (Months 10-18):</strong> Sub-scale D1 technology demonstrator (3.56m) sea trials in Tolo Harbour; 100Hz wave-decoupling validation.',
@@ -926,7 +939,7 @@
                 'dr_card2_title': 'Regulatory & Classification Path',
                 'dr_c2_b1': '<strong>DNV Classification:</strong> Adherence to High Speed Light Craft (HSLC) rules for novel composite hydrofoil structures.',
                 'dr_c2_b2': '<strong>HKMD / MSA Certification:</strong> Pathway defined for Local Vessel operation within Hong Kong and GBA cross-boundary waters.',
-                'dr_c2_b3': '<strong>Inner-Harbor Wake Exemption:</strong> Seeking clearance for elevated speeds in Victoria Harbour due to < 0.15m wake wash profile.',
+                'dr_c2_b3': '<strong>Inner-Harbor Wake Exemption:</strong> Seeking clearance for elevated speeds in Victoria Harbour due to &lt; 0.15m wake wash profile.',
                 'dr_c2_b4': '<strong>Autonomous Testing Exemption:</strong> D1 test permit cleared through Marine Department uncrewed vessel trials channel in Tolo waters.',
                 'dr_card3_title': 'EF-150 Fleet Economics Breakdown',
                 'dr_c3_h1': 'Metric', 'dr_c3_h2': 'Legacy Diesel', 'dr_c3_h3': 'EF-150 Electric',
@@ -936,177 +949,402 @@
                 'dr_card4_title': 'MCS Terminal & BESS Integration',
                 'dr_c4_b1': '<strong>Dockside Buffer:</strong> Onshore 4.0 MWh BESS eliminates high-voltage grid upgrades at public ferry piers.',
                 'dr_c4_b2': '<strong>Megawatt Charge Rate:</strong> 3.5 MW DC output compatible with marine MCS standards.',
-                'dr_c4_b3': '<strong>Turnaround Window:</strong> < 45-minute charge cycle (20% to 90% SOC) during passenger disembarkation.',
+                'dr_c4_b3': '<strong>Turnaround Window:</strong> &lt; 45-minute charge cycle (20% to 90% SOC) during passenger disembarkation.',
                 
-                'footer_cpy': 'AERO-MARINE SYSTEMS CONCEPT © 2026.',
+                'footer_cpy': 'AERO-MARINE SYSTEMS CONCEPT &copy; 2026.',
                 'footer_loc': 'HONG KONG / SHENZHEN', 'footer_type': 'FEASIBILITY STUDY'
             },
             'tc': {
-                'nav_subtitle': '深科技概念提案',
-                'nav_1': '平台', 'nav_demo': '1:8 驗證機', 'nav_2': '經濟效益', 'nav_3': '航線分析', 'nav_4': '技術矩陣', 'nav_5': '資本',
-                'badge_hkstp': '香港科技園 (HKSTP) 培育與可行性研究',
-                'hero_subtitle': '主動線傳飛控電動水翼平台',
-                'hero_desc': 'Aero-Marine Systems 正在構建大灣區海上交通的軟件定義未來。通過將航太級飛控算法與珠三角碳纖維複合材料供應鏈相結合，EF-150 架構將船體與水動力阻力完全解耦——大幅降低 80% 的能耗，使高速電動通勤航線具備商業可行性。',
-                'spec_title': '目標運行包絡線', 'spec_class': '150 客位級別',
-                'spec_speed': '目標巡航速度', 'unit_38': '38.0', 'unit_knots': '節', 'spec_speed_sub': '(70.3 公里/小時 水翼飛行)',
-                'spec_range': '有效航程', 'spec_range_sub': '(含 20% 法規安全儲備)',
-                'spec_battery': '預估電池容量', 'spec_battery_sub': '800V 船用磷酸鐵鋰架構',
-                'spec_turnaround': '週轉時間目標', 'unit_mins': '分鐘', 'spec_turnaround_sub': '3.5 MW 自動化充電',
+                'nav_subtitle': '前沿科技概念提案',
+                'nav_1': '平台', 'nav_demo': '1:8 技術驗證機', 'nav_2': '經濟效益', 'nav_3': '分析數據', 'nav_4': '技術矩陣', 'nav_5': '資金結構', 'nav_track': '香港科技園 (HKSTP) INCU-TECH 培育計劃',
+                'badge_hkstp': '香港科技園培育計劃與可行性研究報告', 'doc_id_label': '文檔編號：',
+                'hero_title': 'BAYWING EF-150 EXPRESS', 'hero_subtitle': '主動式電傳操縱電動水翼船平台',
+                'hero_desc': 'Aero-Marine Systems 正全力構建由軟體定義的粵港澳大灣區（GBA）水上交通未來。通過將航空級飛行控制演算法與珠江三角洲的碳纖維複合材料供應鏈深度結合，EF-150 架構實現了船體與水動力阻力的完全解耦——降低 80% 的能源需求，使高速電動水上通勤路線具備商業可行性。',
+                'hero_btn_explore': '探索 1:8 技術驗證機', 'hero_btn_fund': '$0 創辦人現金出資計劃',
+                'spec_title': '目標營運規格', 'spec_class': '150 人座級',
+                'spec_speed': '目標巡航航速', 'unit_38': '38.0', 'unit_knots': '節', 'spec_speed_sub': '（水翼翼航狀態下 70.3 km/h）',
+                'spec_range': '有效航程', 'unit_nm': '海里', 'spec_range_sub': '（包含 20% 法規儲備電量）',
+                'spec_battery': '估算電池容量', 'spec_battery_sub': '800V 海事專用 LFP 磷酸鐵鋰架構',
+                'spec_turnaround': '周轉時間目標', 'unit_mins': '分鐘', 'spec_turnaround_sub': '3.5 MW 自動化充電',
                 
-                'demo_tag': '1. 縮比技術驗證機', 'demo_title': 'BAYWING-D1 (1:8 比例自主試驗平台)',
-                'demo_desc': '高速水翼飛行本質上是一個航太控制問題。由於動力學不穩定性與物理尺寸成反比，3.56 米的縮比驗證船比 28.5 米的全尺寸船具有更高的自然震盪頻率。在真實港口海況下穩定 D1，可在過渡到 20-30 人客船及最終 EF-150 之前，徹底消除飛控算法的技術風險。',
-                'd1_card1_tag': '航電與傳感器融合', 'd1_card1_title': '自主飛行控制器',
-                'd1_card1_desc': '雙確定性微控制器運行實時 RTOS 操作系統。整合雙 IMU、高速超聲波高度計和前視微型激光雷達，實現波浪前饋主動補償。',
-                'd1_card2_tag': '水動力學與縮比定律', 'd1_card2_title': '真實動力相似性',
-                'd1_card2_desc': '嚴格依據弗勞德數準則 (Fn = v/√gL) 進行幾何與動態縮比。以 13.4 節航行可完全模擬全尺寸船隻在 38 節時的興波、空化邊界與襟翼偏轉響應。',
-                'd1_card3_tag': '零電網依賴研發部署', 'd1_card3_title': '吐露港海試協議',
-                'd1_card3_desc': '直接在香港科學園對開海域（白石角海濱/吐露港）進行測試。可快速插拔的 48V 磷酸鐵鋰電池在研發階段完全無需岸電充電樁，極大降低海試成本。',
+                'demo_tag': '1. 縮尺技術驗證機', 'demo_title': 'BAYWING-D1（1:8 縮尺自主測試平台）',
+                'demo_desc': '高速水翼航行本質上是一個航空控制問題。由於動態不穩定性與物理尺寸成反比，3.56 米的縮尺船體在真實海況下比 28.5 米的全尺寸船體具有更高的自然振盪頻率。在真實港口海況下成功穩定 D1，可在放大至 20–30 人座中型船體及最終 EF-150 平台之前，徹底排除飛控系統的技術風險。',
+                'd1_card1_tag': '航電與感測器融合', 'd1_card1_badge': '100 Hz 迴路', 'd1_card1_title': '自主飛行控制器',
+                'd1_card1_desc': '運行實時操作系統（RTOS）的雙確定性微控制器。整合雙 IMU（慣性測量單元）、高速超聲波波高/騎行高度感測器以及用於波浪前饋補償的前視微型光學雷達（micro-LiDAR）。',
+                'd1_c1_lbl1': '計算單元：', 'd1_c1_val1': 'STM32H7 + Jetson Orin Nano', 'd1_c1_lbl2': '延遲：', 'd1_c1_val2': '&lt; 8ms 執行器響應', 'd1_c1_lbl3': '遙測：', 'd1_c1_val3': '4G/5G + LoRa 遠距離通訊',
                 
-                'd1_table_title': '物理與縮比矩陣：EF-150 對比 BAYWING-D1 驗證機', 'd1_table_sub': '弗勞德數：1.17',
-                'd1_th_metric': '工程參數', 'd1_th_ef150': '全尺寸 EF-150 (商業船)', 'd1_th_d1': 'BAYWING-D1 (1:8 驗證機)', 'd1_th_ratio': '縮比定律',
-                'd1_r1_lbl': '總長 (LOA)', 'd1_r2_lbl': '水翼跨度 (船寬)', 'd1_r3_lbl': '滿載排水量', 'd1_r4_lbl': '起飛/巡航航速', 'd1_r5_lbl': '安裝動力系統', 'd1_r6_lbl': '飛控迴路頻率', 'd1_r7_lbl': '主要研發階段',
+                'd1_card2_tag': '水動力學與縮尺理論', 'd1_card2_badge': '弗勞德縮尺', 'd1_card2_title': '真正動態相似性',
+                'd1_card2_desc': '嚴格按照弗勞德數（Froude number）準則 (Fn = v/&radic;(gL)) 進行縮尺。在 13.4 節下的運行狀態，能精準模擬全尺寸船隻在 38 節時的造波、空化邊界及襟翼動態特性。',
+                'd1_c2_lbl1': '縮尺比例：', 'd1_c2_val1': '1:8 線性縮尺 (&lambda; = 8)', 'd1_c2_lbl2': '模型航速：', 'd1_c2_val2': '13.4 節 (24.8 km/h)', 'd1_c2_lbl3': '模型質量：', 'd1_c2_val3': '約 109 kg (排水量)',
+                
+                'd1_card3_tag': '零電網依賴研發部署', 'd1_card3_badge': '低營運成本測試', 'd1_card3_title': '吐露港測試方案',
+                'd1_card3_desc': '直接於香港科學園沿岸（白石角海濱 / 吐露港）進行海試。可互換式 48V LFP 電池組消除研發期間對岸電充電的依賴，大幅降低海試成本。',
+                'd1_c3_lbl1': '測試地點：', 'd1_c3_val1': 'HKSTP 吐露港船台/斜坡', 'd1_c3_lbl2': '電池系統：', 'd1_c3_val2': '2.5 kWh 可互換式 48V LFP', 'd1_c3_lbl3': '每組續航：', 'd1_c3_val3': '約 45 分鐘翼航狀態',
+                
+                'd1_table_title': '物理與縮尺矩陣：EF-150 vs. BAYWING-D1 驗證機', 'd1_table_sub': '弗勞德數 (Froude Number)：1.17',
+                'd1_th_metric': '工程參數', 'd1_th_ef150': '全尺寸 EF-150 (商業型)', 'd1_th_d1': 'BAYWING-D1 (1:8 驗證機)', 'd1_th_ratio': '縮尺律 (Scaling Law)',
+                'd1_r1_lbl': '全長 (LOA)', 'd1_r1_ef': '28.50 米 (93.5 呎)', 'd1_r1_d1': '3.56 米 (11.7 呎)', 'd1_r1_law': '1 : &lambda; (&lambda; = 8)',
+                'd1_r2_lbl': '翼展 / 船寬 (Beam)', 'd1_r2_ef': '9.80 米', 'd1_r2_d1': '1.22 米', 'd1_r2_law': '1 : &lambda;',
+                'd1_r3_lbl': '滿載排水質量', 'd1_r3_ef': '約 56,000 kg', 'd1_r3_d1': '約 109 kg', 'd1_r3_law': '1 : &lambda;&sup3; (&times; 1/512)',
+                'd1_r4_lbl': '巡航 / 起飞航速', 'd1_r4_ef': '18.0 節 (起飛) / 38.0 節 (巡航)', 'd1_r4_d1': '6.4 節 (起飛) / 13.4 節 (巡航)', 'd1_r4_law': '1 : &radic;&lambda; (&times; 1/2.83)',
+                'd1_r5_lbl': '安裝動力系統', 'd1_r5_ef': '2x 650 kW 吊艙推進器 (共 1,300 kW)', 'd1_r5_d1': '2x 5.0 kW 無刷吊艙 (共 10 kW)', 'd1_r5_law': '所需功率 &propto; &lambda;<sup>3.5</sup>',
+                'd1_r6_lbl': '飛控系統頻率', 'd1_r6_ef': '100 Hz 迴路 (三重冗餘)', 'd1_r6_d1': '100 Hz 迴路 (確定性雙核)', 'd1_r6_law': '過採樣 (相較於縮尺船體具更高頻寬)',
+                'd1_r7_lbl': '主要開發階段', 'd1_r7_ef': '第三階段 (完整商業建造)', 'd1_r7_d1': '第一與第二階段 (香港科技園培育核心)', 'd1_r7_law': '零資本風險燒機驗證',
 
-                'grant_box_tag': '100% 非稀釋性香港政府資助架構', 'grant_box_title': 'D1 驗證機 R&D 預算：HK$ 3,990,000',
-                'founder_share': '創始人私人自籌資金：', 'founder_cost': 'HK$ 0.00 (完全零自掏腰包)',
-                'g1_title': 'HKSTP 科技園培育資助', 'g1_desc': '模具、實驗室租金、海試許可與運營津貼。',
-                'g2_title': '創新科技署研究人才庫 (RTH)', 'g2_desc': '政府 100% 全額資助 2 名全職控制算法工程師薪資。',
-                'g3_title': '專利申請資助計劃 (PAG)', 'g3_desc': 'PAG 專項直接補貼 PCT 與各國核心發明專利。',
-                'g4_title': '智慧交通 / 綠色科技基金', 'g4_desc': '縮比硬件原型打樣與珠三角船艇供應鏈試製補助。',
+                'grant_box_tag': '100% 非稀釋性公共資金結構', 'grant_box_title': '驗證機 (D1) 研發預算：HK$ 3,990,000',
+                'founder_share': '創辦人私人現金注入：', 'founder_cost': 'HK$ 0.00（零自籌資金）',
+                'g1_title': '香港科技園 Incu-Tech 資助', 'g1_desc': '工裝工具、實驗室租金、測試許可及營運津貼。',
+                'g2_title': '創科署研究人才庫 (ITF RTH)', 'g2_desc': '100% 政府全額資助 2 名全職控制工程師薪酬。',
+                'g3_title': '專利申請資助計劃 (PAG)', 'g3_desc': 'PAG 資助直接覆蓋 PCT 及區域專利申請費用。',
+                'g4_title': '智慧出行 / 綠色科技基金', 'g4_desc': '硬體原型製作及珠三角海事供應鏈資助。',
 
-                'moat_tag': '2. 深科技護城河與經濟效益', 'moat_title': '具防禦性的運營成本優勢',
-                'moat_desc': '傳統高速客輪依賴兆瓦級柴油燃氣輪機推動沉重的排水型船體。高昂的船用燃料成本和不斷攀升的引擎大修費用壓縮了利潤空間。我們的線傳飛控系統實現了熱力學的根本轉變。',
-                'p1_tag': '01. 平台動力學', 'p1_title': '阻力減免', 'p1_desc': '全浸沒式 T 型水翼在 18 節以上速度時將船體完全抬離水面，使船隻與水動力排水阻力解耦。', 'p1_sub': '巡航功率:',
-                'p2_tag': '02. 核心技術護城河', 'p2_title': '主動飛控迴路', 'p2_desc': '三重冗餘的線傳飛控軟件讀取 IMU 和光學雷達數據，每秒 100 次調整浸沒式襟翼，以抵消維多利亞港尾流引起的俯仰和側傾。', 'p2_sub': '尾流激浪:',
-                'p3_tag': '03. 基礎設施', 'p3_title': '岸電 BESS 緩衝', 'p3_desc': '碼頭電池儲能系統緩衝 3.5 MW 兆瓦級充電系統 (MCS)，實現快速週轉而不會衝擊當地市政電網。', 'p3_sub': '充電速率:',
-                'p4_tag': '04. 航線收益', 'p4_title': '運營成本節省', 'p4_sub': '能源運營成本:',
+                'moat_tag': '2. 前沿科技壁壘與經濟效益', 'moat_title': '可防禦的營運成本 (OPEX) 優勢',
+                'moat_desc': '傳統高速客輪依賴數兆瓦級的柴油燃氣輪機推動沉重的排水型船體。高昂的海上燃料成本和不斷上升的引擎大修費用壓縮了營運利潤。我們的電傳操縱（Fly-by-Wire）控制系統實現了熱力學與水動力學的根本轉變。',
+                'p1_tag': '01. 平台動態特性', 'p1_metric': '80%', 'p1_title': '阻力降低', 'p1_desc': '全浸式 T 型水翼在 18 節以上的速度下將船體完全抬離水面，使船隻與水動力排水阻力徹底解耦。', 'p1_sub': '巡航功率：', 'p1_val': '約 1,100 kW',
+                'p2_tag': '02. 核心知識產權壁壘', 'p2_title': '主動飛控迴路', 'p2_desc': '三重冗餘電傳操縱軟體讀取 IMU 與光學雷達數據，以每秒 100 次的頻率調整水下襟翼，徹底消除維多利亞港尾波產生的俯仰與滾轉。', 'p2_sub': '尾波波高：', 'p2_val': '&lt; 0.15 米',
+                'p3_tag': '03. 基礎設施', 'p3_title': '岸基儲能緩衝', 'p3_desc': '碼頭側電池儲能系統（BESS）為 3.5 MW 兆瓦級充電系統（MCS）提供緩衝，在實現快速周轉的同時，不會衝擊當地市政電網。', 'p3_sub': '充電功率：', 'p3_val': '3.5 MW 直流電 (DC)',
+                'p4_tag': '04. 航線收益', 'p4_metric': '78%', 'p4_title': '營運成本節省', 'p4_sub': '能源營運成本：',
                 
-                'calc_tag': '3. 戰略航線分析', 'calc_title': '大灣區航線可行性計算器',
-                'calc_desc': '模擬使用 EF-150 平台替換大灣區主要交通走廊傳統柴油船隊的財務可行性。',
-                'calc_sim_tag': '交互式財務模擬器', 'calc_sim_title': '船隊運營成本預測模型', 'calc_sim_base': '基準船用輕柴油:',
-                'calc_input_1': '1. 選擇大灣區快線航線',
-                'calc_input_2': '2. 活躍船隊規模', 'calc_input_2_min': '1 艘', 'calc_input_2_mid': '6 艘', 'calc_input_2_max': '12 艘',
-                'calc_input_3': '3. 單船每日往返次數', 'calc_input_3_min': '2 次', 'calc_input_3_mid': '8 次', 'calc_input_3_max': '16 次',
-                'calc_out_1_title': '年度能源節省', 'calc_out_1_sub': '對比傳統柴油雙體船',
-                'calc_out_2_title': '預估資本支出溢價回收期', 'calc_out_2_sub': '基於電動平台溢價成本',
-                'calc_out_3_title': '年度減少二氧化碳排放', 'calc_out_3_sub': '公噸溫室氣體 / 年',
-                'calc_out_4_title': '預估 EF-150 航行時間', 'calc_out_4_sub': '12 分鐘 (比傳統快)',
-                'calc_bar_diesel': '年度能源成本 (傳統柴油船隊)', 'calc_bar_ef150': '年度能源成本 (EF-150 電動船隊)',
+                'calc_tag': '3. 戰略航線分析', 'calc_title': '粵港澳大灣區航線可行性計算器',
+                'calc_desc': '模擬在大灣區主要水上交通走廊中，以 EF-150 平台替代傳統柴油船隻的財務可行性。',
+                'calc_sim_tag': '互動式財務模擬器', 'calc_sim_title': '船隊營運成本預測模型', 'calc_sim_base': '基準 MGO 海事柴油價格：',
+                'calc_input_1': '選擇大灣區快線航線：',
+                'calc_input_2': '營運船隊規模：', 'calc_input_2_min': '1 艘船', 'calc_input_2_mid': '6 艘船', 'calc_input_2_max': '12 艘船',
+                'calc_input_3': '單船每日往返次數：', 'calc_input_3_min': '2 次往返', 'calc_input_3_mid': '8 次往返', 'calc_input_3_max': '16 次往返',
+                'calc_out_1_title': '年度能源節省：', 'calc_out_1_sub': '（對比傳統柴油雙體船）',
+                'calc_out_2_title': '預估 CapEx 溢價回收期：', 'calc_out_2_sub': '（針對電動平台溢價成本）',
+                'calc_out_3_title': '年度二氧化碳減排量：', 'calc_out_3_sub': '（每年溫室氣體公噸數）',
+                'calc_out_4_title': '預估 EF-150 航行時間：', 'calc_out_4_sub': '（比柴油船更快）',
+                'calc_bar_diesel': '年度能源成本（傳統柴油船隊）：', 'calc_bar_ef150': '年度能源成本（EF-150 電動船隊）：',
                 
-                'tech_tag': '4. 技術數據庫', 'tech_title': '擬定工程矩陣',
-                'tech_desc': 'EF-150 平台架構的基準結構與運行參數，已根據物理極限和海事認證標準進行更新。',
-                'tech_table_title': '平台架構：BAYWING EF-150', 'tech_table_ver': '修訂草案 v2.1',
-                't_cat1': '1. 船舶尺寸與容量',
-                't_c1_r1': '總長 (LOA)', 't_c1_v1': '28.50 米 (93.5 英尺)',
-                't_c1_r2': '總寬 (BoA)', 't_c1_v2': '8.20 米 (水翼跨度 9.80 米)',
+                'tech_tag': '4. 技術數據庫', 'tech_title': '建議工程矩陣',
+                'tech_desc': '為 EF-150 平台架構提出的基準結構與營運參數，已針對物理約束和海事認證標準進行更新。',
+                'tech_table_title': '平台架構：BAYWING EF-150', 'tech_table_ver': '(修改草案 v2.1)',
+                't_cat1': '1. 船隻尺寸與載客量',
+                't_c1_r1': '全長 (LOA)', 't_c1_v1': '28.50 米 (93.5 呎)',
+                't_c1_r2': '型寬 (BoA)', 't_c1_v2': '8.20 米 (水翼翼展 9.80 米)',
                 't_c1_r3': '載客量', 't_c1_v3': '150 名乘客 + 4 名船員',
-                't_cat2': '2. 水動力與效率',
-                't_c2_r1': '水翼配置', 't_c2_v1': '全浸沒式 T 型水翼 (前) & 倒 V 型水翼 (後)',
-                't_c2_r2': '目標阻力減免', 't_c2_v2': '80% 對比同等排水型雙體船',
-                't_c2_r3': '港口尾流激浪', 't_c2_v3': '< 0.15 米 於巡航速度',
+                't_cat2': '2. 水動力學與效率',
+                't_c2_r1': '水翼配置', 't_c2_v1': '前部全浸式 T 型水翼 & 後部倒 V 型水翼',
+                't_c2_r2': '目標阻力降低', 't_c2_v2': '相較同等排水量雙體船降低 80%',
+                't_c2_r3': '港口航行尾波', 't_c2_v3': '巡航速度下波高 &lt; 0.15 米',
                 't_cat3': '3. 動力與基礎設施目標',
-                't_c3_r1': '儲能架構', 't_c3_v1': '2,400 kWh (2.4 MWh), 800V 標稱直流',
-                't_c3_r2': '巡航功耗', 't_c3_v2': '~1,100 kW @ 38 節',
-                't_c3_r3': '有效航程', 't_c3_v3': '45 海里 (包含 20% 法規安全儲備)',
+                't_c3_r1': '儲能架構', 't_c3_v1': '2,400 kWh (2.4 MWh)，標稱 800V DC',
+                't_c3_r2': '巡航功率消耗', 't_c3_v2': '在 38 節航速下約 1,100 kW',
+                't_c3_r3': '營運航程', 't_c3_v3': '45 海里（包含 20% 法規安全儲備）',
                 't_cat4': '4. 飛行控制系統 (FCS)',
-                't_c4_r1': '飛行控制器', 't_c4_v1': '三重冗餘主動線傳飛控管理單元',
-                't_c4_r2': '控制迴路頻率', 't_c4_v2': '100 Hz 動態襟翼與配平驅動迴路',
-                't_c4_r3': '傳感器融合', 't_c4_v3': '慣性測量單元 (IMU)、超聲波高度計、前視光學雷達',
-                't_cat5': '5. 岸電充電與儲能緩衝',
-                't_c5_r1': '固定 BESS 緩衝', 't_c5_v1': '4.0 MWh 貨櫃式電池緩衝 (碼頭削峰填谷)',
-                't_c5_r2': '充電標準', 't_c5_v2': '3.5 MW 自動化 MCS (兆瓦級充電系統) 臂',
+                't_c4_r1': '飛行控制器', 't_c4_v1': '三重冗餘主動電傳操縱飛行管理單元',
+                't_c4_r2': '控制迴路速率', 't_c4_v2': '100 Hz 動態襟翼與配平執行迴路',
+                't_c4_r3': '感測器融合', 't_c4_v3': '慣性測量單元 (IMUs)、超聲波波高感測器、前視光學雷達 (LiDAR)',
+                't_cat5': '5. 岸基充電與能量緩衝',
+                't_c5_r1': '固定式 BESS 緩衝', 't_c5_v1': '4.0 MWh 集裝箱式電池緩衝（碼頭削峰填谷）',
+                't_c5_r2': '充電標準', 't_c5_v2': '3.5 MW 自動化 MCS (兆瓦級充電系統) 充電臂',
 
-                'data_tag': '5. 非稀釋性資本化與資料室', 'data_title': '零自有資金公共資助架構',
-                'data_desc': 'Aero-Marine Systems 架構設計實現創始人 0 自籌私人出資。透過將科技園培育里程碑與創新科技署研究人才庫 (RTH-SPC) 及綠色科技/智慧交通資助相疊加，100% 覆蓋 D1 驗證機研發開支。',
-                'dr_card1_title': '階段發展路線圖',
-                'dr_c1_b1': '<strong>第一階段 (第 1-9 個月):</strong> 六自由度數字孿生、FCS 算法台架測試，及科技園機器人實驗室硬件在環仿真。',
-                'dr_c1_b2': '<strong>第二階段 (第 10-18 個月):</strong> 3.56米 D1 縮比驗證船於吐露港進行自主海試；驗證 100Hz 尾流解耦算法。',
-                'dr_c1_b3': '<strong>第三階段 (第 19-27 個月):</strong> 過渡至 20-30 人商業先導客船設計；組建大灣區聯合運營商財團。',
-                'dr_c1_b4': '<strong>第四階段 (第 28-36 個月):</strong> 與持牌珠三角複合材料船廠合作建造全尺寸 EF-150 平台。',
-                'dr_card2_title': '監管與入級路徑',
-                'dr_c2_b1': '<strong>DNV 船級社:</strong> 遵循高速輕型船 (HSLC) 規則，適用於新型複合材料水翼結構。',
-                'dr_c2_b2': '<strong>HKMD / MSA 認證:</strong> 確定在香港及大灣區跨境水域進行本地船隻營運的路徑。',
-                'dr_c2_b3': '<strong>內港尾流豁免:</strong> 憑藉小於 0.15 米的尾流激浪特性，尋求在維多利亞港限制區內提高航速的許可。',
-                'dr_c2_b4': '<strong>無人船海試許可:</strong> 透過海事處非載人無人船試驗機制獲取吐露港專屬海試水域批文。',
-                'dr_card3_title': 'EF-150 船隊經濟性細目',
-                'dr_c3_h1': '指標', 'dr_c3_h2': '傳統柴油', 'dr_c3_h3': 'EF-150 電動',
-                'dr_c3_r1': '能源/燃料',
-                'dr_c3_r2': '動力系統維護', 'dr_c3_v2a': '高 (燃氣輪機)', 'dr_c3_v2b': '低 (吊艙驅動)',
-                'dr_c3_r3': '船員配置', 'dr_c3_v3a': '標準 (8-10)', 'dr_c3_v3b': '減少 (4)',
+                'data_tag': '5. 非稀釋性資本結構與數據室', 'data_title': '零資本公共資金架構',
+                'data_desc': 'Aero-Marine Systems 的架構旨在實現<strong>創辦人 $0 私人資金投入</strong>。通過疊加香港科技園 Incu-Tech 培育計劃里程碑資助、香港創新科技署的「研究人才庫」(RTH-SPC) 以及綠色科技/智慧出行資助額度，BAYWING-D1 驗證機建置成本的 100% 均由非稀釋性政府資金補助。',
+                'dr_card1_title': '階段開發路線圖',
+                'dr_c1_b1': '▸ <strong>第一階段 (第 1-9 個月)：</strong> 6 自由度 (6-DoF) 數位雙生 (Digital Twin)、FCS 檯架測試，以及在香港科技園機器人實驗室進行硬體在環 (HIL) 模擬。',
+                'dr_c1_b2': '▸ <strong>第二階段 (第 10-18 個月)：</strong> 縮尺 D1 技術驗證機 (3.56m) 於吐露港進行海試；100Hz 波浪解耦驗證。',
+                'dr_c1_b3': '▸ <strong>第三階段 (第 19-27 個月)：</strong> 20-30 人座中型試航平台設計；組建聯合商業財團。',
+                'dr_c1_b4': '▸ <strong>第四階段 (第 28-36 個月)：</strong> 通過獲授權之珠三角複合材料造船廠建造完整商業化 EF-150 平台。',
+                'dr_card2_title': '法規與分級認證路徑',
+                'dr_c2_b1': '▸ <strong>DNV 船級社認證：</strong> 符合新型複合材料水翼結構之高速輕型船隻 (HSLC) 規範。',
+                'dr_c2_b2': '▸ <strong>香港海事處 (HKMD) / 海事局 (MSA) 認證：</strong> 明確香港本地船隻及大灣區跨境水域營運之認證路徑。',
+                'dr_c2_b3': '▸ <strong>內港尾波豁免：</strong> 憑藉 &lt; 0.15 米尾波波高特性，申請維多利亞港內提高航速之許可。',
+                'dr_c2_b4': '▸ <strong>自主測試豁免：</strong> D1 測試許可已通過海事處於吐露港水域之無人船隻測試通道獲批。',
+                'dr_card3_title': 'EF-150 船隊經濟效益拆解',
+                'dr_c3_h1': '指標', 'dr_c3_h2': '傳統柴油船', 'dr_c3_h3': 'EF-150 電動船',
+                'dr_c3_r1': '能源 / 燃料',
+                'dr_c3_r2': '動力總成維護成本', 'dr_c3_v2a': '高 (燃氣輪機)', 'dr_c3_v2b': '低 (電動吊艙)',
+                'dr_c3_r3': '船員配置', 'dr_c3_v3a': '標準 (8-10 人)', 'dr_c3_v3b': '減少 (4 人)',
                 'dr_card4_title': 'MCS 終端與 BESS 整合',
-                'dr_c4_b1': '<strong>碼頭緩衝:</strong> 岸上 4.0 MWh 電池儲能系統消除了公共渡輪碼頭高壓電網升級的需求。',
-                'dr_c4_b2': '<strong>兆瓦級充電速率:</strong> 3.5 MW 直流輸出，兼容船用 MCS 標準。',
-                'dr_c4_b3': '<strong>週轉時間:</strong> 乘客下船期間完成 < 45 分鐘的充電週期 (20% 至 90% SOC)。',
-
-                'footer_cpy': 'AERO-MARINE SYSTEMS CONCEPT © 2026.',
-                'footer_loc': '香港 / 深圳', 'footer_type': '可行性研究'
+                'dr_c4_b1': '▸ <strong>碼頭緩衝：</strong> 岸上 4.0 MWh BESS 儲能系統消除公共渡輪碼頭對高壓電網升級的需求。',
+                'dr_c4_b2': '▸ <strong>兆瓦級充電速率：</strong> 3.5 MW 直流輸出，相容海事 MCS 充電標準。',
+                'dr_c4_b3': '▸ <strong>周轉時間窗口：</strong> 乘客下船期間實現 &lt; 45 分鐘充電週期（20% 至 90% SOC 電量）。',
+                
+                'footer_cpy': 'AERO-MARINE SYSTEMS 概念 &copy; 2026。',
+                'footer_loc': '香港 / 深圳', 'footer_type': '可行性研究報告'
             },
             'sc': {
-                'nav_subtitle': '深科技概念提案',
-                'nav_1': '平台', 'nav_demo': '1:8 验证机', 'nav_2': '经济效益', 'nav_3': '航线分析', 'nav_4': '技术矩阵', 'nav_5': '资本',
-                'badge_hkstp': '香港科技园 (HKSTP) 孵化与可行性研究',
-                'hero_subtitle': '主动线传飞控电动水翼平台',
-                'hero_desc': 'Aero-Marine Systems 正在构建大湾区海上交通的软件定义未来。通过将航空级飞控算法与珠三角碳纤维复合材料供应链相结合，EF-150 架构将船体与水动力阻力完全解耦——大幅降低 80% 的能耗，使高速电动通勤航线具备商业可行性。',
-                'spec_title': '目标运行包络线', 'spec_class': '150 客位级别',
-                'spec_speed': '目标巡航速度', 'unit_38': '38.0', 'unit_knots': '节', 'spec_speed_sub': '(70.3 公里/小时 水翼飞行)',
-                'spec_range': '有效航程', 'spec_range_sub': '(含 20% 法规安全储备)',
-                'spec_battery': '预估电池容量', 'spec_battery_sub': '800V 船用磷酸铁锂架构',
+                'nav_subtitle': '前沿科技概念提案',
+                'nav_1': '平台', 'nav_demo': '1:8 技术验证机', 'nav_2': '经济效益', 'nav_3': '分析数据', 'nav_4': '技术矩阵', 'nav_5': '资金结构', 'nav_track': '香港科技园 (HKSTP) INCU-TECH 培育计划',
+                'badge_hkstp': '香港科技园培育计划与可行性研究报告', 'doc_id_label': '文档编号：',
+                'hero_title': 'BAYWING EF-150 EXPRESS', 'hero_subtitle': '主动式电传操纵电动水翼船平台',
+                'hero_desc': 'Aero-Marine Systems 正全力构建由软件定义的粤港澳大湾区（GBA）水上交通未来。通过将航空级飞行控制算法与珠江三角洲的碳纤维复合材料供应链深度结合，EF-150 架构实现了船体与水动力阻力的完全解耦——降低 80% 的能源需求，使高速电动水上通勤路线具备商业可行性。',
+                'hero_btn_explore': '探索 1:8 技术验证机', 'hero_btn_fund': '$0 创始人现金出资计划',
+                'spec_title': '目标营运规格', 'spec_class': '150 人座级',
+                'spec_speed': '目标巡航航速', 'unit_38': '38.0', 'unit_knots': '节', 'spec_speed_sub': '（水翼翼航状态下 70.3 km/h）',
+                'spec_range': '有效航程', 'unit_nm': '海里', 'spec_range_sub': '（包含 20% 法规储备电量）',
+                'spec_battery': '估算电池容量', 'spec_battery_sub': '800V 海事专用 LFP 磷酸铁锂架构',
                 'spec_turnaround': '周转时间目标', 'unit_mins': '分钟', 'spec_turnaround_sub': '3.5 MW 自动化充电',
                 
-                'demo_tag': '1. 缩比技术验证机', 'demo_title': 'BAYWING-D1 (1:8 比例自主试验平台)',
-                'demo_desc': '高速水翼飞行本质上是一个航空控制问题。由于动力学不稳定度与物理尺寸成反比，3.56 米的缩比验证船比 28.5 米的全尺寸船具有更高的自然震荡频率。在真实港口海况下稳定 D1，可在过渡到 20-30 人客船及最终 EF-150 之前，彻底消除飞控算法的技术风险。',
-                'd1_card1_tag': '航电与传感器融合', 'd1_card1_title': '自主飞行控制器',
-                'd1_card1_desc': '双确定性微控制器运行实时 RTOS 操作系统。整合双 IMU、高速超声波高度计和前视微型激光雷达，实现波浪前馈主动补偿。',
-                'd1_card2_tag': '水动力学与缩比定律', 'd1_card2_title': '真实动力相似性',
-                'd1_card2_desc': '严格依据弗劳德数准则 (Fn = v/√gL) 进行几何与动态缩比。以 13.4 节航行可完全模拟全尺寸船只在 38 节时的兴波、空化边界与襟翼偏转响应。',
-                'd1_card3_tag': '零电网依赖研发部署', 'd1_card3_title': '吐露港海试协议',
-                'd1_card3_desc': '直接在香港科学园对开海域（白石角海滨/吐露港）进行测试。可快速插拔的 48V 磷酸铁锂电池在研发阶段完全无需岸电充电桩，极大降低海试成本。',
+                'demo_tag': '1. 缩尺技术验证机', 'demo_title': 'BAYWING-D1（1:8 缩尺自主测试平台）',
+                'demo_desc': '高速水翼航行本质上是一个航空控制问题。由于动态不稳定与物理尺寸成反比，3.56 米的缩尺船体在真实海况下比 28.5 米的全尺寸船体具有更高的自然振荡频率。在真实港口海况下成功稳定 D1，可在放大至 20–30 人座中型船体及最终 EF-150 平台之前，彻底排除飞控系统的技术风险。',
+                'd1_card1_tag': '航电与传感器融合', 'd1_card1_badge': '100 Hz 回路', 'd1_card1_title': '自主飞行控制器',
+                'd1_card1_desc': '运行实时操作系统（RTOS）的双确定性微控制器。整合双 IMU（惯性测量单元）、高速超声波波高/骑行高度传感器以及用于波浪前馈补偿的前视微型光学雷达（micro-LiDAR）。',
+                'd1_c1_lbl1': '计算单元：', 'd1_c1_val1': 'STM32H7 + Jetson Orin Nano', 'd1_c1_lbl2': '延迟：', 'd1_c1_val2': '&lt; 8ms 执行器响应', 'd1_c1_lbl3': '遥测：', 'd1_c1_val3': '4G/5G + LoRa 远距离通讯',
                 
-                'd1_table_title': '物理与缩比矩阵：EF-150 对比 BAYWING-D1 验证机', 'd1_table_sub': '弗劳德数：1.17',
-                'd1_th_metric': '工程参数', 'd1_th_ef150': '全尺寸 EF-150 (商业船)', 'd1_th_d1': 'BAYWING-D1 (1:8 验证机)', 'd1_th_ratio': '缩比定律',
-                'd1_r1_lbl': '总长 (LOA)', 'd1_r2_lbl': '水翼跨度 (船宽)', 'd1_r3_lbl': '满载排水量', 'd1_r4_lbl': '起飞/巡航航速', 'd1_r5_lbl': '安装动力系统', 'd1_r6_lbl': '飞控回路频率', 'd1_r7_lbl': '主要研发阶段',
+                'd1_card2_tag': '水动力学与缩尺理论', 'd1_card2_badge': '弗劳德缩尺', 'd1_card2_title': '真正动态相似性',
+                'd1_card2_desc': '严格按照弗劳德数（Froude number）准则 (Fn = v/&radic;(gL)) 进行缩尺。在 13.4 节下的运行状态，能精准模拟全尺寸船只在 38 节时的造波、空化边界及襟翼动态特性。',
+                'd1_c2_lbl1': '缩尺比例：', 'd1_c2_val1': '1:8 线性缩尺 (&lambda; = 8)', 'd1_c2_lbl2': '模型航速：', 'd1_c2_val2': '13.4 节 (24.8 km/h)', 'd1_c2_lbl3': '模型质量：', 'd1_c2_val3': '约 109 kg (排水量)',
+                
+                'd1_card3_tag': '零电网依赖研发部署', 'd1_card3_badge': '低营运成本测试', 'd1_card3_title': '吐露港测试方案',
+                'd1_card3_desc': '直接于香港科学园沿岸（白石角海滨 / 吐露港）进行海试。可互换式 48V LFP 电池组消除研发期间对岸电充电的依赖，大幅降低海试成本。',
+                'd1_c3_lbl1': '测试地点：', 'd1_c3_val1': 'HKSTP 吐露港船台/斜坡', 'd1_c3_lbl2': '电池系统：', 'd1_c3_val2': '2.5 kWh 可互换式 48V LFP', 'd1_c3_lbl3': '每组续航：', 'd1_c3_val3': '约 45 分钟翼航状态',
+                
+                'd1_table_title': '物理与缩尺矩阵：EF-150 vs. BAYWING-D1 验证机', 'd1_table_sub': '弗劳德数 (Froude Number)：1.17',
+                'd1_th_metric': '工程参数', 'd1_th_ef150': '全尺寸 EF-150 (商业型)', 'd1_th_d1': 'BAYWING-D1 (1:8 验证机)', 'd1_th_ratio': '缩尺律 (Scaling Law)',
+                'd1_r1_lbl': '全长 (LOA)', 'd1_r1_ef': '28.50 米 (93.5 英尺)', 'd1_r1_d1': '3.56 米 (11.7 英尺)', 'd1_r1_law': '1 : &lambda; (&lambda; = 8)',
+                'd1_r2_lbl': '翼展 / 船宽 (Beam)', 'd1_r2_ef': '9.80 米', 'd1_r2_d1': '1.22 米', 'd1_r2_law': '1 : &lambda;',
+                'd1_r3_lbl': '满载排水质量', 'd1_r3_ef': '约 56,000 kg', 'd1_r3_d1': '约 109 kg', 'd1_r3_law': '1 : &lambda;&sup3; (&times; 1/512)',
+                'd1_r4_lbl': '巡航 / 起飞航速', 'd1_r4_ef': '18.0 节 (起飞) / 38.0 节 (巡航)', 'd1_r4_d1': '6.4 节 (起飞) / 13.4 节 (巡航)', 'd1_r4_law': '1 : &radic;&lambda; (&times; 1/2.83)',
+                'd1_r5_lbl': '安装动力系统', 'd1_r5_ef': '2x 650 kW 吊舱推进器 (共 1,300 kW)', 'd1_r5_d1': '2x 5.0 kW 无刷吊舱 (共 10 kW)', 'd1_r5_law': '所需功率 &propto; &lambda;<sup>3.5</sup>',
+                'd1_r6_lbl': '飞控系统频率', 'd1_r6_ef': '100 Hz 回路 (三重冗余)', 'd1_r6_d1': '100 Hz 回路 (确定性双核)', 'd1_r6_law': '过采样 (相较于缩尺船体具更高带宽)',
+                'd1_r7_lbl': '主要开发阶段', 'd1_r7_ef': '第三阶段 (完整商业建造)', 'd1_r7_d1': '第一与第二阶段 (香港科技园培育核心)', 'd1_r7_law': '零资本风险烧机验证',
 
-                'grant_box_tag': '100% 非稀释性香港政府资助架构', 'grant_box_title': 'D1 验证机 R&D 预算：HK$ 3,990,000',
-                'founder_share': '创始人私人自筹资金：', 'founder_cost': 'HK$ 0.00 (完全零自掏腰包)',
-                'g1_title': 'HKSTP 科技园孵化资助', 'g1_desc': '模具、实验室租金、海试许可与运营津贴。',
-                'g2_title': '创新科技署研究人才库 (RTH)', 'g2_desc': '政府 100% 全额资助 2 名全职控制算法工程师薪资。',
-                'g3_title': '专利申请资助计划 (PAG)', 'g3_desc': 'PAG 专项直接补贴 PCT 与各国核心发明专利。',
-                'g4_title': '智慧交通 / 绿色科技基金', 'g4_desc': '缩比硬件原型打样与珠三角船艇供应链试制补助。',
+                'grant_box_tag': '100% 非稀释性公共资金结构', 'grant_box_title': '验证机 (D1) 研发预算：HK$ 3,990,000',
+                'founder_share': '创始人私人现金注入：', 'founder_cost': 'HK$ 0.00（零自筹资金）',
+                'g1_title': '香港科技园 Incu-Tech 资助', 'g1_desc': '工装工具、实验室租金、测试许可及营运津贴。',
+                'g2_title': '创科署研究人才库 (ITF RTH)', 'g2_desc': '100% 政府全额资助 2 名全职控制工程师薪酬。',
+                'g3_title': '专利申请资助计划 (PAG)', 'g3_desc': 'PAG 资助直接覆盖 PCT 及区域专利申请费用。',
+                'g4_title': '智慧出行 / 绿色科技基金', 'g4_desc': '硬件原型制作及珠三角海事供应链资助。',
 
-                'moat_tag': '2. 深科技护城河与经济效益', 'moat_title': '具防御性的运营成本优势',
-                'moat_desc': '传统高速客轮依赖兆瓦级柴油燃气轮机推动沉重的排水型船体。高昂的船用燃料成本和不断攀升的引擎大修费用压缩了利润空间。我们的线传飞控系统实现了热力学的根本转变。',
-                'p1_tag': '01. 平台动力学', 'p1_title': '阻力减免', 'p1_desc': '全浸没式 T 型水翼在 18 节以上速度时将船体完全抬离水面，使船只与水动力排水阻力解耦。', 'p1_sub': '巡航功率:',
-                'p2_tag': '02. 核心技术护城河', 'p2_title': '主动飞控回路', 'p2_desc': '三重冗余的线传飞控软件读取 IMU 和光学雷达数据，每秒 100 次调整浸没式襟翼，以抵消维多利亚港尾流引起的俯仰和侧倾。', 'p2_sub': '尾流激浪:',
-                'p3_tag': '03. 基础设施', 'p3_title': '岸电 BESS 缓冲', 'p3_desc': '码头电池储能系统缓冲 3.5 MW 兆瓦级充电系统 (MCS)，实现快速周转而不会冲击当地市政电网。', 'p3_sub': '充电速率:',
-                'p4_tag': '04. 航线收益', 'p4_title': '运营成本节省', 'p4_sub': '能源运营成本:',
+                'moat_tag': '2. 前沿科技壁垒与经济效益', 'moat_title': '可防御的营运成本 (OPEX) 优势',
+                'moat_desc': '传统高速客轮依赖数兆瓦级的柴油燃气轮机推动沉重的排水型船体。高昂的海上燃料成本和不断上升的引擎大修费用压缩了营运利润。我们的电传操纵（Fly-by-Wire）控制系统实现了热力学与水动力学的根本转变。',
+                'p1_tag': '01. 平台动态特性', 'p1_metric': '80%', 'p1_title': '阻力降低', 'p1_desc': '全浸式 T 型水翼在 18 节速度以上将船体完全抬离水面，使船只与水动力排水阻力彻底解耦。', 'p1_sub': '巡航功率：', 'p1_val': '约 1,100 kW',
+                'p2_tag': '02. 核心知识产权壁垒', 'p2_title': '主动飞控回路', 'p2_desc': '三重冗余电传操纵软件读取 IMU 与光学雷达数据，以每秒 100 次的频率调整水下襟翼，彻底消除维多利亚港尾波产生的俯仰与滚转。', 'p2_sub': '尾波波高：', 'p2_val': '&lt; 0.15 米',
+                'p3_tag': '03. 基础设施', 'p3_title': '岸基储能缓冲', 'p3_desc': '码头侧电池储能系统（BESS）为 3.5 MW 兆瓦级充电系统（MCS）提供缓冲，在实现快速周转的同时，不会冲击当地市政电网。', 'p3_sub': '充电功率：', 'p3_val': '3.5 MW 直流电 (DC)',
+                'p4_tag': '04. 航线收益', 'p4_metric': '78%', 'p4_title': '营运成本节省', 'p4_sub': '能源营运成本：',
                 
-                'calc_tag': '3. 战略航线分析', 'calc_title': '大湾区航线可行性计算器',
-                'calc_desc': '模拟使用 EF-150 平台替换大湾区主要交通走廊传统柴油船队的财务可行性。',
-                'calc_sim_tag': '交互式财务模拟器', 'calc_sim_title': '船队运营成本预测模型', 'calc_sim_base': '基准船用轻柴油:',
-                'calc_input_1': '1. 选择大湾区快线航线',
-                'calc_input_2': '2. 活跃船队规模', 'calc_input_2_min': '1 艘', 'calc_input_2_mid': '6 艘', 'calc_input_2_max': '12 艘',
-                'calc_input_3': '3. 单船每日往返次数', 'calc_input_3_min': '2 次', 'calc_input_3_mid': '8 次', 'calc_input_3_max': '16 次',
-                'calc_out_1_title': '年度能源节省', 'calc_out_1_sub': '对比传统柴油双体船',
-                'calc_out_2_title': '预估资本支出溢价回收期', 'calc_out_2_sub': '基于电动平台溢价成本',
-                'calc_out_3_title': '年度减少二氧化碳排放', 'calc_out_3_sub': '公吨温室气体 / 年',
-                'calc_out_4_title': '预估 EF-150 航行时间', 'calc_out_4_sub': '12 分钟 (比传统快)',
-                'calc_bar_diesel': '年度能源成本 (传统柴油船队)', 'calc_bar_ef150': '年度能源成本 (EF-150 电动船队)',
+                'calc_tag': '3. 战略航线分析', 'calc_title': '粤港澳大湾区航线可行性计算器',
+                'calc_desc': '模拟在大湾区主要水上交通走廊中，以 EF-150 平台替代传统柴油船只的财务可行性。',
+                'calc_sim_tag': '互动式财务模拟器', 'calc_sim_title': '船队营运成本预测模型', 'calc_sim_base': '基准 MGO 海事柴油价格：',
+                'calc_input_1': '选择大湾区快线航线：',
+                'calc_input_2': '营运船队规模：', 'calc_input_2_min': '1 艘船', 'calc_input_2_mid': '6 艘船', 'calc_input_2_max': '12 艘船',
+                'calc_input_3': '单船每日往返次数：', 'calc_input_3_min': '2 次往返', 'calc_input_3_mid': '8 次往返', 'calc_input_3_max': '16 次往返',
+                'calc_out_1_title': '年度能源节省：', 'calc_out_1_sub': '（对比传统柴油双体船）',
+                'calc_out_2_title': '预估 CapEx 溢价回收期：', 'calc_out_2_sub': '（针对电动平台溢价成本）',
+                'calc_out_3_title': '年度二氧化碳减排量：', 'calc_out_3_sub': '（每年温室气体公吨数）',
+                'calc_out_4_title': '预估 EF-150 航行时间：', 'calc_out_4_sub': '（比柴油船更快）',
+                'calc_bar_diesel': '年度能源成本（传统柴油船队）：', 'calc_bar_ef150': '年度能源成本（EF-150 电动船队）：',
                 
-                'tech_tag': '4. 技术数据库', 'tech_title': '拟定工程矩阵',
-                'tech_desc': 'EF-150 平台架构的基准结构与运行参数，已根据物理极限和海事认证标准进行更新。',
-                'tech_table_title': '平台架构：BAYWING EF-150', 'tech_table_ver': '修订草案 v2.1',
-                't_cat1': '1. 船舶尺寸与容量',
-                't_c1_r1': '总长 (LOA)', 't_c1_v1': '28.50 米 (93.5 英尺)',
-                't_c1_r2': '总宽 (BoA)', 't_c1_v2': '8.20 米 (水翼跨度 9.80 米)',
+                'tech_tag': '4. 技术数据库', 'tech_title': '建议工程矩阵',
+                'tech_desc': '为 EF-150 平台架构提出的基准结构与营运参数，已针对物理约束和海事认证标准进行更新。',
+                'tech_table_title': '平台架构：BAYWING EF-150', 'tech_table_ver': '(修改草案 v2.1)',
+                't_cat1': '1. 船只尺寸与载客量',
+                't_c1_r1': '全长 (LOA)', 't_c1_v1': '28.50 米 (93.5 英尺)',
+                't_c1_r2': '型宽 (BoA)', 't_c1_v2': '8.20 米 (水翼翼展 9.80 米)',
                 't_c1_r3': '载客量', 't_c1_v3': '150 名乘客 + 4 名船员',
-                't_cat2': '2. 水动力与效率',
-                't_c2_r1': '水翼配置', 't_c2_v1': '全浸没式 T 型水翼 (前) & 倒 V 型水翼 (后)',
-                't_c2_r2': '目标阻力减免', 't_c2_v2': '80% 对比同等排水型双体船',
-                't_c2_r3': '港口尾流激浪', 't_c2_v3': '< 0.15 米 于巡航速度',
+                't_cat2': '2. 水动力学与效率',
+                't_c2_r1': '水翼配置', 't_c2_v1': '前部全浸式 T 型水翼 & 后部倒 V 型水翼',
+                't_c2_r2': '目标阻力降低', 't_c2_v2': '相较同等排水量双体船降低 80%',
+                't_c2_r3': '港口航行尾波', 't_c2_v3': '巡航速度下波高 &lt; 0.15 米',
                 't_cat3': '3. 动力与基础设施目标',
-                't_c3_r1': '储能架构', 't_c3_v1': '2,400 kWh (2.4 MWh), 800V 标称直流',
-                't_c3_r2': '巡航功耗', 't_c3_v2': '~1,100 kW @ 38 节',
-                't_c3_r3': '有效航程', 't_c3_v3': '45 海里 (包含 20% 法规安全储备)',
+                't_c3_r1': '储能架构', 't_c3_v1': '2,400 kWh (2.4 MWh)，标称 800V DC',
+                't_c3_r2': '巡航功率消耗', 't_c3_v2': '在 38 节航速下约 1,100 kW',
+                't_c3_r3': '营运航程', 't_c3_v3': '45 海里（包含 20% 法规安全储备）',
                 't_cat4': '4. 飞行控制系统 (FCS)',
-                't_c4_r1': '飞行控制器', 't_c4_v1': '三重冗余主动线传飞控管理单元',
-                't_c4_r2': '控制回路频率', 't_c4_v2': '100 Hz 动态襟翼与配平驱动回路',
-                't_c4_r3': '传感器融合', 't_c4_v3': '惯性测量单元 (IMU
+                't_c4_r1': '飞行控制器', 't_c4_v1': '三重冗余主动电传操纵飞行管理单元',
+                't_c4_r2': '控制回路速率', 't_c4_v2': '100 Hz 动态襟翼与配平执行回路',
+                't_c4_r3': '传感器融合', 't_c4_v3': '惯性测量单元 (IMUs)、超声波波高传感器、前视光学雷达 (LiDAR)',
+                't_cat5': '5. 岸基充电与能量缓冲',
+                't_c5_r1': '固定式 BESS 缓冲', 't_c5_v1': '4.0 MWh 集装箱式电池缓冲（码头削峰填谷）',
+                't_c5_r2': '充电标准', 't_c5_v2': '3.5 MW 自动化 MCS (兆瓦级充电系统) 充电臂',
+
+                'data_tag': '5. 非稀释性资本结构与数据室', 'data_title': '零资本公共资金架构',
+                'data_desc': 'Aero-Marine Systems 的架构旨在实现<strong>创始人 $0 私人资金投入</strong>。通过叠加香港科技园 Incu-Tech 培育计划里程碑资助、香港创新科技署的“研究人才库”(RTH-SPC) 以及绿色科技/智慧出行资助额度，BAYWING-D1 验证机建置成本的 100% 均由非稀释性政府资金补助。',
+                'dr_card1_title': '阶段开发路线图',
+                'dr_c1_b1': '▸ <strong>第一阶段 (第 1-9 个月)：</strong> 6 自由度 (6-DoF) 数字孪生 (Digital Twin)、FCS 台架测试，以及在香港科技园机器人实验室进行硬件在环 (HIL) 模拟。',
+                'dr_c1_b2': '▸ <strong>第二阶段 (第 10-18 个月)：</strong> 缩尺 D1 技术验证机 (3.56m) 于吐露港进行海试；100Hz 波浪解耦验证。',
+                'dr_c1_b3': '▸ <strong>第三阶段 (第 19-27 个月)：</strong> 20-30 人座中型试航平台设计；组建联合商业财团。',
+                'dr_c1_b4': '▸ <strong>第四阶段 (第 28-36 个月)：</strong> 通过获授权之珠三角复合材料造船厂建造完整商业化 EF-150 平台。',
+                'dr_card2_title': '法规与分级认证路径',
+                'dr_c2_b1': '▸ <strong>DNV 船级社认证：</strong> 符合新型复合材料水翼结构之高速轻型船只 (HSLC) 规范。',
+                'dr_c2_b2': '▸ <strong>香港海事处 (HKMD) / 海事局 (MSA) 认证：</strong> 明确香港本地船只及大湾区跨境水域营运之认证路径。',
+                'dr_c2_b3': '▸ <strong>内港尾波豁免：</strong> 凭借 &lt; 0.15 米尾波波高特性，申请维多利亚港内提高航速之许可。',
+                'dr_c2_b4': '▸ <strong>自主测试豁免：</strong> D1 测试许可已通过海事处于吐露港水域之无人船只测试通道获批。',
+                'dr_card3_title': 'EF-150 船队经济效益拆解',
+                'dr_c3_h1': '指标', 'dr_c3_h2': '传统柴油船', 'dr_c3_h3': 'EF-150 电动船',
+                'dr_c3_r1': '能源 / 燃料',
+                'dr_c3_r2': '动力总成维护成本', 'dr_c3_v2a': '高 (燃气轮机)', 'dr_c3_v2b': '低 (电动吊舱)',
+                'dr_c3_r3': '船员配置', 'dr_c3_v3a': '标准 (8-10 人)', 'dr_c3_v3b': '减少 (4 人)',
+                'dr_card4_title': 'MCS 终端与 BESS 整合',
+                'dr_c4_b1': '▸ <strong>码头缓冲：</strong> 岸上 4.0 MWh BESS 储能系统消除公共渡轮码头对高压电网升级的需求。',
+                'dr_c4_b2': '▸ <strong>兆瓦级充电速率：</strong> 3.5 MW 直流输出，兼容海事 MCS 充电标准。',
+                'dr_c4_b3': '▸ <strong>周转时间窗口：</strong> 乘客下船期间实现 &lt; 45 分钟充电周期（20% 至 90% SOC 电量）。',
+                
+                'footer_cpy': 'AERO-MARINE SYSTEMS 概念 &copy; 2026。',
+                'footer_loc': '香港 / 深圳', 'footer_type': '可行性研究报告'
+            }
+        };
+
+        function setLang(lang) {
+            currentLang = lang;
+            const fx = fxMap[lang];
+            const t = translations[lang];
+
+            // 1. Update text nodes
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) el.innerHTML = t[key];
+            });
+
+            // 2. Localized sentences
+            const dieselBase = (22.50 * fx.rate).toFixed(2);
+            const electricBase = (4.90 * fx.rate).toFixed(2);
+            
+            let p4Desc = '';
+            if (lang === 'en') {
+                p4Desc = `Direct electric pod drives yield ~${fx.symbol}${electricBase} ${fx.code}/NM energy costs, compared to ~${fx.symbol}${dieselBase} ${fx.code}/NM for legacy marine gas oil turbines.`;
+            } else if (lang === 'tc') {
+                p4Desc = `直驅式電動吊艙推進器的能源成本僅約 ${fx.symbol}${electricBase} ${fx.code} / 海里，而傳統柴油燃氣輪機則需約 ${fx.symbol}${dieselBase} ${fx.code} / 海里。`;
+            } else if (lang === 'sc') {
+                p4Desc = `直驱式电动吊舱推进器的能源成本仅约 ${fx.symbol}${electricBase} ${fx.code} / 海里，而传统柴油燃气轮机则需约 ${fx.symbol}${dieselBase} ${fx.code} / 海里。`;
+            }
+            
+            document.getElementById('ui-p4-desc').innerText = p4Desc;
+            
+            let nm_suffix = ' / NM';
+            if (lang === 'tc' || lang === 'sc') nm_suffix = ' / 海里';
+            
+            document.getElementById('ui-p4-metric').innerText = `~${fx.symbol}${electricBase} ${fx.code}${nm_suffix}`;
+            document.getElementById('ui-dr-diesel').innerText = `~${fx.symbol}${dieselBase} ${fx.code}${nm_suffix}`;
+            document.getElementById('ui-dr-electric').innerText = `~${fx.symbol}${electricBase} ${fx.code}${nm_suffix}`;
+
+            // 3. Dropdown list
+            const routeSelect = document.getElementById('calc-route');
+            if(routeSelect) {
+                const currentVal = routeSelect.value;
+                if (lang === 'en') {
+                    routeSelect.innerHTML = `
+                        <option value="hk-shenzhen">HK Central ⟷ Shenzhen Shekou (22 NM)</option>
+                        <option value="hkg-szx">HKG SkyPier ⟷ Shenzhen Airport (25 NM)</option>
+                        <option value="hk-macau">HK Central ⟷ Macau Taipa (36 NM)</option>
+                        <option value="hk-airport">HK Central ⟷ HKG SkyPier Airport (17 NM)</option>
+                        <option value="hk-zhuhai">HK Central ⟷ Zhuhai Jiuzhou (35 NM)</option>
+                    `;
+                } else if (lang === 'tc') {
+                    routeSelect.innerHTML = `
+                        <option value="hk-shenzhen">香港中環 ⟷ 深圳蛇口 (22 海里)</option>
+                        <option value="hkg-szx">香港機場海天客運碼頭 ⟷ 深圳機場 (25 海里)</option>
+                        <option value="hk-macau">香港中環 ⟷ 澳門氹仔 (36 海里)</option>
+                        <option value="hk-airport">香港中環 ⟷ 香港機場海天客運碼頭 (17 海里)</option>
+                        <option value="hk-zhuhai">香港中環 ⟷ 珠海九洲 (35 海里)</option>
+                    `;
+                } else {
+                    routeSelect.innerHTML = `
+                        <option value="hk-shenzhen">香港中环 ⟷ 深圳蛇口 (22 海里)</option>
+                        <option value="hkg-szx">香港机场海天客运码头 ⟷ 深圳机场 (25 海里)</option>
+                        <option value="hk-macau">香港中环 ⟷ 澳门氹仔 (36 海里)</option>
+                        <option value="hk-airport">香港中环 ⟷ 香港机场海天客运码头 (17 海里)</option>
+                        <option value="hk-zhuhai">香港中环 ⟷ 珠海九洲 (35 海里)</option>
+                    `;
+                }
+                routeSelect.value = currentVal;
+            }
+
+            // 4. Update Button Classes
+            ['en', 'tc', 'sc'].forEach(l => {
+                const btn = document.getElementById('btn-lang-' + l);
+                if(btn) {
+                    if(l === lang) {
+                        btn.classList.remove('text-zinc-500', 'hover:text-white');
+                        btn.classList.add('bg-zinc-800', 'text-white');
+                    } else {
+                        btn.classList.add('text-zinc-500', 'hover:text-white');
+                        btn.classList.remove('bg-zinc-800', 'text-white');
+                    }
+                }
+            });
+            
+            // 5. Re-run calculator
+            runRouteCalculator();
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                iconOpen.classList.add('hidden');
+                iconClose.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            }
+        }
+
+        const routeProfiles = {
+            'hk-shenzhen': { distanceNM: 22, dieselTimeMins: 48, ef150TimeMins: 36, dieselFuelPerNM: 17.5, electricKwhPerNM: 30.0 },
+            'hkg-szx': { distanceNM: 25, dieselTimeMins: 45, ef150TimeMins: 40, dieselFuelPerNM: 17.8, electricKwhPerNM: 30.0 },
+            'hk-macau': { distanceNM: 36, dieselTimeMins: 58, ef150TimeMins: 55, dieselFuelPerNM: 18.5, electricKwhPerNM: 30.0 },
+            'hk-airport': { distanceNM: 17, dieselTimeMins: 42, ef150TimeMins: 28, dieselFuelPerNM: 17.0, electricKwhPerNM: 30.0 },
+            'hk-zhuhai': { distanceNM: 35, dieselTimeMins: 55, ef150TimeMins: 53, dieselFuelPerNM: 18.2, electricKwhPerNM: 30.0 }
+        };
+
+        function runRouteCalculator() {
+            const routeKey = document.getElementById('calc-route').value;
+            const fleet = parseInt(document.getElementById('calc-fleet').value);
+            const trips = parseInt(document.getElementById('calc-trips').value);
+            const fx = fxMap[currentLang];
+
+            const vesselSuffix = currentLang === 'en' ? (fleet === 1 ? ' VESSEL' : ' VESSELS') : ' 艘船';
+            const tripSuffix = currentLang === 'en' ? ' TRIPS' : ' 次往返';
+            const minSuffix = currentLang === 'en' ? ' MINS' : (currentLang === 'tc' ? ' 分鐘' : ' 分钟');
+            const yrsSuffix = currentLang === 'en' ? ' YRS' : ' 年';
+
+            document.getElementById('calc-fleet-val').innerText = fleet + (currentLang === 'en' ? vesselSuffix : (' ' + vesselSuffix));
+            document.getElementById('calc-trips-val').innerText = trips + (currentLang === 'en' ? tripSuffix : (' ' + tripSuffix));
+
+            const r = routeProfiles[routeKey];
+            if (!r) return;
+
+            const dieselPricePerLiterUSD = 2.20; 
+            const electricityPricePerKwhUSD = 0.16; 
+            
+            const localDieselPrice = (dieselPricePerLiterUSD * fx.rate).toFixed(2);
+            document.getElementById('ui-calc-diesel-price').innerText = `${fx.symbol}${localDieselPrice} ${fx.code} / Liter`;
+
+            const annualNMTravelled = fleet * trips * r.distanceNM * 365;
+
+            const annualDieselLiters = annualNMTravelled * r.dieselFuelPerNM;
+            const annualDieselCostUSD = annualDieselLiters * dieselPricePerLiterUSD;
+            const annualElectricKwh = annualNMTravelled * r.electricKwhPerNM;
+            const annualElectricCostUSD = annualElectricKwh * electricityPricePerKwhUSD;
+
+            const annualSavingsUSD = Math.max(0, annualDieselCostUSD - annualElectricCostUSD);
+            const premiumCostPerVesselUSD = 3500000;
+            const fleetPremiumCapExUSD = fleet * premiumCostPerVesselUSD;
+            const paybackYears = annualSavingsUSD > 0 ? (fleetPremiumCapExUSD / annualSavingsUSD).toFixed(1) : 'N/A';
+            const co2TonsReduced = Math.round((annualDieselLiters * 2.68) / 1000);
+            
+            const timeSavedMins = r.dieselTimeMins - r.ef150TimeMins;
+            let diffSuffix = '';
+            if (currentLang === 'en') diffSuffix = ` ${timeSavedMins} Mins Faster than Diesel`;
+            if (currentLang === 'tc') diffSuffix = ` ${timeSavedMins} 分鐘 (比柴油船更快)`;
+            if (currentLang === 'sc') diffSuffix = ` ${timeSavedMins} 分钟 (比柴油船更快)`;
+
+            const localAnnualSavings = (annualSavingsUSD * fx.rate) / 1000000;
+            const localAnnualDiesel = (annualDieselCostUSD * fx.rate) / 1000000;
+            const localAnnualElectric = (annualElectricCostUSD * fx.rate) / 1000000;
+
+            document.getElementById('calc-out-savings').innerText = `${fx.symbol}${localAnnualSavings.toFixed(2)}${fx.m_suffix}`;
+            document.getElementById('calc-out-payback').innerText = paybackYears + yrsSuffix;
+            document.getElementById('calc-out-co2').innerText = co2TonsReduced.toLocaleString() + (currentLang === 'en' ? ' T' : ' 噸');
+            document.getElementById('calc-out-time').innerText = r.ef150TimeMins + minSuffix;
+            document.getElementById('calc-out-time-diff').innerText = diffSuffix;
+            document.getElementById('calc-bar-diesel-text').innerText = `${fx.symbol}${localAnnualDiesel.toFixed(2)}${fx.m_suffix}`;
+            document.getElementById('calc-bar-ef150-text').innerText = `${fx.symbol}${localAnnualElectric.toFixed(2)}${fx.m_suffix}`;
+
+            const efPercent = Math.round((annualElectricCostUSD / annualDieselCostUSD) * 100);
+            document.getElementById('calc-bar-ef150').style.width = Math.max(8, efPercent) + '%';
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setLang('en');
+        });
+    </script>
+</body>
+</html>
