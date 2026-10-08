@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlowCom" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#111827"/><stop offset="100%" stop-color="#030712"/></radialGradient>
+    <linearGradient id="comHull" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#374151"/><stop offset="50%" stop-color="#1f2937"/><stop offset="100%" stop-color="#0b0f19"/></linearGradient>
+    <filter id="cyanGlowCom"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bgGlowCom)"/>
+  <path d="M 0 0 H 1600 V 1200 H 0 Z" fill="none" stroke="#10b981" stroke-width="1" stroke-opacity="0.1"/>
+
+  <text x="50" y="50" fill="#10b981" font-family="monospace" font-size="20" font-weight="bold" letter-spacing="3">BAYWING EF-150 // 150-PAX COMMERCIAL HYDROFOIL EXPRESS</text>
+  <text x="50" y="75" fill="#94a3b8" font-family="monospace" font-size="12">GBA TRANSIT CORRIDOR FLAGSHIP PLATFORM - ENGINEERING MULTI-VIEW</text>
+
+  <!-- 1. TOP-DOWN PLAN -->
+  <g transform="translate(100, 120)">
+    <text x="0" y="20" fill="#fff" font-family="monospace" font-size="12" font-weight="bold">01. TOP-DOWN PLAN (93.5 FT LOA)</text>
+    <path d="M 30 120 Q 150 50 420 50 Q 520 50 570 120 Q 520 190 420 190 Q 150 190 30 120 Z" fill="url(#comHull)" stroke="#10b981" stroke-width="2" filter="url(#cyanGlowCom)"/>
+    <rect x="180" y="80" width="220" height="80" rx="10" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1"/>
+  </g>
+
+  <!-- 2. PORT (LEFT) SIDE -->
+  <g transform="translate(600, 120)">
+    <text x="0" y="20" fill="#fff" font-family="monospace" font-size="12" font-weight="bold">02. PORT SIDE ELEVATION</text>
+    <path d="M 20 130 C 120 80 400 80 480 120 C 440 150 100 160 20 130 Z" fill="url(#comHull)" stroke="#10b981" stroke-width="2" filter="url(#cyanGlowCom)"/>
+    <line x1="380" y1="125" x2="380" y2="210" stroke="#10b981" stroke-width="6"/>
+    <path d="M 330 210 L 430 210" stroke="#10b981" stroke-width="10" stroke-linecap="round"/>
+    <line x1="120" y1="140" x2="120" y2="220" stroke="#10b981" stroke-width="6"/>
+    <path d="M 80 220 L 160 220" stroke="#10b981" stroke-width="10" stroke-linecap="round"/>
+    <line x1="0" y1="170" x2="520" y2="170" stroke="#fff" stroke-opacity="0.3" stroke-dasharray="5,5"/>
+  </g>
+
+  <!-- 3. STARBOARD (RIGHT) SIDE -->
+  <g transform="translate(1100, 120)">
+    <text x="0" y="20" fill="#fff" font-family="monospace" font-size="12" font-weight="bold">03. STARBOARD SIDE ELEVATION</text>
+    <path d="M 20 130 C 120 80 400 80 480 120 C 440 150 100 160 20 130 Z" fill="url(#comHull)" stroke="#10b981" stroke-width="2" filter="url(#cyanGlowCom)"/>
+    <line x1="380" y1="125" x2="380" y2="210" stroke="#10b981" stroke-width="6"/>
+    <path d="M 330 210 L 430 210" stroke="#10b981" stroke-width="10" stroke-linecap="round"/>
+    <line x1="120" y1="140" x2="120" y2="220" stroke="#10b981" stroke-width="6"/>
+    <path d="M 80 220 L 160 220" stroke="#10b981" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <!-- 4. BOTTOM-UP -->
+  <g transform="translate(100, 420)">
+    <text x="0" y="20" fill="#fff" font-family="monospace" font-size="12" font-weight="bold">04. BOTTOM-UP HULL GEOMETRY</text>
+    <path d="M 30 120 Q 150 50 420 50 Q 520 50 570 120 Q 520 190 420 190 Q 150 190 30 120 Z" fill="none" stroke="#10b981" stroke-width="2"/>
+  </g>
+
+  <!-- 5. REAR TRANSOM -->
+  <g transform="translate(600, 420)">
+    <text x="0" y="20" fill="#fff" font-family="monospace" font-size="12" font-weight="bold">05. REAR TRANSOM (POD DRIVES)</text>
+    <path d="M 100 70 Q 220 50 340 70 L 320 170 Q 220 200 120 170 Z" fill="url(#comHull)" stroke="#10b981" stroke-width="2"/>
+    <rect x="150" y="110" width="30" height="40" rx="5" fill="none" stroke="#10b981" stroke-width="3"/>
+    <rect x="260" y="110" width="30" height="40" rx="5" fill="none" stroke="#10b981" stroke-width="3"/>
+  </g>
+
+  <!-- 6. FRONT BOW -->
+  <g transform="translate(1100, 420)">
+    <text x="0" y="20" fill="#fff" font-family="monospace" font-size="12" font-weight="bold">06. FRONT BOW WEDGE PROFILE</text>
+    <path d="M 220 50 Q 220 110 220 180 Q 300 140 360 100 Q 300 60 220 50 Z" fill="url(#comHull)" stroke="#10b981" stroke-width="2"/>
+    <path d="M 80 100 Q 140 60 220 50 Q 220 110 220 180 Q 140 140 80 100 Z" fill="url(#comHull)" stroke="#10b981" stroke-width="2"/>
+  </g>
+
+  <!-- 7. CFD HYDRODYNAMIC TESTING VIEW -->
+  <g transform="translate(350, 720)">
+    <text x="0" y="20" fill="#fff" font-family="monospace" font-size="12" font-weight="bold">07. FULL-SCALE CAVITATION & LIFT-TO-DRAG CFD FLOW</text>
+    <path d="M 80 100 C 180 50 720 50 820 100 C 750 130 150 140 80 100 Z" fill="url(#comHull)" stroke="#10b981" stroke-width="2"/>
+    <line x1="620" y1="120" x2="620" y2="210" stroke="#10b981" stroke-width="6"/>
+    <path d="M 570 210 L 670 210" stroke="#10b981" stroke-width="10" stroke-linecap="round"/>
+    <path d="M 0 40 Q 450 0 1000 40" fill="none" stroke="#00f2ff" stroke-width="2" filter="url(#cyanGlowCom)"/>
+    <path d="M 0 70 Q 450 30 1000 70" fill="none" stroke="#10b981" stroke-width="2"/>
+    <path d="M 0 160 Q 450 200 1000 160" fill="none" stroke="#f59e0b" stroke-width="2"/>
+  </g>
+</svg>
