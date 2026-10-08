@@ -309,8 +309,7 @@
             <div class="mb-12">
                 <div class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-3" data-i18n="bp_title">INTERACTIVE SCHEMATIC VIEWER</div>
                 <div class="blueprint-container">
-                    <!-- Image embedded via base64 or relative path -->
-                    <img src="image.png" alt="BAYWING-D1 Blueprint" class="blueprint-img">
+                    <img src="d1-multiview.svg" alt="BAYWING-D1 Blueprint" class="blueprint-img">
                     
                     <!-- Hotspot 1: Forward LiDAR -->
                     <div class="hotspot" style="top: 24%; left: 39%;">
@@ -688,6 +687,13 @@
                 </p>
             </div>
 
+            <!-- EMBED EF-150 SVG SCHEMATIC -->
+            <div class="mb-10">
+                <div class="blueprint-container">
+                    <img src="ef150-multiview.svg" alt="BAYWING EF-150 Commercial Blueprint" class="blueprint-img">
+                </div>
+            </div>
+
             <div class="data-card rounded-xl overflow-hidden">
                 <div class="p-4 bg-zinc-950 border-b border-zinc-800 flex justify-between items-center text-xs font-mono">
                     <span class="text-white font-bold" data-i18n="tech_table_title">PLATFORM ARCHITECTURE: BAYWING EF-150</span>
@@ -787,61 +793,61 @@
                 <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase" data-i18n="data_title">
                     Public Funding & Working Capital Architecture
                 </h2>
-                <p class="text-sm text-zinc-400 mt-4 font-sans leading-relaxed bg-tech-emerald/5 border border-tech-emerald/20 p-4 rounded" data-i18n="data_desc">
-                    Aero-Marine Systems utilizes a highly leveraged grant stack to execute the BAYWING-D1 hardware demonstrator. Because the HKSTP Incu-Tech and ITF Research Talent Hub operate on a reimbursement basis, we are securing an initial <strong>"Float Capital" bridge facility</strong> (via commercial venture debt or angel injection). This bridges cash flow, covers the PAG 10% co-pay, and secures specific Commercial Off-The-Shelf (COTS) aerospace components while ensuring zero interruption to the R&D timeline while awaiting government disbursements.
-                </p>
+                <div class="mt-4 bg-tech-emerald/5 border border-tech-emerald/20 p-5 rounded-lg space-y-4">
+                    <p class="text-sm text-zinc-300 font-sans leading-relaxed" data-i18n="data_desc_1">
+                        Aero-Marine Systems utilizes a highly leveraged grant stack to execute the BAYWING-D1 hardware demonstrator. Because the HKSTP Incu-Tech and ITF Research Talent Hub operate on a reimbursement basis, we are securing an initial <strong>"Float Capital" bridge facility</strong> (via commercial venture debt or angel injection). This bridges cash flow, covers the PAG 10% co-pay, and secures specific Commercial Off-The-Shelf (COTS) aerospace components while ensuring zero interruption to the R&D timeline while awaiting government disbursements.
+                    </p>
+                    <p class="text-sm text-zinc-300 font-sans leading-relaxed pt-3 border-t border-tech-emerald/10" data-i18n="data_desc_2">
+                        <strong>AI-Optimized Lean Engineering:</strong> To build the BAYWING-D1 under a strict HK$ 3.99M public funding envelope, we utilize AI coding agents for GNC (Guidance, Navigation, and Control) software generation and AI-assisted OpenFOAM CFD scripting. This reduces traditional maritime engineering labor requirements from a team of 4–5 down to a lean core team of 2 (fully subsidized by the RTH grant), allowing the bulk of the HKSTP subsidy to be deployed into pure hardware and testing capabilities.
+                    </p>
+                </div>
             </div>
 
             <!-- Detailed COTS Budget Table -->
             <div class="data-card rounded-xl overflow-hidden mb-10">
                 <div class="p-4 bg-zinc-900 border-b border-zinc-800 flex justify-between items-center text-xs font-mono">
-                    <span class="text-white font-bold" data-i18n="cots_table_title">DEMONSTRATOR (D1) COTS BUDGET BREAKDOWN</span>
+                    <span class="text-white font-bold" data-i18n="cots_table_title">DEMONSTRATOR (D1) AI-OPTIMIZED BUDGET BREAKDOWN</span>
                     <span class="text-tech-emerald font-bold">HK$ 3,990,000</span>
                 </div>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left text-[11px] font-mono whitespace-nowrap">
                         <thead class="bg-zinc-950/80 text-zinc-400 border-b border-zinc-800">
                             <tr>
-                                <th class="py-3 px-4" data-i18n="cots_th_cat">R&D Category</th>
-                                <th class="py-3 px-4" data-i18n="cots_th_desc">COTS Hardware / Resource Allocation</th>
-                                <th class="py-3 px-4 text-right" data-i18n="cots_th_cost">Est. Cost (HKD)</th>
+                                <th class="py-3 px-4" data-i18n="cots_th_cat">Budget Category</th>
+                                <th class="py-3 px-4" data-i18n="cots_th_desc">AI-Driven Strategy & Allocation Details</th>
+                                <th class="py-3 px-4 text-right" data-i18n="cots_th_cost">Allocation (HKD)</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-zinc-800 text-zinc-300">
                             <tr>
-                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r1_cat">Avionics & Sensor Fusion</td>
-                                <td class="py-3 px-4" data-i18n="cots_r1_desc">SBG Ellipse-D RTK INS, Ouster OS0 LiDAR, Jetson Orin Nano, Echologger Altimeter</td>
-                                <td class="py-3 px-4 text-right">$250,000</td>
+                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r1_cat">1. Founder Living Allowance</td>
+                                <td class="py-3 px-4" data-i18n="cots_r1_desc">Sustains lead founder during core R&D (HKSTP flexible operational subsidy)</td>
+                                <td class="py-3 px-4 text-right">$720,000</td>
                             </tr>
                             <tr>
-                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r2_cat">Actuation & Mechatronics</td>
-                                <td class="py-3 px-4" data-i18n="cots_r2_desc">Subsea IP68 Rotary Servos (Volz/Moog), SubConn cabling, CNC linkages</td>
-                                <td class="py-3 px-4 text-right">$350,000</td>
+                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r2_cat">2. Core Staff (1 Engineer)</td>
+                                <td class="py-3 px-4" data-i18n="cots_r2_desc">1x Mechatronics Lead. GNC logic heavily augmented by AI code-gen (RTH Subsidized)</td>
+                                <td class="py-3 px-4 text-right">$1,450,000</td>
                             </tr>
                             <tr>
-                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r3_cat">Powertrain & Energy</td>
-                                <td class="py-3 px-4" data-i18n="cots_r3_desc">2x 1.0kW Pods, 48V Marine LFP Packs, Victron BMS</td>
-                                <td class="py-3 px-4 text-right">$300,000</td>
+                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r3_cat">3. COTS Hardware & Sensors</td>
+                                <td class="py-3 px-4" data-i18n="cots_r3_desc">Jetson Orin Nano, SBG INS, Ouster LiDAR, Torqeedo pods (HKSTP Prototyping)</td>
+                                <td class="py-3 px-4 text-right">$800,000</td>
                             </tr>
                             <tr>
-                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r4_cat">Hull & Composites</td>
-                                <td class="py-3 px-4" data-i18n="cots_r4_desc">Carbon-fiber infusion tooling, 3D printed molds, CNC hydrofoil struts</td>
+                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r4_cat">4. Hull Mfg & Tooling</td>
+                                <td class="py-3 px-4" data-i18n="cots_r4_desc">AI-optimized CAD driving CNC foam milling & carbon infusion (Smart Mobility Fund)</td>
                                 <td class="py-3 px-4 text-right">$500,000</td>
                             </tr>
                             <tr>
-                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r5_cat">Testing & Infrastructure</td>
-                                <td class="py-3 px-4" data-i18n="cots_r5_desc">Telemetry base station (Microhard), Ansys/MATLAB licenses, Chase boat rental</td>
-                                <td class="py-3 px-4 text-right">$450,000</td>
+                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r5_cat">5. Testing & Water Permits</td>
+                                <td class="py-3 px-4" data-i18n="cots_r5_desc">Tolo Harbour site allowances, telemetry gear, chase boats (HKSTP Operations)</td>
+                                <td class="py-3 px-4 text-right">$200,000</td>
                             </tr>
                             <tr>
-                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r6_cat">R&D Personnel (24 Mos)</td>
-                                <td class="py-3 px-4" data-i18n="cots_r6_desc">2x GNC Engineers (RTH Subsidized), 1x Naval Architect (Contract)</td>
-                                <td class="py-3 px-4 text-right">$1,800,000</td>
-                            </tr>
-                            <tr>
-                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r7_cat">IP Protection</td>
-                                <td class="py-3 px-4" data-i18n="cots_r7_desc">PCT Filing & Regional Patent Prosecution (PAG Subsidized)</td>
-                                <td class="py-3 px-4 text-right">$340,000</td>
+                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r7_cat">6. Intellectual Property</td>
+                                <td class="py-3 px-4" data-i18n="cots_r7_desc">PCT Filing & GBA Regional Patent Prosecution (PAG 90% Subsidized)</td>
+                                <td class="py-3 px-4 text-right">$120,000</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1047,17 +1053,18 @@
                 't_c5_r2': 'Charging Standard', 't_c5_v2': '3.5 MW Automated MCS (Megawatt Charging System) Arm',
 
                 'data_tag': '5. Capitalization & COTS R&D Budget', 'data_title': 'Public Funding & Working Capital Architecture',
-                'data_desc': 'Aero-Marine Systems utilizes a highly leveraged grant stack to execute the BAYWING-D1 hardware demonstrator. Because the HKSTP Incu-Tech and ITF Research Talent Hub operate on a reimbursement basis, we are securing an initial <strong>"Float Capital" bridge facility</strong> (via commercial venture debt or angel injection). This bridges cash flow, covers the PAG 10% co-pay, and secures specific Commercial Off-The-Shelf (COTS) aerospace components while ensuring zero interruption to the R&D timeline while awaiting government disbursements.',
+                'data_desc_1': 'Aero-Marine Systems utilizes a highly leveraged grant stack to execute the BAYWING-D1 hardware demonstrator. Because the HKSTP Incu-Tech and ITF Research Talent Hub operate on a reimbursement basis, we are securing an initial <strong>"Float Capital" bridge facility</strong> (via commercial venture debt or angel injection). This bridges cash flow, covers the PAG 10% co-pay, and secures specific Commercial Off-The-Shelf (COTS) aerospace components while ensuring zero interruption to the R&D timeline while awaiting government disbursements.',
+                'data_desc_2': '<strong>AI-Optimized Lean Engineering:</strong> To build the BAYWING-D1 under a strict HK$ 3.99M public funding envelope, we utilize AI coding agents for GNC (Guidance, Navigation, and Control) software generation and AI-assisted OpenFOAM CFD scripting. This reduces traditional maritime engineering labor requirements from a team of 4–5 down to a lean core team of 2 (fully subsidized by the RTH grant), allowing the bulk of the HKSTP subsidy to be deployed into pure hardware and testing capabilities.',
                 
-                'cots_table_title': 'DEMONSTRATOR (D1) COTS BUDGET BREAKDOWN',
-                'cots_th_cat': 'R&D Category', 'cots_th_desc': 'COTS Hardware / Resource Allocation', 'cots_th_cost': 'Est. Cost (HKD)',
-                'cots_r1_cat': 'Avionics & Sensor Fusion', 'cots_r1_desc': 'SBG Ellipse-D RTK INS, Ouster OS0 LiDAR, Jetson Orin Nano, Echologger Altimeter',
-                'cots_r2_cat': 'Actuation & Mechatronics', 'cots_r2_desc': 'Subsea IP68 Rotary Servos (Volz/Moog), SubConn cabling, CNC linkages',
-                'cots_r3_cat': 'Powertrain & Energy', 'cots_r3_desc': '2x 1.0kW Pods, 48V Marine LFP Packs, Victron BMS',
-                'cots_r4_cat': 'Hull & Composites', 'cots_r4_desc': 'Carbon-fiber infusion tooling, 3D printed molds, CNC hydrofoil struts',
-                'cots_r5_cat': 'Testing & Infrastructure', 'cots_r5_desc': 'Telemetry base station (Microhard), Ansys/MATLAB licenses, Chase boat rental',
-                'cots_r6_cat': 'R&D Personnel (24 Mos)', 'cots_r6_desc': '2x GNC Engineers (RTH Subsidized), 1x Naval Architect (Contract)',
-                'cots_r7_cat': 'IP Protection', 'cots_r7_desc': 'PCT Filing & Regional Patent Prosecution (PAG Subsidized)',
+                'cots_table_title': 'DEMONSTRATOR (D1) AI-OPTIMIZED BUDGET BREAKDOWN',
+                'cots_th_cat': 'Budget Category', 'cots_th_desc': 'AI-Driven Strategy & Allocation Details', 'cots_th_cost': 'Allocation (HKD)',
+                
+                'cots_r1_cat': '1. Founder Living Allowance', 'cots_r1_desc': 'Sustains lead founder during core R&D (HKSTP flexible operational subsidy)',
+                'cots_r2_cat': '2. Core Staff (1 Engineer)', 'cots_r2_desc': '1x Mechatronics Lead. GNC logic heavily augmented by AI code-gen (RTH Subsidized)',
+                'cots_r3_cat': '3. COTS Hardware & Sensors', 'cots_r3_desc': 'Jetson Orin Nano, SBG INS, Ouster LiDAR, Torqeedo pods (HKSTP Prototyping)',
+                'cots_r4_cat': '4. Hull Mfg & Tooling', 'cots_r4_desc': 'AI-optimized CAD driving CNC foam milling & carbon infusion (Smart Mobility Fund)',
+                'cots_r5_cat': '5. Testing & Water Permits', 'cots_r5_desc': 'Tolo Harbour site allowances, telemetry gear, chase boats (HKSTP Operations)',
+                'cots_r7_cat': '6. Intellectual Property', 'cots_r7_desc': 'PCT Filing & GBA Regional Patent Prosecution (PAG 90% Subsidized)',
 
                 'grant_box_tag': 'LEVERAGED PUBLIC CAPITAL STACK', 'grant_box_title': 'Total Demonstrator Capitalization: HK$ 3,990,000',
                 'founder_share': 'Seed Bridge Facility / Float Capital (~25%):', 'founder_cost': 'HK$ 1,000,000',
@@ -1166,17 +1173,18 @@
                 't_c5_r2': '充電標準', 't_c5_v2': '3.5 MW 自動化 MCS (兆瓦級充電系統) 充電臂',
 
                 'data_tag': '5. 資本結構與 COTS 研發預算', 'data_title': '公共資金與營運資金架構',
-                'data_desc': 'Aero-Marine Systems 運用高度槓桿化的資助疊加策略來推進 BAYWING-D1 硬件驗證機。由於香港科技園 Incu-Tech 培育計劃及創新科技署「研究人才庫」皆採實報實銷 (Reimbursement) 制，我們將透過<strong>「營運流動資金」過渡性貸款 (Float Capital bridge facility)</strong>，或天使輪注入初期營運資金以橋接現金流、涵蓋 PAG 專利申請的 10% 企業承擔部份，並採購特定的商用現成 (COTS) 航空組件，確保在等待政府撥款期間研發進度零中斷。',
+                'data_desc_1': 'Aero-Marine Systems 運用高度槓桿化的資助疊加策略來推進 BAYWING-D1 硬件驗證機。由於香港科技園 Incu-Tech 培育計劃及創新科技署「研究人才庫」皆採實報實銷 (Reimbursement) 制，我們將透過<strong>「營運流動資金」過渡性貸款 (Float Capital bridge facility)</strong>，或天使輪注入初期營運資金以橋接現金流、涵蓋 PAG 專利申請的 10% 企業承擔部份，並採購特定的商用現成 (COTS) 航空組件，確保在等待政府撥款期間研發進度零中斷。',
+                'data_desc_2': '<strong>AI 驅動的精益工程：</strong> 為了在嚴格的 HK$ 3.99M 公共資金預算內完成 BAYWING-D1 的建造，我們利用 AI 編碼代理生成 GNC（制導、導航與控制）軟體，並採用 AI 輔助的 OpenFOAM CFD 腳本化運算。這將傳統海事工程團隊的人力需求從 4-5 人精簡至僅 2 人的核心團隊（薪資由 RTH 完全補貼），從而使絕大部份的科技園資助金能直接投入於純硬體開發及測試環節。',
                 
-                'cots_table_title': 'D1 驗證機商用現成 (COTS) 預算明細',
-                'cots_th_cat': '研發類別', 'cots_th_desc': 'COTS 硬件 / 資源分配', 'cots_th_cost': '預估成本 (HKD)',
-                'cots_r1_cat': '航電與感測器融合', 'cots_r1_desc': 'SBG Ellipse-D RTK INS, Ouster OS0 LiDAR, Jetson Orin Nano, Echologger 聲納高度計',
-                'cots_r2_cat': '致動器與機電', 'cots_r2_desc': '水下 IP68 旋轉伺服馬達 (Volz/Moog), SubConn 防水線纜, CNC 連桿',
-                'cots_r3_cat': '動力總成與能源', 'cots_r3_desc': '2x 1.0kW 電動吊艙, 48V 船用 LFP 電池組, Victron BMS',
-                'cots_r4_cat': '船體與複合材料', 'cots_r4_desc': '碳纖維真空灌注模具, 3D 列印母模, CNC 銑削水翼支柱',
-                'cots_r5_cat': '測試與基礎設施', 'cots_r5_desc': '遙測基站 (Microhard), Ansys/MATLAB 軟體授權, 護航船租賃',
-                'cots_r6_cat': '研發人員 (24 個月)', 'cots_r6_desc': '2x GNC 控制工程師 (RTH 補貼), 1x 造船工程師 (合約制)',
-                'cots_r7_cat': '知識產權保護', 'cots_r7_desc': 'PCT 專利佈局與區域專利申請 (PAG 補貼)',
+                'cots_table_title': 'D1 驗證機 AI 優化預算明細',
+                'cots_th_cat': '預算類別', 'cots_th_desc': 'AI 策略與資源分配細節', 'cots_th_cost': '預估成本 (HKD)',
+                
+                'cots_r1_cat': '1. 創辦人生活津貼', 'cots_r1_desc': '於核心研發期維持主導創辦人生計 (HKSTP 彈性營運津貼)',
+                'cots_r2_cat': '2. 核心團隊 (1 名工程師)', 'cots_r2_desc': '1x 機電負責人。GNC 邏輯主要由 AI 代碼生成輔助 (RTH 補貼)',
+                'cots_r3_cat': '3. COTS 硬件與感測器', 'cots_r3_desc': 'Jetson Orin Nano, SBG INS, Ouster LiDAR, Torqeedo 吊艙 (HKSTP 原型資助)',
+                'cots_r4_cat': '4. 船體製造與模具', 'cots_r4_desc': 'AI 優化 CAD 直接驅動 CNC 泡沫銑削及碳纖維灌注 (智慧交通基金)',
+                'cots_r5_cat': '5. 測試與水域許可', 'cots_r5_desc': '吐露港場地津貼、遙測設備、護航船 (HKSTP 營運資助)',
+                'cots_r7_cat': '6. 知識產權', 'cots_r7_desc': 'PCT 專利佈局與大灣區區域專利申請 (PAG 90% 補貼)',
 
                 'grant_box_tag': '槓桿化公共資本結構', 'grant_box_title': '驗證機總資本：HK$ 3,990,000',
                 'founder_share': '種子輪過渡貸款 / 營運流動資金 (~25%)：', 'founder_cost': 'HK$ 1,000,000',
@@ -1285,17 +1293,18 @@
                 't_c5_r2': '充电标准', 't_c5_v2': '3.5 MW 自动化 MCS (兆瓦级充电系统) 充电臂',
 
                 'data_tag': '5. 资本结构与 COTS 研发预算', 'data_title': '公共资金与营运资金架构',
-                'data_desc': 'Aero-Marine Systems 运用高度杠杆化的资助叠加策略来推进 BAYWING-D1 硬件验证机。由于香港科技园 Incu-Tech 培育计划及创新科技署“研究人才库”皆采实报实销 (Reimbursement) 制，我们将透过<strong>“营运流动资金”过渡性贷款 (Float Capital bridge facility)</strong>，或天使轮注入初期营运资金以桥接现金流、涵盖 PAG 专利申请的 10% 企业承担部份，并采购特定的商用现成 (COTS) 航空组件，确保在等待政府拨款期间研发进度零中断。',
+                'data_desc_1': 'Aero-Marine Systems 运用高度杠杆化的资助叠加策略来推进 BAYWING-D1 硬件验证机。由于香港科技园 Incu-Tech 培育计划及创新科技署“研究人才库”皆采实报实销 (Reimbursement) 制，我们将透过<strong>“营运流动资金”过渡性贷款 (Float Capital bridge facility)</strong>，或天使轮注入初期营运资金以桥接现金流、涵盖 PAG 专利申请的 10% 企业承担部份，并采购特定的商用现成 (COTS) 航空组件，确保在等待政府拨款期间研发进度零中断。',
+                'data_desc_2': '<strong>AI 驱动的精益工程：</strong> 为了在严格的 HK$ 3.99M 公共资金预算内完成 BAYWING-D1 的建造，我们利用 AI 编码代理生成 GNC（制导、导航与控制）软件，并采用 AI 辅助的 OpenFOAM CFD 脚本化运算。这将传统海事工程团队的人力需求从 4-5 人精简至仅 2 人的核心团队（薪资由 RTH 完全补贴），从而使绝大部分的科技园资助金能直接投入于纯硬件开发及测试环节。',
                 
-                'cots_table_title': 'D1 验证机商用现成 (COTS) 预算明细',
-                'cots_th_cat': '研发类别', 'cots_th_desc': 'COTS 硬件 / 资源分配', 'cots_th_cost': '预估成本 (HKD)',
-                'cots_r1_cat': '航电与传感器融合', 'cots_r1_desc': 'SBG Ellipse-D RTK INS, Ouster OS0 LiDAR, Jetson Orin Nano, Echologger 声纳高度计',
-                'cots_r2_cat': '致动器与机电', 'cots_r2_desc': '水下 IP68 旋转伺服马达 (Volz/Moog), SubConn 防水线缆, CNC 连杆',
-                'cots_r3_cat': '动力总成与能源', 'cots_r3_desc': '2x 1.0kW 电动吊舱, 48V 船用 LFP 电池组, Victron BMS',
-                'cots_r4_cat': '船体与复合材料', 'cots_r4_desc': '碳纤维真空灌注模具, 3D 打印母模, CNC 铣削水翼支柱',
-                'cots_r5_cat': '测试与基础设施', 'cots_r5_desc': '遥测基站 (Microhard), Ansys/MATLAB 软件授权, 护航船租赁',
-                'cots_r6_cat': '研发人员 (24 个月)', 'cots_r6_desc': '2x GNC 控制工程师 (RTH 补贴), 1x 造船工程师 (合约制)',
-                'cots_r7_cat': '知识产权保护', 'cots_r7_desc': 'PCT 专利布局与区域专利申请 (PAG 补贴)',
+                'cots_table_title': 'D1 验证机 AI 优化预算明细',
+                'cots_th_cat': '预算类别', 'cots_th_desc': 'AI 策略与资源分配细节', 'cots_th_cost': '预估成本 (HKD)',
+                
+                'cots_r1_cat': '1. 创始人生活津贴', 'cots_r1_desc': '于核心研发期维持主导创始人生计 (HKSTP 弹性营运津贴)',
+                'cots_r2_cat': '2. 核心团队 (1 名工程师)', 'cots_r2_desc': '1x 机电负责人。GNC 逻辑主要由 AI 代码生成辅助 (RTH 补贴)',
+                'cots_r3_cat': '3. COTS 硬件与传感器', 'cots_r3_desc': 'Jetson Orin Nano, SBG INS, Ouster LiDAR, Torqeedo 吊舱 (HKSTP 原型资助)',
+                'cots_r4_cat': '4. 船体制造与模具', 'cots_r4_desc': 'AI 优化 CAD 直接驱动 CNC 泡沫铣削及碳纤维灌注 (智慧交通基金)',
+                'cots_r5_cat': '5. 测试与水域许可', 'cots_r5_desc': '吐露港场地津贴、遥测设备、护航船 (HKSTP 营运资助)',
+                'cots_r7_cat': '6. 知识产权', 'cots_r7_desc': 'PCT 专利布局与大湾区区域专利申请 (PAG 90% 补贴)',
 
                 'grant_box_tag': '杠杆化公共资本结构', 'grant_box_title': '验证机总资本：HK$ 3,990,000',
                 'founder_share': '种子轮过渡贷款 / 营运流动资金 (~25%)：', 'founder_cost': 'HK$ 1,000,000',
@@ -1502,4 +1511,3 @@
     </script>
 </body>
 </html>
-
