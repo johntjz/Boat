@@ -89,42 +89,42 @@
 
     <!-- Header Navigation Bar -->
     <header class="fixed top-0 w-full bg-zinc-950/90 backdrop-blur-md z-50 border-b border-zinc-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 
-                <!-- Brand Identity -->
-                <a href="#" class="flex items-center space-x-3 group">
-                    <div class="w-9 h-9 bg-zinc-900 border border-zinc-700 rounded flex items-center justify-center relative overflow-hidden transition-colors">
+                <!-- Brand Identity (Fixed overlapping with flex-shrink-0 and whitespace-nowrap) -->
+                <a href="#" class="flex items-center space-x-3 group flex-shrink-0">
+                    <div class="w-9 h-9 bg-zinc-900 border border-zinc-700 rounded flex items-center justify-center relative overflow-hidden transition-colors flex-shrink-0">
                         <svg class="w-5 h-5 text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                     </div>
-                    <div class="flex flex-col">
+                    <div class="flex flex-col whitespace-nowrap">
                         <div class="flex items-center space-x-2">
                             <span class="text-base font-mono font-bold tracking-wider text-white">BAYWING</span>
                             <span class="text-[10px] font-mono px-1.5 py-0.5 bg-zinc-800 text-zinc-300 border border-zinc-700 rounded">EF-150 / D1</span>
                         </div>
-                        <span class="text-[9px] font-mono text-zinc-500 tracking-widest uppercase" data-i18n="nav_subtitle">Deep Tech Concept Proposal</span>
+                        <span class="text-[9px] font-mono text-zinc-500 tracking-widest uppercase mt-0.5" data-i18n="nav_subtitle">Deep Tech Concept Proposal</span>
                     </div>
                 </a>
 
-                <!-- Aligned Header Nav Menu -->
-                <nav class="hidden xl:flex items-center space-x-6 text-[11px] font-mono tracking-wider uppercase text-zinc-400">
-                    <a href="#vessel" class="hover:text-white transition-colors" data-i18n="nav_1">1. Platform</a>
-                    <a href="#demonstrator" class="hover:text-tech-cyan text-tech-cyan/90 transition-colors" data-i18n="nav_demo">2. 1:8 Demonstrator</a>
-                    <a href="#moat" class="hover:text-white transition-colors" data-i18n="nav_2">3. Economics</a>
-                    <a href="#routes" class="hover:text-white transition-colors" data-i18n="nav_3">4. Route Analytics</a>
-                    <a href="#specs" class="hover:text-white transition-colors" data-i18n="nav_4">5. Tech Matrix</a>
-                    <a href="#portal" class="hover:text-white transition-colors" data-i18n="nav_5">6. Grants & Capital</a>
+                <!-- Aligned Header Nav Menu (Removed numbers for wider spacing) -->
+                <nav class="hidden xl:flex items-center space-x-7 text-[11px] font-mono tracking-wider uppercase text-zinc-400 whitespace-nowrap ml-8">
+                    <a href="#vessel" class="hover:text-white transition-colors" data-i18n="nav_1">Platform</a>
+                    <a href="#demonstrator" class="hover:text-tech-cyan text-tech-cyan/90 transition-colors" data-i18n="nav_demo">1:8 Demonstrator</a>
+                    <a href="#moat" class="hover:text-white transition-colors" data-i18n="nav_2">Economics</a>
+                    <a href="#routes" class="hover:text-white transition-colors" data-i18n="nav_3">Analytics</a>
+                    <a href="#specs" class="hover:text-white transition-colors" data-i18n="nav_4">Tech Matrix</a>
+                    <a href="#portal" class="hover:text-white transition-colors" data-i18n="nav_5">Capital Stack</a>
                 </nav>
 
                 <!-- Tools & Mobile Navigation -->
-                <div class="flex items-center space-x-4">
-                    <span class="hidden sm:inline-block bg-zinc-800/40 text-tech-cyan border border-tech-cyan/30 px-2 py-0.5 rounded text-[9px] font-mono tracking-widest">
-                        HKSTP INCU-TECH TRACK
+                <div class="flex items-center space-x-4 ml-auto">
+                    <span class="hidden md:inline-block bg-zinc-800/40 text-tech-cyan border border-tech-cyan/30 px-2 py-0.5 rounded text-[9px] font-mono tracking-widest whitespace-nowrap">
+                        HKSTP INCU-TECH
                     </span>
 
-                    <div class="hidden sm:flex bg-zinc-900 border border-zinc-800 rounded p-0.5 text-[10px] font-mono">
+                    <div class="hidden sm:flex bg-zinc-900 border border-zinc-800 rounded p-0.5 text-[10px] font-mono whitespace-nowrap">
                         <button onclick="setLang('en')" id="btn-lang-en" class="px-2 py-1 rounded bg-zinc-800 text-white transition-colors">EN (USD)</button>
                         <button onclick="setLang('tc')" id="btn-lang-tc" class="px-2 py-1 rounded text-zinc-500 hover:text-white transition-colors">繁 (HKD)</button>
                         <button onclick="setLang('sc')" id="btn-lang-sc" class="px-2 py-1 rounded text-zinc-500 hover:text-white transition-colors">简 (RMB)</button>
@@ -146,12 +146,12 @@
                 <button onclick="setLang('tc'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-900 text-zinc-400 border border-zinc-800 whitespace-nowrap">繁體 (HKD)</button>
                 <button onclick="setLang('sc'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-900 text-zinc-400 border border-zinc-800 whitespace-nowrap">简体 (RMB)</button>
             </div>
-            <a href="#vessel" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_1">1. Platform Setup</a>
-            <a href="#demonstrator" onclick="toggleMobileMenu()" class="block p-2 text-tech-cyan hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_demo">2. 1:8 Demonstrator</a>
-            <a href="#moat" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_2">3. Economics</a>
-            <a href="#routes" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_3">4. Route Analytics</a>
-            <a href="#specs" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_4">5. Tech Matrix</a>
-            <a href="#portal" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_5">6. Grants & Capital</a>
+            <a href="#vessel" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_1">Platform</a>
+            <a href="#demonstrator" onclick="toggleMobileMenu()" class="block p-2 text-tech-cyan hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_demo">1:8 Demonstrator</a>
+            <a href="#moat" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_2">Economics</a>
+            <a href="#routes" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_3">Analytics</a>
+            <a href="#specs" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_4">Tech Matrix</a>
+            <a href="#portal" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_5">Capital Stack</a>
         </div>
     </header>
 
@@ -225,7 +225,7 @@
     <section id="demonstrator" class="py-16 md:py-24 bg-zinc-950 border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-12">
-                <div class="text-xs font-mono text-tech-cyan uppercase tracking-widest mb-2" data-i18n="demo_tag">2. Sub-Scale Technology Demonstrator</div>
+                <div class="text-xs font-mono text-tech-cyan uppercase tracking-widest mb-2" data-i18n="demo_tag">1. Sub-Scale Technology Demonstrator</div>
                 <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase" data-i18n="demo_title">
                     BAYWING-D1 (1:8 Scale Autonomous Testbed)
                 </h2>
@@ -265,7 +265,7 @@
                     <ul class="text-[11px] font-mono text-zinc-400 space-y-1.5 border-t border-zinc-800 pt-3">
                         <li class="flex justify-between"><span>Scale Factor:</span> <span class="text-zinc-200">1:8 Linear ($\lambda = 8$)</span></li>
                         <li class="flex justify-between"><span>Model Speed:</span> <span class="text-tech-emerald">13.4 Knots (24.8 km/h)</span></li>
-                        <li class="flex justify-between"><span>Model Mass:</span> <span class="text-zinc-200">~110 kg (Displacement)</span></li>
+                        <li class="flex justify-between"><span>Model Mass:</span> <span class="text-zinc-200">~109 kg (Displacement)</span></li>
                     </ul>
                 </div>
 
@@ -291,7 +291,7 @@
             <div class="data-card rounded-xl overflow-hidden">
                 <div class="p-4 bg-zinc-900 border-b border-zinc-800 flex justify-between items-center text-xs font-mono">
                     <span class="text-white font-bold" data-i18n="d1_table_title">PHYSICS & SCALING MATRIX: EF-150 vs. BAYWING-D1 DEMONSTRATOR</span>
-                    <span class="text-tech-cyan" data-i18n="d1_table_sub">Froude Number: 1.18</span>
+                    <span class="text-tech-cyan" data-i18n="d1_table_sub">Froude Number: 1.17</span>
                 </div>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left text-xs font-mono">
@@ -329,10 +329,10 @@
                                 <td class="py-2.5 px-4 text-zinc-500">1 : $\sqrt{\lambda}$ ($\times 1/2.83$)</td>
                             </tr>
                             <tr>
-                                <td class="py-2.5 px-4 text-zinc-400" data-i18n="d1_r5_lbl">Powertrain Output</td>
+                                <td class="py-2.5 px-4 text-zinc-400" data-i18n="d1_r5_lbl">Installed Powertrain</td>
                                 <td class="py-2.5 px-4">2x 650 kW Pod Drives (1,300 kW Total)</td>
                                 <td class="py-2.5 px-4 text-tech-cyan font-bold">2x 5.0 kW Brushless Pods (10 kW Total)</td>
-                                <td class="py-2.5 px-4 text-zinc-500">Power $\propto \lambda^{3.5}$</td>
+                                <td class="py-2.5 px-4 text-zinc-500">Power Reqd $\propto \lambda^{3.5}$</td>
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-4 text-zinc-400" data-i18n="d1_r6_lbl">Flight Controller Frequency</td>
@@ -358,7 +358,7 @@
     <section id="moat" class="py-16 md:py-24 bg-zinc-900 border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-12">
-                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2" data-i18n="moat_tag">3. Deep Tech Moat & Economics</div>
+                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2" data-i18n="moat_tag">2. Deep Tech Moat & Economics</div>
                 <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase" data-i18n="moat_title">
                     Defensible OPEX Advantages
                 </h2>
@@ -431,7 +431,7 @@
     <section id="routes" class="py-16 md:py-24 bg-zinc-950 border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-10">
-                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2" data-i18n="calc_tag">4. Strategic Route Analytics</div>
+                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2" data-i18n="calc_tag">3. Strategic Route Analytics</div>
                 <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase" data-i18n="calc_title">
                     GBA Route Feasibility Calculator
                 </h2>
@@ -562,7 +562,7 @@
     <section id="specs" class="py-16 md:py-24 bg-zinc-900 border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-10">
-                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2" data-i18n="tech_tag">5. Technical Data Bank</div>
+                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2" data-i18n="tech_tag">4. Technical Data Bank</div>
                 <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase" data-i18n="tech_title">
                     Proposed Engineering Matrix
                 </h2>
@@ -666,7 +666,7 @@
     <section id="portal" class="py-16 md:py-24 bg-zinc-950 border-b border-zinc-800 cad-grid-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-12">
-                <div class="text-xs font-mono text-tech-emerald uppercase tracking-widest mb-2" data-i18n="data_tag">6. Non-Dilutive Capitalization & Data Room</div>
+                <div class="text-xs font-mono text-tech-emerald uppercase tracking-widest mb-2" data-i18n="data_tag">5. Non-Dilutive Capitalization & Data Room</div>
                 <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase" data-i18n="data_title">
                     Zero-Capital Public Funding Architecture
                 </h2>
@@ -799,15 +799,15 @@
                     <div class="text-sm font-mono font-bold text-white mb-4 border-b border-zinc-800 pb-2" data-i18n="dr_card4_title">MCS Terminal & BESS Integration</div>
                     <ul class="space-y-3 text-[11px] font-mono text-zinc-300">
                         <li class="flex items-start gap-2">
-                            <span class="text-tech-amber">⚡</span>
+                            <span class="text-tech-amber">▸</span>
                             <span data-i18n="dr_c4_b1"><strong>Dockside Buffer:</strong> Onshore 4.0 MWh BESS eliminates high-voltage grid upgrades at public ferry piers.</span>
                         </li>
                         <li class="flex items-start gap-2">
-                            <span class="text-tech-amber">⚡</span>
+                            <span class="text-tech-amber">▸</span>
                             <span data-i18n="dr_c4_b2"><strong>Megawatt Charge Rate:</strong> 3.5 MW DC output compatible with marine MCS standards.</span>
                         </li>
                         <li class="flex items-start gap-2">
-                            <span class="text-tech-amber">⚡</span>
+                            <span class="text-tech-amber">▸</span>
                             <span data-i18n="dr_c4_b3"><strong>Turnaround Window:</strong> &lt; 45-minute charge cycle (20% to 90% SOC) during passenger disembarkation.</span>
                         </li>
                     </ul>
@@ -844,7 +844,7 @@
         const translations = {
             'en': {
                 'nav_subtitle': 'Deep Tech Concept Proposal',
-                'nav_1': '1. Platform', 'nav_demo': '2. 1:8 Demonstrator', 'nav_2': '3. Economics', 'nav_3': '4. Route Analytics', 'nav_4': '5. Tech Matrix', 'nav_5': '6. Grants & Capital',
+                'nav_1': 'Platform', 'nav_demo': '1:8 Demonstrator', 'nav_2': 'Economics', 'nav_3': 'Analytics', 'nav_4': 'Tech Matrix', 'nav_5': 'Capital Stack',
                 'badge_hkstp': 'HKSTP Incubation & Feasibility Study',
                 'hero_subtitle': 'Active Fly-by-Wire Electric Hydrofoil Platform',
                 'hero_desc': 'Aero-Marine Systems is building the software-defined future of GBA maritime transit. By integrating aerospace-grade flight control algorithms with Pearl River Delta carbon-composite supply chains, the EF-150 architecture completely decouples the hull from hydrodynamic drag—slashing energy requirements by 80% and making high-speed electric commuter routes commercially viable.',
@@ -854,7 +854,7 @@
                 'spec_battery': 'Est. Battery Capacity', 'spec_battery_sub': '800V Marine LFP Architecture',
                 'spec_turnaround': 'Turnaround Target', 'unit_mins': 'MINS', 'spec_turnaround_sub': '3.5 MW Automated Charging',
                 
-                'demo_tag': '2. Sub-Scale Technology Demonstrator', 'demo_title': 'BAYWING-D1 (1:8 Scale Autonomous Testbed)',
+                'demo_tag': '1. Sub-Scale Technology Demonstrator', 'demo_title': 'BAYWING-D1 (1:8 Scale Autonomous Testbed)',
                 'demo_desc': 'High-speed hydrofoiling is fundamentally an aerospace control problem. Because dynamic instability scales inversely with physical size, a sub-scale 3.56-meter vessel experiences higher natural oscillation frequencies than the full 28.5-meter craft. Successfully stabilizing the D1 in real-world harbor sea-states completely de-risks the flight control stack before scaling up to intermediate 20–30 passenger hulls and the final EF-150 platform.',
                 'd1_card1_tag': 'Avionics & Sensor Fusion', 'd1_card1_title': 'Autonomous Flight Controller',
                 'd1_card1_desc': 'Dual deterministic microcontrollers running real-time RTOS. Ingests dual IMUs, high-speed ultrasonic ride-height sensors, and a forward-scanning micro-LiDAR for wave feedforward compensation.',
@@ -863,9 +863,9 @@
                 'd1_card3_tag': 'Zero-Grid R&D Deployment', 'd1_card3_title': 'Tolo Harbour Test Protocol',
                 'd1_card3_desc': 'Tested directly offshore at Hong Kong Science Park (Pak Shek Kok waterfront / Tolo Harbour). Swappable 48V LFP batteries eliminate shore charging needs during R&D, slashing sea-trial costs.',
                 
-                'd1_table_title': 'PHYSICS & SCALING MATRIX: EF-150 vs. BAYWING-D1 DEMONSTRATOR', 'd1_table_sub': 'Froude Number: 1.18',
+                'd1_table_title': 'PHYSICS & SCALING MATRIX: EF-150 vs. BAYWING-D1 DEMONSTRATOR', 'd1_table_sub': 'Froude Number: 1.17',
                 'd1_th_metric': 'Engineering Parameter', 'd1_th_ef150': 'Full-Scale EF-150 (Commercial)', 'd1_th_d1': 'BAYWING-D1 (1:8 Demonstrator)', 'd1_th_ratio': 'Scaling Law',
-                'd1_r1_lbl': 'Length Overall (LOA)', 'd1_r2_lbl': 'Foil Span (Beam)', 'd1_r3_lbl': 'All-Up Displacement Mass', 'd1_r4_lbl': 'Cruise Take-off Speed', 'd1_r5_lbl': 'Powertrain Output', 'd1_r6_lbl': 'Flight Controller Frequency', 'd1_r7_lbl': 'Primary Development Phase',
+                'd1_r1_lbl': 'Length Overall (LOA)', 'd1_r2_lbl': 'Foil Span (Beam)', 'd1_r3_lbl': 'All-Up Displacement Mass', 'd1_r4_lbl': 'Cruise Take-off Speed', 'd1_r5_lbl': 'Installed Powertrain', 'd1_r6_lbl': 'Flight Controller Frequency', 'd1_r7_lbl': 'Primary Development Phase',
 
                 'grant_box_tag': '100% NON-DILUTIVE PUBLIC CAPITAL STACK', 'grant_box_title': 'Demonstrator (D1) R&D Budget: HK$ 3,990,000',
                 'founder_share': 'Founder Private Cash Injection:', 'founder_cost': 'HK$ 0.00 (Zero Self-Funding)',
@@ -874,14 +874,14 @@
                 'g3_title': 'Patent Application Grant', 'g3_desc': 'PAG grant directly covering PCT & regional patent filings.',
                 'g4_title': 'Smart Mobility / Green Tech', 'g4_desc': 'Hardware prototyping & PRD maritime supply chain grant.',
 
-                'moat_tag': '3. Deep Tech Moat & Economics', 'moat_title': 'Defensible OPEX Advantages',
+                'moat_tag': '2. Deep Tech Moat & Economics', 'moat_title': 'Defensible OPEX Advantages',
                 'moat_desc': 'Legacy fast ferries rely on multi-megawatt diesel gas turbines pushing heavy displacement hulls. High marine fuel costs and escalating engine overhaul expenses compress operating margins. Our Fly-by-Wire control system enables a thermodynamic shift.',
                 'p1_tag': '01. Platform Dynamics', 'p1_title': 'Drag Reduction', 'p1_desc': 'Fully submerged T-foils lift the hull completely above the waves at 18+ knots, decoupling the vessel from hydrodynamic displacement drag.', 'p1_sub': 'Cruise Power:',
                 'p2_tag': '02. Core IP Moat', 'p2_title': 'Active FCS Loop', 'p2_desc': 'Triple-redundant Fly-by-Wire software reads IMUs and LiDAR, adjusting submerged flaps 100x/sec to neutralize Victoria Harbour wake pitch and roll.', 'p2_sub': 'Wake Wash:',
                 'p3_tag': '03. Infrastructure', 'p3_title': 'Shore BESS Buffer', 'p3_desc': 'Dockside battery storage buffers the 3.5 MW Megawatt Charging System (MCS), enabling rapid turnarounds without crashing the local municipal grid.', 'p3_sub': 'Charge Rate:',
                 'p4_tag': '04. Route Yield', 'p4_title': 'OPEX Savings', 'p4_sub': 'Energy OPEX:',
                 
-                'calc_tag': '4. Strategic Route Analytics', 'calc_title': 'GBA Route Feasibility Calculator',
+                'calc_tag': '3. Strategic Route Analytics', 'calc_title': 'GBA Route Feasibility Calculator',
                 'calc_desc': 'Simulate the financial viability of replacing legacy diesel vessels with the EF-150 platform across major Greater Bay Area transit corridors.',
                 'calc_sim_tag': 'INTERACTIVE FINANCIAL SIMULATOR', 'calc_sim_title': 'Fleet OPEX Projection Model', 'calc_sim_base': 'BASELINE MGO DIESEL:',
                 'calc_input_1': '1. Select GBA Express Route',
@@ -893,7 +893,7 @@
                 'calc_out_4_title': 'Est. EF-150 Transit Time', 'calc_out_4_sub': '12 Mins Faster than Diesel',
                 'calc_bar_diesel': 'Annual Energy Cost (Legacy Diesel Fleet)', 'calc_bar_ef150': 'Annual Energy Cost (EF-150 Electric Fleet)',
                 
-                'tech_tag': '5. Technical Data Bank', 'tech_title': 'Proposed Engineering Matrix',
+                'tech_tag': '4. Technical Data Bank', 'tech_title': 'Proposed Engineering Matrix',
                 'tech_desc': 'Baseline structural and operational parameters proposed for the EF-150 platform architecture, updated for physics constraints and marine certification standards.',
                 'tech_table_title': 'PLATFORM ARCHITECTURE: BAYWING EF-150', 'tech_table_ver': 'REVISED DRAFT v2.1',
                 't_cat1': '1. Vessel Dimensions & Capacity',
@@ -916,7 +916,7 @@
                 't_c5_r1': 'Stationary BESS Buffer', 't_c5_v1': '4.0 MWh Containerized Battery Buffer (Dockside Peak Shaving)',
                 't_c5_r2': 'Charging Standard', 't_c5_v2': '3.5 MW Automated MCS (Megawatt Charging System) Arm',
 
-                'data_tag': '6. Non-Dilutive Capitalization & Data Room', 'data_title': 'Zero-Capital Public Funding Architecture',
+                'data_tag': '5. Non-Dilutive Capitalization & Data Room', 'data_title': 'Zero-Capital Public Funding Architecture',
                 'data_desc': 'Aero-Marine Systems is structured to require $0 founder private bankroll. By stacking HKSTP Incu-Tech milestones with the Hong Kong Innovation and Technology Commission’s Research Talent Hub (RTH-SPC) and Green Tech/Smart Mobility grant allowances, 100% of the BAYWING-D1 demonstrator build is subsidized by non-dilutive government capital.',
                 'dr_card1_title': 'Phase Development Roadmap',
                 'dr_c1_b1': '<strong>Phase 1 (Months 1-9):</strong> 6-DoF Digital Twin, FCS Bench Testing, & Hardware-in-the-Loop simulation in HKSTP Robotics Lab.',
@@ -943,7 +943,7 @@
             },
             'tc': {
                 'nav_subtitle': '深科技概念提案',
-                'nav_1': '1. 平台概述', 'nav_demo': '2. 1:8 驗證船', 'nav_2': '3. 經濟效益', 'nav_3': '4. 航線分析', 'nav_4': '5. 技術矩陣', 'nav_5': '6. 補助與資本',
+                'nav_1': '平台', 'nav_demo': '1:8 驗證機', 'nav_2': '經濟效益', 'nav_3': '航線分析', 'nav_4': '技術矩陣', 'nav_5': '資本',
                 'badge_hkstp': '香港科技園 (HKSTP) 培育與可行性研究',
                 'hero_subtitle': '主動線傳飛控電動水翼平台',
                 'hero_desc': 'Aero-Marine Systems 正在構建大灣區海上交通的軟件定義未來。通過將航太級飛控算法與珠三角碳纖維複合材料供應鏈相結合，EF-150 架構將船體與水動力阻力完全解耦——大幅降低 80% 的能耗，使高速電動通勤航線具備商業可行性。',
@@ -953,7 +953,7 @@
                 'spec_battery': '預估電池容量', 'spec_battery_sub': '800V 船用磷酸鐵鋰架構',
                 'spec_turnaround': '週轉時間目標', 'unit_mins': '分鐘', 'spec_turnaround_sub': '3.5 MW 自動化充電',
                 
-                'demo_tag': '2. 縮比技術驗證機', 'demo_title': 'BAYWING-D1 (1:8 比例自主試驗平台)',
+                'demo_tag': '1. 縮比技術驗證機', 'demo_title': 'BAYWING-D1 (1:8 比例自主試驗平台)',
                 'demo_desc': '高速水翼飛行本質上是一個航太控制問題。由於動力學不穩定性與物理尺寸成反比，3.56 米的縮比驗證船比 28.5 米的全尺寸船具有更高的自然震盪頻率。在真實港口海況下穩定 D1，可在過渡到 20-30 人客船及最終 EF-150 之前，徹底消除飛控算法的技術風險。',
                 'd1_card1_tag': '航電與傳感器融合', 'd1_card1_title': '自主飛行控制器',
                 'd1_card1_desc': '雙確定性微控制器運行實時 RTOS 操作系統。整合雙 IMU、高速超聲波高度計和前視微型激光雷達，實現波浪前饋主動補償。',
@@ -962,9 +962,9 @@
                 'd1_card3_tag': '零電網依賴研發部署', 'd1_card3_title': '吐露港海試協議',
                 'd1_card3_desc': '直接在香港科學園對開海域（白石角海濱/吐露港）進行測試。可快速插拔的 48V 磷酸鐵鋰電池在研發階段完全無需岸電充電樁，極大降低海試成本。',
                 
-                'd1_table_title': '物理與縮比矩陣：EF-150 對比 BAYWING-D1 驗證機', 'd1_table_sub': '弗勞德數：1.18',
+                'd1_table_title': '物理與縮比矩陣：EF-150 對比 BAYWING-D1 驗證機', 'd1_table_sub': '弗勞德數：1.17',
                 'd1_th_metric': '工程參數', 'd1_th_ef150': '全尺寸 EF-150 (商業船)', 'd1_th_d1': 'BAYWING-D1 (1:8 驗證機)', 'd1_th_ratio': '縮比定律',
-                'd1_r1_lbl': '總長 (LOA)', 'd1_r2_lbl': '水翼跨度 (船寬)', 'd1_r3_lbl': '滿載排水量', 'd1_r4_lbl': '起飛/巡航航速', 'd1_r5_lbl': '動力系統輸出', 'd1_r6_lbl': '飛控迴路頻率', 'd1_r7_lbl': '主要研發階段',
+                'd1_r1_lbl': '總長 (LOA)', 'd1_r2_lbl': '水翼跨度 (船寬)', 'd1_r3_lbl': '滿載排水量', 'd1_r4_lbl': '起飛/巡航航速', 'd1_r5_lbl': '安裝動力系統', 'd1_r6_lbl': '飛控迴路頻率', 'd1_r7_lbl': '主要研發階段',
 
                 'grant_box_tag': '100% 非稀釋性香港政府資助架構', 'grant_box_title': 'D1 驗證機 R&D 預算：HK$ 3,990,000',
                 'founder_share': '創始人私人自籌資金：', 'founder_cost': 'HK$ 0.00 (完全零自掏腰包)',
@@ -973,14 +973,14 @@
                 'g3_title': '專利申請資助計劃 (PAG)', 'g3_desc': 'PAG 專項直接補貼 PCT 與各國核心發明專利。',
                 'g4_title': '智慧交通 / 綠色科技基金', 'g4_desc': '縮比硬件原型打樣與珠三角船艇供應鏈試製補助。',
 
-                'moat_tag': '3. 深科技護城河與經濟效益', 'moat_title': '具防禦性的運營成本優勢',
+                'moat_tag': '2. 深科技護城河與經濟效益', 'moat_title': '具防禦性的運營成本優勢',
                 'moat_desc': '傳統高速客輪依賴兆瓦級柴油燃氣輪機推動沉重的排水型船體。高昂的船用燃料成本和不斷攀升的引擎大修費用壓縮了利潤空間。我們的線傳飛控系統實現了熱力學的根本轉變。',
                 'p1_tag': '01. 平台動力學', 'p1_title': '阻力減免', 'p1_desc': '全浸沒式 T 型水翼在 18 節以上速度時將船體完全抬離水面，使船隻與水動力排水阻力解耦。', 'p1_sub': '巡航功率:',
                 'p2_tag': '02. 核心技術護城河', 'p2_title': '主動飛控迴路', 'p2_desc': '三重冗餘的線傳飛控軟件讀取 IMU 和光學雷達數據，每秒 100 次調整浸沒式襟翼，以抵消維多利亞港尾流引起的俯仰和側傾。', 'p2_sub': '尾流激浪:',
                 'p3_tag': '03. 基礎設施', 'p3_title': '岸電 BESS 緩衝', 'p3_desc': '碼頭電池儲能系統緩衝 3.5 MW 兆瓦級充電系統 (MCS)，實現快速週轉而不會衝擊當地市政電網。', 'p3_sub': '充電速率:',
                 'p4_tag': '04. 航線收益', 'p4_title': '運營成本節省', 'p4_sub': '能源運營成本:',
                 
-                'calc_tag': '4. 戰略航線分析', 'calc_title': '大灣區航線可行性計算器',
+                'calc_tag': '3. 戰略航線分析', 'calc_title': '大灣區航線可行性計算器',
                 'calc_desc': '模擬使用 EF-150 平台替換大灣區主要交通走廊傳統柴油船隊的財務可行性。',
                 'calc_sim_tag': '交互式財務模擬器', 'calc_sim_title': '船隊運營成本預測模型', 'calc_sim_base': '基準船用輕柴油:',
                 'calc_input_1': '1. 選擇大灣區快線航線',
@@ -992,7 +992,7 @@
                 'calc_out_4_title': '預估 EF-150 航行時間', 'calc_out_4_sub': '12 分鐘 (比傳統快)',
                 'calc_bar_diesel': '年度能源成本 (傳統柴油船隊)', 'calc_bar_ef150': '年度能源成本 (EF-150 電動船隊)',
                 
-                'tech_tag': '5. 技術數據庫', 'tech_title': '擬定工程矩陣',
+                'tech_tag': '4. 技術數據庫', 'tech_title': '擬定工程矩陣',
                 'tech_desc': 'EF-150 平台架構的基準結構與運行參數，已根據物理極限和海事認證標準進行更新。',
                 'tech_table_title': '平台架構：BAYWING EF-150', 'tech_table_ver': '修訂草案 v2.1',
                 't_cat1': '1. 船舶尺寸與容量',
@@ -1015,7 +1015,7 @@
                 't_c5_r1': '固定 BESS 緩衝', 't_c5_v1': '4.0 MWh 貨櫃式電池緩衝 (碼頭削峰填谷)',
                 't_c5_r2': '充電標準', 't_c5_v2': '3.5 MW 自動化 MCS (兆瓦級充電系統) 臂',
 
-                'data_tag': '6. 非稀釋性資本化與資料室', 'data_title': '零自有資金公共資助架構',
+                'data_tag': '5. 非稀釋性資本化與資料室', 'data_title': '零自有資金公共資助架構',
                 'data_desc': 'Aero-Marine Systems 架構設計實現創始人 0 自籌私人出資。透過將科技園培育里程碑與創新科技署研究人才庫 (RTH-SPC) 及綠色科技/智慧交通資助相疊加，100% 覆蓋 D1 驗證機研發開支。',
                 'dr_card1_title': '階段發展路線圖',
                 'dr_c1_b1': '<strong>第一階段 (第 1-9 個月):</strong> 六自由度數字孿生、FCS 算法台架測試，及科技園機器人實驗室硬件在環仿真。',
@@ -1042,7 +1042,7 @@
             },
             'sc': {
                 'nav_subtitle': '深科技概念提案',
-                'nav_1': '1. 平台概述', 'nav_demo': '2. 1:8 验证船', 'nav_2': '3. 经济效益', 'nav_3': '4. 航线分析', 'nav_4': '5. 技术矩阵', 'nav_5': '6. 资助与资本',
+                'nav_1': '平台', 'nav_demo': '1:8 验证机', 'nav_2': '经济效益', 'nav_3': '航线分析', 'nav_4': '技术矩阵', 'nav_5': '资本',
                 'badge_hkstp': '香港科技园 (HKSTP) 孵化与可行性研究',
                 'hero_subtitle': '主动线传飞控电动水翼平台',
                 'hero_desc': 'Aero-Marine Systems 正在构建大湾区海上交通的软件定义未来。通过将航空级飞控算法与珠三角碳纤维复合材料供应链相结合，EF-150 架构将船体与水动力阻力完全解耦——大幅降低 80% 的能耗，使高速电动通勤航线具备商业可行性。',
@@ -1052,7 +1052,7 @@
                 'spec_battery': '预估电池容量', 'spec_battery_sub': '800V 船用磷酸铁锂架构',
                 'spec_turnaround': '周转时间目标', 'unit_mins': '分钟', 'spec_turnaround_sub': '3.5 MW 自动化充电',
                 
-                'demo_tag': '2. 缩比技术验证机', 'demo_title': 'BAYWING-D1 (1:8 比例自主试验平台)',
+                'demo_tag': '1. 缩比技术验证机', 'demo_title': 'BAYWING-D1 (1:8 比例自主试验平台)',
                 'demo_desc': '高速水翼飞行本质上是一个航空控制问题。由于动力学不稳定度与物理尺寸成反比，3.56 米的缩比验证船比 28.5 米的全尺寸船具有更高的自然震荡频率。在真实港口海况下稳定 D1，可在过渡到 20-30 人客船及最终 EF-150 之前，彻底消除飞控算法的技术风险。',
                 'd1_card1_tag': '航电与传感器融合', 'd1_card1_title': '自主飞行控制器',
                 'd1_card1_desc': '双确定性微控制器运行实时 RTOS 操作系统。整合双 IMU、高速超声波高度计和前视微型激光雷达，实现波浪前馈主动补偿。',
@@ -1061,9 +1061,9 @@
                 'd1_card3_tag': '零电网依赖研发部署', 'd1_card3_title': '吐露港海试协议',
                 'd1_card3_desc': '直接在香港科学园对开海域（白石角海滨/吐露港）进行测试。可快速插拔的 48V 磷酸铁锂电池在研发阶段完全无需岸电充电桩，极大降低海试成本。',
                 
-                'd1_table_title': '物理与缩比矩阵：EF-150 对比 BAYWING-D1 验证机', 'd1_table_sub': '弗劳德数：1.18',
+                'd1_table_title': '物理与缩比矩阵：EF-150 对比 BAYWING-D1 验证机', 'd1_table_sub': '弗劳德数：1.17',
                 'd1_th_metric': '工程参数', 'd1_th_ef150': '全尺寸 EF-150 (商业船)', 'd1_th_d1': 'BAYWING-D1 (1:8 验证机)', 'd1_th_ratio': '缩比定律',
-                'd1_r1_lbl': '总长 (LOA)', 'd1_r2_lbl': '水翼跨度 (船宽)', 'd1_r3_lbl': '满载排水量', 'd1_r4_lbl': '起飞/巡航航速', 'd1_r5_lbl': '动力系统输出', 'd1_r6_lbl': '飞控回路频率', 'd1_r7_lbl': '主要研发阶段',
+                'd1_r1_lbl': '总长 (LOA)', 'd1_r2_lbl': '水翼跨度 (船宽)', 'd1_r3_lbl': '满载排水量', 'd1_r4_lbl': '起飞/巡航航速', 'd1_r5_lbl': '安装动力系统', 'd1_r6_lbl': '飞控回路频率', 'd1_r7_lbl': '主要研发阶段',
 
                 'grant_box_tag': '100% 非稀释性香港政府资助架构', 'grant_box_title': 'D1 验证机 R&D 预算：HK$ 3,990,000',
                 'founder_share': '创始人私人自筹资金：', 'founder_cost': 'HK$ 0.00 (完全零自掏腰包)',
@@ -1072,14 +1072,14 @@
                 'g3_title': '专利申请资助计划 (PAG)', 'g3_desc': 'PAG 专项直接补贴 PCT 与各国核心发明专利。',
                 'g4_title': '智慧交通 / 绿色科技基金', 'g4_desc': '缩比硬件原型打样与珠三角船艇供应链试制补助。',
 
-                'moat_tag': '3. 深科技护城河与经济效益', 'moat_title': '具防御性的运营成本优势',
+                'moat_tag': '2. 深科技护城河与经济效益', 'moat_title': '具防御性的运营成本优势',
                 'moat_desc': '传统高速客轮依赖兆瓦级柴油燃气轮机推动沉重的排水型船体。高昂的船用燃料成本和不断攀升的引擎大修费用压缩了利润空间。我们的线传飞控系统实现了热力学的根本转变。',
                 'p1_tag': '01. 平台动力学', 'p1_title': '阻力减免', 'p1_desc': '全浸没式 T 型水翼在 18 节以上速度时将船体完全抬离水面，使船只与水动力排水阻力解耦。', 'p1_sub': '巡航功率:',
                 'p2_tag': '02. 核心技术护城河', 'p2_title': '主动飞控回路', 'p2_desc': '三重冗余的线传飞控软件读取 IMU 和光学雷达数据，每秒 100 次调整浸没式襟翼，以抵消维多利亚港尾流引起的俯仰和侧倾。', 'p2_sub': '尾流激浪:',
                 'p3_tag': '03. 基础设施', 'p3_title': '岸电 BESS 缓冲', 'p3_desc': '码头电池储能系统缓冲 3.5 MW 兆瓦级充电系统 (MCS)，实现快速周转而不会冲击当地市政电网。', 'p3_sub': '充电速率:',
                 'p4_tag': '04. 航线收益', 'p4_title': '运营成本节省', 'p4_sub': '能源运营成本:',
                 
-                'calc_tag': '4. 战略航线分析', 'calc_title': '大湾区航线可行性计算器',
+                'calc_tag': '3. 战略航线分析', 'calc_title': '大湾区航线可行性计算器',
                 'calc_desc': '模拟使用 EF-150 平台替换大湾区主要交通走廊传统柴油船队的财务可行性。',
                 'calc_sim_tag': '交互式财务模拟器', 'calc_sim_title': '船队运营成本预测模型', 'calc_sim_base': '基准船用轻柴油:',
                 'calc_input_1': '1. 选择大湾区快线航线',
@@ -1091,7 +1091,7 @@
                 'calc_out_4_title': '预估 EF-150 航行时间', 'calc_out_4_sub': '12 分钟 (比传统快)',
                 'calc_bar_diesel': '年度能源成本 (传统柴油船队)', 'calc_bar_ef150': '年度能源成本 (EF-150 电动船队)',
                 
-                'tech_tag': '5. 技术数据库', 'tech_title': '拟定工程矩阵',
+                'tech_tag': '4. 技术数据库', 'tech_title': '拟定工程矩阵',
                 'tech_desc': 'EF-150 平台架构的基准结构与运行参数，已根据物理极限和海事认证标准进行更新。',
                 'tech_table_title': '平台架构：BAYWING EF-150', 'tech_table_ver': '修订草案 v2.1',
                 't_cat1': '1. 船舶尺寸与容量',
@@ -1109,183 +1109,4 @@
                 't_cat4': '4. 飞行控制系统 (FCS)',
                 't_c4_r1': '飞行控制器', 't_c4_v1': '三重冗余主动线传飞控管理单元',
                 't_c4_r2': '控制回路频率', 't_c4_v2': '100 Hz 动态襟翼与配平驱动回路',
-                't_c4_r3': '传感器融合', 't_c4_v3': '惯性测量单元 (IMU)、超声波高度计、前视光学雷达',
-                't_cat5': '5. 岸电充电与储能缓冲',
-                't_c5_r1': '固定 BESS 缓冲', 't_c5_v1': '4.0 MWh 集装箱式电池缓冲 (码头削峰填谷)',
-                't_c5_r2': '充电标准', 't_c5_v2': '3.5 MW 自动化 MCS (兆瓦级充电系统) 臂',
-
-                'data_tag': '6. 非稀释性资本化与资料室', 'data_title': '零自有资金公共资助架构',
-                'data_desc': 'Aero-Marine Systems 架构设计实现创始人 0 自筹私人出资。通过将科技园孵化里程碑与创新科技署研究人才库 (RTH-SPC) 及绿色科技/智慧交通资助相叠加，100% 覆盖 D1 验证机研发开支。',
-                'dr_card1_title': '阶段发展路线图',
-                'dr_c1_b1': '<strong>第一阶段 (第 1-9 个月):</strong> 六自由度数字孪生、FCS 算法台架测试，及科技园机器人实验室硬件在环仿真。',
-                'dr_c1_b2': '<strong>第二阶段 (第 10-18 个月):</strong> 3.56米 D1 缩比验证船于吐露港进行自主海试；验证 100Hz 尾流解耦算法。',
-                'dr_c1_b3': '<strong>第三阶段 (第 19-27 个月):</strong> 过渡至 20-30 人商业先导客船设计；组建大湾区联合运营商财团。',
-                'dr_c1_b4': '<strong>第四阶段 (第 28-36 个月):</strong> 与持牌珠三角复合材料船厂合作建造全尺寸 EF-150 平台。',
-                'dr_card2_title': '监管与入级路径',
-                'dr_c2_b1': '<strong>DNV 船级社:</strong> 遵循高速轻型船 (HSLC) 规则，适用于新型复合材料水翼结构。',
-                'dr_c2_b2': '<strong>HKMD / MSA 认证:</strong> 确定在香港及大湾区跨境水域进行本地船只运营的路径。',
-                'dr_c2_b3': '<strong>内港尾流豁免:</strong> 凭借小于 0.15 米的尾流激浪特性，寻求在维多利亚港限制区内提高航速的许可。',
-                'dr_c2_b4': '<strong>无人船海试许可:</strong> 通过海事处非载人无人船试验机制获取吐露港专属海试水域批文。',
-                'dr_card3_title': 'EF-150 船队经济性细目',
-                'dr_c3_h1': '指标', 'dr_c3_h2': '传统柴油', 'dr_c3_h3': 'EF-150 电动',
-                'dr_c3_r1': '能源/燃料',
-                'dr_c3_r2': '动力系统维护', 'dr_c3_v2a': '高 (燃气轮机)', 'dr_c3_v2b': '低 (吊舱驱动)',
-                'dr_c3_r3': '船员配置', 'dr_c3_v3a': '标准 (8-10)', 'dr_c3_v3b': '减少 (4)',
-                'dr_card4_title': 'MCS 终端与 BESS 整合',
-                'dr_c4_b1': '<strong>码头缓冲:</strong> 岸上 4.0 MWh 电池储能系统消除了公共渡轮码头高压电网升级的需求。',
-                'dr_c4_b2': '<strong>兆瓦级充电速率:</strong> 3.5 MW 直流输出，兼容船用 MCS 标准。',
-                'dr_c4_b3': '<strong>周转时间:</strong> 乘客下船期间完成 < 45 分钟的充电周期 (20% 至 90% SOC)。',
-
-                'footer_cpy': 'AERO-MARINE SYSTEMS CONCEPT © 2026.',
-                'footer_loc': '香港 / 深圳', 'footer_type': '可行性研究'
-            }
-        };
-
-        function setLang(lang) {
-            currentLang = lang;
-            const fx = fxMap[lang];
-            const t = translations[lang];
-
-            // 1. Update text nodes
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (t[key]) el.innerHTML = t[key];
-            });
-
-            // 2. Localized sentences
-            const dieselBase = (22.50 * fx.rate).toFixed(2);
-            const electricBase = (4.90 * fx.rate).toFixed(2);
-            
-            let p4Desc = '';
-            if (lang === 'en') {
-                p4Desc = `Direct electric pod drives yield ~${fx.symbol}${electricBase} ${fx.code}/NM energy costs, compared to ~${fx.symbol}${dieselBase} ${fx.code}/NM for legacy marine gas oil turbines.`;
-            } else if (lang === 'tc') {
-                p4Desc = `直接電力吊艙驅動和大幅阻力減免帶來約 ${fx.symbol}${electricBase} ${fx.code}/海里的能源成本，而傳統船用輕柴油燃氣輪機為約 ${fx.symbol}${dieselBase} ${fx.code}/海里。`;
-            } else if (lang === 'sc') {
-                p4Desc = `直接电力吊舱驱动和大幅阻力减免带来约 ${fx.symbol}${electricBase} ${fx.code}/海里的能源成本，而传统船用轻柴油燃气轮机为约 ${fx.symbol}${dieselBase} ${fx.code}/海里。`;
-            }
-            
-            document.getElementById('ui-p4-desc').innerText = p4Desc;
-            document.getElementById('ui-p4-metric').innerText = `~${fx.symbol}${electricBase} ${fx.code} / NM`;
-            document.getElementById('ui-dr-diesel').innerText = `~${fx.symbol}${dieselBase} ${fx.code} / NM`;
-            document.getElementById('ui-dr-electric').innerText = `~${fx.symbol}${electricBase} ${fx.code} / NM`;
-
-            // 3. Dropdown list
-            const routeSelect = document.getElementById('calc-route');
-            if(routeSelect) {
-                const currentVal = routeSelect.value;
-                routeSelect.innerHTML = `
-                    <option value="hk-shenzhen">HK Central ⟷ Shenzhen Shekou (22 NM)</option>
-                    <option value="hkg-szx">HKG SkyPier ⟷ Shenzhen Airport (25 NM)</option>
-                    <option value="hk-macau">HK Central ⟷ Macau Taipa (36 NM)</option>
-                    <option value="hk-airport">HK Central ⟷ HKG SkyPier Airport (17 NM)</option>
-                    <option value="hk-zhuhai">HK Central ⟷ Zhuhai Jiuzhou (35 NM)</option>
-                `;
-                routeSelect.value = currentVal;
-            }
-
-            // 4. Update Button Classes
-            ['en', 'tc', 'sc'].forEach(l => {
-                const btn = document.getElementById('btn-lang-' + l);
-                if(btn) {
-                    if(l === lang) {
-                        btn.classList.remove('text-zinc-500', 'hover:text-white');
-                        btn.classList.add('bg-zinc-800', 'text-white');
-                    } else {
-                        btn.classList.add('text-zinc-500', 'hover:text-white');
-                        btn.classList.remove('bg-zinc-800', 'text-white');
-                    }
-                }
-            });
-            
-            // 5. Re-run calculator
-            runRouteCalculator();
-        }
-
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            const iconOpen = document.getElementById('menu-icon-open');
-            const iconClose = document.getElementById('menu-icon-close');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-                iconOpen.classList.add('hidden');
-                iconClose.classList.remove('hidden');
-            } else {
-                menu.classList.add('hidden');
-                iconOpen.classList.remove('hidden');
-                iconClose.classList.add('hidden');
-            }
-        }
-
-        const routeProfiles = {
-            'hk-shenzhen': { distanceNM: 22, dieselTimeMins: 48, ef150TimeMins: 36, dieselFuelPerNM: 17.5, electricKwhPerNM: 30.0 },
-            'hkg-szx': { distanceNM: 25, dieselTimeMins: 45, ef150TimeMins: 40, dieselFuelPerNM: 17.8, electricKwhPerNM: 30.0 },
-            'hk-macau': { distanceNM: 36, dieselTimeMins: 58, ef150TimeMins: 55, dieselFuelPerNM: 18.5, electricKwhPerNM: 30.0 },
-            'hk-airport': { distanceNM: 17, dieselTimeMins: 42, ef150TimeMins: 28, dieselFuelPerNM: 17.0, electricKwhPerNM: 30.0 },
-            'hk-zhuhai': { distanceNM: 35, dieselTimeMins: 55, ef150TimeMins: 53, dieselFuelPerNM: 18.2, electricKwhPerNM: 30.0 }
-        };
-
-        function runRouteCalculator() {
-            const routeKey = document.getElementById('calc-route').value;
-            const fleet = parseInt(document.getElementById('calc-fleet').value);
-            const trips = parseInt(document.getElementById('calc-trips').value);
-            const fx = fxMap[currentLang];
-
-            const vesselSuffix = currentLang === 'en' ? (fleet === 1 ? ' VESSEL' : ' VESSELS') : ' 艘';
-            const tripSuffix = currentLang === 'en' ? ' TRIPS' : ' 次';
-            const minSuffix = currentLang === 'en' ? ' MINS' : (currentLang === 'tc' ? ' 分鐘' : ' 分钟');
-            const yrsSuffix = currentLang === 'en' ? ' YRS' : ' 年';
-
-            document.getElementById('calc-fleet-val').innerText = fleet + vesselSuffix;
-            document.getElementById('calc-trips-val').innerText = trips + tripSuffix;
-
-            const r = routeProfiles[routeKey];
-            if (!r) return;
-
-            const dieselPricePerLiterUSD = 2.20; 
-            const electricityPricePerKwhUSD = 0.16; 
-            
-            const localDieselPrice = (dieselPricePerLiterUSD * fx.rate).toFixed(2);
-            document.getElementById('ui-calc-diesel-price').innerText = `${fx.symbol}${localDieselPrice} ${fx.code} / Liter`;
-
-            const annualNMTravelled = fleet * trips * r.distanceNM * 365;
-
-            const annualDieselLiters = annualNMTravelled * r.dieselFuelPerNM;
-            const annualDieselCostUSD = annualDieselLiters * dieselPricePerLiterUSD;
-            const annualElectricKwh = annualNMTravelled * r.electricKwhPerNM;
-            const annualElectricCostUSD = annualElectricKwh * electricityPricePerKwhUSD;
-
-            const annualSavingsUSD = Math.max(0, annualDieselCostUSD - annualElectricCostUSD);
-            const premiumCostPerVesselUSD = 3500000;
-            const fleetPremiumCapExUSD = fleet * premiumCostPerVesselUSD;
-            const paybackYears = annualSavingsUSD > 0 ? (fleetPremiumCapExUSD / annualSavingsUSD).toFixed(1) : 'N/A';
-            const co2TonsReduced = Math.round((annualDieselLiters * 2.68) / 1000);
-            
-            const timeSavedMins = r.dieselTimeMins - r.ef150TimeMins;
-            let diffSuffix = '';
-            if (currentLang === 'en') diffSuffix = ` ${timeSavedMins} Mins Faster than Diesel`;
-            if (currentLang === 'tc') diffSuffix = ` ${timeSavedMins} 分鐘 (比傳統快)`;
-            if (currentLang === 'sc') diffSuffix = ` ${timeSavedMins} 分钟 (比传统快)`;
-
-            const localAnnualSavings = (annualSavingsUSD * fx.rate) / 1000000;
-            const localAnnualDiesel = (annualDieselCostUSD * fx.rate) / 1000000;
-            const localAnnualElectric = (annualElectricCostUSD * fx.rate) / 1000000;
-
-            document.getElementById('calc-out-savings').innerText = `${fx.symbol}${localAnnualSavings.toFixed(2)}${fx.m_suffix}`;
-            document.getElementById('calc-out-payback').innerText = paybackYears + yrsSuffix;
-            document.getElementById('calc-out-co2').innerText = co2TonsReduced.toLocaleString() + ' T';
-            document.getElementById('calc-out-time').innerText = r.ef150TimeMins + minSuffix;
-            document.getElementById('calc-out-time-diff').innerText = diffSuffix;
-            document.getElementById('calc-bar-diesel-text').innerText = `${fx.symbol}${localAnnualDiesel.toFixed(2)}${fx.m_suffix}`;
-            document.getElementById('calc-bar-ef150-text').innerText = `${fx.symbol}${localAnnualElectric.toFixed(2)}${fx.m_suffix}`;
-
-            const efPercent = Math.round((annualElectricCostUSD / annualDieselCostUSD) * 100);
-            document.getElementById('calc-bar-ef150').style.width = Math.max(8, efPercent) + '%';
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            setLang('en');
-        });
-    </script>
-</body>
-</html>
+                't_c4_r3': '传感器融合', 't_c4_v3': '惯性测量单元 (IMU
