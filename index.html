@@ -115,7 +115,7 @@
                     <a href="#moat" class="hover:text-white transition-colors" data-i18n="nav_2">Economics</a>
                     <a href="#routes" class="hover:text-white transition-colors" data-i18n="nav_3">Analytics</a>
                     <a href="#specs" class="hover:text-white transition-colors" data-i18n="nav_4">Tech Matrix</a>
-                    <a href="#portal" class="hover:text-white transition-colors" data-i18n="nav_5">Capital Stack</a>
+                    <a href="#portal" class="hover:text-white transition-colors" data-i18n="nav_5">D1 Budget & Capital</a>
                 </nav>
 
                 <!-- Tools & Mobile Navigation -->
@@ -151,7 +151,7 @@
             <a href="#moat" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_2">Economics</a>
             <a href="#routes" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_3">Analytics</a>
             <a href="#specs" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_4">Tech Matrix</a>
-            <a href="#portal" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_5">Capital Stack</a>
+            <a href="#portal" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_5">D1 Budget & Capital</a>
         </div>
     </header>
 
@@ -184,7 +184,7 @@
                             <span>→</span>
                         </a>
                         <a href="#portal" class="inline-flex items-center space-x-2 px-4 py-2 bg-zinc-800 border border-zinc-700 text-zinc-300 text-xs font-mono rounded hover:bg-zinc-750 transition-colors">
-                            <span data-i18n="hero_btn_fund">$0 FOUNDER CASH FUNDING PLAN</span>
+                            <span data-i18n="hero_btn_fund">HK$ 3.99M R&D CAPITAL STRATEGY</span>
                         </a>
                     </div>
                 </div>
@@ -294,7 +294,7 @@
                     <span class="text-tech-cyan" data-i18n="d1_table_sub">Froude Number: 1.17</span>
                 </div>
                 <div class="overflow-x-auto">
-                    <table class="w-full text-left text-xs font-mono">
+                    <table class="w-full text-left text-xs font-mono whitespace-nowrap">
                         <thead class="bg-zinc-950/80 text-zinc-400 border-b border-zinc-800">
                             <tr>
                                 <th class="py-3 px-4" data-i18n="d1_th_metric">Engineering Parameter</th>
@@ -338,7 +338,7 @@
                                 <td class="py-2.5 px-4 text-zinc-400" data-i18n="d1_r6_lbl">Flight Controller Frequency</td>
                                 <td class="py-2.5 px-4" data-i18n="d1_r6_ef">100 Hz Loop (Triple Redundant)</td>
                                 <td class="py-2.5 px-4 text-tech-cyan font-bold" data-i18n="d1_r6_d1">100 Hz Loop (Deterministic Dual-Core)</td>
-                                <td class="py-2.5 px-4 text-zinc-500" data-i18n="d1_r6_law">Oversampled (Higher bandwidth vs scaled craft)</td>
+                                <td class="py-2.5 px-4 text-zinc-500" data-i18n="d1_r6_law">Oversampled (Higher bandwidth)</td>
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-4 text-zinc-400" data-i18n="d1_r7_lbl">Primary Development Phase</td>
@@ -436,7 +436,7 @@
                     GBA Route Feasibility Calculator
                 </h2>
                 <p class="text-sm text-zinc-400 mt-2 font-sans" data-i18n="calc_desc">
-                    Simulate the financial viability of replacing legacy diesel vessels with the EF-150 platform across major Greater Bay Area transit corridors.
+                    Simulate the financial viability of replacing legacy diesel vessels with the EF-150 platform across major Greater Bay Area transit corridors. (Mathematics corrected to ensure exactly equal fleet utilization).
                 </p>
             </div>
 
@@ -448,7 +448,7 @@
                         <h3 class="text-lg font-mono font-bold text-white" data-i18n="calc_sim_title">Fleet OPEX Projection Model</h3>
                     </div>
                     <div class="text-[11px] font-mono text-zinc-500">
-                        <span data-i18n="calc_sim_base">BASELINE MGO DIESEL:</span> <span class="text-zinc-300 font-bold" id="ui-calc-diesel-price">$2.20 USD / Liter</span>
+                        <span data-i18n="calc_sim_base">BASELINE MGO DIESEL:</span> <span class="text-zinc-300 font-bold" id="ui-calc-diesel-price">$22.50 USD / NM</span>
                     </div>
                 </div>
 
@@ -578,7 +578,7 @@
                 </div>
 
                 <div class="overflow-x-auto">
-                    <table class="w-full text-left text-xs font-mono">
+                    <table class="w-full text-left text-xs font-mono whitespace-nowrap">
                         <tbody class="divide-y divide-zinc-800">
                             <tr class="bg-zinc-950/60">
                                 <th colspan="2" class="py-2.5 px-4 text-zinc-400 uppercase font-bold text-[11px] tracking-wider" data-i18n="t_cat1">1. Vessel Dimensions & Capacity</th>
@@ -604,8 +604,8 @@
                                 <td class="py-2.5 px-4 text-zinc-300" data-i18n="t_c2_v1">Fully Submerged T-Foil (Forward) & Inverted V-Foil (Aft)</td>
                             </tr>
                             <tr>
-                                <td class="py-2.5 px-4 text-zinc-500" data-i18n="t_c2_r2">Target Drag Reduction</td>
-                                <td class="py-2.5 px-4 text-zinc-300 font-bold" data-i18n="t_c2_v2">80% vs Equivalent Displacement Catamaran</td>
+                                <td class="py-2.5 px-4 text-zinc-500" data-i18n="t_c2_r2">Target Lift-to-Drag (L/D)</td>
+                                <td class="py-2.5 px-4 text-zinc-300 font-bold" data-i18n="t_c2_v2">~9.8 L/D Ratio (Conservative Aerodynamic Profile)</td>
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-4 text-zinc-500" data-i18n="t_c2_r3">Harbor Wake Wash</td>
@@ -666,51 +666,101 @@
     <section id="portal" class="py-16 md:py-24 bg-zinc-950 border-b border-zinc-800 cad-grid-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-12">
-                <div class="text-xs font-mono text-tech-emerald uppercase tracking-widest mb-2" data-i18n="data_tag">5. Non-Dilutive Capitalization & Data Room</div>
+                <div class="text-xs font-mono text-tech-emerald uppercase tracking-widest mb-2" data-i18n="data_tag">5. Capitalization & COTS R&D Budget</div>
                 <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase" data-i18n="data_title">
-                    Zero-Capital Public Funding Architecture
+                    Public Funding & Working Capital Architecture
                 </h2>
                 <p class="text-sm text-zinc-400 mt-2 font-sans leading-relaxed" data-i18n="data_desc">
-                    Aero-Marine Systems is structured to require <strong>$0 founder private bankroll</strong>. By stacking HKSTP Incu-Tech milestones with the Hong Kong Innovation and Technology Commission’s Research Talent Hub (RTH-SPC) and Green Tech/Smart Mobility grant allowances, 100% of the BAYWING-D1 demonstrator build is subsidized by non-dilutive government capital.
+                    Aero-Marine Systems utilizes a highly leveraged grant stack to execute the BAYWING-D1 hardware demonstrator. Because the HKSTP Incu-Tech and ITF Research Talent Hub operate on a reimbursement basis, we require an initial founder/seed working capital injection to bridge cash flow, cover the PAG 10% co-pay, and secure specific Commercial Off-The-Shelf (COTS) aerospace/marine components.
                 </p>
+            </div>
+
+            <!-- Detailed COTS Budget Table -->
+            <div class="data-card rounded-xl overflow-hidden mb-10">
+                <div class="p-4 bg-zinc-900 border-b border-zinc-800 flex justify-between items-center text-xs font-mono">
+                    <span class="text-white font-bold" data-i18n="cots_table_title">DEMONSTRATOR (D1) COTS BUDGET BREAKDOWN</span>
+                    <span class="text-tech-emerald font-bold">HK$ 3,990,000</span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-[11px] font-mono whitespace-nowrap">
+                        <thead class="bg-zinc-950/80 text-zinc-400 border-b border-zinc-800">
+                            <tr>
+                                <th class="py-3 px-4" data-i18n="cots_th_cat">R&D Category</th>
+                                <th class="py-3 px-4" data-i18n="cots_th_desc">COTS Hardware / Resource Allocation</th>
+                                <th class="py-3 px-4 text-right" data-i18n="cots_th_cost">Est. Cost (HKD)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-zinc-800 text-zinc-300">
+                            <tr>
+                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r1_cat">Avionics & Sensor Fusion</td>
+                                <td class="py-3 px-4" data-i18n="cots_r1_desc">SBG Ellipse-D RTK INS, Ouster OS0 LiDAR, Jetson Orin Nano, Echologger Altimeter</td>
+                                <td class="py-3 px-4 text-right">$250,000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r2_cat">Actuation & Mechatronics</td>
+                                <td class="py-3 px-4" data-i18n="cots_r2_desc">Subsea IP68 Rotary Servos (Volz/Moog), SubConn cabling, CNC linkages</td>
+                                <td class="py-3 px-4 text-right">$350,000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r3_cat">Powertrain & Energy</td>
+                                <td class="py-3 px-4" data-i18n="cots_r3_desc">2x 5.0kW Torqeedo Pods, 48V Marine LFP Packs, Victron BMS</td>
+                                <td class="py-3 px-4 text-right">$300,000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r4_cat">Hull & Composites</td>
+                                <td class="py-3 px-4" data-i18n="cots_r4_desc">Carbon-fiber infusion tooling, 3D printed molds, CNC hydrofoil struts</td>
+                                <td class="py-3 px-4 text-right">$500,000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r5_cat">Testing & Infrastructure</td>
+                                <td class="py-3 px-4" data-i18n="cots_r5_desc">Telemetry base station (Microhard), Ansys/MATLAB licenses, Chase boat rental</td>
+                                <td class="py-3 px-4 text-right">$450,000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r6_cat">R&D Personnel (24 Mos)</td>
+                                <td class="py-3 px-4" data-i18n="cots_r6_desc">2x GNC Engineers (RTH Subsidized), 1x Naval Architect (Contract)</td>
+                                <td class="py-3 px-4 text-right">$1,800,000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r7_cat">IP Protection</td>
+                                <td class="py-3 px-4" data-i18n="cots_r7_desc">PCT Filing & Regional Patent Prosecution (PAG Subsidized)</td>
+                                <td class="py-3 px-4 text-right">$340,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <!-- Grant Funding Stack Summary Card -->
             <div class="data-card p-6 rounded-xl border border-tech-emerald/30 bg-zinc-950 mb-8">
                 <div class="flex flex-wrap items-center justify-between pb-4 border-b border-zinc-800 gap-4">
                     <div>
-                        <span class="text-[10px] font-mono text-tech-emerald uppercase tracking-widest font-bold" data-i18n="grant_box_tag">100% NON-DILUTIVE PUBLIC CAPITAL STACK</span>
-                        <h3 class="text-xl font-mono font-bold text-white mt-0.5" data-i18n="grant_box_title">Demonstrator (D1) R&D Budget: HK$ 3,990,000</h3>
+                        <span class="text-[10px] font-mono text-tech-emerald uppercase tracking-widest font-bold" data-i18n="grant_box_tag">LEVERAGED PUBLIC CAPITAL STACK</span>
+                        <h3 class="text-xl font-mono font-bold text-white mt-0.5" data-i18n="grant_box_title">Total Demonstrator Capitalization: HK$ 3,990,000</h3>
                     </div>
                     <div class="text-right">
-                        <span class="text-[10px] font-mono text-zinc-500 uppercase block" data-i18n="founder_share">Founder Private Cash Injection:</span>
-                        <span class="text-lg font-mono font-bold text-tech-emerald" data-i18n="founder_cost">HK$ 0.00 (Zero Self-Funding)</span>
+                        <span class="text-[10px] font-mono text-zinc-500 uppercase block" data-i18n="founder_share">Founder Working Capital Injection (25%):</span>
+                        <span class="text-lg font-mono font-bold text-white" data-i18n="founder_cost">HK$ 1,000,000</span>
                     </div>
                 </div>
 
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+                <div class="grid sm:grid-cols-3 gap-4 mt-6">
                     <div class="p-3 bg-zinc-900 border border-zinc-800 rounded">
                         <div class="text-[10px] font-mono text-zinc-500 uppercase" data-i18n="g1_title">HKSTP Incu-Tech Subsidy</div>
-                        <div class="text-xl font-mono font-bold text-white mt-1">HK$ 1,290,000</div>
-                        <div class="text-[9px] font-mono text-zinc-400 mt-1" data-i18n="g1_desc">Tooling, lab rent, testing permits & operational allowance.</div>
+                        <div class="text-xl font-mono font-bold text-tech-emerald mt-1">HK$ 1,290,000</div>
+                        <div class="text-[9px] font-mono text-zinc-400 mt-1" data-i18n="g1_desc">Tooling, lab rent, testing permits & operational allowance (Reimbursement).</div>
                     </div>
 
                     <div class="p-3 bg-zinc-900 border border-zinc-800 rounded">
                         <div class="text-[10px] font-mono text-zinc-500 uppercase" data-i18n="g2_title">ITF Research Talent Hub</div>
                         <div class="text-xl font-mono font-bold text-tech-emerald mt-1">HK$ 1,450,000</div>
-                        <div class="text-[9px] font-mono text-zinc-400 mt-1" data-i18n="g2_desc">100% Gov-paid salaries for 2 full-time control engineers.</div>
+                        <div class="text-[9px] font-mono text-zinc-400 mt-1" data-i18n="g2_desc">100% Gov-paid salaries for 2 full-time control engineers (Reimbursement).</div>
                     </div>
 
                     <div class="p-3 bg-zinc-900 border border-zinc-800 rounded">
                         <div class="text-[10px] font-mono text-zinc-500 uppercase" data-i18n="g3_title">Patent Application Grant</div>
-                        <div class="text-xl font-mono font-bold text-white mt-1">HK$ 250,000</div>
-                        <div class="text-[9px] font-mono text-zinc-400 mt-1" data-i18n="g3_desc">PAG grant directly covering PCT & regional patent filings.</div>
-                    </div>
-
-                    <div class="p-3 bg-zinc-900 border border-zinc-800 rounded">
-                        <div class="text-[10px] font-mono text-zinc-500 uppercase" data-i18n="g4_title">Smart Mobility / Green Tech</div>
-                        <div class="text-xl font-mono font-bold text-tech-cyan mt-1">HK$ 1,000,000</div>
-                        <div class="text-[9px] font-mono text-zinc-400 mt-1" data-i18n="g4_desc">Hardware prototyping & PRD maritime supply chain grant.</div>
+                        <div class="text-xl font-mono font-bold text-tech-emerald mt-1">HK$ 250,000</div>
+                        <div class="text-[9px] font-mono text-zinc-400 mt-1" data-i18n="g3_desc">PAG grant directly covering up to 90% of PCT & regional patent filings.</div>
                     </div>
                 </div>
             </div>
@@ -762,56 +812,6 @@
                         </li>
                     </ul>
                 </div>
-
-                <!-- Economics -->
-                <div class="data-card p-6 rounded-lg">
-                    <div class="text-sm font-mono font-bold text-white mb-4 border-b border-zinc-800 pb-2" data-i18n="dr_card3_title">EF-150 Fleet Economics Breakdown</div>
-                    <table class="w-full text-left text-[11px] font-mono">
-                        <thead class="text-zinc-500">
-                            <tr>
-                                <th class="pb-2 font-normal" data-i18n="dr_c3_h1">Metric</th>
-                                <th class="pb-2 font-normal" data-i18n="dr_c3_h2">Legacy Diesel</th>
-                                <th class="pb-2 font-normal" data-i18n="dr_c3_h3">EF-150 Electric</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-zinc-300 divide-y divide-zinc-800/50">
-                            <tr>
-                                <td class="py-2 text-zinc-400" data-i18n="dr_c3_r1">Energy/Fuel</td>
-                                <td class="py-2" id="ui-dr-diesel">~$22.50 USD / NM</td>
-                                <td class="py-2 text-tech-emerald" id="ui-dr-electric">~$4.90 USD / NM</td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 text-zinc-400" data-i18n="dr_c3_r2">Powertrain Maintenance</td>
-                                <td class="py-2" data-i18n="dr_c3_v2a">High (Gas Turbines)</td>
-                                <td class="py-2 text-tech-emerald" data-i18n="dr_c3_v2b">Low (Pod Drives)</td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 text-zinc-400" data-i18n="dr_c3_r3">Crew Complement</td>
-                                <td class="py-2" data-i18n="dr_c3_v3a">Standard (8-10)</td>
-                                <td class="py-2 text-tech-emerald" data-i18n="dr_c3_v3b">Reduced (4)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- MCS Infrastructure -->
-                <div class="data-card p-6 rounded-lg">
-                    <div class="text-sm font-mono font-bold text-white mb-4 border-b border-zinc-800 pb-2" data-i18n="dr_card4_title">MCS Terminal & BESS Integration</div>
-                    <ul class="space-y-3 text-[11px] font-mono text-zinc-300">
-                        <li class="flex items-start gap-2">
-                            <span class="text-tech-amber">▸</span>
-                            <span data-i18n="dr_c4_b1"><strong>Dockside Buffer:</strong> Onshore 4.0 MWh BESS eliminates high-voltage grid upgrades at public ferry piers.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-tech-amber">▸</span>
-                            <span data-i18n="dr_c4_b2"><strong>Megawatt Charge Rate:</strong> 3.5 MW DC output compatible with marine MCS standards.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-tech-amber">▸</span>
-                            <span data-i18n="dr_c4_b3"><strong>Turnaround Window:</strong> &lt; 45-minute charge cycle (20% to 90% SOC) during passenger disembarkation.</span>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
     </section>
@@ -845,11 +845,11 @@
         const translations = {
             'en': {
                 'nav_subtitle': 'Deep Tech Concept Proposal',
-                'nav_1': 'Platform', 'nav_demo': '1:8 Demonstrator', 'nav_2': 'Economics', 'nav_3': 'Analytics', 'nav_4': 'Tech Matrix', 'nav_5': 'Capital Stack', 'nav_track': 'HKSTP INCU-TECH TRACK',
+                'nav_1': 'Platform', 'nav_demo': '1:8 Demonstrator', 'nav_2': 'Economics', 'nav_3': 'Analytics', 'nav_4': 'Tech Matrix', 'nav_5': 'D1 Budget & Capital', 'nav_track': 'HKSTP INCU-TECH TRACK',
                 'badge_hkstp': 'HKSTP Incubation & Feasibility Study', 'doc_id_label': 'DOC ID:',
                 'hero_title': 'BAYWING EF-150 EXPRESS', 'hero_subtitle': 'Active Fly-by-Wire Electric Hydrofoil Platform',
                 'hero_desc': 'Aero-Marine Systems is building the software-defined future of GBA maritime transit. By integrating aerospace-grade flight control algorithms with Pearl River Delta carbon-composite supply chains, the EF-150 architecture completely decouples the hull from hydrodynamic drag—slashing energy requirements by 80% and making high-speed electric commuter routes commercially viable.',
-                'hero_btn_explore': 'EXPLORE 1:8 TECH DEMONSTRATOR', 'hero_btn_fund': '$0 FOUNDER CASH FUNDING PLAN',
+                'hero_btn_explore': 'EXPLORE 1:8 TECH DEMONSTRATOR', 'hero_btn_fund': 'HK$ 3.99M R&D CAPITAL STRATEGY',
                 'spec_title': 'Target Operational Envelope', 'spec_class': '150 PASSENGER CLASS',
                 'spec_speed': 'Target Cruise Speed', 'unit_38': '38.0', 'unit_knots': 'KNOTS', 'spec_speed_sub': '(70.3 km/h Foil-borne)',
                 'spec_range': 'Effective Range', 'unit_nm': 'NM', 'spec_range_sub': '(w/ 20% Regulatory Reserve)',
@@ -877,15 +877,8 @@
                 'd1_r3_lbl': 'All-Up Displacement Mass', 'd1_r3_ef': '~56,000 kg', 'd1_r3_d1': '~109 kg', 'd1_r3_law': '1 : &lambda;&sup3; (&times; 1/512)',
                 'd1_r4_lbl': 'Cruise Take-off Speed', 'd1_r4_ef': '18.0 Knots (Take-off) / 38.0 Knots (Cruise)', 'd1_r4_d1': '6.4 Knots (Take-off) / 13.4 Knots (Cruise)', 'd1_r4_law': '1 : &radic;&lambda; (&times; 1/2.83)',
                 'd1_r5_lbl': 'Installed Powertrain', 'd1_r5_ef': '2x 650 kW Pod Drives (1,300 kW Total)', 'd1_r5_d1': '2x 5.0 kW Brushless Pods (10 kW Total)', 'd1_r5_law': 'Power Reqd &propto; &lambda;<sup>3.5</sup>',
-                'd1_r6_lbl': 'Flight Controller Frequency', 'd1_r6_ef': '100 Hz Loop (Triple Redundant)', 'd1_r6_d1': '100 Hz Loop (Deterministic Dual-Core)', 'd1_r6_law': 'Oversampled (Higher bandwidth vs scaled craft)',
+                'd1_r6_lbl': 'Flight Controller Frequency', 'd1_r6_ef': '100 Hz Loop (Triple Redundant)', 'd1_r6_d1': '100 Hz Loop (Deterministic Dual-Core)', 'd1_r6_law': 'Oversampled (Higher bandwidth)',
                 'd1_r7_lbl': 'Primary Development Phase', 'd1_r7_ef': 'Phase 3 (Full Commercial Build)', 'd1_r7_d1': 'Phase 1 & 2 (HKSTP Incubation Core)', 'd1_r7_law': 'Zero-capex risk burn-in',
-
-                'grant_box_tag': '100% NON-DILUTIVE PUBLIC CAPITAL STACK', 'grant_box_title': 'Demonstrator (D1) R&D Budget: HK$ 3,990,000',
-                'founder_share': 'Founder Private Cash Injection:', 'founder_cost': 'HK$ 0.00 (Zero Self-Funding)',
-                'g1_title': 'HKSTP Incu-Tech Subsidy', 'g1_desc': 'Tooling, lab rent, testing permits & operational allowance.',
-                'g2_title': 'ITF Research Talent Hub', 'g2_desc': '100% Gov-paid salaries for 2 full-time control engineers.',
-                'g3_title': 'Patent Application Grant', 'g3_desc': 'PAG grant directly covering PCT & regional patent filings.',
-                'g4_title': 'Smart Mobility / Green Tech', 'g4_desc': 'Hardware prototyping & PRD maritime supply chain grant.',
 
                 'moat_tag': '2. Deep Tech Moat & Economics', 'moat_title': 'Defensible OPEX Advantages',
                 'moat_desc': 'Legacy fast ferries rely on multi-megawatt diesel gas turbines pushing heavy displacement hulls. High marine fuel costs and escalating engine overhaul expenses compress operating margins. Our Fly-by-Wire control system enables a thermodynamic shift.',
@@ -895,7 +888,7 @@
                 'p4_tag': '04. Route Yield', 'p4_metric': '78%', 'p4_title': 'OPEX Savings', 'p4_sub': 'Energy OPEX:',
                 
                 'calc_tag': '3. Strategic Route Analytics', 'calc_title': 'GBA Route Feasibility Calculator',
-                'calc_desc': 'Simulate the financial viability of replacing legacy diesel vessels with the EF-150 platform across major Greater Bay Area transit corridors.',
+                'calc_desc': 'Simulate the financial viability of replacing legacy diesel vessels with the EF-150 platform across major Greater Bay Area transit corridors. (Mathematics corrected to ensure exactly equal fleet utilization).',
                 'calc_sim_tag': 'INTERACTIVE FINANCIAL SIMULATOR', 'calc_sim_title': 'Fleet OPEX Projection Model', 'calc_sim_base': 'BASELINE MGO DIESEL:',
                 'calc_input_1': '1. Select GBA Express Route',
                 'calc_input_2': '2. Active Fleet Size', 'calc_input_2_min': '1 Unit', 'calc_input_2_mid': '6 Units', 'calc_input_2_max': '12 Units',
@@ -915,7 +908,7 @@
                 't_c1_r3': 'Passenger Capacity', 't_c1_v3': '150 Passengers + 4 Crew',
                 't_cat2': '2. Hydrodynamics & Efficiency',
                 't_c2_r1': 'Foil Configuration', 't_c2_v1': 'Fully Submerged T-Foil (Forward) & Inverted V-Foil (Aft)',
-                't_c2_r2': 'Target Drag Reduction', 't_c2_v2': '80% vs Equivalent Displacement Catamaran',
+                't_c2_r2': 'Target Lift-to-Drag (L/D)', 't_c2_v2': '~9.8 L/D Ratio (Conservative Aerodynamic Profile)',
                 't_c2_r3': 'Harbor Wake Wash', 't_c2_v3': '&lt; 0.15m at Cruise Speed',
                 't_cat3': '3. Power & Infrastructure Target',
                 't_c3_r1': 'Storage Architecture', 't_c3_v1': '2,400 kWh (2.4 MWh), 800V DC Nominal',
@@ -929,8 +922,25 @@
                 't_c5_r1': 'Stationary BESS Buffer', 't_c5_v1': '4.0 MWh Containerized Battery Buffer (Dockside Peak Shaving)',
                 't_c5_r2': 'Charging Standard', 't_c5_v2': '3.5 MW Automated MCS (Megawatt Charging System) Arm',
 
-                'data_tag': '5. Non-Dilutive Capitalization & Data Room', 'data_title': 'Zero-Capital Public Funding Architecture',
-                'data_desc': 'Aero-Marine Systems is structured to require <strong>$0 founder private bankroll</strong>. By stacking HKSTP Incu-Tech milestones with the Hong Kong Innovation and Technology Commission’s Research Talent Hub (RTH-SPC) and Green Tech/Smart Mobility grant allowances, 100% of the BAYWING-D1 demonstrator build is subsidized by non-dilutive government capital.',
+                'data_tag': '5. Capitalization & COTS R&D Budget', 'data_title': 'Public Funding & Working Capital Architecture',
+                'data_desc': 'Aero-Marine Systems utilizes a highly leveraged grant stack to execute the BAYWING-D1 hardware demonstrator. Because the HKSTP Incu-Tech and ITF Research Talent Hub operate on a reimbursement basis, we require an initial founder/seed working capital injection to bridge cash flow, cover the PAG 10% co-pay, and secure specific Commercial Off-The-Shelf (COTS) aerospace/marine components.',
+                
+                'cots_table_title': 'DEMONSTRATOR (D1) COTS BUDGET BREAKDOWN',
+                'cots_th_cat': 'R&D Category', 'cots_th_desc': 'COTS Hardware / Resource Allocation', 'cots_th_cost': 'Est. Cost (HKD)',
+                'cots_r1_cat': 'Avionics & Sensor Fusion', 'cots_r1_desc': 'SBG Ellipse-D RTK INS, Ouster OS0 LiDAR, Jetson Orin Nano, Echologger Altimeter',
+                'cots_r2_cat': 'Actuation & Mechatronics', 'cots_r2_desc': 'Subsea IP68 Rotary Servos (Volz/Moog), SubConn cabling, CNC linkages',
+                'cots_r3_cat': 'Powertrain & Energy', 'cots_r3_desc': '2x 5.0kW Torqeedo Pods, 48V Marine LFP Packs, Victron BMS',
+                'cots_r4_cat': 'Hull & Composites', 'cots_r4_desc': 'Carbon-fiber infusion tooling, 3D printed molds, CNC hydrofoil struts',
+                'cots_r5_cat': 'Testing & Infrastructure', 'cots_r5_desc': 'Telemetry base station (Microhard), Ansys/MATLAB licenses, Chase boat rental',
+                'cots_r6_cat': 'R&D Personnel (24 Mos)', 'cots_r6_desc': '2x GNC Engineers (RTH Subsidized), 1x Naval Architect (Contract)',
+                'cots_r7_cat': 'IP Protection', 'cots_r7_desc': 'PCT Filing & Regional Patent Prosecution (PAG Subsidized)',
+
+                'grant_box_tag': 'LEVERAGED PUBLIC CAPITAL STACK', 'grant_box_title': 'Total Demonstrator Capitalization: HK$ 3,990,000',
+                'founder_share': 'Founder Working Capital Injection (25%):', 'founder_cost': 'HK$ 1,000,000',
+                'g1_title': 'HKSTP Incu-Tech Subsidy', 'g1_desc': 'Tooling, lab rent, testing permits & operational allowance (Reimbursement).',
+                'g2_title': 'ITF Research Talent Hub', 'g2_desc': '100% Gov-paid salaries for 2 full-time control engineers (Reimbursement).',
+                'g3_title': 'Patent Application Grant', 'g3_desc': 'PAG grant directly covering up to 90% of PCT & regional patent filings.',
+
                 'dr_card1_title': 'Phase Development Roadmap',
                 'dr_c1_b1': '<strong>Phase 1 (Months 1-9):</strong> 6-DoF Digital Twin, FCS Bench Testing, & Hardware-in-the-Loop simulation in HKSTP Robotics Lab.',
                 'dr_c1_b2': '<strong>Phase 2 (Months 10-18):</strong> Sub-scale D1 technology demonstrator (3.56m) sea trials in Tolo Harbour; 100Hz wave-decoupling validation.',
@@ -941,26 +951,17 @@
                 'dr_c2_b2': '<strong>HKMD / MSA Certification:</strong> Pathway defined for Local Vessel operation within Hong Kong and GBA cross-boundary waters.',
                 'dr_c2_b3': '<strong>Inner-Harbor Wake Exemption:</strong> Seeking clearance for elevated speeds in Victoria Harbour due to &lt; 0.15m wake wash profile.',
                 'dr_c2_b4': '<strong>Autonomous Testing Exemption:</strong> D1 test permit cleared through Marine Department uncrewed vessel trials channel in Tolo waters.',
-                'dr_card3_title': 'EF-150 Fleet Economics Breakdown',
-                'dr_c3_h1': 'Metric', 'dr_c3_h2': 'Legacy Diesel', 'dr_c3_h3': 'EF-150 Electric',
-                'dr_c3_r1': 'Energy/Fuel',
-                'dr_c3_r2': 'Powertrain Maintenance', 'dr_c3_v2a': 'High (Gas Turbines)', 'dr_c3_v2b': 'Low (Pod Drives)',
-                'dr_c3_r3': 'Crew Complement', 'dr_c3_v3a': 'Standard (8-10)', 'dr_c3_v3b': 'Reduced (4)',
-                'dr_card4_title': 'MCS Terminal & BESS Integration',
-                'dr_c4_b1': '<strong>Dockside Buffer:</strong> Onshore 4.0 MWh BESS eliminates high-voltage grid upgrades at public ferry piers.',
-                'dr_c4_b2': '<strong>Megawatt Charge Rate:</strong> 3.5 MW DC output compatible with marine MCS standards.',
-                'dr_c4_b3': '<strong>Turnaround Window:</strong> &lt; 45-minute charge cycle (20% to 90% SOC) during passenger disembarkation.',
                 
                 'footer_cpy': 'AERO-MARINE SYSTEMS CONCEPT &copy; 2026.',
                 'footer_loc': 'HONG KONG / SHENZHEN', 'footer_type': 'FEASIBILITY STUDY'
             },
             'tc': {
                 'nav_subtitle': '前沿科技概念提案',
-                'nav_1': '平台', 'nav_demo': '1:8 技術驗證機', 'nav_2': '經濟效益', 'nav_3': '分析數據', 'nav_4': '技術矩陣', 'nav_5': '資金結構', 'nav_track': '香港科技園 (HKSTP) INCU-TECH 培育計劃',
+                'nav_1': '平台', 'nav_demo': '1:8 技術驗證機', 'nav_2': '經濟效益', 'nav_3': '分析數據', 'nav_4': '技術矩陣', 'nav_5': 'D1 資金與預算', 'nav_track': '香港科技園 (HKSTP) INCU-TECH 培育計劃',
                 'badge_hkstp': '香港科技園培育計劃與可行性研究報告', 'doc_id_label': '文檔編號：',
                 'hero_title': 'BAYWING EF-150 EXPRESS', 'hero_subtitle': '主動式電傳操縱電動水翼船平台',
                 'hero_desc': 'Aero-Marine Systems 正全力構建由軟體定義的粵港澳大灣區（GBA）水上交通未來。通過將航空級飛行控制演算法與珠江三角洲的碳纖維複合材料供應鏈深度結合，EF-150 架構實現了船體與水動力阻力的完全解耦——降低 80% 的能源需求，使高速電動水上通勤路線具備商業可行性。',
-                'hero_btn_explore': '探索 1:8 技術驗證機', 'hero_btn_fund': '$0 創辦人現金出資計劃',
+                'hero_btn_explore': '探索 1:8 技術驗證機', 'hero_btn_fund': 'HK$ 3.99M 研發資本策略',
                 'spec_title': '目標營運規格', 'spec_class': '150 人座級',
                 'spec_speed': '目標巡航航速', 'unit_38': '38.0', 'unit_knots': '節', 'spec_speed_sub': '（水翼翼航狀態下 70.3 km/h）',
                 'spec_range': '有效航程', 'unit_nm': '海里', 'spec_range_sub': '（包含 20% 法規儲備電量）',
@@ -986,17 +987,10 @@
                 'd1_r1_lbl': '全長 (LOA)', 'd1_r1_ef': '28.50 米 (93.5 呎)', 'd1_r1_d1': '3.56 米 (11.7 呎)', 'd1_r1_law': '1 : &lambda; (&lambda; = 8)',
                 'd1_r2_lbl': '翼展 / 船寬 (Beam)', 'd1_r2_ef': '9.80 米', 'd1_r2_d1': '1.22 米', 'd1_r2_law': '1 : &lambda;',
                 'd1_r3_lbl': '滿載排水質量', 'd1_r3_ef': '約 56,000 kg', 'd1_r3_d1': '約 109 kg', 'd1_r3_law': '1 : &lambda;&sup3; (&times; 1/512)',
-                'd1_r4_lbl': '巡航 / 起飞航速', 'd1_r4_ef': '18.0 節 (起飛) / 38.0 節 (巡航)', 'd1_r4_d1': '6.4 節 (起飛) / 13.4 節 (巡航)', 'd1_r4_law': '1 : &radic;&lambda; (&times; 1/2.83)',
+                'd1_r4_lbl': '巡航 / 起飛航速', 'd1_r4_ef': '18.0 節 (起飛) / 38.0 節 (巡航)', 'd1_r4_d1': '6.4 節 (起飛) / 13.4 節 (巡航)', 'd1_r4_law': '1 : &radic;&lambda; (&times; 1/2.83)',
                 'd1_r5_lbl': '安裝動力系統', 'd1_r5_ef': '2x 650 kW 吊艙推進器 (共 1,300 kW)', 'd1_r5_d1': '2x 5.0 kW 無刷吊艙 (共 10 kW)', 'd1_r5_law': '所需功率 &propto; &lambda;<sup>3.5</sup>',
-                'd1_r6_lbl': '飛控系統頻率', 'd1_r6_ef': '100 Hz 迴路 (三重冗餘)', 'd1_r6_d1': '100 Hz 迴路 (確定性雙核)', 'd1_r6_law': '過採樣 (相較於縮尺船體具更高頻寬)',
+                'd1_r6_lbl': '飛控系統頻率', 'd1_r6_ef': '100 Hz 迴路 (三重冗餘)', 'd1_r6_d1': '100 Hz 迴路 (確定性雙核)', 'd1_r6_law': '過採樣 (相較於縮尺船體)',
                 'd1_r7_lbl': '主要開發階段', 'd1_r7_ef': '第三階段 (完整商業建造)', 'd1_r7_d1': '第一與第二階段 (香港科技園培育核心)', 'd1_r7_law': '零資本風險燒機驗證',
-
-                'grant_box_tag': '100% 非稀釋性公共資金結構', 'grant_box_title': '驗證機 (D1) 研發預算：HK$ 3,990,000',
-                'founder_share': '創辦人私人現金注入：', 'founder_cost': 'HK$ 0.00（零自籌資金）',
-                'g1_title': '香港科技園 Incu-Tech 資助', 'g1_desc': '工裝工具、實驗室租金、測試許可及營運津貼。',
-                'g2_title': '創科署研究人才庫 (ITF RTH)', 'g2_desc': '100% 政府全額資助 2 名全職控制工程師薪酬。',
-                'g3_title': '專利申請資助計劃 (PAG)', 'g3_desc': 'PAG 資助直接覆蓋 PCT 及區域專利申請費用。',
-                'g4_title': '智慧出行 / 綠色科技基金', 'g4_desc': '硬體原型製作及珠三角海事供應鏈資助。',
 
                 'moat_tag': '2. 前沿科技壁壘與經濟效益', 'moat_title': '可防禦的營運成本 (OPEX) 優勢',
                 'moat_desc': '傳統高速客輪依賴數兆瓦級的柴油燃氣輪機推動沉重的排水型船體。高昂的海上燃料成本和不斷上升的引擎大修費用壓縮了營運利潤。我們的電傳操縱（Fly-by-Wire）控制系統實現了熱力學與水動力學的根本轉變。',
@@ -1006,16 +1000,16 @@
                 'p4_tag': '04. 航線收益', 'p4_metric': '78%', 'p4_title': '營運成本節省', 'p4_sub': '能源營運成本：',
                 
                 'calc_tag': '3. 戰略航線分析', 'calc_title': '粵港澳大灣區航線可行性計算器',
-                'calc_desc': '模擬在大灣區主要水上交通走廊中，以 EF-150 平台替代傳統柴油船隻的財務可行性。',
+                'calc_desc': '模擬在大灣區主要水上交通走廊中，以 EF-150 平台替代傳統柴油船隻的財務可行性。（計算模型已修正以確保車隊利用率完全對等）。',
                 'calc_sim_tag': '互動式財務模擬器', 'calc_sim_title': '船隊營運成本預測模型', 'calc_sim_base': '基準 MGO 海事柴油價格：',
-                'calc_input_1': '選擇大灣區快線航線：',
-                'calc_input_2': '營運船隊規模：', 'calc_input_2_min': '1 艘船', 'calc_input_2_mid': '6 艘船', 'calc_input_2_max': '12 艘船',
-                'calc_input_3': '單船每日往返次數：', 'calc_input_3_min': '2 次往返', 'calc_input_3_mid': '8 次往返', 'calc_input_3_max': '16 次往返',
-                'calc_out_1_title': '年度能源節省：', 'calc_out_1_sub': '（對比傳統柴油雙體船）',
-                'calc_out_2_title': '預估 CapEx 溢價回收期：', 'calc_out_2_sub': '（針對電動平台溢價成本）',
-                'calc_out_3_title': '年度二氧化碳減排量：', 'calc_out_3_sub': '（每年溫室氣體公噸數）',
-                'calc_out_4_title': '預估 EF-150 航行時間：', 'calc_out_4_sub': '（比柴油船更快）',
-                'calc_bar_diesel': '年度能源成本（傳統柴油船隊）：', 'calc_bar_ef150': '年度能源成本（EF-150 電動船隊）：',
+                'calc_input_1': '1. 選擇大灣區快線航線',
+                'calc_input_2': '2. 營運船隊規模', 'calc_input_2_min': '1 艘船', 'calc_input_2_mid': '6 艘船', 'calc_input_2_max': '12 艘船',
+                'calc_input_3': '3. 單船每日往返次數', 'calc_input_3_min': '2 次往返', 'calc_input_3_mid': '8 次往返', 'calc_input_3_max': '16 次往返',
+                'calc_out_1_title': '年度能源節省', 'calc_out_1_sub': '（對比傳統柴油雙體船）',
+                'calc_out_2_title': '預估 CapEx 溢價回收期', 'calc_out_2_sub': '（針對電動平台溢價成本）',
+                'calc_out_3_title': '年度二氧化碳減排量', 'calc_out_3_sub': '（每年溫室氣體公噸數）',
+                'calc_out_4_title': '預估 EF-150 航行時間', 'calc_out_4_sub': '（比柴油船更快）',
+                'calc_bar_diesel': '年度能源成本（傳統柴油船隊）', 'calc_bar_ef150': '年度能源成本（EF-150 電動船隊）',
                 
                 'tech_tag': '4. 技術數據庫', 'tech_title': '建議工程矩陣',
                 'tech_desc': '為 EF-150 平台架構提出的基準結構與營運參數，已針對物理約束和海事認證標準進行更新。',
@@ -1026,7 +1020,7 @@
                 't_c1_r3': '載客量', 't_c1_v3': '150 名乘客 + 4 名船員',
                 't_cat2': '2. 水動力學與效率',
                 't_c2_r1': '水翼配置', 't_c2_v1': '前部全浸式 T 型水翼 & 後部倒 V 型水翼',
-                't_c2_r2': '目標阻力降低', 't_c2_v2': '相較同等排水量雙體船降低 80%',
+                't_c2_r2': '目標升阻比 (L/D)', 't_c2_v2': '約 9.8 L/D (保守空氣動力學配置)',
                 't_c2_r3': '港口航行尾波', 't_c2_v3': '巡航速度下波高 &lt; 0.15 米',
                 't_cat3': '3. 動力與基礎設施目標',
                 't_c3_r1': '儲能架構', 't_c3_v1': '2,400 kWh (2.4 MWh)，標稱 800V DC',
@@ -1040,38 +1034,46 @@
                 't_c5_r1': '固定式 BESS 緩衝', 't_c5_v1': '4.0 MWh 集裝箱式電池緩衝（碼頭削峰填谷）',
                 't_c5_r2': '充電標準', 't_c5_v2': '3.5 MW 自動化 MCS (兆瓦級充電系統) 充電臂',
 
-                'data_tag': '5. 非稀釋性資本結構與數據室', 'data_title': '零資本公共資金架構',
-                'data_desc': 'Aero-Marine Systems 的架構旨在實現<strong>創辦人 $0 私人資金投入</strong>。通過疊加香港科技園 Incu-Tech 培育計劃里程碑資助、香港創新科技署的「研究人才庫」(RTH-SPC) 以及綠色科技/智慧出行資助額度，BAYWING-D1 驗證機建置成本的 100% 均由非稀釋性政府資金補助。',
+                'data_tag': '5. 資本結構與 COTS 研發預算', 'data_title': '公共資金與營運資金架構',
+                'data_desc': 'Aero-Marine Systems 運用高度槓桿化的資助疊加策略來推進 BAYWING-D1 硬件驗證機。由於香港科技園 Incu-Tech 培育計劃及創新科技署「研究人才庫」皆採實報實銷 (Reimbursement) 制，我們需創辦人/種子輪注入初期營運資金以橋接現金流、涵蓋 PAG 專利申請的 10% 企業承擔部份，並採購特定的商用現成 (COTS) 航空/海事組件。',
+                
+                'cots_table_title': 'D1 驗證機商用現成 (COTS) 預算明細',
+                'cots_th_cat': '研發類別', 'cots_th_desc': 'COTS 硬件 / 資源分配', 'cots_th_cost': '預估成本 (HKD)',
+                'cots_r1_cat': '航電與感測器融合', 'cots_r1_desc': 'SBG Ellipse-D RTK INS, Ouster OS0 LiDAR, Jetson Orin Nano, Echologger 聲納高度計',
+                'cots_r2_cat': '致動器與機電', 'cots_r2_desc': '水下 IP68 旋轉伺服馬達 (Volz/Moog), SubConn 防水線纜, CNC 連桿',
+                'cots_r3_cat': '動力總成與能源', 'cots_r3_desc': '2x 5.0kW Torqeedo 電動吊艙, 48V 船用 LFP 電池組, Victron BMS',
+                'cots_r4_cat': '船體與複合材料', 'cots_r4_desc': '碳纖維真空灌注模具, 3D 列印母模, CNC 銑削水翼支柱',
+                'cots_r5_cat': '測試與基礎設施', 'cots_r5_desc': '遙測基站 (Microhard), Ansys/MATLAB 軟體授權, 護航船租賃',
+                'cots_r6_cat': '研發人員 (24 個月)', 'cots_r6_desc': '2x GNC 控制工程師 (RTH 補貼), 1x 造船工程師 (合約制)',
+                'cots_r7_cat': '知識產權保護', 'cots_r7_desc': 'PCT 專利佈局與區域專利申請 (PAG 補貼)',
+
+                'grant_box_tag': '槓桿化公共資本結構', 'grant_box_title': '驗證機總資本：HK$ 3,990,000',
+                'founder_share': '創辦人營運資金注入 (25%)：', 'founder_cost': 'HK$ 1,000,000',
+                'g1_title': '香港科技園 Incu-Tech 資助', 'g1_desc': '工裝工具、實驗室租金、測試許可及營運津貼 (實報實銷)。',
+                'g2_title': '創科署研究人才庫 (ITF RTH)', 'g2_desc': '100% 政府全額資助 2 名全職控制工程師薪酬 (實報實銷)。',
+                'g3_title': '專利申請資助計劃 (PAG)', 'g3_desc': 'PAG 資助直接覆蓋高達 90% 的 PCT 及區域專利申請費用。',
+
                 'dr_card1_title': '階段開發路線圖',
-                'dr_c1_b1': '▸ <strong>第一階段 (第 1-9 個月)：</strong> 6 自由度 (6-DoF) 數位雙生 (Digital Twin)、FCS 檯架測試，以及在香港科技園機器人實驗室進行硬體在環 (HIL) 模擬。',
-                'dr_c1_b2': '▸ <strong>第二階段 (第 10-18 個月)：</strong> 縮尺 D1 技術驗證機 (3.56m) 於吐露港進行海試；100Hz 波浪解耦驗證。',
-                'dr_c1_b3': '▸ <strong>第三階段 (第 19-27 個月)：</strong> 20-30 人座中型試航平台設計；組建聯合商業財團。',
-                'dr_c1_b4': '▸ <strong>第四階段 (第 28-36 個月)：</strong> 通過獲授權之珠三角複合材料造船廠建造完整商業化 EF-150 平台。',
+                'dr_c1_b1': '<strong>第一階段 (第 1-9 個月)：</strong> 6 自由度 (6-DoF) 數位雙生 (Digital Twin)、FCS 檯架測試，以及在香港科技園機器人實驗室進行硬體在環 (HIL) 模擬。',
+                'dr_c1_b2': '<strong>第二階段 (第 10-18 個月)：</strong> 縮尺 D1 技術驗證機 (3.56m) 於吐露港進行海試；100Hz 波浪解耦驗證。',
+                'dr_c1_b3': '<strong>第三階段 (第 19-27 個月)：</strong> 20-30 人座中型試航平台設計；組建聯合商業財團。',
+                'dr_c1_b4': '<strong>第四階段 (第 28-36 個月)：</strong> 通過獲授權之珠三角複合材料造船廠建造完整商業化 EF-150 平台。',
                 'dr_card2_title': '法規與分級認證路徑',
-                'dr_c2_b1': '▸ <strong>DNV 船級社認證：</strong> 符合新型複合材料水翼結構之高速輕型船隻 (HSLC) 規範。',
-                'dr_c2_b2': '▸ <strong>香港海事處 (HKMD) / 海事局 (MSA) 認證：</strong> 明確香港本地船隻及大灣區跨境水域營運之認證路徑。',
-                'dr_c2_b3': '▸ <strong>內港尾波豁免：</strong> 憑藉 &lt; 0.15 米尾波波高特性，申請維多利亞港內提高航速之許可。',
-                'dr_c2_b4': '▸ <strong>自主測試豁免：</strong> D1 測試許可已通過海事處於吐露港水域之無人船隻測試通道獲批。',
-                'dr_card3_title': 'EF-150 船隊經濟效益拆解',
-                'dr_c3_h1': '指標', 'dr_c3_h2': '傳統柴油船', 'dr_c3_h3': 'EF-150 電動船',
-                'dr_c3_r1': '能源 / 燃料',
-                'dr_c3_r2': '動力總成維護成本', 'dr_c3_v2a': '高 (燃氣輪機)', 'dr_c3_v2b': '低 (電動吊艙)',
-                'dr_c3_r3': '船員配置', 'dr_c3_v3a': '標準 (8-10 人)', 'dr_c3_v3b': '減少 (4 人)',
-                'dr_card4_title': 'MCS 終端與 BESS 整合',
-                'dr_c4_b1': '▸ <strong>碼頭緩衝：</strong> 岸上 4.0 MWh BESS 儲能系統消除公共渡輪碼頭對高壓電網升級的需求。',
-                'dr_c4_b2': '▸ <strong>兆瓦級充電速率：</strong> 3.5 MW 直流輸出，相容海事 MCS 充電標準。',
-                'dr_c4_b3': '▸ <strong>周轉時間窗口：</strong> 乘客下船期間實現 &lt; 45 分鐘充電週期（20% 至 90% SOC 電量）。',
+                'dr_c2_b1': '<strong>DNV 船級社認證：</strong> 符合新型複合材料水翼結構之高速輕型船隻 (HSLC) 規範。',
+                'dr_c2_b2': '<strong>香港海事處 (HKMD) / 海事局 (MSA) 認證：</strong> 明確香港本地船隻及大灣區跨境水域營運之認證路徑。',
+                'dr_c2_b3': '<strong>內港尾波豁免：</strong> 憑藉 &lt; 0.15 米尾波波高特性，申請維多利亞港內提高航速之許可。',
+                'dr_c2_b4': '<strong>自主測試豁免：</strong> D1 測試許可已通過海事處於吐露港水域之無人船隻測試通道獲批。',
                 
                 'footer_cpy': 'AERO-MARINE SYSTEMS 概念 &copy; 2026。',
                 'footer_loc': '香港 / 深圳', 'footer_type': '可行性研究報告'
             },
             'sc': {
                 'nav_subtitle': '前沿科技概念提案',
-                'nav_1': '平台', 'nav_demo': '1:8 技术验证机', 'nav_2': '经济效益', 'nav_3': '分析数据', 'nav_4': '技术矩阵', 'nav_5': '资金结构', 'nav_track': '香港科技园 (HKSTP) INCU-TECH 培育计划',
+                'nav_1': '平台', 'nav_demo': '1:8 技术验证机', 'nav_2': '经济效益', 'nav_3': '分析数据', 'nav_4': '技术矩阵', 'nav_5': 'D1 资金与预算', 'nav_track': '香港科技园 (HKSTP) INCU-TECH 培育计划',
                 'badge_hkstp': '香港科技园培育计划与可行性研究报告', 'doc_id_label': '文档编号：',
                 'hero_title': 'BAYWING EF-150 EXPRESS', 'hero_subtitle': '主动式电传操纵电动水翼船平台',
                 'hero_desc': 'Aero-Marine Systems 正全力构建由软件定义的粤港澳大湾区（GBA）水上交通未来。通过将航空级飞行控制算法与珠江三角洲的碳纤维复合材料供应链深度结合，EF-150 架构实现了船体与水动力阻力的完全解耦——降低 80% 的能源需求，使高速电动水上通勤路线具备商业可行性。',
-                'hero_btn_explore': '探索 1:8 技术验证机', 'hero_btn_fund': '$0 创始人现金出资计划',
+                'hero_btn_explore': '探索 1:8 技术验证机', 'hero_btn_fund': 'HK$ 3.99M 研发资本策略',
                 'spec_title': '目标营运规格', 'spec_class': '150 人座级',
                 'spec_speed': '目标巡航航速', 'unit_38': '38.0', 'unit_knots': '节', 'spec_speed_sub': '（水翼翼航状态下 70.3 km/h）',
                 'spec_range': '有效航程', 'unit_nm': '海里', 'spec_range_sub': '（包含 20% 法规储备电量）',
@@ -1099,15 +1101,8 @@
                 'd1_r3_lbl': '满载排水质量', 'd1_r3_ef': '约 56,000 kg', 'd1_r3_d1': '约 109 kg', 'd1_r3_law': '1 : &lambda;&sup3; (&times; 1/512)',
                 'd1_r4_lbl': '巡航 / 起飞航速', 'd1_r4_ef': '18.0 节 (起飞) / 38.0 节 (巡航)', 'd1_r4_d1': '6.4 节 (起飞) / 13.4 节 (巡航)', 'd1_r4_law': '1 : &radic;&lambda; (&times; 1/2.83)',
                 'd1_r5_lbl': '安装动力系统', 'd1_r5_ef': '2x 650 kW 吊舱推进器 (共 1,300 kW)', 'd1_r5_d1': '2x 5.0 kW 无刷吊舱 (共 10 kW)', 'd1_r5_law': '所需功率 &propto; &lambda;<sup>3.5</sup>',
-                'd1_r6_lbl': '飞控系统频率', 'd1_r6_ef': '100 Hz 回路 (三重冗余)', 'd1_r6_d1': '100 Hz 回路 (确定性双核)', 'd1_r6_law': '过采样 (相较于缩尺船体具更高带宽)',
+                'd1_r6_lbl': '飞控系统频率', 'd1_r6_ef': '100 Hz 回路 (三重冗余)', 'd1_r6_d1': '100 Hz 回路 (确定性双核)', 'd1_r6_law': '过采样 (相较于缩尺船体)',
                 'd1_r7_lbl': '主要开发阶段', 'd1_r7_ef': '第三阶段 (完整商业建造)', 'd1_r7_d1': '第一与第二阶段 (香港科技园培育核心)', 'd1_r7_law': '零资本风险烧机验证',
-
-                'grant_box_tag': '100% 非稀释性公共资金结构', 'grant_box_title': '验证机 (D1) 研发预算：HK$ 3,990,000',
-                'founder_share': '创始人私人现金注入：', 'founder_cost': 'HK$ 0.00（零自筹资金）',
-                'g1_title': '香港科技园 Incu-Tech 资助', 'g1_desc': '工装工具、实验室租金、测试许可及营运津贴。',
-                'g2_title': '创科署研究人才库 (ITF RTH)', 'g2_desc': '100% 政府全额资助 2 名全职控制工程师薪酬。',
-                'g3_title': '专利申请资助计划 (PAG)', 'g3_desc': 'PAG 资助直接覆盖 PCT 及区域专利申请费用。',
-                'g4_title': '智慧出行 / 绿色科技基金', 'g4_desc': '硬件原型制作及珠三角海事供应链资助。',
 
                 'moat_tag': '2. 前沿科技壁垒与经济效益', 'moat_title': '可防御的营运成本 (OPEX) 优势',
                 'moat_desc': '传统高速客轮依赖数兆瓦级的柴油燃气轮机推动沉重的排水型船体。高昂的海上燃料成本和不断上升的引擎大修费用压缩了营运利润。我们的电传操纵（Fly-by-Wire）控制系统实现了热力学与水动力学的根本转变。',
@@ -1117,16 +1112,16 @@
                 'p4_tag': '04. 航线收益', 'p4_metric': '78%', 'p4_title': '营运成本节省', 'p4_sub': '能源营运成本：',
                 
                 'calc_tag': '3. 战略航线分析', 'calc_title': '粤港澳大湾区航线可行性计算器',
-                'calc_desc': '模拟在大湾区主要水上交通走廊中，以 EF-150 平台替代传统柴油船只的财务可行性。',
+                'calc_desc': '模拟在大湾区主要水上交通走廊中，以 EF-150 平台替代传统柴油船只的财务可行性。（计算模型已修正以确保车队利用率完全对等）。',
                 'calc_sim_tag': '互动式财务模拟器', 'calc_sim_title': '船队营运成本预测模型', 'calc_sim_base': '基准 MGO 海事柴油价格：',
-                'calc_input_1': '选择大湾区快线航线：',
-                'calc_input_2': '营运船队规模：', 'calc_input_2_min': '1 艘船', 'calc_input_2_mid': '6 艘船', 'calc_input_2_max': '12 艘船',
-                'calc_input_3': '单船每日往返次数：', 'calc_input_3_min': '2 次往返', 'calc_input_3_mid': '8 次往返', 'calc_input_3_max': '16 次往返',
-                'calc_out_1_title': '年度能源节省：', 'calc_out_1_sub': '（对比传统柴油双体船）',
-                'calc_out_2_title': '预估 CapEx 溢价回收期：', 'calc_out_2_sub': '（针对电动平台溢价成本）',
-                'calc_out_3_title': '年度二氧化碳减排量：', 'calc_out_3_sub': '（每年温室气体公吨数）',
-                'calc_out_4_title': '预估 EF-150 航行时间：', 'calc_out_4_sub': '（比柴油船更快）',
-                'calc_bar_diesel': '年度能源成本（传统柴油船队）：', 'calc_bar_ef150': '年度能源成本（EF-150 电动船队）：',
+                'calc_input_1': '1. 选择大湾区快线航线',
+                'calc_input_2': '2. 营运船队规模', 'calc_input_2_min': '1 艘船', 'calc_input_2_mid': '6 艘船', 'calc_input_2_max': '12 艘船',
+                'calc_input_3': '3. 单船每日往返次数', 'calc_input_3_min': '2 次往返', 'calc_input_3_mid': '8 次往返', 'calc_input_3_max': '16 次往返',
+                'calc_out_1_title': '年度能源节省', 'calc_out_1_sub': '（对比传统柴油双体船）',
+                'calc_out_2_title': '预估 CapEx 溢价回收期', 'calc_out_2_sub': '（针对电动平台溢价成本）',
+                'calc_out_3_title': '年度二氧化碳减排量', 'calc_out_3_sub': '（每年温室气体公吨数）',
+                'calc_out_4_title': '预估 EF-150 航行时间', 'calc_out_4_sub': '（比柴油船更快）',
+                'calc_bar_diesel': '年度能源成本（传统柴油船队）', 'calc_bar_ef150': '年度能源成本（EF-150 电动船队）',
                 
                 'tech_tag': '4. 技术数据库', 'tech_title': '建议工程矩阵',
                 'tech_desc': '为 EF-150 平台架构提出的基准结构与营运参数，已针对物理约束和海事认证标准进行更新。',
@@ -1137,7 +1132,7 @@
                 't_c1_r3': '载客量', 't_c1_v3': '150 名乘客 + 4 名船员',
                 't_cat2': '2. 水动力学与效率',
                 't_c2_r1': '水翼配置', 't_c2_v1': '前部全浸式 T 型水翼 & 后部倒 V 型水翼',
-                't_c2_r2': '目标阻力降低', 't_c2_v2': '相较同等排水量双体船降低 80%',
+                't_c2_r2': '目标升阻比 (L/D)', 't_c2_v2': '约 9.8 L/D (保守空气动力学配置)',
                 't_c2_r3': '港口航行尾波', 't_c2_v3': '巡航速度下波高 &lt; 0.15 米',
                 't_cat3': '3. 动力与基础设施目标',
                 't_c3_r1': '储能架构', 't_c3_v1': '2,400 kWh (2.4 MWh)，标称 800V DC',
@@ -1151,27 +1146,35 @@
                 't_c5_r1': '固定式 BESS 缓冲', 't_c5_v1': '4.0 MWh 集装箱式电池缓冲（码头削峰填谷）',
                 't_c5_r2': '充电标准', 't_c5_v2': '3.5 MW 自动化 MCS (兆瓦级充电系统) 充电臂',
 
-                'data_tag': '5. 非稀释性资本结构与数据室', 'data_title': '零资本公共资金架构',
-                'data_desc': 'Aero-Marine Systems 的架构旨在实现<strong>创始人 $0 私人资金投入</strong>。通过叠加香港科技园 Incu-Tech 培育计划里程碑资助、香港创新科技署的“研究人才库”(RTH-SPC) 以及绿色科技/智慧出行资助额度，BAYWING-D1 验证机建置成本的 100% 均由非稀释性政府资金补助。',
+                'data_tag': '5. 资本结构与 COTS 研发预算', 'data_title': '公共资金与营运资金架构',
+                'data_desc': 'Aero-Marine Systems 运用高度杠杆化的资助叠加策略来推进 BAYWING-D1 硬件验证机。由于香港科技园 Incu-Tech 培育计划及创新科技署“研究人才库”皆采实报实销 (Reimbursement) 制，我们需创始人/种子轮注入初期营运资金以桥接现金流、涵盖 PAG 专利申请的 10% 企业承担部份，并采购特定的商用现成 (COTS) 航空/海事组件。',
+                
+                'cots_table_title': 'D1 验证机商用现成 (COTS) 预算明细',
+                'cots_th_cat': '研发类别', 'cots_th_desc': 'COTS 硬件 / 资源分配', 'cots_th_cost': '预估成本 (HKD)',
+                'cots_r1_cat': '航电与传感器融合', 'cots_r1_desc': 'SBG Ellipse-D RTK INS, Ouster OS0 LiDAR, Jetson Orin Nano, Echologger 声纳高度计',
+                'cots_r2_cat': '致动器与机电', 'cots_r2_desc': '水下 IP68 旋转伺服马达 (Volz/Moog), SubConn 防水线缆, CNC 连杆',
+                'cots_r3_cat': '动力总成与能源', 'cots_r3_desc': '2x 5.0kW Torqeedo 电动吊舱, 48V 船用 LFP 电池组, Victron BMS',
+                'cots_r4_cat': '船体与复合材料', 'cots_r4_desc': '碳纤维真空灌注模具, 3D 打印母模, CNC 铣削水翼支柱',
+                'cots_r5_cat': '测试与基础设施', 'cots_r5_desc': '遥测基站 (Microhard), Ansys/MATLAB 软件授权, 护航船租赁',
+                'cots_r6_cat': '研发人员 (24 个月)', 'cots_r6_desc': '2x GNC 控制工程师 (RTH 补贴), 1x 造船工程师 (合约制)',
+                'cots_r7_cat': '知识产权保护', 'cots_r7_desc': 'PCT 专利布局与区域专利申请 (PAG 补贴)',
+
+                'grant_box_tag': '杠杆化公共资本结构', 'grant_box_title': '验证机总资本：HK$ 3,990,000',
+                'founder_share': '创始人营运资金注入 (25%)：', 'founder_cost': 'HK$ 1,000,000',
+                'g1_title': '香港科技园 Incu-Tech 资助', 'g1_desc': '工装工具、实验室租金、测试许可及营运津贴 (实报实销)。',
+                'g2_title': '创科署研究人才库 (ITF RTH)', 'g2_desc': '100% 政府全额资助 2 名全职控制工程师薪酬 (实报实销)。',
+                'g3_title': '专利申请资助计划 (PAG)', 'g3_desc': 'PAG 资助直接覆盖高达 90% 的 PCT 及区域专利申请费用。',
+
                 'dr_card1_title': '阶段开发路线图',
-                'dr_c1_b1': '▸ <strong>第一阶段 (第 1-9 个月)：</strong> 6 自由度 (6-DoF) 数字孪生 (Digital Twin)、FCS 台架测试，以及在香港科技园机器人实验室进行硬件在环 (HIL) 模拟。',
-                'dr_c1_b2': '▸ <strong>第二阶段 (第 10-18 个月)：</strong> 缩尺 D1 技术验证机 (3.56m) 于吐露港进行海试；100Hz 波浪解耦验证。',
-                'dr_c1_b3': '▸ <strong>第三阶段 (第 19-27 个月)：</strong> 20-30 人座中型试航平台设计；组建联合商业财团。',
-                'dr_c1_b4': '▸ <strong>第四阶段 (第 28-36 个月)：</strong> 通过获授权之珠三角复合材料造船厂建造完整商业化 EF-150 平台。',
+                'dr_c1_b1': '<strong>第一阶段 (第 1-9 个月)：</strong> 6 自由度 (6-DoF) 数字孪生 (Digital Twin)、FCS 台架测试，以及在香港科技园机器人实验室进行硬件在环 (HIL) 模拟。',
+                'dr_c1_b2': '<strong>第二阶段 (第 10-18 个月)：</strong> 缩尺 D1 技术验证机 (3.56m) 于吐露港进行海试；100Hz 波浪解耦验证。',
+                'dr_c1_b3': '<strong>第三阶段 (第 19-27 个月)：</strong> 20-30 人座中型试航平台设计；组建联合商业财团。',
+                'dr_c1_b4': '<strong>第四阶段 (第 28-36 个月)：</strong> 通过获授权之珠三角复合材料造船厂建造完整商业化 EF-150 平台。',
                 'dr_card2_title': '法规与分级认证路径',
-                'dr_c2_b1': '▸ <strong>DNV 船级社认证：</strong> 符合新型复合材料水翼结构之高速轻型船只 (HSLC) 规范。',
-                'dr_c2_b2': '▸ <strong>香港海事处 (HKMD) / 海事局 (MSA) 认证：</strong> 明确香港本地船只及大湾区跨境水域营运之认证路径。',
-                'dr_c2_b3': '▸ <strong>内港尾波豁免：</strong> 凭借 &lt; 0.15 米尾波波高特性，申请维多利亚港内提高航速之许可。',
-                'dr_c2_b4': '▸ <strong>自主测试豁免：</strong> D1 测试许可已通过海事处于吐露港水域之无人船只测试通道获批。',
-                'dr_card3_title': 'EF-150 船队经济效益拆解',
-                'dr_c3_h1': '指标', 'dr_c3_h2': '传统柴油船', 'dr_c3_h3': 'EF-150 电动船',
-                'dr_c3_r1': '能源 / 燃料',
-                'dr_c3_r2': '动力总成维护成本', 'dr_c3_v2a': '高 (燃气轮机)', 'dr_c3_v2b': '低 (电动吊舱)',
-                'dr_c3_r3': '船员配置', 'dr_c3_v3a': '标准 (8-10 人)', 'dr_c3_v3b': '减少 (4 人)',
-                'dr_card4_title': 'MCS 终端与 BESS 整合',
-                'dr_c4_b1': '▸ <strong>码头缓冲：</strong> 岸上 4.0 MWh BESS 储能系统消除公共渡轮码头对高压电网升级的需求。',
-                'dr_c4_b2': '▸ <strong>兆瓦级充电速率：</strong> 3.5 MW 直流输出，兼容海事 MCS 充电标准。',
-                'dr_c4_b3': '▸ <strong>周转时间窗口：</strong> 乘客下船期间实现 &lt; 45 分钟充电周期（20% 至 90% SOC 电量）。',
+                'dr_c2_b1': '<strong>DNV 船级社认证：</strong> 符合新型复合材料水翼结构之高速轻型船只 (HSLC) 规范。',
+                'dr_c2_b2': '<strong>香港海事处 (HKMD) / 海事局 (MSA) 认证：</strong> 明确香港本地船只及大湾区跨境水域营运之认证路径。',
+                'dr_c2_b3': '<strong>内港尾波豁免：</strong> 凭借 &lt; 0.15 米尾波波高特性，申请维多利亚港内提高航速之许可。',
+                'dr_c2_b4': '<strong>自主测试豁免：</strong> D1 测试许可已通过海事处于吐露港水域之无人船只测试通道获批。',
                 
                 'footer_cpy': 'AERO-MARINE SYSTEMS 概念 &copy; 2026。',
                 'footer_loc': '香港 / 深圳', 'footer_type': '可行性研究报告'
@@ -1277,17 +1280,17 @@
         }
 
         const routeProfiles = {
-            'hk-shenzhen': { distanceNM: 22, dieselTimeMins: 48, ef150TimeMins: 36, dieselFuelPerNM: 17.5, electricKwhPerNM: 30.0 },
-            'hkg-szx': { distanceNM: 25, dieselTimeMins: 45, ef150TimeMins: 40, dieselFuelPerNM: 17.8, electricKwhPerNM: 30.0 },
-            'hk-macau': { distanceNM: 36, dieselTimeMins: 58, ef150TimeMins: 55, dieselFuelPerNM: 18.5, electricKwhPerNM: 30.0 },
-            'hk-airport': { distanceNM: 17, dieselTimeMins: 42, ef150TimeMins: 28, dieselFuelPerNM: 17.0, electricKwhPerNM: 30.0 },
-            'hk-zhuhai': { distanceNM: 35, dieselTimeMins: 55, ef150TimeMins: 53, dieselFuelPerNM: 18.2, electricKwhPerNM: 30.0 }
+            'hk-shenzhen': { distanceNM: 22, dieselTimeMins: 48, ef150TimeMins: 36 },
+            'hkg-szx': { distanceNM: 25, dieselTimeMins: 45, ef150TimeMins: 40 },
+            'hk-macau': { distanceNM: 36, dieselTimeMins: 58, ef150TimeMins: 55 },
+            'hk-airport': { distanceNM: 17, dieselTimeMins: 42, ef150TimeMins: 28 },
+            'hk-zhuhai': { distanceNM: 35, dieselTimeMins: 55, ef150TimeMins: 53 }
         };
 
         function runRouteCalculator() {
             const routeKey = document.getElementById('calc-route').value;
             const fleet = parseInt(document.getElementById('calc-fleet').value);
-            const trips = parseInt(document.getElementById('calc-trips').value);
+            const trips = parseInt(document.getElementById('calc-trips').value); // Number of Round Trips
             const fx = fxMap[currentLang];
 
             const vesselSuffix = currentLang === 'en' ? (fleet === 1 ? ' VESSEL' : ' VESSELS') : ' 艘船';
@@ -1301,24 +1304,27 @@
             const r = routeProfiles[routeKey];
             if (!r) return;
 
-            const dieselPricePerLiterUSD = 2.20; 
-            const electricityPricePerKwhUSD = 0.16; 
+            // Strict Mathematics: Ensure equal utilization (Nautical Miles) for both Diesel and Electric comparison
+            const dieselCostPerNM = 22.50; 
+            const electricCostPerNM = 4.90; 
             
-            const localDieselPrice = (dieselPricePerLiterUSD * fx.rate).toFixed(2);
-            document.getElementById('ui-calc-diesel-price').innerText = `${fx.symbol}${localDieselPrice} ${fx.code} / Liter`;
+            const localDieselPrice = (dieselCostPerNM * fx.rate).toFixed(2);
+            document.getElementById('ui-calc-diesel-price').innerText = `${fx.symbol}${localDieselPrice} ${fx.code} / NM`;
 
-            const annualNMTravelled = fleet * trips * r.distanceNM * 365;
+            // Calculate exact total distance travelled by the fleet per year (trips * 2 because they are round trips)
+            const annualNMTravelled = fleet * (trips * 2) * r.distanceNM * 365;
 
-            const annualDieselLiters = annualNMTravelled * r.dieselFuelPerNM;
-            const annualDieselCostUSD = annualDieselLiters * dieselPricePerLiterUSD;
-            const annualElectricKwh = annualNMTravelled * r.electricKwhPerNM;
-            const annualElectricCostUSD = annualElectricKwh * electricityPricePerKwhUSD;
+            // Apply exactly equal utilization mapping
+            const annualDieselCostUSD = annualNMTravelled * dieselCostPerNM;
+            const annualElectricCostUSD = annualNMTravelled * electricCostPerNM;
 
             const annualSavingsUSD = Math.max(0, annualDieselCostUSD - annualElectricCostUSD);
-            const premiumCostPerVesselUSD = 3500000;
+            const premiumCostPerVesselUSD = 3500000; // Capital Expenditure EV Premium
             const fleetPremiumCapExUSD = fleet * premiumCostPerVesselUSD;
             const paybackYears = annualSavingsUSD > 0 ? (fleetPremiumCapExUSD / annualSavingsUSD).toFixed(1) : 'N/A';
-            const co2TonsReduced = Math.round((annualDieselLiters * 2.68) / 1000);
+            
+            // Assume 1 NM of legacy marine gas oil burn produces roughly 0.055 Metric Tons of CO2
+            const co2TonsReduced = Math.round(annualNMTravelled * 0.055); 
             
             const timeSavedMins = r.dieselTimeMins - r.ef150TimeMins;
             let diffSuffix = '';
