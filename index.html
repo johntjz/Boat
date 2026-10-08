@@ -186,13 +186,14 @@
                 </a>
 
                 <!-- Aligned Header Nav Menu -->
-                <nav class="hidden xl:flex items-center space-x-7 text-[11px] font-mono tracking-wider uppercase text-zinc-400 whitespace-nowrap ml-8">
+                <nav class="hidden xl:flex items-center space-x-6 text-[10px] font-mono tracking-wider uppercase text-zinc-400 whitespace-nowrap ml-8">
                     <a href="#vessel" class="hover:text-white transition-colors" data-i18n="nav_1">Platform</a>
                     <a href="#demonstrator" class="hover:text-tech-cyan text-tech-cyan/90 transition-colors" data-i18n="nav_demo">1:8 Demonstrator</a>
                     <a href="#moat" class="hover:text-white transition-colors" data-i18n="nav_2">Economics</a>
                     <a href="#routes" class="hover:text-white transition-colors" data-i18n="nav_3">Analytics</a>
                     <a href="#specs" class="hover:text-white transition-colors" data-i18n="nav_4">Tech Matrix</a>
-                    <a href="#portal" class="hover:text-white transition-colors" data-i18n="nav_5">D1 Budget & Capital</a>
+                    <a href="#portal" class="hover:text-white transition-colors" data-i18n="nav_5">Budget</a>
+                    <a href="#investor" class="hover:text-white transition-colors" data-i18n="nav_6">Investor Risks</a>
                 </nav>
 
                 <!-- Tools & Mobile Navigation -->
@@ -228,7 +229,8 @@
             <a href="#moat" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_2">Economics</a>
             <a href="#routes" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_3">Analytics</a>
             <a href="#specs" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_4">Tech Matrix</a>
-            <a href="#portal" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_5">D1 Budget & Capital</a>
+            <a href="#portal" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_5">Budget</a>
+            <a href="#investor" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_6">Investor Risks</a>
         </div>
     </header>
 
@@ -1063,7 +1065,7 @@
         </div>
     </section>
 
-    <!-- SECTION 6: DATA ROOM & PUBLIC GRANT CAPITAL STACK (#portal) -->
+    <!-- SECTION 5: CAPITALIZATION & R&D BUDGET (#portal) -->
     <section id="portal" class="py-16 md:py-24 bg-zinc-950 border-b border-zinc-800 cad-grid-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-12">
@@ -1217,6 +1219,97 @@
         </div>
     </section>
 
+    <!-- SECTION 7: INVESTOR MERITS & RISKS (#investor) -->
+    <section id="investor" class="py-16 md:py-24 bg-zinc-900 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-12">
+                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2" data-i18n="inv_tag">6. Investor Merits & Risk Mitigation</div>
+                <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase" data-i18n="inv_title">
+                    Capital Efficiency vs. Execution Risk
+                </h2>
+                <p class="text-sm text-zinc-400 mt-3 font-sans leading-relaxed" data-i18n="inv_desc">
+                    We recognize that early-stage deep-tech seed investors and venture capital funds evaluate hardware proposals through a critical lens. Here is our direct response to the core investment merits and execution risks associated with scaling the EF-150 platform.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- The Bull Case (Merits) -->
+                <div class="space-y-6">
+                    <h3 class="text-lg font-mono font-bold text-tech-emerald uppercase border-b border-tech-emerald/30 pb-2 flex items-center gap-2" data-i18n="inv_bull_title">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        What Investors Love (The Bull Case)
+                    </h3>
+                    
+                    <div class="data-card p-5 rounded-lg border-l-2 border-l-tech-emerald">
+                        <h4 class="text-sm font-mono font-bold text-white mb-2" data-i18n="inv_b1_title">Unusually High Capital Leverage (3.99x)</h4>
+                        <p class="text-xs text-zinc-400 leading-relaxed font-sans" data-i18n="inv_b1_desc">
+                            Injecting HK$ 1M in private float capital immediately unlocks HK$ 2.99M in non-dilutive government subsidies (Incu-Tech, RTH salaries, PAG). Investor money buys a full HK$ 3.99M R&D runway with minimal equity dilution.
+                        </p>
+                    </div>
+
+                    <div class="data-card p-5 rounded-lg border-l-2 border-l-tech-emerald">
+                        <h4 class="text-sm font-mono font-bold text-white mb-2" data-i18n="inv_b2_title">Disciplined Froude-Scaling Strategy</h4>
+                        <p class="text-xs text-zinc-400 leading-relaxed font-sans" data-i18n="inv_b2_desc">
+                            Instead of burning tens of millions on a full-scale 28.5m craft, we validate physical stability on a 3.56m sub-scale demonstrator. Proving the 100Hz control loop on a 109kg model drastically reduces software/hydrodynamics risk before scaling up.
+                        </p>
+                    </div>
+
+                    <div class="data-card p-5 rounded-lg border-l-2 border-l-tech-emerald">
+                        <h4 class="text-sm font-mono font-bold text-white mb-2" data-i18n="inv_b3_title">Disruptive Unit Economics</h4>
+                        <p class="text-xs text-zinc-400 leading-relaxed font-sans" data-i18n="inv_b3_desc">
+                            Cutting drag by 80% reduces energy OPEX by 78% vs legacy diesel. For high-frequency GBA routes, this gives fleet operators a rapid payback period on the EV platform premium.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- The Red Flags (Risks) -->
+                <div class="space-y-6">
+                    <h3 class="text-lg font-mono font-bold text-f43f5e uppercase border-b border-[#f43f5e]/30 pb-2 flex items-center gap-2 text-rose-500" data-i18n="inv_bear_title">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        What Investors Will Question (The Risks)
+                    </h3>
+
+                    <div class="data-card p-5 rounded-lg border-l-2 border-l-rose-500">
+                        <h4 class="text-sm font-mono font-bold text-white mb-2" data-i18n="inv_r1_title">Heavy Key-Person Risk & AI Dependency</h4>
+                        <p class="text-xs text-zinc-400 leading-relaxed font-sans" data-i18n="inv_r1_desc">
+                            Running a hardware-software team with only two engineers augmented by AI cuts costs but creates extreme dependency. <em>Mitigation: Strict modular documentation and standard COTS hardware limits proprietary lock-in.</em>
+                        </p>
+                    </div>
+
+                    <div class="data-card p-5 rounded-lg border-l-2 border-l-rose-500">
+                        <h4 class="text-sm font-mono font-bold text-white mb-2" data-i18n="inv_r2_title">Dockside Infrastructure Bottlenecks</h4>
+                        <p class="text-xs text-zinc-400 leading-relaxed font-sans" data-i18n="inv_r2_desc">
+                            Securing 3.5 MW grid capacity and pier modifications from local harbour authorities is notoriously slow. <em>Mitigation: The 4.0 MWh BESS buffer strategy completely bypasses high-voltage municipal grid upgrades.</em>
+                        </p>
+                    </div>
+
+                    <div class="data-card p-5 rounded-lg border-l-2 border-l-rose-500">
+                        <h4 class="text-sm font-mono font-bold text-white mb-2" data-i18n="inv_r3_title">The "CapEx Trap" in Phase 4</h4>
+                        <p class="text-xs text-zinc-400 leading-relaxed font-sans" data-i18n="inv_r3_desc">
+                            Building full-scale 56-tonne vessels requires massive capital. <em>Mitigation: We are not a shipyard. We are a software & flight-control OEM licensing the EF-150 IP package to existing PRD shipyards, eliminating heavy manufacturing CapEx.</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Verdict -->
+            <div class="mt-10 bg-tech-cyan/5 border border-tech-cyan/20 p-5 rounded-lg">
+                <h4 class="text-sm font-mono font-bold text-tech-cyan uppercase mb-3" data-i18n="inv_verdict_title">The Investment Verdict</h4>
+                <div class="grid sm:grid-cols-2 gap-6 text-sm font-sans text-zinc-300 leading-relaxed">
+                    <div>
+                        <strong class="text-white block mb-1 font-mono uppercase" data-i18n="inv_v1_lbl">For Seed Angels & HKBAN:</strong>
+                        <span data-i18n="inv_v1_desc">Highly attractive. The entry ticket is small, grant leverage is massive, and the milestone is clear: validate the D1 prototype in Tolo Harbour within 18 months.</span>
+                    </div>
+                    <div>
+                        <strong class="text-white block mb-1 font-mono uppercase" data-i18n="inv_v2_lbl">For Institutional VCs (Series A):</strong>
+                        <span data-i18n="inv_v2_desc">Wait & See. Institutional funds will wait for Phase 2 sea-trial data logs proving the 100Hz controller neutralizes wake in real ocean chop before writing the commercial scale-up check.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="bg-zinc-950 py-10 border-t border-zinc-800 text-zinc-500 text-[10px] font-mono uppercase tracking-wider">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -1246,7 +1339,7 @@
         const translations = {
             'en': {
                 'nav_subtitle': 'Deep Tech Concept Proposal',
-                'nav_1': 'Platform', 'nav_demo': '1:8 Demonstrator', 'nav_2': 'Economics', 'nav_3': 'Analytics', 'nav_4': 'Tech Matrix', 'nav_5': 'D1 Budget & Capital', 'nav_track': 'HKSTP INCU-TECH TRACK',
+                'nav_1': 'Platform', 'nav_demo': '1:8 Demonstrator', 'nav_2': 'Economics', 'nav_3': 'Analytics', 'nav_4': 'Tech Matrix', 'nav_5': 'Budget', 'nav_6': 'Investor Risks', 'nav_track': 'HKSTP INCU-TECH TRACK',
                 'badge_hkstp': 'HKSTP Incubation & Feasibility Study', 'doc_id_label': 'DOC ID:',
                 'hero_title': 'BAYWING EF-150 EXPRESS', 'hero_subtitle': 'Active Fly-by-Wire Electric Hydrofoil Platform',
                 'hero_desc': 'Aero-Marine Systems is building the software-defined future of GBA maritime transit. By integrating aerospace-grade flight control algorithms with Pearl River Delta carbon-composite supply chains, the EF-150 architecture completely decouples the hull from hydrodynamic drag—slashing energy requirements by 80% and making high-speed electric commuter routes commercially viable.',
@@ -1361,12 +1454,28 @@
                 'dr_c2_b3': '<strong>HKMD / MSA Certification:</strong> Pathway defined for Local Vessel operation within Hong Kong and GBA cross-boundary waters.',
                 'dr_c2_b4': '<strong>Autonomous Testing Exemption:</strong> D1 test permit cleared through Marine Department uncrewed vessel trials channel in Tolo waters.',
                 
+                'inv_tag': '6. Investor Merits & Risk Mitigation', 'inv_title': 'Capital Efficiency vs. Execution Risk',
+                'inv_desc': 'We recognize that early-stage deep-tech seed investors and venture capital funds evaluate hardware proposals through a critical lens. Here is our direct response to the core investment merits and execution risks associated with scaling the EF-150 platform.',
+                'inv_bull_title': 'What Investors Love (The Bull Case)',
+                'inv_b1_title': 'Unusually High Capital Leverage (3.99x)', 'inv_b1_desc': 'Injecting HK$ 1M in private float capital immediately unlocks HK$ 2.99M in non-dilutive government subsidies (Incu-Tech, RTH salaries, PAG). Investor money buys a full HK$ 3.99M R&D runway with minimal equity dilution.',
+                'inv_b2_title': 'Disciplined Froude-Scaling Strategy', 'inv_b2_desc': 'Instead of burning tens of millions on a full-scale 28.5m craft, we validate physical stability on a 3.56m sub-scale demonstrator. Proving the 100Hz control loop on a 109kg model drastically reduces software/hydrodynamics risk before scaling up.',
+                'inv_b3_title': 'Disruptive Unit Economics', 'inv_b3_desc': 'Cutting drag by 80% reduces energy OPEX by 78% vs legacy diesel. For high-frequency GBA routes, this gives fleet operators a rapid payback period on the EV platform premium.',
+                
+                'inv_bear_title': 'What Investors Will Question (The Risks)',
+                'inv_r1_title': 'Heavy Key-Person Risk & AI Dependency', 'inv_r1_desc': 'Running a hardware-software team with only two engineers augmented by AI cuts costs but creates extreme dependency. <em>Mitigation: Strict modular documentation and standard COTS hardware limits proprietary lock-in.</em>',
+                'inv_r2_title': 'Dockside Infrastructure Bottlenecks', 'inv_r2_desc': 'Securing 3.5 MW grid capacity and pier modifications from local harbour authorities is notoriously slow. <em>Mitigation: The 4.0 MWh BESS buffer strategy completely bypasses high-voltage municipal grid upgrades.</em>',
+                'inv_r3_title': 'The "CapEx Trap" in Phase 4', 'inv_r3_desc': 'Building full-scale 56-tonne vessels requires massive capital. <em>Mitigation: We are not a shipyard. We are a software & flight-control OEM licensing the EF-150 IP package to existing PRD shipyards, eliminating heavy manufacturing CapEx.</em>',
+                
+                'inv_verdict_title': 'The Investment Verdict',
+                'inv_v1_lbl': 'For Seed Angels & HKBAN:', 'inv_v1_desc': 'Highly attractive. The entry ticket is small, grant leverage is massive, and the milestone is clear: validate the D1 prototype in Tolo Harbour within 18 months.',
+                'inv_v2_lbl': 'For Institutional VCs (Series A):', 'inv_v2_desc': 'Wait & See. Institutional funds will wait for Phase 2 sea-trial data logs proving the 100Hz controller neutralizes wake in real ocean chop before writing the commercial scale-up check.',
+
                 'footer_cpy': 'AERO-MARINE SYSTEMS CONCEPT &copy; 2026.',
                 'footer_loc': 'HONG KONG / SHENZHEN', 'footer_type': 'FEASIBILITY STUDY'
             },
             'tc': {
                 'nav_subtitle': '前沿科技概念提案',
-                'nav_1': '平台', 'nav_demo': '1:8 技術驗證機', 'nav_2': '經濟效益', 'nav_3': '分析數據', 'nav_4': '技術矩陣', 'nav_5': 'D1 資金與預算', 'nav_track': '香港科技園 (HKSTP) INCU-TECH 培育計劃',
+                'nav_1': '平台', 'nav_demo': '1:8 技術驗證機', 'nav_2': '經濟效益', 'nav_3': '分析數據', 'nav_4': '技術矩陣', 'nav_5': '資金與預算', 'nav_6': '投資人風險評估', 'nav_track': '香港科技園 (HKSTP) INCU-TECH 培育計劃',
                 'badge_hkstp': '香港科技園培育計劃與可行性研究報告', 'doc_id_label': '文檔編號：',
                 'hero_title': 'BAYWING EF-150 EXPRESS', 'hero_subtitle': '主動式電傳操縱電動水翼船平台',
                 'hero_desc': 'Aero-Marine Systems 正全力構建由軟體定義的粵港澳大灣區（GBA）水上交通未來。通過將航空級飛行控制演算法與珠江三角洲的碳纖維複合材料供應鏈深度結合，EF-150 架構實現了船體與水動力阻力的完全解耦——降低 80% 的能源需求，使高速電動水上通勤路線具備商業可行性。',
@@ -1380,7 +1489,7 @@
                 'demo_tag': '1. 縮尺技術驗證機', 'demo_title': 'BAYWING-D1（1:8 縮尺自主測試平台）',
                 'demo_desc': '高速水翼航行本質上是一個航空控制問題。由於動態不穩定性與物理尺寸成反比，3.56 米的縮尺船體在真實海況下比 28.5 米的全尺寸船體具有更高的自然振盪頻率。在真實港口海況下成功穩定 D1，可在放大至 20–30 人座中型船體及最終 EF-150 平台之前，徹底排除飛控系統的技術風險。',
                 
-                'bp_title': '交互式藍圖查看器', 'bp_title_com': '商業平台工程視圖', 'bp_hint': '將滑鼠懸停在標記組件上以查看技術數據',
+                'bp_title': '交互式藍圖查看器', 'bp_title_com': '商業平台工程視圖', 'bp_hint': '點擊或將滑鼠懸停在標記組件上以查看技術數據',
                 'bp_tt1_title': '前視光學雷達 (LiDAR)', 'bp_tt1_desc': '為 100Hz 飛行控制器提供波浪前饋補償，在水翼支柱受到衝擊前預判水面波浪變化。',
                 'bp_tt2_title': '無人航空電子艙', 'bp_tt2_desc': '內置雙 STM32H7 / Jetson Orin Nano 飛行電腦、SBG 慣性導航系統及 1.0 kWh 48V LFP 電池組。',
                 'bp_tt3_title': '水下旋轉伺服馬達', 'bp_tt3_desc': 'IP68 級防水致動器。以每秒 100 次的頻率調整水下襟翼，主動抵消俯仰與滾轉。',
@@ -1481,12 +1590,28 @@
                 'dr_c2_b3': '<strong>香港海事處 (HKMD) / 海事局 (MSA) 認證：</strong> 明確香港本地船隻及大灣區跨境水域營運之認證路徑。',
                 'dr_c2_b4': '<strong>自主測試豁免：</strong> D1 測試許可已通過海事處於吐露港水域之無人船隻測試通道獲批。',
                 
+                'inv_tag': '6. 投資人優勢與風險緩釋', 'inv_title': '資本效率與執行風險',
+                'inv_desc': '我們深知早期深科技種子投資者與創投基金在評估硬體提案時的嚴格標準。以下是我們對擴展 EF-150 平台核心投資優勢及執行風險的正面回應與緩釋策略。',
+                'inv_bull_title': '投資人優勢 (牛市邏輯)',
+                'inv_b1_title': '異常龐大的資金使用槓桿 (3.99x)', 'inv_b1_desc': '注入 HK$ 100 萬的私人過渡資金即可立即解鎖 HK$ 299 萬的非稀釋性政府資助（Incu-Tech 培育津貼、ITF RTH 薪資全額補貼、PAG 專利補貼）。投資者的資金在極低股權稀釋下買到了完整的 HK$ 399 萬研發跑道。',
+                'inv_b2_title': '嚴格遵循弗勞德縮尺策略', 'inv_b2_desc': '我們沒有一開始就燒掉數千萬去打造 28.5 米的全尺寸船，而是在 3.56 米的縮尺驗證機上驗證物理穩定性。在 109 公斤的模型上以極低成本驗證 100Hz 控制迴路，能在商業化擴充前大幅降低軟體與水動力風險。',
+                'inv_b3_title': '顛覆性的單位經濟模型', 'inv_b3_desc': '降低 80% 的阻力使得能源營運成本 (OPEX) 較傳統柴油船減少 78%。對於高頻次的大灣區航線而言，船隊營運商能在極短時間內收回純電平台的資本支出溢價。',
+                
+                'inv_bear_title': '投資人疑慮 (風險挑戰)',
+                'inv_r1_title': '關鍵人員風險與 AI 依賴度', 'inv_r1_desc': '利用 AI 輔助將軟硬體團隊縮編至僅兩名工程師雖能大幅降低成本，但也造成極端依賴性。<em>緩釋方案：強制執行嚴格的模組化代碼文檔規範，並統一使用標準 COTS 硬體，避免陷入專有技術鎖定陷阱。</em>',
+                'inv_r2_title': '碼頭基礎設施瓶頸', 'inv_r2_desc': '獲取 3.5 MW 的電網容量以及地方港務局的碼頭改裝許可通常進度緩慢。<em>緩釋方案：我們部署的 4.0 MWh BESS 岸基儲能緩衝策略，徹底繞過了市政高壓電網升級的行政審批難關。</em>',
+                'inv_r3_title': '第四階段的「資本支出陷阱」(CapEx Trap)', 'inv_r3_desc': '建造全尺寸 56 噸客船需要龐大資本。<em>緩釋方案：我們並非傳統造船廠。我們是提供軟體與飛控系統的 OEM 廠商，透過將 EF-150 IP 授權予現有的珠三角造船廠，徹底消除重資產製造的資本支出壓力。</em>',
+                
+                'inv_verdict_title': '投資評級總結',
+                'inv_v1_lbl': '針對種子輪天使與 HKBAN 投資人：', 'inv_v1_desc': '極具吸引力。入場門檻低，政府資助槓桿龐大，且里程碑清晰：目標是在 18 個月內於吐露港完成 D1 驗證機的海試。',
+                'inv_v2_lbl': '針對機構創投 (Series A)：', 'inv_v2_desc': '觀望態度。機構基金將等待第二階段的海試數據日誌，證明 100Hz 控制器能在真實海浪中有效抵消尾波後，才會開出數百萬美元的商業化擴展支票。',
+
                 'footer_cpy': 'AERO-MARINE SYSTEMS 概念 &copy; 2026。',
                 'footer_loc': '香港 / 深圳', 'footer_type': '可行性研究報告'
             },
             'sc': {
                 'nav_subtitle': '前沿科技概念提案',
-                'nav_1': '平台', 'nav_demo': '1:8 技术验证机', 'nav_2': '经济效益', 'nav_3': '分析数据', 'nav_4': '技术矩阵', 'nav_5': 'D1 资金与预算', 'nav_track': '香港科技园 (HKSTP) INCU-TECH 培育计划',
+                'nav_1': '平台', 'nav_demo': '1:8 技术验证机', 'nav_2': '经济效益', 'nav_3': '分析数据', 'nav_4': '技术矩阵', 'nav_5': 'D1 资金与预算', 'nav_6': '投资人风险评估', 'nav_track': '香港科技园 (HKSTP) INCU-TECH 培育计划',
                 'badge_hkstp': '香港科技园培育计划与可行性研究报告', 'doc_id_label': '文档编号：',
                 'hero_title': 'BAYWING EF-150 EXPRESS', 'hero_subtitle': '主动式电传操纵电动水翼船平台',
                 'hero_desc': 'Aero-Marine Systems 正全力构建由软件定义的粤港澳大湾区（GBA）水上交通未来。通过将航空级飞行控制算法与珠江三角洲的碳纤维复合材料供应链深度结合，EF-150 架构实现了船体与水动力阻力的完全解耦——降低 80% 的能源需求，使高速电动水上通勤路线具备商业可行性。',
@@ -1500,7 +1625,7 @@
                 'demo_tag': '1. 缩尺技术验证机', 'demo_title': 'BAYWING-D1（1:8 缩尺自主测试平台）',
                 'demo_desc': '高速水翼航行本质上是一个航空控制问题。由于动态不稳定与物理尺寸成反比，3.56 米的缩尺船体在真实海况下比 28.5 米的全尺寸船体具有更高的自然振荡频率。在真实港口海况下成功稳定 D1，可在放大至 20–30 人座中型船体及最终 EF-150 平台之前，彻底排除飞控系统的技术风险。',
                 
-                'bp_title': '交互式蓝图查看器', 'bp_title_com': '商业平台工程视图', 'bp_hint': '将鼠标悬停在标记组件上以查看技术数据',
+                'bp_title': '交互式蓝图查看器', 'bp_title_com': '商业平台工程视图', 'bp_hint': '点击或将鼠标悬停在标记组件上以查看技术数据',
                 'bp_tt1_title': '前视激光雷达 (LiDAR)', 'bp_tt1_desc': '为 100Hz 飞行控制器提供波浪前馈补偿，在水翼支柱受到冲击前预判水面波浪变化。',
                 'bp_tt2_title': '无人航空电子舱', 'bp_tt2_desc': '内置双 STM32H7 / Jetson Orin Nano 飞行电脑、SBG 惯性导航系统及 1.0 kWh 48V LFP 电池组。',
                 'bp_tt3_title': '水下旋转伺服马达', 'bp_tt3_desc': 'IP68 级防水致动器。以每秒 100 次的频率调整水下襟翼，主动抵消俯仰与滚转。',
@@ -1601,6 +1726,22 @@
                 'dr_c2_b3': '<strong>香港海事处 (HKMD) / 海事局 (MSA) 认证：</strong> 明确香港本地船只及大湾区跨境水域营运之认证路径。',
                 'dr_c2_b4': '<strong>自主测试豁免：</strong> D1 测试许可已通过海事处于吐露港水域之无人船只测试通道获批。',
                 
+                'inv_tag': '6. 投资人优势与风险缓释', 'inv_title': '资本效率与执行风险',
+                'inv_desc': '我们深知早期深科技种子投资者与创投基金在评估硬件提案时的严格标准。以下是我们对扩展 EF-150 平台核心投资优势及执行风险的正面回应与缓释策略。',
+                'inv_bull_title': '投资人优势 (牛市逻辑)',
+                'inv_b1_title': '异常庞大的资金使用杠杆 (3.99x)', 'inv_b1_desc': '注入 HK$ 100 万的私人过渡资金即可立即解锁 HK$ 299 万的非稀释性政府资助（Incu-Tech 培育津贴、ITF RTH 薪资全额补贴、PAG 专利补贴）。投资者的资金在极低股权稀释下买到了完整的 HK$ 399 万研发跑道。',
+                'inv_b2_title': '严格遵循弗劳德缩尺策略', 'inv_b2_desc': '我们没有一开始就烧掉数千万去打造 28.5 米的全尺寸船，而是在 3.56 米的缩尺验证机上验证物理稳定性。在 109 公斤的模型上以极低成本验证 100Hz 控制回路，能在商业化扩充前大幅降低软件与水动力风险。',
+                'inv_b3_title': '颠覆性的单位经济模型', 'inv_b3_desc': '降低 80% 的阻力使得能源营运成本 (OPEX) 较传统柴油船减少 78%。对于高频次的大湾区航线而言，船队营运商能在极短时间内收回纯电平台的资本支出溢价。',
+                
+                'inv_bear_title': '投资人疑虑 (风险挑战)',
+                'inv_r1_title': '关键人员风险与 AI 依赖度', 'inv_r1_desc': '利用 AI 辅助将软硬件团队缩编至仅两名工程师虽能大幅降低成本，但也造成极端依赖性。<em>缓释方案：强制执行严格的模块化代码文档规范，并统一使用标准 COTS 硬件，避免陷入专有技术锁定陷阱。</em>',
+                'inv_r2_title': '码头基础设施瓶颈', 'inv_r2_desc': '获取 3.5 MW 的电网容量以及地方港务局的码头改装许可通常进度缓慢。<em>缓释方案：我们部署的 4.0 MWh BESS 岸基储能缓冲策略，彻底绕过了市政高压电网升级的行政审批难关。</em>',
+                'inv_r3_title': '第四阶段的「资本支出陷阱」(CapEx Trap)', 'inv_r3_desc': '建造全尺寸 56 吨客船需要庞大资本。<em>缓释方案：我们并非传统造船厂。我们是提供软件与飞控系统的 OEM 厂商，透过将 EF-150 IP 授权予现有的珠三角造船厂，彻底消除重资产制造的资本支出压力。</em>',
+                
+                'inv_verdict_title': '投资评级总结',
+                'inv_v1_lbl': '针对种子轮天使与 HKBAN 投资人：', 'inv_v1_desc': '极具吸引力。入场门槛低，政府资助杠杆庞大，且里程碑清晰：目标是在 18 个月内于吐露港完成 D1 验证机的海试。',
+                'inv_v2_lbl': '针对机构创投 (Series A)：', 'inv_v2_desc': '观望态度。机构基金将等待第二阶段的海试数据日志，证明 100Hz 控制器能在真实海浪中有效抵消尾波后，才会开出数百万美元的商业化扩展支票。',
+
                 'footer_cpy': 'AERO-MARINE SYSTEMS 概念 &copy; 2026。',
                 'footer_loc': '香港 / 深圳', 'footer_type': '可行性研究报告'
             }
@@ -1654,17 +1795,17 @@
                 } else if (lang === 'tc') {
                     routeSelect.innerHTML = `
                         <option value="hk-shenzhen">香港中環 ⟷ 深圳蛇口 (22 海里)</option>
-                        <option value="hkg-szx">香港機場海天碼頭 ⟷ 深圳機場 (25 海里)</option>
+                        <option value="hkg-szx">香港機場海天客運碼頭 ⟷ 深圳機場 (25 海里)</option>
                         <option value="hk-macau">香港中環 ⟷ 澳門氹仔 (36 海里)</option>
-                        <option value="hk-airport">香港中環 ⟷ 香港機場海天碼頭 (17 海里)</option>
+                        <option value="hk-airport">香港中環 ⟷ 香港機場海天客運碼頭 (17 海里)</option>
                         <option value="hk-zhuhai">香港中環 ⟷ 珠海九洲 (35 海里)</option>
                     `;
                 } else {
                     routeSelect.innerHTML = `
                         <option value="hk-shenzhen">香港中环 ⟷ 深圳蛇口 (22 海里)</option>
-                        <option value="hkg-szx">香港机场海天码头 ⟷ 深圳机场 (25 海里)</option>
+                        <option value="hkg-szx">香港机场海天客运码头 ⟷ 深圳机场 (25 海里)</option>
                         <option value="hk-macau">香港中环 ⟷ 澳门氹仔 (36 海里)</option>
-                        <option value="hk-airport">香港中环 ⟷ 香港机场海天码头 (17 海里)</option>
+                        <option value="hk-airport">香港中环 ⟷ 香港机场海天客运码头 (17 海里)</option>
                         <option value="hk-zhuhai">香港中环 ⟷ 珠海九洲 (35 海里)</option>
                     `;
                 }
