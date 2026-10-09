@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAYWING EF-150, D2 & D1 | HKSTP Deep Tech Proposal</title>
+    <title>BAYWING EF-150, D1 & D2 | HKSTP Deep Tech Proposal</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,8 +85,9 @@
 
                 <nav class="hidden xl:flex items-center space-x-6 text-[10px] font-mono tracking-wider uppercase text-zinc-400 whitespace-nowrap ml-8">
                     <a href="#vessel" class="hover:text-white transition-colors" data-i18n="nav_1">EF-150</a>
-                    <a href="#d2-commercial" class="hover:text-tech-emerald text-tech-emerald/90 transition-colors" data-i18n="nav_d2">D2 Pilot</a>
                     <a href="#demonstrator" class="hover:text-tech-cyan text-tech-cyan/90 transition-colors" data-i18n="nav_demo">D1 Demo</a>
+                    <a href="#d2-commercial" class="hover:text-tech-emerald text-tech-emerald/90 transition-colors" data-i18n="nav_d2">D2 Pilot</a>
+                    <a href="#moat" class="hover:text-white transition-colors" data-i18n="nav_2">Economics</a>
                     <a href="#routes" class="hover:text-white transition-colors" data-i18n="nav_3">Analytics</a>
                     <a href="#specs" class="hover:text-white transition-colors" data-i18n="nav_4">Matrix</a>
                     <a href="#portal" class="hover:text-white transition-colors" data-i18n="nav_5">VC Capital</a>
@@ -113,12 +114,13 @@
         <div id="mobile-menu" class="hidden xl:hidden bg-zinc-950 border-b border-zinc-800 px-4 py-4 space-y-2 font-mono text-xs uppercase tracking-wider">
             <div class="flex space-x-2 mb-4 pb-4 border-b border-zinc-800 overflow-x-auto">
                 <button id="btn-lang-en-mob" onclick="setLang('en'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-800 text-white border border-zinc-700 whitespace-nowrap">EN (USD)</button>
-                <button id="btn-lang-tc-mob" onclick="setLang('tc'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-900 text-zinc-500 border border-zinc-800 whitespace-nowrap">繁體 (HKD)</button>
-                <button id="btn-lang-sc-mob" onclick="setLang('sc'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-900 text-zinc-500 border border-zinc-800 whitespace-nowrap">简体 (RMB)</button>
+                <button id="btn-lang-tc-mob" onclick="setLang('tc'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-900 text-zinc-500 hover:text-white border border-zinc-800 whitespace-nowrap">繁體 (HKD)</button>
+                <button id="btn-lang-sc-mob" onclick="setLang('sc'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-900 text-zinc-500 hover:text-white border border-zinc-800 whitespace-nowrap">简体 (RMB)</button>
             </div>
             <a href="#vessel" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_1">Platform</a>
-            <a href="#d2-commercial" onclick="toggleMobileMenu()" class="block p-2 text-tech-emerald hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_d2">D2 Commercial</a>
             <a href="#demonstrator" onclick="toggleMobileMenu()" class="block p-2 text-tech-cyan hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_demo">1:8 Demonstrator</a>
+            <a href="#d2-commercial" onclick="toggleMobileMenu()" class="block p-2 text-tech-emerald hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_d2">D2 Commercial</a>
+            <a href="#moat" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_2">Economics</a>
             <a href="#routes" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_3">Analytics</a>
             <a href="#specs" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_4">Tech Matrix</a>
             <a href="#portal" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_5">VC Capital Stack</a>
@@ -148,12 +150,12 @@
                         Aero-Marine Systems is building the software-defined future of GBA maritime transit. By integrating aerospace-grade flight control algorithms with Pearl River Delta carbon-composite supply chains, the EF-150 architecture completely decouples the hull from hydrodynamic drag—slashing energy requirements by 80% and making high-speed electric commuter routes commercially viable.
                     </p>
                     <div class="pt-2 flex flex-wrap gap-3">
-                        <a href="#d2-commercial" class="inline-flex items-center space-x-2 px-4 py-2 bg-tech-emerald/10 border border-tech-emerald/40 text-tech-emerald text-xs font-mono rounded hover:bg-tech-emerald/20 transition-colors">
-                            <span data-i18n="hero_btn_d2">EXPLORE D2 COMMERCIAL PILOT</span>
-                            <span>→</span>
-                        </a>
                         <a href="#demonstrator" class="inline-flex items-center space-x-2 px-4 py-2 bg-tech-cyan/10 border border-tech-cyan/40 text-tech-cyan text-xs font-mono rounded hover:bg-tech-cyan/20 transition-colors">
                             <span data-i18n="hero_btn_explore">EXPLORE 1:8 TECH DEMONSTRATOR</span>
+                            <span>→</span>
+                        </a>
+                        <a href="#d2-commercial" class="inline-flex items-center space-x-2 px-4 py-2 bg-tech-emerald/10 border border-tech-emerald/40 text-tech-emerald text-xs font-mono rounded hover:bg-tech-emerald/20 transition-colors">
+                            <span data-i18n="hero_btn_d2">EXPLORE D2 COMMERCIAL PILOT</span>
                             <span>→</span>
                         </a>
                     </div>
@@ -191,193 +193,7 @@
         </div>
     </section>
 
-    <!-- SECTION 2: D2 COMMERCIAL PILOT (#d2-commercial) -->
-    <section id="d2-commercial" class="py-16 md:py-24 bg-zinc-900 border-b border-zinc-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mb-12">
-                <div class="text-xs font-mono text-tech-emerald uppercase tracking-widest mb-2" data-i18n="d2_tag">Phase 2: Commercial Transition & Revenue</div>
-                <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase" data-i18n="d2_title">
-                    BAYWING-D2 (25-Pax Commercial Pilot)
-                </h2>
-                <p class="text-sm text-zinc-400 mt-3 font-sans leading-relaxed" data-i18n="d2_desc">
-                    Jumping directly from a 3-meter drone to a 28-meter 150-pax ferry is un-fundable by early-stage VCs. The <strong>BAYWING-D2</strong> is our commercial bridge. It is a 15m, 25-passenger vessel designed explicitly to validate the technology in human-rated intra-city Hong Kong transit, secure marine certifications, and generate our first recurring revenue. This intermediate step allows VCs to fund the "gap" securely using government 1:1 matching schemes.
-                </p>
-            </div>
-
-            <!-- INTERACTIVE BLUEPRINT FOR D2 -->
-            <div class="mb-12">
-                <div class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-3" data-i18n="bp_title_d2">INTERACTIVE SCHEMATIC: D2 PILOT VESSEL</div>
-                <div class="blueprint-container" ontouchstart="">
-                    <!-- D2 SVG IMAGE -->
-                    <svg class="blueprint-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%">
-                        <defs>
-                            <pattern id="cadGridD2" width="40" height="40" patternUnits="userSpaceOnUse">
-                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#10b981" stroke-width="0.5" stroke-opacity="0.12"/>
-                                <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#10b981" stroke-width="1" stroke-opacity="0.25"/>
-                            </pattern>
-                            <radialGradient id="d2Bg" cx="50%" cy="50%" r="75%">
-                                <stop offset="0%" stop-color="#051c14"/>
-                                <stop offset="100%" stop-color="#020a07"/>
-                            </radialGradient>
-                            <linearGradient id="d2Hull" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#1b302a"/>
-                                <stop offset="50%" stop-color="#0e1a16"/>
-                                <stop offset="100%" stop-color="#050a09"/>
-                            </linearGradient>
-                            <filter id="emeraldGlowD2" x="-20%" y="-20%" width="140%" height="140%">
-                                <feGaussianBlur stdDeviation="2" result="blur"/>
-                                <feMerge>
-                                    <feMergeNode in="blur"/>
-                                    <feMergeNode in="SourceGraphic"/>
-                                </feMerge>
-                            </filter>
-                        </defs>
-
-                        <rect width="1600" height="900" fill="url(#d2Bg)"/>
-                        <rect width="1600" height="900" fill="url(#cadGridD2)"/>
-                        <rect x="20" y="20" width="1560" height="860" fill="none" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.4"/>
-                        <rect x="25" y="25" width="1550" height="850" fill="none" stroke="#10b981" stroke-width="0.5" stroke-opacity="0.2"/>
-
-                        <!-- Quadrant Dividers -->
-                        <line x1="800" y1="25" x2="800" y2="875" stroke="#10b981" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="8,4"/>
-                        <line x1="25" y1="450" x2="1575" y2="450" stroke="#10b981" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="8,4"/>
-
-                        <!-- QUADRANT 1: TOP-DOWN VIEW (PLAN) -->
-                        <g id="d2-top-down">
-                            <text x="60" y="65" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold" letter-spacing="1.5">TOP-DOWN PLAN: 25-PASSENGER VIP CABIN</text>
-                            <text x="60" y="82" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">LOA 15.0m (49.2 FT) | BOA 4.5m</text>
-                            <path d="M 680 225 C 600 170, 480 150, 260 150 C 160 150, 110 165, 80 185 L 80 265 C 110 285, 160 300, 260 300 C 480 300, 600 280, 680 225 Z" fill="url(#d2Hull)" fill-opacity="0.8" stroke="#10b981" stroke-width="2" filter="url(#emeraldGlowD2)"/>
-                            <rect x="220" y="175" width="220" height="100" rx="6" fill="#091c16" stroke="#10b981" stroke-width="1.2"/>
-                            <!-- 25 Seats representation -->
-                            <g fill="#10b981" fill-opacity="0.3" stroke="#10b981" stroke-width="0.5">
-                                <rect x="240" y="185" width="80" height="15" rx="2"/><rect x="240" y="205" width="80" height="15" rx="2"/>
-                                <rect x="240" y="230" width="80" height="15" rx="2"/><rect x="240" y="250" width="80" height="15" rx="2"/>
-                                <rect x="340" y="185" width="80" height="15" rx="2"/><rect x="340" y="205" width="80" height="15" rx="2"/>
-                                <rect x="340" y="230" width="80" height="15" rx="2"/><rect x="340" y="250" width="80" height="15" rx="2"/>
-                            </g>
-                            <path d="M 450 195 Q 500 225 450 255 Z" fill="#0d2b23" stroke="#00f2ff" stroke-width="1.2"/>
-                            <text x="465" y="228" fill="#00f2ff" font-family="'JetBrains Mono', monospace" font-size="8">CREW</text>
-                        </g>
-
-                        <!-- QUADRANT 2: SIDE ELEVATION -->
-                        <g id="d2-side-elevation" transform="translate(850, 0)">
-                            <text x="60" y="65" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold" letter-spacing="1.5">PORT SIDE ELEVATION</text>
-                            <text x="60" y="82" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">WATER TAXI / ISLAND COMMUTER CONFIGURATION</text>
-                            <g transform="translate(0, 30)">
-                                <path d="M 60 145 C 160 100, 440 100, 560 135 C 520 165, 200 170, 60 145 Z" fill="url(#d2Hull)" fill-opacity="0.8" stroke="#10b981" stroke-width="2" filter="url(#emeraldGlowD2)"/>
-                                <path d="M 160 120 C 260 110, 380 110, 460 125 L 450 135 C 380 120, 260 120, 160 130 Z" fill="#00f2ff" fill-opacity="0.3" stroke="#00f2ff" stroke-width="0.8"/>
-                                <line x1="450" y1="145" x2="450" y2="245" stroke="#10b981" stroke-width="4"/>
-                                <path d="M 410 245 C 440 240, 480 240, 500 248 C 480 252, 430 252, 410 245 Z" fill="#10b981" stroke="#10b981" stroke-width="1.5"/>
-                                <line x1="140" y1="150" x2="140" y2="240" stroke="#10b981" stroke-width="4"/>
-                                <rect x="110" y="235" width="55" height="16" rx="4" fill="#0d2b23" stroke="#00f2ff" stroke-width="1.5"/>
-                                <text x="175" y="246" fill="#00f2ff" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold">2x 150 kW PODS</text>
-                                <line x1="20" y1="210" x2="600" y2="210" stroke="#38bdf8" stroke-width="1" stroke-dasharray="6,4" stroke-opacity="0.8"/>
-                                <text x="590" y="202" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="end">WATERLINE (32 KNOTS)</text>
-                            </g>
-                        </g>
-
-                        <!-- QUADRANT 3: D2 COMMERCIAL MARKET & ROUTES -->
-                        <g transform="translate(0, 470)">
-                            <text x="60" y="45" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold" letter-spacing="1.5">INITIAL COMMERCIAL ROUTES & INFRASTRUCTURE</text>
-                            <text x="60" y="62" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">INTRA-CITY DECARBONIZATION NETWORK</text>
-                            
-                            <!-- HK Map Representation -->
-                            <path d="M 150 150 C 200 120, 300 180, 400 130 C 500 180, 600 120, 650 150" fill="none" stroke="#10b981" stroke-width="1" stroke-dasharray="2,2"/>
-                            
-                            <circle cx="200" cy="140" r="8" fill="#f59e0b"/>
-                            <text x="200" y="170" fill="#fff" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle">DISCOVERY BAY</text>
-                            
-                            <circle cx="400" cy="130" r="10" fill="#00f2ff"/>
-                            <text x="400" y="110" fill="#fff" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle" font-weight="bold">HK CENTRAL PIERS</text>
-                            <text x="400" y="160" fill="#00f2ff" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">500 kW FAST CHARGER</text>
-                            
-                            <circle cx="600" cy="135" r="8" fill="#f59e0b"/>
-                            <text x="600" y="165" fill="#fff" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle">SCIENCE PARK (TOLO)</text>
-
-                            <rect x="60" y="220" width="660" height="60" rx="4" fill="#0d2b23" stroke="#10b981" stroke-width="1"/>
-                            <text x="80" y="245" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">MARKET STRATEGY:</text>
-                            <text x="80" y="260" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">Validating the D2 on short, high-density intra-city routes (Central to DB/Tolo) proves commercial unit economics and regulatory compliance for passenger transport, unlocking institutional VC funding for the EF-150.</text>
-                        </g>
-
-                        <!-- ENGINEERING TITLE BLOCK D2 -->
-                        <g transform="translate(1050, 770)">
-                            <rect x="0" y="0" width="510" height="95" fill="#051c14" stroke="#10b981" stroke-width="1.5"/>
-                            <line x1="0" y1="32" x2="510" y2="32" stroke="#10b981" stroke-width="0.75" stroke-opacity="0.4"/>
-                            <line x1="280" y1="32" x2="280" y2="95" stroke="#10b981" stroke-width="0.75" stroke-opacity="0.4"/>
-                            <text x="15" y="22" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold" letter-spacing="2">AERO-MARINE SYSTEMS // D2 COMMERCIAL</text>
-                            <text x="15" y="50" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">PROJECT: <tspan fill="#fff" font-weight="bold">BAYWING-D2 (PILOT VESSEL)</tspan></text>
-                            <text x="15" y="68" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">CAPACITY: 25 PAX + 2 CREW</text>
-                            <text x="15" y="84" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">BUILD TIME: <tspan fill="#00f2ff">14 MONTHS</tspan></text>
-                            <text x="295" y="50" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">DISPLACEMENT: <tspan fill="#fff">~12.0 TONNES</tspan></text>
-                            <text x="295" y="68" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">SPEED: <tspan fill="#10b981">32.0 KNOTS</tspan></text>
-                            <text x="295" y="84" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">BUDGET: <tspan fill="#f59e0b">HK$ 20.0M (VC + ITF ESS MATCH)</tspan></text>
-                        </g>
-                    </svg>
-
-                    <!-- Hotspot 1: 25 Pax Cabin -->
-                    <div class="hotspot emerald" style="top: 25%; left: 21%;">
-                        <div class="hotspot-dot"></div>
-                        <div class="hotspot-tooltip">
-                            <strong class="text-tech-emerald block mb-1 font-bold border-b border-zinc-700 pb-1" data-i18n="d2_tt1_title">25-Passenger VIP Cabin</strong>
-                            <span data-i18n="d2_tt1_desc">Sufficient capacity to generate initial commercial revenue on premium intra-city routes, proving the financial model to Series A investors.</span>
-                        </div>
-                    </div>
-
-                    <!-- Hotspot 2: 150kW Pods -->
-                    <div class="hotspot emerald" style="top: 29.5%; left: 59%;">
-                        <div class="hotspot-dot"></div>
-                        <div class="hotspot-tooltip">
-                            <strong class="text-tech-emerald block mb-1 font-bold border-b border-zinc-700 pb-1" data-i18n="d2_tt2_title">2x 150 kW Pod Drives</strong>
-                            <span data-i18n="d2_tt2_desc">Provides 32 knots cruise speed. Draws power from a 400 kWh LFP battery pack offering ~40 NM range.</span>
-                        </div>
-                    </div>
-
-                    <!-- Hotspot 3: Charging Infrastructure -->
-                    <div class="hotspot emerald" style="top: 67%; left: 25%;">
-                        <div class="hotspot-dot"></div>
-                        <div class="hotspot-tooltip">
-                            <strong class="text-tech-emerald block mb-1 font-bold border-b border-zinc-700 pb-1" data-i18n="d2_tt3_title">500 kW Fast Charging</strong>
-                            <span data-i18n="d2_tt3_desc">Initial infrastructure build-out at Central Piers utilizes standard 500 kW marine chargers, avoiding the complex 3.5 MW grid upgrades needed for the full EF-150.</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- D2 Build & Deployment Details -->
-            <div class="grid lg:grid-cols-3 gap-6">
-                <div class="data-card p-6 rounded-lg">
-                    <h3 class="text-base font-mono font-bold text-white mb-2" data-i18n="d2_card1_title">Manufacturing Specs</h3>
-                    <ul class="text-[11px] font-mono text-zinc-400 space-y-2 mt-4">
-                        <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l1">Build Time:</span> <span class="text-zinc-200" data-i18n="d2_c1_v1">14 Months</span></li>
-                        <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l3">Facility Required:</span> <span class="text-zinc-200" data-i18n="d2_c1_v3">PRD Composite Shipyard Partner</span></li>
-                        <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l4">Labor Required:</span> <span class="text-zinc-200" data-i18n="d2_c1_v4">~12 Person Assembly Team</span></li>
-                        <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l5">Core Materials:</span> <span class="text-zinc-200" data-i18n="d2_c1_v5">Infused Carbon-Fiber & Marine Alum</span></li>
-                        <li class="flex justify-between pt-2 border-t border-zinc-800/50 mt-2"><span class="text-zinc-500" data-i18n="d2_c1_l2">Shipyard Build:</span> <span class="text-zinc-300" data-i18n="d2_c1_v2">HK$ 18.5 Million</span></li>
-                        <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l6">Testing & Certs:</span> <span class="text-zinc-300" data-i18n="d2_c1_v6">HK$ 1.5 Million</span></li>
-                        <li class="flex justify-between pt-1"><span class="text-zinc-400 font-bold" data-i18n="d2_c1_l7">Total D2 Capital:</span> <span class="text-tech-emerald font-bold" data-i18n="d2_c1_v7">HK$ 20.0 Million</span></li>
-                    </ul>
-                </div>
-
-                <div class="data-card p-6 rounded-lg">
-                    <h3 class="text-base font-mono font-bold text-white mb-2" data-i18n="d2_card2_title">Commercial Market Focus</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed font-sans mt-3" data-i18n="d2_card2_desc">
-                        While the D1 serves to de-risk our proprietary flight-control IP and hydrodynamic models at near-zero OPEX, the D2 enters the <strong>intra-city transit market</strong> to generate our first recurring passenger revenue. It will decarbonize Hong Kong's internal ferry network (Discovery Bay, Lamma Island, Mui Wo) providing VIP transit and fast commuting before the EF-150 dominates the inter-city GBA routes (Macau, Shenzhen).
-                    </p>
-                </div>
-
-                <div class="data-card p-6 rounded-lg border border-tech-emerald/40 bg-tech-emerald/5">
-                    <h3 class="text-base font-mono font-bold text-tech-emerald mb-2" data-i18n="d2_card3_title">The VC "Gap" Funding Hook</h3>
-                    <p class="text-xs text-zinc-300 leading-relaxed font-sans mt-3" data-i18n="d2_card3_desc">
-                        The D2 bridges the "Valley of Death." This staged capital architecture minimizes founder and early angel dilution by leveraging non-dilutive statutory capital across both prototyping and pilot phases. Pitching VCs to fund a HK$ 10M Seed/Pre-A round directly triggers the government's <strong>ITF Enterprise Support Scheme (ESS) 1:1 matching grant</strong>, immediately doubling the capital to HK$ 20M to fully fund the D2 construction, testing, and launch.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SECTION 3: D1 DEMONSTRATOR (#demonstrator) -->
+    <!-- SECTION 2: D1 DEMONSTRATOR (#demonstrator) -->
     <section id="demonstrator" class="py-16 md:py-24 bg-zinc-950 border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-12">
@@ -613,8 +429,194 @@
         </div>
     </section>
 
+    <!-- SECTION 3: D2 COMMERCIAL PILOT (#d2-commercial) -->
+    <section id="d2-commercial" class="py-16 md:py-24 bg-zinc-900 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-12">
+                <div class="text-xs font-mono text-tech-emerald uppercase tracking-widest mb-2" data-i18n="d2_tag">Phase 2: Commercial Transition & Revenue</div>
+                <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase" data-i18n="d2_title">
+                    BAYWING-D2 (25-Pax Commercial Pilot)
+                </h2>
+                <p class="text-sm text-zinc-400 mt-3 font-sans leading-relaxed" data-i18n="d2_desc">
+                    Jumping directly from a 3-meter drone to a 28-meter 150-pax ferry is un-fundable by early-stage VCs. The <strong>BAYWING-D2</strong> is our commercial bridge. It is a 15m, 25-passenger vessel designed explicitly to validate the technology in human-rated intra-city Hong Kong transit, secure marine certifications, and generate our first recurring revenue. This intermediate step allows VCs to fund the "gap" securely using government 1:1 matching schemes.
+                </p>
+            </div>
+
+            <!-- INTERACTIVE BLUEPRINT FOR D2 -->
+            <div class="mb-12">
+                <div class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-3" data-i18n="bp_title_d2">INTERACTIVE SCHEMATIC: D2 PILOT VESSEL</div>
+                <div class="blueprint-container" ontouchstart="">
+                    <!-- D2 SVG IMAGE -->
+                    <svg class="blueprint-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%">
+                        <defs>
+                            <pattern id="cadGridD2" width="40" height="40" patternUnits="userSpaceOnUse">
+                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#10b981" stroke-width="0.5" stroke-opacity="0.12"/>
+                                <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#10b981" stroke-width="1" stroke-opacity="0.25"/>
+                            </pattern>
+                            <radialGradient id="d2Bg" cx="50%" cy="50%" r="75%">
+                                <stop offset="0%" stop-color="#051c14"/>
+                                <stop offset="100%" stop-color="#020a07"/>
+                            </radialGradient>
+                            <linearGradient id="d2Hull" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#1b302a"/>
+                                <stop offset="50%" stop-color="#0e1a16"/>
+                                <stop offset="100%" stop-color="#050a09"/>
+                            </linearGradient>
+                            <filter id="emeraldGlowD2" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="2" result="blur"/>
+                                <feMerge>
+                                    <feMergeNode in="blur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+
+                        <rect width="1600" height="900" fill="url(#d2Bg)"/>
+                        <rect width="1600" height="900" fill="url(#cadGridD2)"/>
+                        <rect x="20" y="20" width="1560" height="860" fill="none" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.4"/>
+                        <rect x="25" y="25" width="1550" height="850" fill="none" stroke="#10b981" stroke-width="0.5" stroke-opacity="0.2"/>
+
+                        <!-- Quadrant Dividers -->
+                        <line x1="800" y1="25" x2="800" y2="875" stroke="#10b981" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="8,4"/>
+                        <line x1="25" y1="450" x2="1575" y2="450" stroke="#10b981" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="8,4"/>
+
+                        <!-- QUADRANT 1: TOP-DOWN VIEW (PLAN) -->
+                        <g id="d2-top-down">
+                            <text x="60" y="65" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold" letter-spacing="1.5">TOP-DOWN PLAN: 25-PASSENGER VIP CABIN</text>
+                            <text x="60" y="82" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">LOA 15.0m (49.2 FT) | BOA 4.5m</text>
+                            <path d="M 680 225 C 600 170, 480 150, 260 150 C 160 150, 110 165, 80 185 L 80 265 C 110 285, 160 300, 260 300 C 480 300, 600 280, 680 225 Z" fill="url(#d2Hull)" fill-opacity="0.8" stroke="#10b981" stroke-width="2" filter="url(#emeraldGlowD2)"/>
+                            <rect x="220" y="175" width="220" height="100" rx="6" fill="#091c16" stroke="#10b981" stroke-width="1.2"/>
+                            <!-- 25 Seats representation -->
+                            <g fill="#10b981" fill-opacity="0.3" stroke="#10b981" stroke-width="0.5">
+                                <rect x="240" y="185" width="80" height="15" rx="2"/><rect x="240" y="205" width="80" height="15" rx="2"/>
+                                <rect x="240" y="230" width="80" height="15" rx="2"/><rect x="240" y="250" width="80" height="15" rx="2"/>
+                                <rect x="340" y="185" width="80" height="15" rx="2"/><rect x="340" y="205" width="80" height="15" rx="2"/>
+                                <rect x="340" y="230" width="80" height="15" rx="2"/><rect x="340" y="250" width="80" height="15" rx="2"/>
+                            </g>
+                            <path d="M 450 195 Q 500 225 450 255 Z" fill="#0d2b23" stroke="#00f2ff" stroke-width="1.2"/>
+                            <text x="465" y="228" fill="#00f2ff" font-family="'JetBrains Mono', monospace" font-size="8">CREW</text>
+                        </g>
+
+                        <!-- QUADRANT 2: SIDE ELEVATION -->
+                        <g id="d2-side-elevation" transform="translate(850, 0)">
+                            <text x="60" y="65" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold" letter-spacing="1.5">PORT SIDE ELEVATION</text>
+                            <text x="60" y="82" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">WATER TAXI / ISLAND COMMUTER CONFIGURATION</text>
+                            <g transform="translate(0, 30)">
+                                <path d="M 60 145 C 160 100, 440 100, 560 135 C 520 165, 200 170, 60 145 Z" fill="url(#d2Hull)" fill-opacity="0.8" stroke="#10b981" stroke-width="2" filter="url(#emeraldGlowD2)"/>
+                                <path d="M 160 120 C 260 110, 380 110, 460 125 L 450 135 C 380 120, 260 120, 160 130 Z" fill="#00f2ff" fill-opacity="0.3" stroke="#00f2ff" stroke-width="0.8"/>
+                                <line x1="450" y1="145" x2="450" y2="245" stroke="#10b981" stroke-width="4"/>
+                                <path d="M 410 245 C 440 240, 480 240, 500 248 C 480 252, 430 252, 410 245 Z" fill="#10b981" stroke="#10b981" stroke-width="1.5"/>
+                                <line x1="140" y1="150" x2="140" y2="240" stroke="#10b981" stroke-width="4"/>
+                                <rect x="110" y="235" width="55" height="16" rx="4" fill="#0d2b23" stroke="#00f2ff" stroke-width="1.5"/>
+                                <text x="175" y="246" fill="#00f2ff" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold">2x 150 kW PODS</text>
+                                <line x1="20" y1="210" x2="600" y2="210" stroke="#38bdf8" stroke-width="1" stroke-dasharray="6,4" stroke-opacity="0.8"/>
+                                <text x="590" y="202" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="end">WATERLINE (32 KNOTS)</text>
+                            </g>
+                        </g>
+
+                        <!-- QUADRANT 3: D2 COMMERCIAL MARKET & ROUTES -->
+                        <g transform="translate(0, 470)">
+                            <text x="60" y="45" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold" letter-spacing="1.5">INITIAL COMMERCIAL ROUTES & INFRASTRUCTURE</text>
+                            <text x="60" y="62" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">INTRA-CITY DECARBONIZATION NETWORK</text>
+                            
+                            <!-- HK Map Representation -->
+                            <path d="M 150 150 C 200 120, 300 180, 400 130 C 500 180, 600 120, 650 150" fill="none" stroke="#10b981" stroke-width="1" stroke-dasharray="2,2"/>
+                            
+                            <circle cx="200" cy="140" r="8" fill="#f59e0b"/>
+                            <text x="200" y="170" fill="#fff" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle">DISCOVERY BAY</text>
+                            
+                            <circle cx="400" cy="130" r="10" fill="#00f2ff"/>
+                            <text x="400" y="110" fill="#fff" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle" font-weight="bold">HK CENTRAL PIERS</text>
+                            <text x="400" y="160" fill="#00f2ff" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">500 kW FAST CHARGER</text>
+                            
+                            <circle cx="600" cy="135" r="8" fill="#f59e0b"/>
+                            <text x="600" y="165" fill="#fff" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle">SCIENCE PARK (TOLO)</text>
+
+                            <rect x="60" y="220" width="660" height="60" rx="4" fill="#0d2b23" stroke="#10b981" stroke-width="1"/>
+                            <text x="80" y="245" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">MARKET STRATEGY:</text>
+                            <text x="80" y="260" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">Validating the D2 on short, high-density intra-city routes (Central to DB/Tolo) proves commercial unit economics and regulatory compliance for passenger transport, unlocking institutional VC funding for the EF-150.</text>
+                        </g>
+
+                        <!-- ENGINEERING TITLE BLOCK D2 -->
+                        <g transform="translate(1050, 770)">
+                            <rect x="0" y="0" width="510" height="95" fill="#051c14" stroke="#10b981" stroke-width="1.5"/>
+                            <line x1="0" y1="32" x2="510" y2="32" stroke="#10b981" stroke-width="0.75" stroke-opacity="0.4"/>
+                            <line x1="280" y1="32" x2="280" y2="95" stroke="#10b981" stroke-width="0.75" stroke-opacity="0.4"/>
+                            <text x="15" y="22" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold" letter-spacing="2">AERO-MARINE SYSTEMS // D2 COMMERCIAL</text>
+                            <text x="15" y="50" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">PROJECT: <tspan fill="#fff" font-weight="bold">BAYWING-D2 (PILOT VESSEL)</tspan></text>
+                            <text x="15" y="68" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">CAPACITY: 25 PAX + 2 CREW</text>
+                            <text x="15" y="84" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">BUILD TIME: <tspan fill="#00f2ff">14 MONTHS</tspan></text>
+                            <text x="295" y="50" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">DISPLACEMENT: <tspan fill="#fff">~12.0 TONNES</tspan></text>
+                            <text x="295" y="68" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">SPEED: <tspan fill="#10b981">32.0 KNOTS</tspan></text>
+                            <text x="295" y="84" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">BUDGET: <tspan fill="#f59e0b">HK$ 20.0M (VC + ITF ESS MATCH)</tspan></text>
+                        </g>
+                    </svg>
+
+                    <!-- Hotspot 1: 25 Pax Cabin -->
+                    <div class="hotspot emerald" style="top: 25%; left: 21%;">
+                        <div class="hotspot-dot"></div>
+                        <div class="hotspot-tooltip">
+                            <strong class="text-tech-emerald block mb-1 font-bold border-b border-zinc-700 pb-1" data-i18n="d2_tt1_title">25-Passenger VIP Cabin</strong>
+                            <span data-i18n="d2_tt1_desc">Sufficient capacity to generate initial commercial revenue on premium intra-city routes, proving the financial model to Series A investors.</span>
+                        </div>
+                    </div>
+
+                    <!-- Hotspot 2: 150kW Pods -->
+                    <div class="hotspot emerald" style="top: 29.5%; left: 59%;">
+                        <div class="hotspot-dot"></div>
+                        <div class="hotspot-tooltip">
+                            <strong class="text-tech-emerald block mb-1 font-bold border-b border-zinc-700 pb-1" data-i18n="d2_tt2_title">2x 150 kW Pod Drives</strong>
+                            <span data-i18n="d2_tt2_desc">Provides 32 knots cruise speed. Draws power from a 400 kWh LFP battery pack offering ~40 NM range.</span>
+                        </div>
+                    </div>
+
+                    <!-- Hotspot 3: Charging Infrastructure -->
+                    <div class="hotspot emerald" style="top: 67%; left: 25%;">
+                        <div class="hotspot-dot"></div>
+                        <div class="hotspot-tooltip">
+                            <strong class="text-tech-emerald block mb-1 font-bold border-b border-zinc-700 pb-1" data-i18n="d2_tt3_title">500 kW Fast Charging</strong>
+                            <span data-i18n="d2_tt3_desc">Initial infrastructure build-out at Central Piers utilizes standard 500 kW marine chargers, avoiding the complex 3.5 MW grid upgrades needed for the full EF-150.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- D2 Build & Deployment Details -->
+            <div class="grid lg:grid-cols-3 gap-6">
+                <div class="data-card p-6 rounded-lg">
+                    <h3 class="text-base font-mono font-bold text-white mb-2" data-i18n="d2_card1_title">Manufacturing Specs</h3>
+                    <ul class="text-[11px] font-mono text-zinc-400 space-y-2 mt-4">
+                        <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l1">Build Time:</span> <span class="text-zinc-200" data-i18n="d2_c1_v1">14 Months</span></li>
+                        <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l3">Facility Required:</span> <span class="text-zinc-200" data-i18n="d2_c1_v3">PRD Composite Shipyard Partner</span></li>
+                        <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l4">Labor Required:</span> <span class="text-zinc-200" data-i18n="d2_c1_v4">~12 Person Assembly Team</span></li>
+                        <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l5">Core Materials:</span> <span class="text-zinc-200" data-i18n="d2_c1_v5">Infused Carbon-Fiber & Marine Alum</span></li>
+                        <li class="flex justify-between pt-2 border-t border-zinc-800/50 mt-2"><span class="text-zinc-500" data-i18n="d2_c1_l2">Shipyard Build:</span> <span class="text-zinc-300" data-i18n="d2_c1_v2">HK$ 18.5 Million</span></li>
+                        <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l6">Testing & Certs:</span> <span class="text-zinc-300" data-i18n="d2_c1_v6">HK$ 1.5 Million</span></li>
+                        <li class="flex justify-between pt-1"><span class="text-zinc-400 font-bold" data-i18n="d2_c1_l7">Total D2 Capital:</span> <span class="text-tech-emerald font-bold" data-i18n="d2_c1_v7">HK$ 20.0 Million</span></li>
+                    </ul>
+                </div>
+
+                <div class="data-card p-6 rounded-lg">
+                    <h3 class="text-base font-mono font-bold text-white mb-2" data-i18n="d2_card2_title">Commercial Market Focus</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed font-sans mt-3" data-i18n="d2_card2_desc">
+                        While the D1 serves to de-risk our proprietary flight-control IP and hydrodynamic models at near-zero OPEX, the D2 enters the <strong>intra-city transit market</strong> to generate our first recurring passenger revenue. It will decarbonize Hong Kong's internal ferry network (Discovery Bay, Lamma Island, Mui Wo) providing VIP transit and fast commuting before the EF-150 dominates the inter-city GBA routes (Macau, Shenzhen).
+                    </p>
+                </div>
+
+                <div class="data-card p-6 rounded-lg border border-tech-emerald/40 bg-tech-emerald/5">
+                    <h3 class="text-base font-mono font-bold text-tech-emerald mb-2" data-i18n="d2_card3_title">The VC "Gap" Funding Hook</h3>
+                    <p class="text-xs text-zinc-300 leading-relaxed font-sans mt-3" data-i18n="d2_card3_desc">
+                        The D2 bridges the "Valley of Death." This staged capital architecture minimizes founder and early angel dilution by leveraging non-dilutive statutory capital across both prototyping and pilot phases. Pitching VCs to fund a HK$ 10M Seed/Pre-A round directly triggers the government's <strong>ITF Enterprise Support Scheme (ESS) 1:1 matching grant</strong>, immediately doubling the capital to HK$ 20M to fully fund the D2 construction, testing, and launch.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <!-- SECTION 4: COMPETITIVE MOAT & ECONOMICS (#moat) -->
-    <section id="moat" class="py-16 md:py-24 bg-zinc-900 border-b border-zinc-800">
+    <section id="moat" class="py-16 md:py-24 bg-zinc-950 border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-12">
                 <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2" data-i18n="moat_tag">3. Deep Tech Moat & Economics</div>
@@ -628,7 +630,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Pillar 01: Carbon Hull -->
-                <div class="data-card p-6 rounded-lg relative overflow-hidden">
+                <div class="data-card p-6 rounded-lg relative overflow-hidden bg-zinc-900">
                     <div class="text-xs font-mono text-zinc-500 uppercase mb-1" data-i18n="p1_tag">01. Platform Dynamics</div>
                     <div class="text-3xl font-mono font-bold text-white mb-2" data-i18n="p1_metric">80%</div>
                     <h3 class="text-sm font-mono font-bold text-zinc-300 mb-2 uppercase" data-i18n="p1_title">Drag Reduction</h3>
@@ -642,7 +644,7 @@
                 </div>
 
                 <!-- Pillar 02: FCS -->
-                <div class="data-card p-6 rounded-lg relative overflow-hidden">
+                <div class="data-card p-6 rounded-lg relative overflow-hidden bg-zinc-900">
                     <div class="text-xs font-mono text-zinc-500 uppercase mb-1" data-i18n="p2_tag">02. Core IP Moat</div>
                     <div class="text-3xl font-mono font-bold text-white mb-2">100<span class="text-lg">Hz</span></div>
                     <h3 class="text-sm font-mono font-bold text-zinc-300 mb-2 uppercase" data-i18n="p2_title">Active FCS Loop</h3>
@@ -656,7 +658,7 @@
                 </div>
 
                 <!-- Pillar 03: BESS & MCS -->
-                <div class="data-card p-6 rounded-lg relative overflow-hidden">
+                <div class="data-card p-6 rounded-lg relative overflow-hidden bg-zinc-900">
                     <div class="text-xs font-mono text-zinc-500 uppercase mb-1" data-i18n="p3_tag">03. Infrastructure</div>
                     <div class="text-3xl font-mono font-bold text-white mb-2">4.0<span class="text-lg">MWh</span></div>
                     <h3 class="text-sm font-mono font-bold text-zinc-300 mb-2 uppercase" data-i18n="p3_title">Shore BESS Buffer</h3>
@@ -670,7 +672,7 @@
                 </div>
 
                 <!-- Pillar 04: Disruption Economics -->
-                <div class="data-card p-6 rounded-lg relative overflow-hidden">
+                <div class="data-card p-6 rounded-lg relative overflow-hidden bg-zinc-900">
                     <div class="text-xs font-mono text-zinc-500 uppercase mb-1" data-i18n="p4_tag">04. Route Yield</div>
                     <div class="text-3xl font-mono font-bold text-white mb-2" data-i18n="p4_metric">78%</div>
                     <h3 class="text-sm font-mono font-bold text-zinc-300 mb-2 uppercase" data-i18n="p4_title">OPEX Savings</h3>
@@ -687,7 +689,7 @@
     </section>
 
     <!-- SECTION 5: ROUTE NETWORK & DISRUPTION CALCULATOR (#routes) -->
-    <section id="routes" class="py-16 md:py-24 bg-zinc-950 border-b border-zinc-800">
+    <section id="routes" class="py-16 md:py-24 bg-zinc-900 border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-10">
                 <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2" data-i18n="calc_tag">4. Strategic Route Analytics</div>
@@ -700,7 +702,7 @@
             </div>
 
             <!-- INTERACTIVE ROUTE CALCULATOR -->
-            <div class="data-card p-6 sm:p-8 rounded-xl bg-zinc-900">
+            <div class="data-card p-6 sm:p-8 rounded-xl bg-zinc-950">
                 <div class="flex flex-wrap items-center justify-between gap-4 border-b border-zinc-800 pb-4 mb-6">
                     <div>
                         <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest" data-i18n="calc_sim_tag">INTERACTIVE FINANCIAL SIMULATOR</span>
@@ -718,7 +720,7 @@
                         
                         <div>
                             <label class="block text-xs font-mono text-zinc-400 uppercase mb-2" data-i18n="calc_input_1">1. Select GBA Express Route</label>
-                            <select id="calc-route" onchange="runRouteCalculator()" class="w-full bg-zinc-950 border border-zinc-700 rounded p-2.5 text-xs font-mono text-white focus:border-zinc-500 outline-none">
+                            <select id="calc-route" onchange="runRouteCalculator()" class="w-full bg-zinc-900 border border-zinc-700 rounded p-2.5 text-xs font-mono text-white focus:border-zinc-500 outline-none">
                                 <option value="hk-shenzhen" selected>HK Central ⟷ Shenzhen Shekou (22 NM)</option>
                                 <option value="hkg-szx">HKG SkyPier ⟷ Shenzhen Airport (25 NM)</option>
                                 <option value="hk-macau">HK Central ⟷ Macau Taipa (36 NM)</option>
@@ -756,29 +758,29 @@
                     </div>
 
                     <!-- Calculated Outputs Column -->
-                    <div class="lg:col-span-7 bg-zinc-950 border border-zinc-800 rounded-lg p-6">
+                    <div class="lg:col-span-7 bg-zinc-900 border border-zinc-800 rounded-lg p-6">
                         
                         <div class="grid grid-cols-2 gap-4 mb-6">
                             
-                            <div class="p-4 bg-zinc-900 rounded border border-zinc-800">
+                            <div class="p-4 bg-zinc-950 rounded border border-zinc-800">
                                 <div class="text-[10px] font-mono text-zinc-500 uppercase" data-i18n="calc_out_1_title">Annual Energy Savings</div>
                                 <div id="calc-out-savings" class="text-2xl sm:text-3xl font-mono font-bold text-white mt-1">$0.00 M</div>
                                 <div class="text-[9px] font-mono text-zinc-500 mt-1" data-i18n="calc_out_1_sub">VS Legacy Diesel Catamaran</div>
                             </div>
 
-                            <div class="p-4 bg-zinc-900 rounded border border-zinc-800">
+                            <div class="p-4 bg-zinc-950 rounded border border-zinc-800">
                                 <div class="text-[10px] font-mono text-zinc-500 uppercase" data-i18n="calc_out_2_title">Est. CapEx Premium Payback</div>
                                 <div id="calc-out-payback" class="text-2xl sm:text-3xl font-mono font-bold text-tech-emerald mt-1">0.0 YRS</div>
                                 <div class="text-[9px] font-mono text-zinc-500 mt-1" data-i18n="calc_out_2_sub">On EV Platform Premium Cost</div>
                             </div>
 
-                            <div class="p-4 bg-zinc-900 rounded border border-zinc-800">
+                            <div class="p-4 bg-zinc-950 rounded border border-zinc-800">
                                 <div class="text-[10px] font-mono text-zinc-500 uppercase" data-i18n="calc_out_3_title">Annual CO2 Avoided</div>
                                 <div id="calc-out-co2" class="text-xl sm:text-2xl font-mono font-bold text-zinc-300 mt-1">0 T</div>
                                 <div class="text-[9px] font-mono text-zinc-500 mt-1" data-i18n="calc_out_3_sub">Metric Tons GHG / Year</div>
                             </div>
 
-                            <div class="p-4 bg-zinc-900 rounded border border-zinc-800">
+                            <div class="p-4 bg-zinc-950 rounded border border-zinc-800">
                                 <div class="text-[10px] font-mono text-zinc-500 uppercase" data-i18n="calc_out_4_title">Est. EF-150 Transit Time</div>
                                 <div id="calc-out-time" class="text-xl sm:text-2xl font-mono font-bold text-zinc-300 mt-1">0 MINS</div>
                                 <div id="calc-out-time-diff" class="text-[9px] font-mono text-zinc-500 mt-1" data-i18n="calc_out_4_sub">Faster than Diesel</div>
@@ -793,7 +795,7 @@
                                     <span data-i18n="calc_bar_diesel">Annual Energy Cost (Legacy Diesel Fleet)</span>
                                     <span id="calc-bar-diesel-text" class="text-white font-bold">$0.00M</span>
                                 </div>
-                                <div class="w-full bg-zinc-900 h-2.5 rounded overflow-hidden border border-zinc-800">
+                                <div class="w-full bg-zinc-950 h-2.5 rounded overflow-hidden border border-zinc-800">
                                     <div id="calc-bar-diesel" class="bg-zinc-600 h-full rounded" style="width: 100%;"></div>
                                 </div>
                             </div>
@@ -803,7 +805,7 @@
                                     <span data-i18n="calc_bar_ef150">Annual Energy Cost (EF-150 Electric Fleet)</span>
                                     <span id="calc-bar-ef150-text" class="text-tech-emerald font-bold">$0.00M</span>
                                 </div>
-                                <div class="w-full bg-zinc-900 h-2.5 rounded overflow-hidden border border-zinc-800">
+                                <div class="w-full bg-zinc-950 h-2.5 rounded overflow-hidden border border-zinc-800">
                                     <div id="calc-bar-ef150" class="bg-tech-emerald h-full rounded" style="width: 22%;"></div>
                                 </div>
                             </div>
@@ -818,7 +820,7 @@
     </section>
 
     <!-- SECTION 6: TECHNICAL SPECIFICATION MATRIX (#specs) -->
-    <section id="specs" class="py-16 md:py-24 bg-zinc-900 border-b border-zinc-800">
+    <section id="specs" class="py-16 md:py-24 bg-zinc-950 border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-10">
                 <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2" data-i18n="tech_tag">5. Technical Data Bank</div>
@@ -963,7 +965,7 @@
 
             <!-- Full 3-Way Scaling Comparison Table -->
             <div class="data-card rounded-xl overflow-hidden">
-                <div class="p-4 bg-zinc-950 border-b border-zinc-800 flex justify-between items-center text-xs font-mono">
+                <div class="p-4 bg-zinc-900 border-b border-zinc-800 flex justify-between items-center text-xs font-mono">
                     <span class="text-white font-bold" data-i18n="tech_table_title">PLATFORM ROADMAP: D1 to EF-150</span>
                     <span class="text-zinc-500" data-i18n="tech_table_ver">REVISED DRAFT v3.0</span>
                 </div>
@@ -1030,7 +1032,7 @@
     </section>
 
     <!-- SECTION 7: INVESTOR MERITS & RISKS (#portal & #investor) -->
-    <section id="portal" class="py-16 md:py-24 bg-zinc-950 border-b border-zinc-800 cad-grid-bg">
+    <section id="portal" class="py-16 md:py-24 bg-zinc-900 border-b border-zinc-800 cad-grid-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-12">
                 <div class="text-xs font-mono text-tech-emerald uppercase tracking-widest mb-2" data-i18n="data_tag">6. VC Funding & Capitalization Strategy</div>
@@ -1049,7 +1051,7 @@
 
             <!-- Detailed COTS Budget Table -->
             <div class="data-card rounded-xl overflow-hidden mb-10">
-                <div class="p-4 bg-zinc-900 border-b border-zinc-800 flex justify-between items-center text-xs font-mono">
+                <div class="p-4 bg-zinc-950 border-b border-zinc-800 flex justify-between items-center text-xs font-mono">
                     <span class="text-white font-bold" data-i18n="cots_table_title">PHASE 1: DEMONSTRATOR (D1) AI-OPTIMIZED BUDGET BREAKDOWN</span>
                     <span class="text-tech-cyan font-bold">HK$ 3,990,000</span>
                 </div>
@@ -1360,7 +1362,7 @@
             },
             'tc': {
                 'nav_subtitle': '前沿科技概念提案',
-                'nav_1': 'EF-150', 'nav_d2': 'D2 商業先導', 'nav_demo': 'D1 驗證機', 'nav_2': '經濟效益', 'nav_3': '分析數據', 'nav_4': '技術矩陣', 'nav_5': 'VC 資金池', 'nav_6': '投資人風險', 'nav_track': 'HKSTP & ITF 創投配對基金',
+                'nav_1': 'EF-150', 'nav_demo': 'D1 驗證機', 'nav_d2': 'D2 商業先導', 'nav_2': '經濟效益', 'nav_3': '分析數據', 'nav_4': '技術矩陣', 'nav_5': 'VC 資金池', 'nav_6': '投資人風險', 'nav_track': 'HKSTP & ITF 創投配對基金',
                 'badge_hkstp': '引領香港渡輪交通零碳轉型', 'doc_id_label': '文檔編號：',
                 'hero_title': 'BAYWING EF-150 EXPRESS', 'hero_subtitle': '主動式電傳操縱電動水翼船平台',
                 'hero_desc': 'Aero-Marine Systems 正全力構建由軟體定義的粵港澳大灣區（GBA）水上交通未來。通過將航空級飛行控制演算法與珠江三角洲的碳纖維複合材料供應鏈深度結合，EF-150 架構實現了船體與水動力阻力的完全解耦——降低 80% 的能源需求，使高速電動水上通勤路線具備商業可行性。',
@@ -1435,7 +1437,7 @@
                 'calc_desc': '模擬在大灣區主要水上交通走廊中，以 EF-150 平台替代傳統柴油船隻的財務可行性。資料已針對香港海事處 COLREGs 限速要求進行校準（維港範圍內以 12 節排水模式航行，駛至開闊水域後始進行翼航）。',
                 'calc_sim_tag': '互動式財務模擬器', 'calc_sim_title': '船隊營運成本預測模型', 'calc_sim_base': '基準 MGO 海事柴油價格：',
                 'calc_input_1': '1. 選擇大灣區快線航線',
-                'calc_input_2': '2. 營運船隊規模', 'calc_input_2_min': '1 艘船', 'calc_input_2_mid': '6 艘船', 'calc_input_2_max': '12 艘船',
+                'calc_input_2': '2. 營運船隊規模', 'calc_input_2_min': '1 艘船', 'calc_input_2_mid': '6 艘船', 'calc_input_2_max': '1 艘船',
                 'calc_input_3': '3. 單船每日往返次數', 'calc_input_3_min': '2 次往返', 'calc_input_3_mid': '8 次往返', 'calc_input_3_max': '16 次往返',
                 'calc_out_1_title': '年度能源節省', 'calc_out_1_sub': '（對比傳統柴油雙體船）',
                 'calc_out_2_title': '預估 CapEx 溢價回收期', 'calc_out_2_sub': '（針對電動平台溢價成本）',
@@ -1485,7 +1487,7 @@
             },
             'sc': {
                 'nav_subtitle': '前沿科技概念提案',
-                'nav_1': 'EF-150', 'nav_d2': 'D2 商业先导', 'nav_demo': 'D1 验证机', 'nav_2': '经济效益', 'nav_3': '分析数据', 'nav_4': '技术矩阵', 'nav_5': 'VC 资金池', 'nav_6': '投资人风险', 'nav_track': 'HKSTP & ITF 创投配对基金',
+                'nav_1': 'EF-150', 'nav_demo': 'D1 验证机', 'nav_d2': 'D2 商业先导', 'nav_2': '经济效益', 'nav_3': '分析数据', 'nav_4': '技术矩阵', 'nav_5': 'VC 资金池', 'nav_6': '投资人风险', 'nav_track': 'HKSTP & ITF 创投配对基金',
                 'badge_hkstp': '引领香港渡轮交通零碳转型', 'doc_id_label': '文档编号：',
                 'hero_title': 'BAYWING EF-150 EXPRESS', 'hero_subtitle': '主动式电传操纵电动水翼船平台',
                 'hero_desc': 'Aero-Marine Systems 正全力构建由软件定义的粤港澳大湾区（GBA）水上交通未来。通过将航空级飞行控制算法与珠江三角洲的碳纤维复合材料供应链深度结合，EF-150 架构实现了船体与水动力阻力的完全解耦——降低 80% 的能源需求，使高速电动水上通勤路线具备商业可行性。',
@@ -1800,5 +1802,3 @@
     </script>
 </body>
 </html>
-
-```
