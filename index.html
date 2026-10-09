@@ -112,9 +112,9 @@
         <!-- Mobile Drawer -->
         <div id="mobile-menu" class="hidden xl:hidden bg-zinc-950 border-b border-zinc-800 px-4 py-4 space-y-2 font-mono text-xs uppercase tracking-wider">
             <div class="flex space-x-2 mb-4 pb-4 border-b border-zinc-800 overflow-x-auto">
-                <button onclick="setLang('en'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-800 text-white border border-zinc-700 whitespace-nowrap">EN (USD)</button>
-                <button onclick="setLang('tc'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-900 text-zinc-400 border border-zinc-800 whitespace-nowrap">繁體 (HKD)</button>
-                <button onclick="setLang('sc'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-900 text-zinc-400 border border-zinc-800 whitespace-nowrap">简体 (RMB)</button>
+                <button id="btn-lang-en-mob" onclick="setLang('en'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-800 text-white border border-zinc-700 whitespace-nowrap">EN (USD)</button>
+                <button id="btn-lang-tc-mob" onclick="setLang('tc'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-900 text-zinc-500 border border-zinc-800 whitespace-nowrap">繁體 (HKD)</button>
+                <button id="btn-lang-sc-mob" onclick="setLang('sc'); toggleMobileMenu();" class="px-3 py-1 rounded bg-zinc-900 text-zinc-500 border border-zinc-800 whitespace-nowrap">简体 (RMB)</button>
             </div>
             <a href="#vessel" onclick="toggleMobileMenu()" class="block p-2 text-zinc-400 hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_1">Platform</a>
             <a href="#d2-commercial" onclick="toggleMobileMenu()" class="block p-2 text-tech-emerald hover:text-white rounded hover:bg-zinc-900" data-i18n="nav_d2">D2 Commercial</a>
@@ -310,7 +310,7 @@
                             <text x="15" y="84" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">BUILD TIME: <tspan fill="#00f2ff">14 MONTHS</tspan></text>
                             <text x="295" y="50" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">DISPLACEMENT: <tspan fill="#fff">~12.0 TONNES</tspan></text>
                             <text x="295" y="68" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">SPEED: <tspan fill="#10b981">32.0 KNOTS</tspan></text>
-                            <text x="295" y="84" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">BUDGET: <tspan fill="#f59e0b">HK$ 18.5M (VC + ITF ESS MATCH)</tspan></text>
+                            <text x="295" y="84" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">BUDGET: <tspan fill="#f59e0b">HK$ 20.0M (VC + ITF ESS MATCH)</tspan></text>
                         </g>
                     </svg>
 
@@ -350,10 +350,12 @@
                     <h3 class="text-base font-mono font-bold text-white mb-2" data-i18n="d2_card1_title">Manufacturing Specs</h3>
                     <ul class="text-[11px] font-mono text-zinc-400 space-y-2 mt-4">
                         <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l1">Build Time:</span> <span class="text-zinc-200" data-i18n="d2_c1_v1">14 Months</span></li>
-                        <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l2">Cost to Build:</span> <span class="text-tech-emerald font-bold" data-i18n="d2_c1_v2">HK$ 18.5 Million</span></li>
                         <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l3">Facility Required:</span> <span class="text-zinc-200" data-i18n="d2_c1_v3">PRD Composite Shipyard Partner</span></li>
                         <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l4">Labor Required:</span> <span class="text-zinc-200" data-i18n="d2_c1_v4">~12 Person Assembly Team</span></li>
                         <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l5">Core Materials:</span> <span class="text-zinc-200" data-i18n="d2_c1_v5">Infused Carbon-Fiber & Marine Alum</span></li>
+                        <li class="flex justify-between pt-2 border-t border-zinc-800/50 mt-2"><span class="text-zinc-500" data-i18n="d2_c1_l2">Shipyard Build:</span> <span class="text-zinc-300" data-i18n="d2_c1_v2">HK$ 18.5 Million</span></li>
+                        <li class="flex justify-between"><span class="text-zinc-500" data-i18n="d2_c1_l6">Testing & Certs:</span> <span class="text-zinc-300" data-i18n="d2_c1_v6">HK$ 1.5 Million</span></li>
+                        <li class="flex justify-between pt-1"><span class="text-zinc-400 font-bold" data-i18n="d2_c1_l7">Total D2 Capital:</span> <span class="text-tech-emerald font-bold" data-i18n="d2_c1_v7">HK$ 20.0 Million</span></li>
                     </ul>
                 </div>
 
@@ -367,7 +369,7 @@
                 <div class="data-card p-6 rounded-lg border border-tech-emerald/40 bg-tech-emerald/5">
                     <h3 class="text-base font-mono font-bold text-tech-emerald mb-2" data-i18n="d2_card3_title">The VC "Gap" Funding Hook</h3>
                     <p class="text-xs text-zinc-300 leading-relaxed font-sans mt-3" data-i18n="d2_card3_desc">
-                        The D2 bridges the "Valley of Death." The founder bears $0 personal risk by pitching VCs to fund a HK$ 10M Seed/Pre-A round. This private capital directly triggers the government's <strong>ITF Enterprise Support Scheme (ESS) 1:1 matching grant</strong>, immediately doubling the capital to HK$ 20M to fully fund the D2 construction and launch.
+                        The D2 bridges the "Valley of Death." This staged capital architecture minimizes founder and early angel dilution by leveraging non-dilutive statutory capital across both prototyping and pilot phases. Pitching VCs to fund a HK$ 10M Seed/Pre-A round directly triggers the government's <strong>ITF Enterprise Support Scheme (ESS) 1:1 matching grant</strong>, immediately doubling the capital to HK$ 20M to fully fund the D2 construction, testing, and launch.
                     </p>
                 </div>
             </div>
@@ -379,7 +381,7 @@
     <section id="demonstrator" class="py-16 md:py-24 bg-zinc-950 border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-12">
-                <div class="text-xs font-mono text-tech-cyan uppercase tracking-widest mb-2" data-i18n="demo_tag">Phase 1. Sub-Scale Technology Validation</div>
+                <div class="text-xs font-mono text-tech-cyan uppercase tracking-widest mb-2" data-i18n="demo_tag">Phase 1: Sub-Scale Technology Validation</div>
                 <h2 class="text-2xl sm:text-3xl font-mono font-bold text-white uppercase" data-i18n="demo_title">
                     BAYWING-D1 (1:8 Scale Testbed)
                 </h2>
@@ -908,7 +910,7 @@
                         <!-- QUADRANT 3: TRANSOM -->
                         <g id="ef150-transom" transform="translate(0, 470)">
                             <text x="60" y="45" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold" letter-spacing="1.5">REAR TRANSOM & HYDROFOIL ARRANGEMENT</text>
-                            <text x="60" y="62" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">INVERTED-V FOIL AFT ARCHITECTURE</text>
+                            <text x="60" y="82" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">INVERTED-V FOIL AFT ARCHITECTURE</text>
                             <path d="M 220 90 Q 390 70 560 90 L 520 200 Q 390 220 260 200 Z" fill="#082b24" stroke="#10b981" stroke-width="2"/>
                             <rect x="270" y="105" width="240" height="60" rx="4" fill="#051a16" stroke="#10b981" stroke-width="1"/>
                             <text x="390" y="140" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle">BOARDING ACCESS & GATES</text>
@@ -1015,9 +1017,9 @@
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-4 text-zinc-400" data-i18n="d1_r7_lbl">Primary Development Phase</td>
-                                <td class="py-2.5 px-4 text-tech-cyan" data-i18n="d1_r7_d1">Phase 1 & 2 (HKSTP Demo)</td>
-                                <td class="py-2.5 px-4 text-tech-emerald" data-i18n="d1_r7_d2">Phase 3 (VC Initial Rev)</td>
-                                <td class="py-2.5 px-4" data-i18n="d1_r7_ef">Phase 4 (Full Commercial Build)</td>
+                                <td class="py-2.5 px-4 text-tech-cyan" data-i18n="d1_r7_d1">Phase 1 (HKSTP Incubation)</td>
+                                <td class="py-2.5 px-4 text-tech-emerald" data-i18n="d1_r7_d2">Phase 2 (Commercial Pilot)</td>
+                                <td class="py-2.5 px-4" data-i18n="d1_r7_ef">Phase 3 (Full Commercial Scale)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1040,7 +1042,7 @@
                         Aero-Marine Systems utilizes a highly leveraged grant stack to execute the BAYWING-D1 hardware demonstrator. Because the HKSTP Incu-Tech and ITF Research Talent Hub operate on a reimbursement basis, we are securing an initial <strong>"Float Capital" bridge facility</strong>. This bridges cash flow, covers the PAG 10% co-pay, and secures specific Commercial Off-The-Shelf (COTS) aerospace components while ensuring zero interruption to the R&D timeline while awaiting government disbursements.
                     </p>
                     <p class="text-sm text-zinc-300 font-sans leading-relaxed pt-3 border-t border-tech-emerald/10" data-i18n="data_desc_2">
-                        <strong>The D2 VC Pitch (ITF ESS 1:1 Matching):</strong> To transition from the D1 drone to the commercial D2 passenger pilot, we are pitching VCs to fund a HK$ 10M Seed/Pre-A round. This private capital directly triggers the government's <strong>ITF Enterprise Support Scheme (ESS) 1:1 matching grant</strong>, immediately doubling the capital to HK$ 20M to fully fund the D2 construction and launch, keeping the founder's personal cash risk at $0.
+                        <strong>The D2 VC Pitch (ITF ESS 1:1 Matching):</strong> To transition from the D1 drone to the commercial D2 passenger pilot, we are pitching VCs to fund a HK$ 10M Seed/Pre-A round. This staged capital architecture minimizes founder and early angel dilution. The private capital directly triggers the government's <strong>ITF Enterprise Support Scheme (ESS) 1:1 matching grant</strong>, immediately doubling the capital to HK$ 20M to fully fund the D2 construction and launch.
                     </p>
                 </div>
             </div>
@@ -1194,7 +1196,7 @@
                         </div>
 
                         <div class="data-card p-5 rounded-lg border-l-2 border-l-rose-500">
-                            <h4 class="text-sm font-mono font-bold text-white mb-2" data-i18n="inv_r3_title">The "CapEx Trap" in Phase 4</h4>
+                            <h4 class="text-sm font-mono font-bold text-white mb-2" data-i18n="inv_r3_title">The "CapEx Trap" in Phase 3</h4>
                             <p class="text-xs text-zinc-400 leading-relaxed font-sans" data-i18n="inv_r3_desc">
                                 Building full-scale 56-tonne vessels requires massive capital. <em>Mitigation: We are not a shipyard. We are a software & flight-control OEM licensing the EF-150 IP package to existing PRD shipyards.</em>
                             </p>
@@ -1253,18 +1255,20 @@
                 
                 'd2_card1_title': 'Manufacturing Specs',
                 'd2_c1_l1': 'Build Time:', 'd2_c1_v1': '14 Months',
-                'd2_c1_l2': 'Cost to Build:', 'd2_c1_v2': 'HK$ 18.5 Million',
+                'd2_c1_l2': 'Shipyard Build:', 'd2_c1_v2': 'HK$ 18.5 Million',
                 'd2_c1_l3': 'Facility Required:', 'd2_c1_v3': 'PRD Composite Shipyard Partner',
                 'd2_c1_l4': 'Labor Required:', 'd2_c1_v4': '~12 Person Assembly Team',
                 'd2_c1_l5': 'Core Materials:', 'd2_c1_v5': 'Infused Carbon-Fiber & Marine Alum',
+                'd2_c1_l6': 'Testing & Certs:', 'd2_c1_v6': 'HK$ 1.5 Million',
+                'd2_c1_l7': 'Total D2 Capital:', 'd2_c1_v7': 'HK$ 20.0 Million',
                 
                 'd2_card2_title': 'Commercial Market Focus',
                 'd2_card2_desc': 'While the D1 serves to sell our IP and data to marine OEMs, the D2 enters the <strong>intra-city transit market</strong>. It will decarbonize Hong Kong\'s internal ferry network (Discovery Bay, Lamma Island, Mui Wo) providing VIP transit and fast commuting before the EF-150 dominates the inter-city GBA routes (Macau, Shenzhen).',
                 
                 'd2_card3_title': 'The VC "Gap" Funding Hook',
-                'd2_card3_desc': 'The D2 bridges the "Valley of Death." The founder bears $0 personal risk by pitching VCs to fund a HK$ 10M Seed/Pre-A round. This private capital directly triggers the government\'s <strong>ITF Enterprise Support Scheme (ESS) 1:1 matching grant</strong>, immediately doubling the capital to HK$ 20M to fully fund the D2 construction and launch.',
+                'd2_card3_desc': 'The D2 bridges the "Valley of Death." This staged capital architecture minimizes founder and early angel dilution by leveraging non-dilutive statutory capital across both prototyping and pilot phases. Pitching VCs to fund a HK$ 10M Seed/Pre-A round directly triggers the government\'s <strong>ITF Enterprise Support Scheme (ESS) 1:1 matching grant</strong>, immediately doubling the capital to HK$ 20M to fully fund the D2 construction, testing, and launch.',
                 
-                'demo_tag': 'Phase 1. Sub-Scale Technology Validation', 'demo_title': 'BAYWING-D1 (1:8 Scale Autonomous Testbed)',
+                'demo_tag': 'Phase 1: Sub-Scale Technology Validation', 'demo_title': 'BAYWING-D1 (1:8 Scale Autonomous Testbed)',
                 'demo_desc': 'High-speed hydrofoiling is fundamentally an aerospace control problem. Because dynamic instability scales inversely with physical size, a sub-scale 3.56-meter vessel experiences higher natural oscillation frequencies than the full commercial crafts. Stabilizing the D1 in real-world harbor sea-states completely de-risks the flight control stack.',
                 
                 'bp_title': 'INTERACTIVE SCHEMATIC: D1 DRONE', 'bp_title_com': 'COMMERCIAL PLATFORM SCHEMATIC', 'bp_hint': 'HOVER OVER HIGHLIGHTED COMPONENTS FOR TECHNICAL DATA',
@@ -1293,7 +1297,7 @@
                 'd1_r4_lbl': 'Cruise Take-off Speed', 'd1_r4_ef': '18.0 Knots (Take-off) / 38.0 Knots (Cruise)', 'd1_r4_d1': '6.4 Knots (Take-off) / 13.4 Knots (Cruise)', 'd1_r4_law': '1 : &radic;&lambda;',
                 'd1_r5_lbl': 'Installed Powertrain', 'd1_r5_ef': '2x 650 kW Pod Drives', 'd1_r5_d1': '2x 1.0 kW Pods (2.0 kW Total)', 'd1_r5_law': 'Power Reqd &propto; &lambda;<sup>3.5</sup>',
                 'd1_r6_lbl': 'Battery Mass Budget', 'd1_r6_ef': '1.2 MWh (~8,500 kg)', 'd1_r6_d1': '1.0 kWh 48V LFP (~10 kg)', 'd1_r6_law': 'Sustains &lt; 109 kg envelope',
-                'd1_r7_lbl': 'Primary Development Phase', 'd1_r7_ef': 'Phase 4 (Full Commercial Build)', 'd1_r7_d1': 'Phase 1 & 2 (HKSTP Incubation Core)', 'd1_r7_d2': 'Phase 3 (VC Initial Rev)', 'd1_r7_law': 'Zero-capex risk burn-in',
+                'd1_r7_lbl': 'Primary Development Phase', 'd1_r7_ef': 'Phase 3 (Full Commercial Scale)', 'd1_r7_d1': 'Phase 1 (HKSTP Incubation)', 'd1_r7_d2': 'Phase 2 (Commercial Pilot)', 'd1_r7_law': 'Zero-capex risk burn-in',
 
                 'moat_tag': '3. Deep Tech Moat & Economics', 'moat_title': 'Defensible OPEX Advantages',
                 'moat_desc': 'Legacy fast ferries rely on multi-megawatt diesel gas turbines pushing heavy displacement hulls. High marine fuel costs and escalating engine overhaul expenses compress operating margins. Our Fly-by-Wire control system enables a thermodynamic shift.',
@@ -1317,29 +1321,10 @@
                 'tech_tag': '5. Technical Data Bank', 'tech_title': 'Proposed Engineering Matrix',
                 'tech_desc': 'Structural and operational parameters proposed for the entire BAYWING architecture roadmap, from the D1 demonstrator to the full EF-150 commercial flagship.',
                 'tech_table_title': 'PLATFORM ROADMAP: D1 to EF-150', 'tech_table_ver': 'REVISED DRAFT v3.0',
-                't_cat1': '1. Vessel Dimensions & Capacity',
-                't_c1_r1': 'Length Overall (LOA)', 't_c1_v1': '28.50 Meters (93.5 ft)',
-                't_c1_r2': 'Displacement Limit', 't_c1_v2': '56,000 kg (56 Tonnes)',
-                't_c1_r3': 'Passenger Capacity', 't_c1_v3': '150 Passengers + 4 Crew (13.1t Payload)',
-                't_cat2': '2. Hydrodynamics & Power',
-                't_c2_r1': 'Foil Configuration', 't_c2_v1': 'Fully Submerged T-Foil (Forward) & Inverted V-Foil (Aft)',
-                't_c2_r2': 'Target Lift-to-Drag (L/D)', 't_c2_v2': '~9.8 L/D Ratio (Conservative Aerodynamic Profile)',
-                't_c2_r3': 'Cruise Power Draw', 't_c2_v3': '~1,100 kW @ 38 Knots',
-                't_cat3': '3. Infrastructure & Turnaround Target',
-                't_c3_r1': 'Storage Architecture', 't_c3_v1': '1,200 kWh (1.2 MWh), 800V DC Nominal (~8.5t Mass)',
-                't_c3_r2': 'Operational Range', 't_c3_v2': '30 NM (Accommodates 22 NM route + 20% Regulatory Reserve)',
-                't_c3_r3': 'Turnaround Target', 't_c3_v3': '20 MINS (3.5 MW Automated MCS replenishes ~640 kWh in ~11 mins)',
-                't_cat4': '4. Flight Control System (FCS)',
-                't_c4_r1': 'Flight Controller', 't_c4_v1': 'Triple-Redundant Active Fly-by-Wire Flight Management Unit',
-                't_c4_r2': 'Control Loop Rate', 't_c4_v2': '100 Hz Dynamic Flap & Trim Actuation Loop',
-                't_c4_r3': 'Sensor Fusion', 't_c4_v3': 'Inertial Measurement Units (IMUs), Ultrasonic Height, Forward LiDAR',
-                't_cat5': '5. Shore Charging & Energy Buffer',
-                't_c5_r1': 'Stationary BESS Buffer', 't_c5_v1': '4.0 MWh Containerized Battery Buffer (Dockside Peak Shaving)',
-                't_c5_r2': 'Charging Standard', 't_c5_v2': '3.5 MW Automated MCS (Megawatt Charging System) Arm',
-
+                
                 'data_tag': '6. VC Funding & Capitalization Strategy', 'data_title': 'Public 1:1 Matching & Working Capital',
                 'data_desc_1': 'Aero-Marine Systems utilizes a highly leveraged grant stack to execute the BAYWING-D1 hardware demonstrator. Because the HKSTP Incu-Tech and ITF Research Talent Hub operate on a reimbursement basis, we are securing an initial <strong>"Float Capital" bridge facility</strong>. This bridges cash flow, covers the PAG 10% co-pay, and secures specific Commercial Off-The-Shelf (COTS) aerospace components while ensuring zero interruption to the R&D timeline while awaiting government disbursements.',
-                'data_desc_2': '<strong>The D2 VC Pitch (ITF ESS 1:1 Matching):</strong> To transition from the D1 drone to the commercial D2 passenger pilot, we are pitching VCs to fund a HK$ 10M Seed/Pre-A round. This private capital directly triggers the government\'s <strong>ITF Enterprise Support Scheme (ESS) 1:1 matching grant</strong>, immediately doubling the capital to HK$ 20M to fully fund the D2 construction and launch, keeping the founder\'s personal cash risk at $0.',
+                'data_desc_2': '<strong>The D2 VC Pitch (ITF ESS 1:1 Matching):</strong> To transition from the D1 drone to the commercial D2 passenger pilot, we are pitching VCs to fund a HK$ 10M Seed/Pre-A round. This staged capital architecture minimizes founder and early angel dilution. The private capital directly triggers the government\'s <strong>ITF Enterprise Support Scheme (ESS) 1:1 matching grant</strong>, immediately doubling the capital to HK$ 20M to fully fund the D2 construction and launch.',
                 
                 'cots_table_title': 'PHASE 1: DEMONSTRATOR (D1) AI-OPTIMIZED BUDGET BREAKDOWN',
                 'cots_th_cat': 'Budget Category', 'cots_th_desc': 'AI-Driven Strategy & Allocation Details', 'cots_th_cost': 'Allocation (HKD)',
@@ -1358,17 +1343,6 @@
                 'g2_title': 'ITF Research Talent Hub', 'g2_desc': '100% Gov-paid salaries for 2 full-time control engineers (Reimbursement).',
                 'g3_title': 'Patent Application Grant', 'g3_desc': 'PAG grant directly covers 90% of up to $278k in PCT & regional patent filings.',
 
-                'dr_card1_title': 'Phase Development Roadmap',
-                'dr_c1_b1': '<strong>Phase 1 (Months 1-9):</strong> 6-DoF Digital Twin, FCS Bench Testing, & Hardware-in-the-Loop simulation in HKSTP Robotics Lab.',
-                'dr_c1_b2': '<strong>Phase 2 (Months 10-18):</strong> Sub-scale D1 technology demonstrator (3.56m) sea trials in Tolo Harbour; 100Hz wave-decoupling validation.',
-                'dr_c1_b3': '<strong>Phase 3 (Months 19-27):</strong> Intermediate 20-30 passenger pilot platform design; joint commercial consortium formation.',
-                'dr_c1_b4': '<strong>Phase 4 (Months 28-36):</strong> Full commercial EF-150 platform constructed via licensed PRD composite shipyard.',
-                'dr_card2_title': 'Regulatory & Classification Path',
-                'dr_c2_b1': '<strong>DNV Classification:</strong> Adherence to High Speed Light Craft (HSLC) rules for novel composite hydrofoil structures.',
-                'dr_c2_b2': '<strong>HKMD COLREGs Compliance:</strong> Vessel heavily optimized for efficient 12-knot displacement mode to comply with inner Victoria Harbour collision avoidance speed limits prior to taking off in open waters.',
-                'dr_c2_b3': '<strong>HKMD / MSA Certification:</strong> Pathway defined for Local Vessel operation within Hong Kong and GBA cross-boundary waters.',
-                'dr_c2_b4': '<strong>Autonomous Testing Exemption:</strong> D1 test permit cleared through Marine Department uncrewed vessel trials channel in Tolo waters.',
-                
                 'inv_tag': '7. Investor Merits & Risk Mitigation', 'inv_title': 'Capital Efficiency vs. Execution Risk',
                 'inv_desc': 'We recognize that early-stage deep-tech seed investors and venture capital funds evaluate hardware proposals through a critical lens. Here is our direct response to the core investment merits and execution risks associated with scaling the EF-150 platform.',
                 'inv_bull_title': 'What Investors Love (The Bull Case)',
@@ -1379,7 +1353,7 @@
                 'inv_bear_title': 'What Investors Will Question (The Risks)',
                 'inv_r1_title': 'Heavy Key-Person Risk & AI Dependency', 'inv_r1_desc': 'Running a hardware-software team with only two engineers augmented by AI cuts costs but creates extreme dependency. <em>Mitigation: Strict modular documentation and standard COTS hardware limits proprietary lock-in.</em>',
                 'inv_r2_title': 'Dockside Infrastructure Bottlenecks', 'inv_r2_desc': 'Securing 3.5 MW grid capacity and pier modifications often involves extended regulatory lead times. <em>Mitigation: The 4.0 MWh BESS buffer strategy completely bypasses high-voltage municipal grid upgrades.</em>',
-                'inv_r3_title': 'The "CapEx Trap" in Phase 4', 'inv_r3_desc': 'Building full-scale 56-tonne vessels requires massive capital. <em>Mitigation: We are not a shipyard. We are a software & flight-control OEM licensing the EF-150 IP package to existing PRD shipyards.</em>',
+                'inv_r3_title': 'The "CapEx Trap" in Phase 3', 'inv_r3_desc': 'Building full-scale 56-tonne vessels requires massive capital. <em>Mitigation: We are not a shipyard. We are a software & flight-control OEM licensing the EF-150 IP package to existing PRD shipyards.</em>',
 
                 'footer_cpy': 'AERO-MARINE SYSTEMS CONCEPT &copy; 2026.',
                 'footer_loc': 'HONG KONG / SHENZHEN', 'footer_type': 'FEASIBILITY STUDY'
@@ -1406,16 +1380,18 @@
                 
                 'd2_card1_title': '製造規格',
                 'd2_c1_l1': '建造時間：', 'd2_c1_v1': '14 個月',
-                'd2_c1_l2': '建造成本：', 'd2_c1_v2': 'HK$ 1,850 萬',
+                'd2_c1_l2': '船廠建造成本：', 'd2_c1_v2': 'HK$ 1,850 萬',
                 'd2_c1_l3': '設施需求：', 'd2_c1_v3': '珠三角複合材料船廠合作夥伴',
                 'd2_c1_l4': '人力需求：', 'd2_c1_v4': '約 12 人組裝團隊',
                 'd2_c1_l5': '核心材質：', 'd2_c1_v5': '真空灌注碳纖維與海事鋁材',
+                'd2_c1_l6': '測試與海事認證：', 'd2_c1_v6': 'HK$ 150 萬',
+                'd2_c1_l7': 'D2 總資本需求：', 'd2_c1_v7': 'HK$ 2,000 萬',
                 
                 'd2_card2_title': '商業市場定位',
                 'd2_card2_desc': 'D1 的目的是向海事 OEM 出售 IP 與數據，而 D2 則正式切入<strong>市內交通市場</strong>。它將推動香港內部渡輪網絡（愉景灣、南丫島、梅窩）的零碳轉型，提供 VIP 接駁與快速通勤，為 EF-150 稱霸城際大灣區航線（澳門、深圳）鋪路。',
                 
                 'd2_card3_title': '創投 (VC) 資金缺口與槓桿',
-                'd2_card3_desc': 'D2 是跨越「死亡之谷」的橋樑。創辦人維持 $0 個人風險，轉而向 VC 尋求 HK$ 1000 萬的種子輪/Pre-A 輪融資。這筆私人資本將直接觸發政府的 <strong>ITF 企業支援計劃 (ESS) 1:1 配對資助</strong>，瞬間將資金翻倍至 HK$ 2000 萬，全額資助 D2 的建造與下水。',
+                'd2_card3_desc': 'D2 是跨越「死亡之谷」的橋樑。這種分階段的資本架構，透過在原型與先導階段善用非稀釋性的法定資本，將創辦人與早期天使投資人的股權稀釋降至最低。向 VC 尋求 HK$ 1000 萬的種子輪融資，將直接觸發政府的 <strong>ITF 企業支援計劃 (ESS) 1:1 配對資助</strong>，瞬間將資金翻倍至 HK$ 2000 萬，全額資助 D2 的建造、測試與下水。',
 
                 'demo_tag': '第一階段：縮尺技術驗證', 'demo_title': 'BAYWING-D1（1:8 縮尺自主測試平台）',
                 'demo_desc': '高速水翼航行本質上是一個航空控制問題。由於動態不穩定性與物理尺寸成反比，3.56 米的縮尺船體在真實海況下比全尺寸船體具有更高的自然振盪頻率。在真實港口海況下成功穩定 D1，可徹底排除飛控系統的技術風險。',
@@ -1446,7 +1422,7 @@
                 'd1_r4_lbl': '巡航 / 起飛航速', 'd1_r4_ef': '18.0 節 (起飛) / 38.0 節 (巡航)', 'd1_r4_d1': '6.4 節 (起飛) / 13.4 節 (巡航)', 'd1_r4_law': '1 : &radic;&lambda;',
                 'd1_r5_lbl': '安裝動力系統', 'd1_r5_ef': '2x 650 kW 吊艙推進器', 'd1_r5_d1': '2x 1.0 kW 吊艙 (共 2.0 kW)', 'd1_r5_law': '所需功率 &propto; &lambda;<sup>3.5</sup>',
                 'd1_r6_lbl': '電池質量預算', 'd1_r6_ef': '1.2 MWh (約 8,500 kg)', 'd1_r6_d1': '1.0 kWh 48V LFP (約 10 kg)', 'd1_r6_law': '維持極限範圍',
-                'd1_r7_lbl': '主要開發階段', 'd1_r7_ef': '第四階段 (商業建造)', 'd1_r7_d1': '第一與第二階段 (HKSTP 核心)', 'd1_r7_d2': '第三階段 (VC 初步營收)', 'd1_r7_law': '零資本風險海試驗證',
+                'd1_r7_lbl': '主要開發階段', 'd1_r7_ef': '第三階段 (全商業化規模)', 'd1_r7_d1': '第一階段 (HKSTP 培育)', 'd1_r7_d2': '第二階段 (商業先導)', 'd1_r7_law': '零資本風險海試驗證',
 
                 'moat_tag': '3. 前沿科技壁壘與經濟效益', 'moat_title': '可防禦的營運成本 (OPEX) 優勢',
                 'moat_desc': '傳統高速客輪依賴數兆瓦級的柴油燃氣輪機推動沉重的排水型船體。高昂的海上燃料成本和不斷上升的引擎大修費用壓縮了營運利潤。我們的電傳操縱（主動式飛控）控制系統實現了熱力學與水動力學的根本轉變。',
@@ -1470,29 +1446,10 @@
                 'tech_tag': '5. 技術數據庫', 'tech_title': '建議工程矩陣',
                 'tech_desc': '涵蓋從 D1 驗證機到 EF-150 商業旗艦的完整 BAYWING 架構路線圖之結構與營運參數。',
                 'tech_table_title': '平台路線圖：D1 到 EF-150', 'tech_table_ver': '(修改草案 v3.0)',
-                't_cat1': '1. 船隻尺寸與載客量',
-                't_c1_r1': '全長 (LOA)', 't_c1_v1': '28.50 米 (93.5 呎)',
-                't_c1_r2': '總排水量限制', 't_c1_v2': '56,000 kg (56 噸)',
-                't_c1_r3': '載客量', 't_c1_v3': '150 名乘客 + 4 名船員 (13.1噸 負載)',
-                't_cat2': '2. 水動力學與效率',
-                't_c2_r1': '水翼配置', 't_c2_v1': '前部全浸式 T 型水翼 & 後部倒 V 型水翼',
-                't_c2_r2': '目標升阻比 (L/D)', 't_c2_v2': '約 9.8 L/D (保守的水動力與氣動外形配置)',
-                't_c2_r3': '巡航功率消耗', 't_c2_v3': '在 38 節航速下約 1,100 kW',
-                't_cat3': '3. 基礎設施與周轉目標',
-                't_c3_r1': '儲能架構', 't_c3_v1': '1,200 kWh (1.2 MWh)，標稱 800V DC (約 8.5噸 質量)',
-                't_c3_r2': '營運航程', 't_c3_v2': '30 海里（涵蓋 22 海里航線 + 20% 法規安全儲備）',
-                't_c3_r3': '周轉時間目標', 't_c3_v3': '20 分鐘（3.5 MW 自動化 MCS 於約 11 分鐘內補充 ~640 kWh）',
-                't_cat4': '4. 飛行控制系統 (FCS)',
-                't_c4_r1': '飛行控制器', 't_c4_v1': '三重冗餘主動電傳操縱飛行管理單元',
-                't_c4_r2': '控制迴路速率', 't_c4_v2': '100 Hz 動態襟翼與配平執行迴路',
-                't_c4_r3': '感測器融合', 't_c4_v3': '慣性測量單元 (IMUs)、高速超聲波艇身離水高度 / 浪高感測器、前視光學雷達 (LiDAR)',
-                't_cat5': '5. 岸基充電與能量緩衝',
-                't_c5_r1': '固定式 BESS 緩衝', 't_c5_v1': '4.0 MWh 集裝箱式電池緩衝（碼頭削峰填谷）',
-                't_c5_r2': '充電標準', 't_c5_v2': '3.5 MW 自動化 MCS (兆瓦級充電系統) 充電臂',
-
+                
                 'data_tag': '6. 創投融資與資本結構', 'data_title': '公共 1:1 配對與營運資金架構',
                 'data_desc_1': 'Aero-Marine Systems 運用高度槓桿化的資助疊加策略來推進 BAYWING-D1 硬件驗證機。由於香港科技園 Incu-Tech 培育計劃及創新科技署「研究人才庫」皆採實報實銷 (Reimbursement) 制，我們將透過<strong>「營運流動資金」過渡性貸款</strong>來橋接現金流、涵蓋 PAG 專利申請的 10% 企業承擔部份，並採購特定的商用現成 (COTS) 航空組件，確保在等待政府撥款期間研發進度零中斷。',
-                'data_desc_2': '<strong>D2 創投提案 (ITF ESS 1:1 配對)：</strong> 為了從 D1 無人機過渡到 D2 商業載客先導船，我們向創投 (VC) 尋求 HK$ 1000 萬的種子輪/Pre-A 融資。這筆私人資本將直接觸發政府的<strong>創新及科技基金企業支援計劃 (ESS) 1:1 配對資助</strong>，瞬間將資金翻倍至 HK$ 2000 萬，全額資助 D2 的建造與下水，確保創辦人維持 $0 個人現金風險。',
+                'data_desc_2': '<strong>D2 創投提案 (ITF ESS 1:1 配對)：</strong> 為了從 D1 無人機過渡到 D2 商業載客先導船，我們向創投 (VC) 尋求 HK$ 1000 萬的種子輪/Pre-A 融資。此資本架構將股權稀釋降至最低。這筆私人資本將直接觸發政府的<strong>創新及科技基金企業支援計劃 (ESS) 1:1 配對資助</strong>，瞬間將資金翻倍至 HK$ 2000 萬，全額資助 D2 的建造與下水。',
                 
                 'cots_table_title': '第一階段：D1 驗證機 AI 優化預算明細',
                 'cots_th_cat': '預算類別', 'cots_th_desc': 'AI 策略與資源分配細節', 'cots_th_cost': '預估成本 (HKD)',
@@ -1511,17 +1468,6 @@
                 'g2_title': '創科署研究人才庫 (ITF RTH)', 'g2_desc': '100% 政府全額資助 2 名全職控制工程師薪酬 (實報實銷)。',
                 'g3_title': '專利申請資助計劃 (PAG)', 'g3_desc': 'PAG 資助直接覆蓋高達 90% 的 $278k 預算之 PCT 專利申請費用。',
 
-                'dr_card1_title': '階段開發路線圖',
-                'dr_c1_b1': '<strong>第一階段 (第 1-9 個月)：</strong> 6 自由度 (6-DoF) 數位雙生 (Digital Twin)、FCS 檯架測試，以及在香港科技園機器人實驗室進行硬體在環 (HIL) 模擬。',
-                'dr_c1_b2': '<strong>第二階段 (第 10-18 個月)：</strong> 縮尺 D1 技術驗證機 (3.56m) 於吐露港進行海試驗證；100Hz 波浪解耦驗證。',
-                'dr_c1_b3': '<strong>第三階段 (第 19-27 個月)：</strong> 20-30 人座 D2 先導平台設計；獲取商業營收與認證。',
-                'dr_c1_b4': '<strong>第四階段 (第 28-36 個月)：</strong> 通過獲授權之珠三角複合材料造船廠建造完整商業化 EF-150 平台。',
-                'dr_card2_title': '法規與分級認證路徑',
-                'dr_c2_b1': '<strong>DNV 船級社認證：</strong> 符合新型複合材料水翼結構之高速輕型船隻 (HSLC) 規範。',
-                'dr_c2_b2': '<strong>HKMD COLREGs 合規：</strong> 船隻針對 12 節排水模式進行了深度優化，以確保在駛出開闊水域起飛前，符合維多利亞港內港的防撞限速要求。',
-                'dr_c2_b3': '<strong>香港海事處 (HKMD) / 海事局 (MSA) 認證：</strong> 明確香港本地船隻及大灣區跨境水域營運之認證路徑。',
-                'dr_c2_b4': '<strong>自主測試豁免：</strong> D1 測試許可已通過海事處於吐露港水域之無人船隻測試通道獲批。',
-                
                 'inv_tag': '7. 投資人優勢與風險緩釋', 'inv_title': '資本效率與執行風險',
                 'inv_desc': '我們深知早期深科技種子投資者與創投基金在評估硬體提案時的嚴格標準。以下是我們對擴展 EF-150 平台核心投資優勢及執行風險的正面回應與緩釋策略。',
                 'inv_bull_title': '投資人優勢 (牛市邏輯)',
@@ -1532,7 +1478,7 @@
                 'inv_bear_title': '投資人疑慮 (風險挑戰)',
                 'inv_r1_title': '關鍵人員風險與 AI 依賴度', 'inv_r1_desc': '利用 AI 輔助將軟硬體團隊縮編至僅兩名工程師雖能大幅降低成本，但也造成極端依賴性。<em>緩釋方案：強制執行嚴格的模組化代碼文檔規範，並統一使用標準 COTS 硬體，避免陷入專有技術鎖定陷阱。</em>',
                 'inv_r2_title': '碼頭基礎設施瓶頸', 'inv_r2_desc': '獲取 3.5 MW 的電網容量以及地方港務局的碼頭改裝許可通常需要漫長的行政審批時間。<em>緩釋方案：我們部署的 4.0 MWh BESS 岸基儲能緩衝策略，徹底繞過了市政高壓電網升級的行政審批難關。</em>',
-                'inv_r3_title': '第四階段的「資本支出陷阱」(CapEx Trap)', 'inv_r3_desc': '建造全尺寸 56 噸客船需要龐大資本。<em>緩釋方案：我們並非傳統造船廠。我們是提供軟體與飛控系統的 OEM 廠商，透過將 EF-150 IP 授權予現有的珠三角造船廠。</em>',
+                'inv_r3_title': '第三階段的「資本支出陷阱」(CapEx Trap)', 'inv_r3_desc': '建造全尺寸 56 噸客船需要龐大資本。<em>緩釋方案：我們並非傳統造船廠。我們是提供軟體與飛控系統的 OEM 廠商，透過將 EF-150 IP 授權予現有的珠三角造船廠。</em>',
 
                 'footer_cpy': 'AERO-MARINE SYSTEMS 概念 &copy; 2026。',
                 'footer_loc': '香港 / 深圳', 'footer_type': '可行性研究報告'
@@ -1559,16 +1505,18 @@
                 
                 'd2_card1_title': '制造规格',
                 'd2_c1_l1': '建造时间：', 'd2_c1_v1': '14 个月',
-                'd2_c1_l2': '建造成本：', 'd2_c1_v2': 'HK$ 1,850 万',
+                'd2_c1_l2': '船厂建造成本：', 'd2_c1_v2': 'HK$ 1,850 万',
                 'd2_c1_l3': '设施需求：', 'd2_c1_v3': '珠三角复合材料船厂合作伙伴',
                 'd2_c1_l4': '人力需求：', 'd2_c1_v4': '约 12 人组装团队',
                 'd2_c1_l5': '核心材质：', 'd2_c1_v5': '真空灌注碳纤维与海事铝材',
+                'd2_c1_l6': '测试与海事认证：', 'd2_c1_v6': 'HK$ 150 万',
+                'd2_c1_l7': 'D2 总资本需求：', 'd2_c1_v7': 'HK$ 2,000 万',
                 
                 'd2_card2_title': '商业市场定位',
                 'd2_card2_desc': 'D1 的目的是向海事 OEM 出售 IP 与数据，而 D2 则正式切入<strong>市内交通市场</strong>。它将推动香港内部渡轮网络（愉景湾、南丫岛、梅窝）的零碳转型，提供 VIP 接驳与快速通勤，为 EF-150 称霸城际大湾区航线（澳门、深圳）铺路。',
                 
                 'd2_card3_title': '创投 (VC) 资金缺口与杠杆',
-                'd2_card3_desc': 'D2 是跨越“死亡之谷”的桥梁。创始人维持 $0 个人风险，转而向 VC 寻求 HK$ 1000 万的种子轮/Pre-A 轮融资。这笔私人资本将直接触发政府的 <strong>ITF 企业支援计划 (ESS) 1:1 配对资助</strong>，瞬间将资金翻倍至 HK$ 2000 万，全额资助 D2 的建造与下水。',
+                'd2_card3_desc': 'D2 是跨越“死亡之谷”的桥梁。这种分阶段的资本架构，通过在原型与先导阶段充分利用非稀释性的法定资本，将创始人与早期天使投资人的股权稀释降至最低。向 VC 寻求 HK$ 1000 万的种子轮融资，将直接触发政府的 <strong>ITF 企业支援计划 (ESS) 1:1 配对资助</strong>，瞬间将资金翻倍至 HK$ 2000 万，全额资助 D2 的建造、测试与下水。',
 
                 'demo_tag': '第一阶段：缩尺技术验证', 'demo_title': 'BAYWING-D1（1:8 缩尺自主测试平台）',
                 'demo_desc': '高速水翼航行本质上是一个航空控制问题。由于动态不稳定与物理尺寸成反比，3.56 米的缩尺船体在真实海况下比全尺寸船体具有更高的自然振荡频率。在真实港口海况下成功稳定 D1，可彻底排除飞控系统的技术风险。',
@@ -1599,7 +1547,7 @@
                 'd1_r4_lbl': '巡航 / 起飞航速', 'd1_r4_ef': '18.0 节 (起飞) / 38.0 节 (巡航)', 'd1_r4_d1': '6.4 节 (起飞) / 13.4 节 (巡航)', 'd1_r4_law': '1 : &radic;&lambda;',
                 'd1_r5_lbl': '安装动力系统', 'd1_r5_ef': '2x 650 kW 吊舱推进器', 'd1_r5_d1': '2x 1.0 kW 吊舱 (共 2.0 kW)', 'd1_r5_law': '所需功率 &propto; &lambda;<sup>3.5</sup>',
                 'd1_r6_lbl': '电池质量预算', 'd1_r6_ef': '1.2 MWh (约 8,500 kg)', 'd1_r6_d1': '1.0 kWh 48V LFP (约 10 kg)', 'd1_r6_law': '维持极限范围',
-                'd1_r7_lbl': '主要开发阶段', 'd1_r7_ef': '第四阶段 (商业建造)', 'd1_r7_d1': '第一与第二阶段 (HKSTP 核心)', 'd1_r7_d2': '第三阶段 (VC 初步营收)', 'd1_r7_law': '零资本风险海试验证',
+                'd1_r7_lbl': '主要开发阶段', 'd1_r7_ef': '第三阶段 (全商业化规模)', 'd1_r7_d1': '第一阶段 (HKSTP 培育)', 'd1_r7_d2': '第二阶段 (商业先导)', 'd1_r7_law': '零资本风险海试验证',
 
                 'moat_tag': '3. 前沿科技壁垒与经济效益', 'moat_title': '可防御的营运成本 (OPEX) 优势',
                 'moat_desc': '传统高速客轮依赖数兆瓦级的柴油燃气轮机推动沉重的排水型船体。高昂的海上燃料成本和不断上升的引擎大修费用压缩了营运利润。我们的电传操纵（主动式飞控）控制系统实现了热力学与水动力学的根本转变。',
@@ -1623,29 +1571,10 @@
                 'tech_tag': '5. 技术数据库', 'tech_title': '建议工程矩阵',
                 'tech_desc': '涵盖从 D1 验证机到 EF-150 商业旗舰的完整 BAYWING 架构路线图之结构与营运参数。',
                 'tech_table_title': '平台路线图：D1 到 EF-150', 'tech_table_ver': '(修改草案 v3.0)',
-                't_cat1': '1. 船只尺寸与载客量',
-                't_c1_r1': '全长 (LOA)', 't_c1_v1': '28.50 米 (93.5 英尺)',
-                't_c1_r2': '总排水量限制', 't_c1_v2': '56,000 kg (56 吨)',
-                't_c1_r3': '载客量', 't_c1_v3': '150 名乘客 + 4 名船员 (13.1吨 负载)',
-                't_cat2': '2. 水动力学与效率',
-                't_c2_r1': '水翼配置', 't_c2_v1': '前部全浸式 T 型水翼 & 后部倒 V 型水翼',
-                't_c2_r2': '目标升阻比 (L/D)', 't_c2_v2': '约 9.8 L/D (保守的水动力与气动外形配置)',
-                't_c2_r3': '巡航功率消耗', 't_c2_v3': '在 38 节航速下约 1,100 kW',
-                't_cat3': '3. 基础设施与周转目标',
-                't_c3_r1': '储能架构', 't_c3_v1': '1,200 kWh (1.2 MWh)，标称 800V DC (约 8.5吨 质量)',
-                't_c3_r2': '营运航程', 't_c3_v2': '30 海里（涵盖 22 海里航线 + 20% 法规安全储备）',
-                't_c3_r3': '周转时间目标', 't_c3_v3': '20 分钟（3.5 MW 自动化 MCS 于约 11 分钟内补充 ~640 kWh）',
-                't_cat4': '4. 飞行控制系统 (FCS)',
-                't_c4_r1': '飞行控制器', 't_c4_v1': '三重冗余主动电传操纵飞行管理单元',
-                't_c4_r2': '控制回路速率', 't_c4_v2': '100 Hz 动态襟翼与配平执行回路',
-                't_c4_r3': '传感器融合', 't_c4_v3': '惯性测量单元 (IMUs)、高速超声波艇身离水高度 / 浪高传感器、前视激光雷达 (LiDAR)',
-                't_cat5': '5. 岸基充电与能量缓冲',
-                't_c5_r1': '固定式 BESS 缓冲', 't_c5_v1': '4.0 MWh 集装箱式电池缓冲（码头削峰填谷）',
-                't_c5_r2': '充电标准', 't_c5_v2': '3.5 MW 自动化 MCS (兆瓦级充电系统) 充电臂',
-
+                
                 'data_tag': '6. 创投融资与资本结构', 'data_title': '公共 1:1 配对与营运资金架构',
                 'data_desc_1': 'Aero-Marine Systems 运用高度杠杆化的资助叠加策略来推进 BAYWING-D1 硬件验证机。由于香港科技园 Incu-Tech 培育计划及创新科技署“研究人才库”皆采实报实销 (Reimbursement) 制，我们将透过<strong>“营运流动资金”过渡性贷款</strong>来桥接现金流、涵盖 PAG 专利申请的 10% 企业承担部份，并采购特定的商用现成 (COTS) 航空组件，确保在等待政府拨款期间研发进度零中断。',
-                'data_desc_2': '<strong>D2 创投提案 (ITF ESS 1:1 配对)：</strong> 为了从 D1 无人机过渡到 D2 商业载客先导船，我们向创投 (VC) 寻求 HK$ 1000 万的种子轮/Pre-A 融资。这笔私人资本将直接触发政府的<strong>创新及科技基金企业支援计划 (ESS) 1:1 配对资助</strong>，瞬间将资金翻倍至 HK$ 2000 万，全额资助 D2 的建造与下水，确保创始人维持 $0 个人现金风险。',
+                'data_desc_2': '<strong>D2 创投提案 (ITF ESS 1:1 配对)：</strong> 为了从 D1 无人机过渡到 D2 商业载客先导船，我们向创投 (VC) 寻求 HK$ 1000 万的种子轮/Pre-A 融资。此资本架构将股权稀释降至最低。这笔私人资本将直接触发政府的<strong>创新及科技基金企业支援计划 (ESS) 1:1 配对资助</strong>，瞬间将资金翻倍至 HK$ 2000 万，全额资助 D2 的建造与下水。',
                 
                 'cots_table_title': '第一阶段：D1 验证机 AI 优化预算明细',
                 'cots_th_cat': '预算类别', 'cots_th_desc': 'AI 策略与资源分配细节', 'cots_th_cost': '预估成本 (HKD)',
@@ -1664,17 +1593,6 @@
                 'g2_title': '创科署研究人才库 (ITF RTH)', 'g2_desc': '100% 政府全额资助 2 名全职控制工程师薪酬 (实报实销)。',
                 'g3_title': '专利申请资助计划 (PAG)', 'g3_desc': 'PAG 资助直接覆盖高达 90% 的 $278k 预算之 PCT 专利申请费用。',
 
-                'dr_card1_title': '阶段开发路线图',
-                'dr_c1_b1': '<strong>第一阶段 (第 1-9 个月)：</strong> 6 自由度 (6-DoF) 数字孪生 (Digital Twin)、FCS 台架测试，以及在香港科技园机器人实验室进行硬件在环 (HIL) 模拟。',
-                'dr_c1_b2': '<strong>第二阶段 (第 10-18 个月)：</strong> 缩尺 D1 技术验证机 (3.56m) 于吐露港进行海试验证；100Hz 波浪解耦验证。',
-                'dr_c1_b3': '<strong>第三阶段 (第 19-27 个月)：</strong> 20-30 人座 D2 先导平台设计；获取商业营收与认证。',
-                'dr_c1_b4': '<strong>第四阶段 (第 28-36 个月)：</strong> 通过获授权之珠三角复合材料造船厂建造完整商业化 EF-150 平台。',
-                'dr_card2_title': '法规与分级认证路径',
-                'dr_c2_b1': '<strong>DNV 船级社认证：</strong> 符合新型复合材料水翼结构之高速轻型船只 (HSLC) 规范。',
-                'dr_c2_b2': '<strong>HKMD COLREGs 合规：</strong> 船只针对 12 节排水模式进行了深度优化，以确保在驶出开阔水域起飞前，符合维多利亚港内港的防撞限速要求。',
-                'dr_c2_b3': '<strong>香港海事处 (HKMD) / 海事局 (MSA) 认证：</strong> 明确香港本地船只及大湾区跨境水域营运之认证路径。',
-                'dr_c2_b4': '<strong>自主测试豁免：</strong> D1 测试许可已通过海事处于吐露港水域之无人船只测试通道获批。',
-                
                 'inv_tag': '7. 投资人优势与风险缓释', 'inv_title': '资本效率与执行风险',
                 'inv_desc': '我们深知早期深科技种子投资者与创投基金在评估硬件提案时的严格标准。以下是我们对扩展 EF-150 平台核心投资优势及执行风险的正面回应与缓释策略。',
                 'inv_bull_title': '投资人优势 (牛市逻辑)',
@@ -1685,7 +1603,7 @@
                 'inv_bear_title': '投资人疑虑 (风险挑战)',
                 'inv_r1_title': '关键人员风险与 AI 依赖度', 'inv_r1_desc': '利用 AI 辅助将软硬件团队缩编至仅两名工程师虽能大幅降低成本，但也造成极端依赖性。<em>缓释方案：强制执行严格的模块化代码文档规范，并统一使用标准 COTS 硬件，避免陷入专有技术锁定陷阱。</em>',
                 'inv_r2_title': '码头基础设施瓶颈', 'inv_r2_desc': '获取 3.5 MW 的电网容量以及地方港务局的码头改装许可通常需要漫长的行政审批时间。<em>缓释方案：我们部署的 4.0 MWh BESS 岸基储能缓冲策略，彻底绕过了市政高压电网升级的行政审批难关。</em>',
-                'inv_r3_title': '第四阶段的「资本支出陷阱」(CapEx Trap)', 'inv_r3_desc': '建造全尺寸 56 吨客船需要庞大资本。<em>缓释方案：我们并非传统造船厂。我们是提供软件与飞控系统的 OEM 厂商，透过将 EF-150 IP 授权予现有的珠三角造船厂。</em>',
+                'inv_r3_title': '第三阶段的「资本支出陷阱」(CapEx Trap)', 'inv_r3_desc': '建造全尺寸 56 吨客船需要庞大资本。<em>缓释方案：我们并非传统造船厂。我们是提供软件与飞控系统的 OEM 厂商，透过将 EF-150 IP 授权予现有的珠三角造船厂。</em>',
 
                 'footer_cpy': 'AERO-MARINE SYSTEMS 概念 &copy; 2026。',
                 'footer_loc': '香港 / 深圳', 'footer_type': '可行性研究报告'
@@ -1722,8 +1640,6 @@
             if (lang === 'tc' || lang === 'sc') nm_suffix = ' / 海里';
             
             document.getElementById('ui-p4-metric').innerText = `~${fx.symbol}${electricBase} ${fx.code}${nm_suffix}`;
-            document.getElementById('ui-dr-diesel').innerText = `~${fx.symbol}${dieselBase} ${fx.code}${nm_suffix}`;
-            document.getElementById('ui-dr-electric').innerText = `~${fx.symbol}${electricBase} ${fx.code}${nm_suffix}`;
 
             // 3. Dropdown list localization
             const routeSelect = document.getElementById('calc-route');
@@ -1757,16 +1673,24 @@
                 routeSelect.value = currentVal;
             }
 
-            // 4. Update Button Classes
+            // 4. Update Button Classes (Desktop & Mobile)
             ['en', 'tc', 'sc'].forEach(l => {
-                const btn = document.getElementById('btn-lang-' + l);
-                if(btn) {
+                const btnDesk = document.getElementById('btn-lang-' + l);
+                const btnMob = document.getElementById('btn-lang-' + l + '-mob');
+
+                if(btnDesk) {
                     if(l === lang) {
-                        btn.classList.remove('text-zinc-500', 'hover:text-white');
-                        btn.classList.add('bg-zinc-800', 'text-white');
+                        btnDesk.className = 'px-2 py-1 rounded bg-zinc-800 text-white transition-colors';
                     } else {
-                        btn.classList.add('text-zinc-500', 'hover:text-white');
-                        btn.classList.remove('bg-zinc-800', 'text-white');
+                        btnDesk.className = 'px-2 py-1 rounded text-zinc-500 hover:text-white transition-colors';
+                    }
+                }
+
+                if(btnMob) {
+                    if(l === lang) {
+                        btnMob.className = 'px-3 py-1 rounded bg-zinc-800 text-white border border-zinc-700 whitespace-nowrap';
+                    } else {
+                        btnMob.className = 'px-3 py-1 rounded bg-zinc-900 text-zinc-500 hover:text-white border border-zinc-800 whitespace-nowrap';
                     }
                 }
             });
