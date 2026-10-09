@@ -88,9 +88,9 @@
         .blueprint-container {
             position: relative;
             width: 100%;
-            max-width: 100%; /* Forces scaling on mobile */
+            max-width: 100%; 
             margin: 0 auto;
-            aspect-ratio: 1600 / 900; /* Locked SVG canvas ratio */
+            aspect-ratio: 1600 / 900; 
             background: #040914; 
             border-radius: 8px;
             overflow: hidden;
@@ -186,7 +186,7 @@
                 </a>
 
                 <!-- Aligned Header Nav Menu -->
-                <nav class="hidden xl:flex items-center space-x-6 text-[10px] font-mono tracking-wider uppercase text-zinc-400 whitespace-nowrap ml-8">
+                <nav class="hidden xl:flex items-center space-x-7 text-[11px] font-mono tracking-wider uppercase text-zinc-400 whitespace-nowrap ml-8">
                     <a href="#vessel" class="hover:text-white transition-colors" data-i18n="nav_1">Platform</a>
                     <a href="#demonstrator" class="hover:text-tech-cyan text-tech-cyan/90 transition-colors" data-i18n="nav_demo">1:8 Demonstrator</a>
                     <a href="#moat" class="hover:text-white transition-colors" data-i18n="nav_2">Economics</a>
@@ -970,7 +970,6 @@
                             <text x="295" y="84" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">CLASSIFICATION: <tspan fill="#10b981">DNV HSLC COMPLIANT</tspan></text>
                         </g>
                     </svg>
-
                 </div>
             </div>
 
@@ -1065,7 +1064,7 @@
         </div>
     </section>
 
-    <!-- SECTION 5: CAPITALIZATION & R&D BUDGET (#portal) -->
+    <!-- SECTION 6: DATA ROOM & PUBLIC GRANT CAPITAL STACK (#portal) -->
     <section id="portal" class="py-16 md:py-24 bg-zinc-950 border-b border-zinc-800 cad-grid-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-12">
@@ -1122,12 +1121,17 @@
                             <tr>
                                 <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r5_cat">5. Testing & Water Permits</td>
                                 <td class="py-3 px-4" data-i18n="cots_r5_desc">Tolo Harbour site allowances, telemetry gear, chase boats (HKSTP Operations)</td>
-                                <td class="py-3 px-4 text-right">$200,000</td>
+                                <td class="py-3 px-4 text-right">$42,000</td>
                             </tr>
                             <tr>
                                 <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r7_cat">6. Intellectual Property</td>
                                 <td class="py-3 px-4" data-i18n="cots_r7_desc">PCT Filing & GBA Regional Patent Prosecution (PAG 90% Subsidized)</td>
-                                <td class="py-3 px-4 text-right">$120,000</td>
+                                <td class="py-3 px-4 text-right">$278,000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 text-zinc-400" data-i18n="cots_r8_cat">7. Contingency & Logistics</td>
+                                <td class="py-3 px-4" data-i18n="cots_r8_desc">Buffer for supply chain shipping, uncrewed vessel insurance, and import duties</td>
+                                <td class="py-3 px-4 text-right">$200,000</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1163,59 +1167,11 @@
                     <div class="p-3 bg-zinc-900 border border-zinc-800 rounded">
                         <div class="text-[10px] font-mono text-zinc-500 uppercase" data-i18n="g3_title">Patent Application Grant</div>
                         <div class="text-xl font-mono font-bold text-tech-emerald mt-1">HK$ 250,000</div>
-                        <div class="text-[9px] font-mono text-zinc-400 mt-1" data-i18n="g3_desc">PAG grant directly covering up to 90% of PCT & regional patent filings.</div>
+                        <div class="text-[9px] font-mono text-zinc-400 mt-1" data-i18n="g3_desc">PAG grant directly covers 90% of up to $278k in PCT & regional patent filings.</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Documents Grid -->
-            <div class="grid lg:grid-cols-2 gap-6">
-                <!-- Roadmap -->
-                <div class="data-card p-6 rounded-lg">
-                    <div class="text-sm font-mono font-bold text-white mb-4 border-b border-zinc-800 pb-2" data-i18n="dr_card1_title">Phase Development Roadmap</div>
-                    <ul class="space-y-3 text-[11px] font-mono text-zinc-300">
-                        <li class="flex items-start gap-2">
-                            <span class="text-tech-cyan">▸</span>
-                            <span data-i18n="dr_c1_b1"><strong>Phase 1 (Months 1-9):</strong> 6-DoF Digital Twin, FCS Bench Testing, & Hardware-in-the-Loop simulation in HKSTP Robotics Lab.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-tech-cyan">▸</span>
-                            <span data-i18n="dr_c1_b2"><strong>Phase 2 (Months 10-18):</strong> Sub-scale D1 technology demonstrator (3.56m) sea trials in Tolo Harbour; 100Hz wave-decoupling validation.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-tech-cyan">▸</span>
-                            <span data-i18n="dr_c1_b3"><strong>Phase 3 (Months 19-27):</strong> Intermediate 20-30 passenger pilot platform design; joint commercial consortium formation.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-tech-cyan">▸</span>
-                            <span data-i18n="dr_c1_b4"><strong>Phase 4 (Months 28-36):</strong> Full commercial EF-150 platform constructed via licensed PRD composite shipyard.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Regulatory -->
-                <div class="data-card p-6 rounded-lg">
-                    <div class="text-sm font-mono font-bold text-white mb-4 border-b border-zinc-800 pb-2" data-i18n="dr_card2_title">Regulatory & Classification Path</div>
-                    <ul class="space-y-3 text-[11px] font-mono text-zinc-300">
-                        <li class="flex items-start gap-2">
-                            <span class="text-tech-cyan">▸</span>
-                            <span data-i18n="dr_c2_b1"><strong>DNV Classification:</strong> Adherence to High Speed Light Craft (HSLC) rules for novel composite hydrofoil structures.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-tech-cyan">▸</span>
-                            <span data-i18n="dr_c2_b2"><strong>HKMD COLREGs Compliance:</strong> Vessel heavily optimized for efficient 12-knot displacement mode to comply with inner Victoria Harbour collision avoidance speed limits prior to taking off in open waters.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-tech-cyan">▸</span>
-                            <span data-i18n="dr_c2_b3"><strong>HKMD / MSA Certification:</strong> Pathway defined for Local Vessel operation within Hong Kong and GBA cross-boundary waters.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-tech-cyan">▸</span>
-                            <span data-i18n="dr_c2_b4"><strong>Autonomous Testing Exemption:</strong> D1 test permit cleared through Marine Department uncrewed vessel trials channel in Tolo waters.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1279,7 +1235,7 @@
                     <div class="data-card p-5 rounded-lg border-l-2 border-l-rose-500">
                         <h4 class="text-sm font-mono font-bold text-white mb-2" data-i18n="inv_r2_title">Dockside Infrastructure Bottlenecks</h4>
                         <p class="text-xs text-zinc-400 leading-relaxed font-sans" data-i18n="inv_r2_desc">
-                            Securing 3.5 MW grid capacity and pier modifications from local harbour authorities is notoriously slow. <em>Mitigation: The 4.0 MWh BESS buffer strategy completely bypasses high-voltage municipal grid upgrades.</em>
+                            Securing 3.5 MW grid capacity and pier modifications often involves extended regulatory lead times. <em>Mitigation: The 4.0 MWh BESS buffer strategy completely bypasses high-voltage municipal grid upgrades.</em>
                         </p>
                     </div>
 
@@ -1436,12 +1392,13 @@
                 'cots_r4_cat': '4. Hull Mfg & Tooling', 'cots_r4_desc': 'AI-optimized CAD driving CNC foam milling & carbon infusion (Smart Mobility Fund)',
                 'cots_r5_cat': '5. Testing & Water Permits', 'cots_r5_desc': 'Tolo Harbour site allowances, telemetry gear, chase boats (HKSTP Operations)',
                 'cots_r7_cat': '6. Intellectual Property', 'cots_r7_desc': 'PCT Filing & GBA Regional Patent Prosecution (PAG 90% Subsidized)',
+                'cots_r8_cat': '7. Contingency & Logistics', 'cots_r8_desc': 'Buffer for supply chain shipping, uncrewed vessel insurance, and import duties',
 
                 'grant_box_tag': 'LEVERAGED PUBLIC CAPITAL STACK', 'grant_box_title': 'Total Demonstrator Capitalization: HK$ 3,990,000',
                 'founder_share': 'Seed Bridge Facility / Float Capital (~25%):', 'founder_cost': 'HK$ 1,000,000',
                 'g1_title': 'HKSTP Incu-Tech Subsidy', 'g1_desc': 'Tooling, lab rent, testing permits & operational allowance (Reimbursement).',
                 'g2_title': 'ITF Research Talent Hub', 'g2_desc': '100% Gov-paid salaries for 2 full-time control engineers (Reimbursement).',
-                'g3_title': 'Patent Application Grant', 'g3_desc': 'PAG grant directly covering up to 90% of PCT & regional patent filings.',
+                'g3_title': 'Patent Application Grant', 'g3_desc': 'PAG grant directly covers 90% of up to $278k in PCT & regional patent filings.',
 
                 'dr_card1_title': 'Phase Development Roadmap',
                 'dr_c1_b1': '<strong>Phase 1 (Months 1-9):</strong> 6-DoF Digital Twin, FCS Bench Testing, & Hardware-in-the-Loop simulation in HKSTP Robotics Lab.',
@@ -1463,7 +1420,7 @@
                 
                 'inv_bear_title': 'What Investors Will Question (The Risks)',
                 'inv_r1_title': 'Heavy Key-Person Risk & AI Dependency', 'inv_r1_desc': 'Running a hardware-software team with only two engineers augmented by AI cuts costs but creates extreme dependency. <em>Mitigation: Strict modular documentation and standard COTS hardware limits proprietary lock-in.</em>',
-                'inv_r2_title': 'Dockside Infrastructure Bottlenecks', 'inv_r2_desc': 'Securing 3.5 MW grid capacity and pier modifications from local harbour authorities is notoriously slow. <em>Mitigation: The 4.0 MWh BESS buffer strategy completely bypasses high-voltage municipal grid upgrades.</em>',
+                'inv_r2_title': 'Dockside Infrastructure Bottlenecks', 'inv_r2_desc': 'Securing 3.5 MW grid capacity and pier modifications often involves extended regulatory lead times. <em>Mitigation: The 4.0 MWh BESS buffer strategy completely bypasses high-voltage municipal grid upgrades.</em>',
                 'inv_r3_title': 'The "CapEx Trap" in Phase 4', 'inv_r3_desc': 'Building full-scale 56-tonne vessels requires massive capital. <em>Mitigation: We are not a shipyard. We are a software & flight-control OEM licensing the EF-150 IP package to existing PRD shipyards, eliminating heavy manufacturing CapEx.</em>',
                 
                 'inv_verdict_title': 'The Investment Verdict',
@@ -1572,12 +1529,13 @@
                 'cots_r4_cat': '4. 船體製造與模具', 'cots_r4_desc': 'AI 優化 CAD 直接驅動 CNC 泡沫銑削及碳纖維灌注 (智慧交通基金)',
                 'cots_r5_cat': '5. 測試與水域許可', 'cots_r5_desc': '吐露港場地津貼、遙測設備、護航船 (HKSTP 營運資助)',
                 'cots_r7_cat': '6. 知識產權', 'cots_r7_desc': 'PCT 專利佈局與大灣區區域專利申請 (PAG 90% 補貼)',
+                'cots_r8_cat': '7. 應急儲備與物流', 'cots_r8_desc': '涵蓋供應鏈運輸、無人測試船體保險與跨境進口關稅緩衝',
 
                 'grant_box_tag': '槓桿化公共資本結構', 'grant_box_title': '驗證機總資本：HK$ 3,990,000',
                 'founder_share': '種子輪過渡貸款 / 營運流動資金 (~25%)：', 'founder_cost': 'HK$ 1,000,000',
                 'g1_title': '香港科技園 Incu-Tech 資助', 'g1_desc': '工裝工具、實驗室租金、海試驗證許可及營運津貼 (實報實銷)。',
                 'g2_title': '創科署研究人才庫 (ITF RTH)', 'g2_desc': '100% 政府全額資助 2 名全職控制工程師薪酬 (實報實銷)。',
-                'g3_title': '專利申請資助計劃 (PAG)', 'g3_desc': 'PAG 資助直接覆蓋高達 90% 的 PCT 及區域專利申請費用。',
+                'g3_title': '專利申請資助計劃 (PAG)', 'g3_desc': 'PAG 資助直接覆蓋高達 90% 的 $278k 預算之 PCT 專利申請費用。',
 
                 'dr_card1_title': '階段開發路線圖',
                 'dr_c1_b1': '<strong>第一階段 (第 1-9 個月)：</strong> 6 自由度 (6-DoF) 數位雙生 (Digital Twin)、FCS 檯架測試，以及在香港科技園機器人實驗室進行硬體在環 (HIL) 模擬。',
@@ -1599,7 +1557,7 @@
                 
                 'inv_bear_title': '投資人疑慮 (風險挑戰)',
                 'inv_r1_title': '關鍵人員風險與 AI 依賴度', 'inv_r1_desc': '利用 AI 輔助將軟硬體團隊縮編至僅兩名工程師雖能大幅降低成本，但也造成極端依賴性。<em>緩釋方案：強制執行嚴格的模組化代碼文檔規範，並統一使用標準 COTS 硬體，避免陷入專有技術鎖定陷阱。</em>',
-                'inv_r2_title': '碼頭基礎設施瓶頸', 'inv_r2_desc': '獲取 3.5 MW 的電網容量以及地方港務局的碼頭改裝許可通常進度緩慢。<em>緩釋方案：我們部署的 4.0 MWh BESS 岸基儲能緩衝策略，徹底繞過了市政高壓電網升級的行政審批難關。</em>',
+                'inv_r2_title': '碼頭基礎設施瓶頸', 'inv_r2_desc': '獲取 3.5 MW 的電網容量以及地方港務局的碼頭改裝許可通常需要漫長的行政審批時間。<em>緩釋方案：我們部署的 4.0 MWh BESS 岸基儲能緩衝策略，徹底繞過了市政高壓電網升級的行政審批難關。</em>',
                 'inv_r3_title': '第四階段的「資本支出陷阱」(CapEx Trap)', 'inv_r3_desc': '建造全尺寸 56 噸客船需要龐大資本。<em>緩釋方案：我們並非傳統造船廠。我們是提供軟體與飛控系統的 OEM 廠商，透過將 EF-150 IP 授權予現有的珠三角造船廠，徹底消除重資產製造的資本支出壓力。</em>',
                 
                 'inv_verdict_title': '投資評級總結',
@@ -1708,12 +1666,13 @@
                 'cots_r4_cat': '4. 船体制造与模具', 'cots_r4_desc': 'AI 优化 CAD 直接驱动 CNC 泡沫铣削及碳纤维灌注 (智慧交通基金)',
                 'cots_r5_cat': '5. 测试与水域许可', 'cots_r5_desc': '吐露港场地津贴、遥测设备、护航船 (HKSTP 营运资助)',
                 'cots_r7_cat': '6. 知识产权', 'cots_r7_desc': 'PCT 专利布局与大湾区区域专利申请 (PAG 90% 补贴)',
+                'cots_r8_cat': '7. 应急储备与物流', 'cots_r8_desc': '涵盖供应链运输、无人测试船体保险与跨境进口关税缓冲',
 
                 'grant_box_tag': '杠杆化公共资本结构', 'grant_box_title': '验证机总资本：HK$ 3,990,000',
                 'founder_share': '种子轮过渡贷款 / 营运流动资金 (~25%)：', 'founder_cost': 'HK$ 1,000,000',
                 'g1_title': '香港科技园 Incu-Tech 资助', 'g1_desc': '工装工具、实验室租金、海试验证许可及营运津贴 (实报实销)。',
                 'g2_title': '创科署研究人才库 (ITF RTH)', 'g2_desc': '100% 政府全额资助 2 名全职控制工程师薪酬 (实报实销)。',
-                'g3_title': '专利申请资助计划 (PAG)', 'g3_desc': 'PAG 资助直接覆盖高达 90% 的 PCT 及区域专利申请费用。',
+                'g3_title': '专利申请资助计划 (PAG)', 'g3_desc': 'PAG 资助直接覆盖高达 90% 的 $278k 预算之 PCT 专利申请费用。',
 
                 'dr_card1_title': '阶段开发路线图',
                 'dr_c1_b1': '<strong>第一阶段 (第 1-9 个月)：</strong> 6 自由度 (6-DoF) 数字孪生 (Digital Twin)、FCS 台架测试，以及在香港科技园机器人实验室进行硬件在环 (HIL) 模拟。',
@@ -1735,7 +1694,7 @@
                 
                 'inv_bear_title': '投资人疑虑 (风险挑战)',
                 'inv_r1_title': '关键人员风险与 AI 依赖度', 'inv_r1_desc': '利用 AI 辅助将软硬件团队缩编至仅两名工程师虽能大幅降低成本，但也造成极端依赖性。<em>缓释方案：强制执行严格的模块化代码文档规范，并统一使用标准 COTS 硬件，避免陷入专有技术锁定陷阱。</em>',
-                'inv_r2_title': '码头基础设施瓶颈', 'inv_r2_desc': '获取 3.5 MW 的电网容量以及地方港务局的码头改装许可通常进度缓慢。<em>缓释方案：我们部署的 4.0 MWh BESS 岸基储能缓冲策略，彻底绕过了市政高压电网升级的行政审批难关。</em>',
+                'inv_r2_title': '码头基础设施瓶颈', 'inv_r2_desc': '获取 3.5 MW 的电网容量以及地方港务局的码头改装许可通常需要漫长的行政审批时间。<em>缓释方案：我们部署的 4.0 MWh BESS 岸基储能缓冲策略，彻底绕过了市政高压电网升级的行政审批难关。</em>',
                 'inv_r3_title': '第四阶段的「资本支出陷阱」(CapEx Trap)', 'inv_r3_desc': '建造全尺寸 56 吨客船需要庞大资本。<em>缓释方案：我们并非传统造船厂。我们是提供软件与飞控系统的 OEM 厂商，透过将 EF-150 IP 授权予现有的珠三角造船厂，彻底消除重资产制造的资本支出压力。</em>',
                 
                 'inv_verdict_title': '投资评级总结',
@@ -1795,17 +1754,17 @@
                 } else if (lang === 'tc') {
                     routeSelect.innerHTML = `
                         <option value="hk-shenzhen">香港中環 ⟷ 深圳蛇口 (22 海里)</option>
-                        <option value="hkg-szx">香港機場海天客運碼頭 ⟷ 深圳機場 (25 海里)</option>
+                        <option value="hkg-szx">香港機場海天碼頭 ⟷ 深圳機場 (25 海里)</option>
                         <option value="hk-macau">香港中環 ⟷ 澳門氹仔 (36 海里)</option>
-                        <option value="hk-airport">香港中環 ⟷ 香港機場海天客運碼頭 (17 海里)</option>
+                        <option value="hk-airport">香港中環 ⟷ 香港機場海天碼頭 (17 海里)</option>
                         <option value="hk-zhuhai">香港中環 ⟷ 珠海九洲 (35 海里)</option>
                     `;
                 } else {
                     routeSelect.innerHTML = `
                         <option value="hk-shenzhen">香港中环 ⟷ 深圳蛇口 (22 海里)</option>
-                        <option value="hkg-szx">香港机场海天客运码头 ⟷ 深圳机场 (25 海里)</option>
+                        <option value="hkg-szx">香港机场海天码头 ⟷ 深圳机场 (25 海里)</option>
                         <option value="hk-macau">香港中环 ⟷ 澳门氹仔 (36 海里)</option>
-                        <option value="hk-airport">香港中环 ⟷ 香港机场海天客运码头 (17 海里)</option>
+                        <option value="hk-airport">香港中环 ⟷ 香港机场海天码头 (17 海里)</option>
                         <option value="hk-zhuhai">香港中环 ⟷ 珠海九洲 (35 海里)</option>
                     `;
                 }
@@ -1878,9 +1837,10 @@
             const localDieselPrice = (dieselCostPerNM * fx.rate).toFixed(2);
             document.getElementById('ui-calc-diesel-price').innerText = `${fx.symbol}${localDieselPrice} ${fx.code}${currentLang === 'en' ? ' / NM' : ' / 海里'}`;
 
+            // Calculate exact total distance travelled by the fleet per year (trips * 2 because they are round trips)
             const annualNMTravelled = fleet * (trips * 2) * r.distanceNM * 365;
 
-            // Base math stays USD
+            // Apply exactly equal utilization mapping
             const annualDieselCostUSD = annualNMTravelled * dieselCostPerNM;
             const annualElectricCostUSD = annualNMTravelled * electricCostPerNM;
             const annualSavingsUSD = Math.max(0, annualDieselCostUSD - annualElectricCostUSD);
@@ -1896,8 +1856,8 @@
             let diffSuffix = '';
             if (timeSavedMins >= 0) {
                 if (currentLang === 'en') diffSuffix = ` ${timeSavedMins} Mins Faster than Diesel`;
-                if (currentLang === 'tc') diffSuffix = ` ${timeSavedMins} 分鐘 (比柴油船快 12 分鐘)`;
-                if (currentLang === 'sc') diffSuffix = ` ${timeSavedMins} 分钟 (比柴油船快 12 分钟)`;
+                if (currentLang === 'tc') diffSuffix = ` ${timeSavedMins} 分鐘 (比柴油船快 ${timeSavedMins} 分鐘)`;
+                if (currentLang === 'sc') diffSuffix = ` ${timeSavedMins} 分钟 (比柴油船快 ${timeSavedMins} 分钟)`;
             } else {
                 const absTime = Math.abs(timeSavedMins);
                 if (currentLang === 'en') diffSuffix = ` ${absTime} Mins Slower (Harbor Limits)`;
@@ -1912,7 +1872,6 @@
 
             document.getElementById('calc-out-savings').innerText = `${fx.symbol}${localAnnualSavings.toFixed(2)}${fx.m_suffix}`;
             document.getElementById('calc-out-payback').innerText = paybackYears + yrsSuffix;
-            // Ton translation fix correctly mapped to both Chinese versions
             document.getElementById('calc-out-co2').innerText = co2TonsReduced.toLocaleString() + (currentLang === 'en' ? ' T' : (currentLang === 'tc' ? ' 公噸' : ' 公吨'));
             document.getElementById('calc-out-time').innerText = r.ef150TimeMins + minSuffix;
             document.getElementById('calc-out-time-diff').innerText = diffSuffix;
